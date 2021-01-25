@@ -1,0 +1,88 @@
+---
+title: "PPP Data"
+author: "Abby Zimmardi"
+date: "1/20/2021"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+#install.packages("rio") 
+```
+#WELLS COMMENT: The next level in R is to make sure your data can be downloaded by anyone. This file is on your hard drive and I can't get to it. Better to put the file on your GitHub and download it from there so everyone can access the script and data. The problem is this is such a large file (130 mb) that it exceeds the GitHub storage of 25 mb. I'll ask Sean how to deal with this.
+```{r}
+PPP <- rio::import('/Users/abbyzimmardi/Downloads/Data Spring 2021/OSHA/150k plus 0808/PPP Data 150k plus 080820.csv')
+```
+
+#WELLS EDIT:
+```{r}
+PPP <- rio::import('/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/PPP Loan Data 150k plus 0808/PPP Data 150k plus 080820.csv')
+```
+
+
+
+
+```{r}
+PPP2 <- PPP %>% 
+  filter(State == "AR")
+PPP2
+```
+```{r}
+OSHA <- rio::import('/Users/abbyzimmardi/Downloads/Data Spring 2021/OSHA/AR Closed Complaints Jan. 13.xlsx')
+```
+
+
+
+#WELLS EDIT:
+```{r}
+OSHA <- rio::import('https://github.com/profrobwells/Spring2021Data/blob/main/closed_complaints_jan_13.xlsx?raw=true', which="AR")
+```
+
+
+
+
+```{r}
+OSHA <- OSHA %>%
+  rename(State = 'Site State', Address = 'Site Address 1', Zip = 'Site Zip', City = 'Site City')
+OSHA
+```
+```{r}
+#install.packages(dplyr)
+library(dplyr)
+```
+#Join the tables
+newtable <- inner_join(table1, table2, by=c("fieldname"="fieldname"))
+```{r}
+OSHA_PPP <- inner_join(PPP2, OSHA, by=c('Address"="Address"))
+```
+
+#WELLS EDIT
+#WELLS EDIT
+```{r}
+head(PPP2$BusinessName)
+```
+
+```{r}
+OSHA <- OSHA %>%
+  rename(BusinessName = `Estab Name`)
+head(OSHA)
+```
+
+#JOIN BY NAME 
+```{r}
+OSHA_PPP <- inner_join(PPP2, OSHA, by=c("BusinessName"="BusinessName"))
+```
+
+
+#You will need to clean either the business names or the addresses to make them match.
+#See this tutorial and we can discuss.
+https://profrobwells.github.io/HomelessSP2020/SF_311_Calls_UofA.html#part_3:_cleaning_dispositions
+
+
+
+
+
+
+
+
+
