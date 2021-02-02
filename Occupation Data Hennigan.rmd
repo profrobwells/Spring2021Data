@@ -99,6 +99,24 @@ glimpse(occupation5_25)
 occupation_master <- smartbind(occupation5_25, occupation5_29, occupation6_2, occupation6_12, occupation6_25, occupation6_28, occupation6_9, occupation7_14, occupation7_21, occupation7_24, occupation7_3, occupation7_6, occupation8_10, occupation8_20, occupation8_3, occupation8_7)
 
 ```
+### Follow the template above to import the occupational sheets from the second spreadsheet
+##import the file from your hard drive
+##adapt this below
+```{r}
+ # occupation5_25 <- rio::import("/Users/rswells/Dropbox/Classes/Data Spring 2021/Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
+
+
+```
+
+##pull in the sheets
+#This section for building the table from individual sheets
+```{r include=FALSE}
+ occupation5_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
+```
+
+
+
+
 ###Below is all school data script
 
 
