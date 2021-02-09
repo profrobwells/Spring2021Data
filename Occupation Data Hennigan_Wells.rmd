@@ -1,0 +1,421 @@
+---
+title: "Occupational Data"
+author: "Mary Hennigan and Rob Wells and Abby Zimmardi" 
+date: "2/4/2021"
+output: pdf_document
+---
+
+# Compilation of Occupational COVID-19 Reports for Calculations
+
+- **This notebook retrieves data from a Google sheet and compiles a time series of ADH occupational infection reports**
+
+--**This 1/26 version created a time series from May 17 - Aug 20**
+
+-**It will create a masterfile: occupation_master.csv**
+
+# Part 1: Import Data, Clean It
+
+```{r include=FALSE}
+#install.packages("slider")
+#install.packages("zoo")
+#install.packages("gtools")
+# vignette("basic-usage", package="googlesheets")
+#install.packages("googledrive")
+#install.packages("googlesheets4")
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(googlesheets4)
+library(googledrive)
+library(tidyr)
+library(jsonlite)
+library(gtools)
+library(zoo)
+library(reshape2)
+library(slider)
+```
+
+#Import data from Hard Drive 
+```{r}
+ # occupation5_25 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/OccupationMaster.xlsx", which = "525 Occupational")
+```
+
+#Wells 
+```{r}
+  occupation5_25 <- rio::import("/Users/rswells/Dropbox/Classes/Data Spring 2021/Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
+
+
+```
+
+
+#This section for building the table from individual sheets
+```{r include=FALSE}
+ occupation5_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
+ occupation5_29 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "529 Occupational")
+ occupation6_2 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "62 Occupational")
+ occupation5_25$date <- "2020-5-25"
+ occupation5_29$date <- "2020-5-29"
+ occupation6_2$date <- "2020-6-2"
+ occupation6_5 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "65 Occupational")
+ occupation6_9 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "69 Occupational")
+ occupation6_12 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "612 Occupational")
+ occupation6_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "614 Occupational")
+ occupation6_18 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "618 Occupational")
+ occupation6_5$date <- "2020-6-05"
+ occupation6_9$date <- "2020-6-09"
+ occupation6_12$date <- "2020-6-12"
+ occupation6_14$date <- "2020-6-14"
+ occupation6_18$date <- "2020-6-18"
+ occupation6_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "625 Occupational")
+ occupation6_28 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "628 Occupational")
+ occupation7_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "73 Occupational")
+ occupation7_6 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "76 Occupational")
+ occupation6_25$date <- "2020-6-25"
+ occupation6_28$date <- "2020-6-28"
+ occupation7_3$date <- "2020-7-03"
+ occupation7_6$date <- "2020-7-06"
+ occupation7_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "714 Occupational")
+ occupation7_21 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "721 Occupational")
+ occupation7_24 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "724 Occupational")
+ occupation8_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "83 Occupational")
+ occupation8_7 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "87 Occupational")
+ occupation7_14$date <- "2020-7-14"
+ occupation7_21$date <- "2020-7-21"
+ occupation7_24$date <- "2020-7-24"
+ occupation8_3$date <- "2020-8-03"
+ occupation8_7$date <- "2020-8-07"
+ occupation8_10 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "810 Occupational")
+ occupation8_20 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "820 Occupational")
+ occupation8_10$date <- "2020-8-10"
+ occupation8_20$date <- "2020-8-20"
+```
+
+
+```{r}
+glimpse(occupation5_25)
+```
+
+```{r warning=FALSE}
+#Changed name to occupation_may_august
+occupation_may_august <- smartbind(occupation5_25, occupation5_29, occupation6_2, occupation6_12, occupation6_25, occupation6_28, occupation6_9, occupation7_14, occupation7_21, occupation7_24, occupation7_3, occupation7_6, occupation8_10, occupation8_20, occupation8_3, occupation8_7)
+
+#This combines occupational data from May 25 through Aug 20
+write.csv(occupation_may_august, "occupationalmay_august.csv")
+
+```
+
+
+### Follow the template above to import the occupational sheets from the second spreadsheet
+##import the file from your hard drive
+##adapt this below
+```{r}
+# occupation10_1 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/Occupationals from PDFs.xlsx", which = "Occupational 10-1")
+
+  # occupation10_1 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/Occupationals from PDFs.xlsx", which = "Occupational 10-1")
+
+```
+
+##pull in the sheets
+#This section for building the table from individual sheets
+```{r include=FALSE}
+ occupation10_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10-1")
+occupation10_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.5")
+occupation10_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.8")
+occupation10_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.12")
+occupation10_15 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.15")
+occupation10_19 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.19")
+occupation10_22 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.22")
+occupation10_26 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.26")
+occupation10_29 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.29")
+occupation9_3 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.3")
+occupation9_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.7")
+occupation9_9 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.9")
+occupation9_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.14")
+occupation9_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.28")
+occupation8_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.17")
+occupation8_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.24")
+occupation8_27 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.27")
+occupation8_31 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.31")
+occupation11_2 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.02")
+occupation11_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.05")
+occupation11_9 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.09")
+occupation11_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.12")
+occupation11_16 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.16")
+occupation11_19 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.19")
+occupation11_23 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.23")
+occupation11_26 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.26")
+occupation11_30 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.30")
+occupation12_3 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.3")
+occupation12_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.7")
+occupation12_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.14")
+occupation12_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.17")
+occupation12_21 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.21")
+occupation12_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.24")
+occupation12_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.28")
+occupation12_31 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.31")
+occupation1_4 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.04")
+occupation1_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.07")
+occupation1_11 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.11")
+occupation1_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.14")
+occupation1_18 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.18")
+occupation1_21 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.21")
+occupation1_25 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.25")
+occupation1_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.28")
+#Add new dates here
+occupation2_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.01")
+
+```
+
+#Clean and Normalize Names
+```{r include=FALSE}
+occupation10_1 <- clean_names(occupation10_1)
+occupation10_5 <- clean_names(occupation10_5)
+occupation10_8 <- clean_names(occupation10_8)
+occupation10_12 <- clean_names(occupation10_12)
+occupation10_15 <- clean_names(occupation10_15)
+occupation10_19 <- clean_names(occupation10_19)
+occupation10_22 <- clean_names(occupation10_22)
+occupation10_26 <- clean_names(occupation10_26)
+occupation10_29 <- clean_names(occupation10_29)
+occupation9_3 <- clean_names(occupation9_3)
+occupation9_7 <- clean_names(occupation9_7)
+occupation9_9 <- clean_names(occupation9_9)
+occupation9_14 <- clean_names(occupation9_14)
+occupation9_28 <- clean_names(occupation9_28)
+occupation8_17 <- clean_names(occupation8_17)
+occupation8_24 <- clean_names(occupation8_24)
+occupation8_27 <- clean_names(occupation8_27)
+occupation8_31 <- clean_names(occupation8_31)
+occupation11_2 <- clean_names(occupation11_2)
+occupation11_5 <- clean_names(occupation11_5)
+occupation11_9 <- clean_names(occupation11_9)
+occupation11_12 <- clean_names(occupation11_12)
+occupation11_16 <- clean_names(occupation11_16)
+occupation11_19 <- clean_names(occupation11_19)
+occupation11_23 <- clean_names(occupation11_23)
+occupation11_26 <- clean_names(occupation11_26)
+occupation11_30 <- clean_names(occupation11_30)
+
+occupation12_3 <- clean_names(occupation12_3)
+occupation12_7 <- clean_names(occupation12_7)
+occupation12_14 <- clean_names(occupation12_14)
+occupation12_17 <- clean_names(occupation12_17)
+occupation12_21 <- clean_names(occupation12_21)
+occupation12_24 <- clean_names(occupation12_24)
+occupation12_28 <- clean_names(occupation12_28)
+occupation12_31 <- clean_names(occupation12_31)
+
+occupation1_4 <- clean_names(occupation1_4)
+occupation1_7 <- clean_names(occupation1_7)
+occupation1_11 <- clean_names(occupation1_11)
+occupation1_14 <- clean_names(occupation1_14)
+occupation1_18 <- clean_names(occupation1_18)
+occupation1_21 <- clean_names(occupation1_21)
+occupation1_25 <- clean_names(occupation1_25)
+occupation1_28 <- clean_names(occupation1_28)
+occupation2_1 <- clean_names(occupation2_1)
+
+```
+
+
+#Combine through 9-14
+#This creates an employer db from Aug 17-Sept 14
+```{r warning=FALSE}
+
+employer_master <- smartbind(occupation8_17, occupation8_24, occupation8_27, occupation8_31, occupation9_14, occupation9_3, occupation9_7, occupation9_9)
+```
+
+
+#This creates an industry db from Sept 28-Feb 1, 2021. It lacks the Employer Names
+```{r warning=FALSE}
+#This creates an industry db from Sept 28-Feb 1, 2021. It lacks the Employer Names
+industry_master <- smartbind(occupation2_1, occupation1_28, occupation1_25, occupation1_11, occupation1_7, occupation1_4, occupation12_31, occupation12_28, occupation12_3, occupation12_24, occupation12_21, occupation12_17, occupation12_14, occupation11_9, occupation11_5, occupation11_30, occupation11_26, occupation11_23, occupation11_2, occupation11_19, occupation11_16, occupation11_12, occupation10_8, occupation10_5, occupation10_29, occupation10_22, occupation10_19, occupation10_26, occupation10_15, occupation10_12, occupation10_1, occupation12_7, occupation9_28, occupation1_21, occupation1_18, occupation1_14)
+
+#occupation_master2 <- occupation_master2[ -c(3,4,5,6) ]
+
+#arrange(occupation_master2,desc(Date))
+employer_master$date <- ymd(employer_master$date)
+industry_master$date <- ymd(industry_master$date)   
+
+write.csv(employer_master,"employer_master.csv")
+
+glimpse(industry_master)
+
+```
+
+
+#separate the company and city by comma
+#from this script: https://profrobwells.github.io/HomelessSP2020/SF_311_Calls_UofA.html
+#split data into two columns
+#SF <- separate(data = SF, col = crime1, into = c("crime2", "crime3", "crime4"), sep = " ", extra = "merge", fill = "right")
+
+```{r}
+#311 records
+industry_master <- separate(data = industry_master, col = industry_city_county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
+
+industry_master <- clean_names(industry_master)
+
+
+industry_master$city <- str_trim(industry_master$city, side = c("both"))
+industry_master$county <- str_trim(industry_master$county,  side = c("both"))
+write.csv(industry_master,"industry_master.csv")
+glimpse(industry_master)
+```
+
+#Import 329 records of company names and dates.
+```{r}
+#329 records
+names <- rio::import("Facilities-Occupational Cases-Deaths.csv")
+names$Date <- ymd(names$Date)
+write.csv(names,"names.csv")
+glimpse(names)
+```
+#Join the Industry and Names Files
+
+#Howard Center People Start Here:
+```{r}
+#329 records from Sept 17 to Jan 28
+names <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/names.csv")
+#311 records from Sept 28 to Feb 1
+industry_master <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/industry_master.csv")
+```
+
+#We now join the industry db with a list of company names and dates
+
+```{r}
+joined_industry_names <- industry_master %>% 
+  inner_join(names, by=c("date"="Date", "city"="City", "county"="County"))
+
+write.csv(joined_industry_names,"joined_indstry_names.csv")
+
+
+#Problem: 369 records, 58 extra than the source industry file
+#It is posting double entries on some dates
+```
+
+
+#Possible Fix: Have them all the same date period: Sept 28-Jan 28
+```{r}
+#318 records
+names2 <- names %>% 
+  filter(Date >= "2020-09-28")
+
+#307 records
+industry_master2 <- industry_master %>% 
+  filter(date >= ("2020-09-28")) %>% 
+  filter(date <= ("2021-01-28"))
+```
+#What's messed up about this is the ADH gave us records for 11 more cases than what they reported.
+#We should check to see if we have all the records by date for the names and industry master - see if there are some date or record gaps in industry master
+
+#Anyway, we join again
+```{r}
+joined2 <- industry_master2 %>% 
+  inner_join(names2, by=c("date"="Date", "city"="City", "county"="County"))
+
+
+#Problem: Still 369 records, now 51 extra than the source industry file
+#It is still posting double entries on some dates
+```
+
+#End of dilemma#
+
+#Notes Below#
+
+
+#This section is aimed at running down the duplication
+
+#73 records in the names file
+```{r}
+names_original <- names %>% 
+  count(`Business Name`)
+```
+
+#68 records in the joined file
+```{r}
+joined_db <- joined %>% 
+  count(`Business Name`)
+```
+
+
+
+```{r}
+#problem: 403 records
+joined2 <- industry_master %>% 
+  left_join(names, by=c("date"="Date", "city"="City", "county"="County"))
+
+```
+
+
+###Format Dates
+```{r}
+library(lubridate)
+
+names$year <- year(names$Date)
+names$month <- month(names$Date, label=TRUE)
+names$week <- week(names$Date)
+names$day <- day(names$Date)
+names$weekday <- wday(names$Date, label=TRUE, abbr=FALSE)
+
+
+employer_master$year <- year(employer_master$date)
+employer_master$month <- month(employer_master$date, label=TRUE)
+employer_master$week <- week(employer_master$date)
+employer_master$day <- day(employer_master$date)
+employer_master$weekday <- wday(employer_master$date, label=TRUE, abbr=FALSE)
+
+
+
+industry_master$year <- year(industry_master$date)
+industry_master$month <- month(industry_master$date, label=TRUE)
+industry_master$week <- week(industry_master$date)
+industry_master$day <- day(industry_master$date)
+industry_master$weekday <- wday(industry_master$date, label=TRUE, abbr=FALSE)
+glimpse(industry_master)
+```
+
+```{r}
+#Mini table
+mini <- employer_master %>% 
+  select(employer_city_county, date, year, month, week, day, weekday,total_number_of_cases)
+mini
+```
+
+
+
+
+```{r}
+sep <- employer_master %>% 
+  select("employer_city_county", "date", "month", "total_number_of_cases") %>% 
+filter(month == "Sep") %>% 
+  arrange(desc("total_number_of_cases"))
+
+sep
+
+
+```
+
+
+#fix this
+
+```{r}
+#Mini table
+mini_industry <- industry_master %>% 
+  select(industry_city_county, date, year, month, week, day, weekday,total_number_of_cases)
+mini_industry
+```
+
+```{r}
+oct <- industry_master %>% 
+  select("industry_city_county", "date", "month", "total_number_of_cases") %>% 
+filter(month == "Oct") %>% 
+  arrange(desc("date"))
+
+oct
+write.csv(oct, "oct_industry.csv")
+
+```
+
+
+
+
