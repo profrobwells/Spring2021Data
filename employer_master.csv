@@ -1,0 +1,64 @@
+"","date","employer_city_county","number_active_cases","number_recovered_cases","total_number_of_cases"
+"1:1",2020-08-17,"Wilson Brothers Lumber Co, Rison, Cleveland",10,6,16
+"1:2",2020-08-17,"ConAgra, Russellville, Pope",6,172,178
+"1:3",2020-08-17,"Frito Lay, Jonesboro, Craighead",6,34,40
+"1:4",2020-08-17,"Kagome Foods, Osceola, Mississippi",5,14,19
+"1:5",2020-08-17,"Peco, Batesville, Independence",19,62,81
+"1:6",2020-08-17,"OK Foods, Ft Smith, Sebastian",17,193,210
+"1:7",2020-08-17,"Tyson, Berry St., Springdale, Washington",11,336,347
+"1:8",2020-08-17,"Tyson, Van Buren, Crawford",8,111,119
+"1:9",2020-08-17,"Simmons Foods, Siloam Springs, Benton",7,67,74
+"1:10",2020-08-17,"Simmons Foods, Gentry, Benton",6,78,84
+"1:11",2020-08-17,"Tyson, 275 Hempstead 278, Hope, Hempstead",6,26,32
+"1:12",2020-08-17,"Tyson, Clarksville, Johnson",5,213,218
+"1:13",2020-08-17,"Tyson, Pine Bluff, Jefferson",5,32,37
+"1:14",2020-08-17,"Twin Rivers Foods, Ft Smith, Sebastian",5,11,16
+"2:1",2020-08-24,"Wilson Brothers Lumber Co, Rison, Cleveland",5,10,15
+"2:2",2020-08-24,"Peco, Batesville, Independence",30,109,139
+"2:3",2020-08-24,"Tyson, Van Buren, Crawford",16,115,131
+"2:4",2020-08-24,"Peco, Pocahontas, Randolph",11,49,60
+"2:5",2020-08-24,"Tyson, Green Forest, Carroll",5,79,84
+"3:1",2020-08-27,"Triumph Airborne Structures, Hot Springs, Garland",10,0,10
+"3:2",2020-08-27,"Global Food Group, Clinton, Van Buren",7,1,8
+"3:3",2020-08-27,"JW Aluminum Co., Russellville, Pope",6,0,6
+"3:4",2020-08-27,"Wilson Brothers Lumber Co, Rison, Cleveland",5,10,15
+"3:5",2020-08-27,"Peco, Batesville, Independence",25,118,143
+"3:6",2020-08-27,"Tyson, Van Buren, Crawford",24,128,152
+"3:7",2020-08-27,"OK Foods, Ft Smith, Sebastian",11,223,234
+"3:8",2020-08-27,"Peco, Pocahontas, Randolph",7,54,61
+"4:1",2020-08-31,"Triumph Airborne Structures, Hot Springs, Garland",13,2,15
+"4:2",2020-08-31,"JW Aluminum Co., Russellville, Pope",7,0,7
+"4:3",2020-08-31,"Global Food Group, Clinton, Van Buren",6,2,8
+"4:4",2020-08-31,"Tyson, Van Buren, Crawford",51,149,200
+"4:5",2020-08-31,"Peco, Batesville, Independence",11,136,147
+"4:6",2020-08-31,"OK Foods, Ft Smith, Sebastian",8,226,234
+"4:7",2020-08-31,"Peco, Pocahontas, Randolph",5,56,61
+"5:1",2020-09-14,"George's Poultry, Springdale, Washington",10,277,287
+"5:2",2020-09-14,"Tyson, Van Buren, Crawford",7,207,214
+"5:3",2020-09-14,"Peco, Pocahontas, Randolph",6,59,65
+"5:4",2020-09-14,"Cargill Poultry, Springdale, Washington",5,219,224
+"5:5",2020-09-14,"Textbook Brokers, Jonesboro, Craighead",6,5,11
+"5:6",2020-09-14,"Lennox Industries, Stuttgart, Arkansas",5,22,27
+"5:7",2020-09-14,"Triumph Airborne Structures, Hot Springs, Garland",5,15,20
+"6:1",2020-09-03,"Tyson, Van Buren, Crawford",31,175,206
+"6:2",2020-09-03,"Peco, Batesville, Independence",5,146,151
+"6:3",2020-09-03,"Peco, Pocahontas, Randolph",5,59,64
+"6:4",2020-09-03,"Triumph Airborne Structures in Hot Springs, AR",11,8,19
+"6:5",2020-09-03,"JW Aluminum Co., Russellville, Pope",5,3,8
+"7:1",2020-09-07,"Tyson, Van Buren, Crawford",24,185,209
+"7:2",2020-09-07,"George's Poultry, Springdale, Washington",5,275,280
+"7:3",2020-09-07,"Tyson, Green Forest, Carroll",5,90,95
+"7:4",2020-09-07,"Peco, Pocahontas, Randolph",5,58,63
+"7:5",2020-09-07,"Triumph Airborne Structures, Hot Springs, Garland",9,10,19
+"7:6",2020-09-07,"Big River Steel, Osceola, Mississippi",8,8,16
+"7:7",2020-09-07,"Textbook Brokers, Jonesboro, Craighead",8,1,9
+"7:8",2020-09-07,"MAHLE Engine Components, Russellville, Pope",7,1,8
+"8:1",2020-09-09,"Tyson, Van Buren, Crawford",17,195,212
+"8:2",2020-09-09,"George's Poultry, Springdale, Washington",8,274,282
+"8:3",2020-09-09,"Tyson, Green Forest, Carroll",5,93,98
+"8:4",2020-09-09,"Peco, Pocahontas, Randolph",5,57,62
+"8:5",2020-09-09,"Triumph Airborne Structures, Hot Springs, Garland",8,12,20
+"8:6",2020-09-09,"MAHLE Engine Components, Russellville, Pope",6,5,11
+"8:7",2020-09-09,"Textbook Brokers, Jonesboro, Craighead",6,4,10
+"8:8",2020-09-09,"Lennox Industries, Stuttgart, Arkansas",5,21,26
+"8:9",2020-09-09,"Big River Steel, Osceola, Mississippi",5,11,16

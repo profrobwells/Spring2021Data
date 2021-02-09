@@ -1,0 +1,315 @@
+"","date","industry","city","county","number_active_cases","number_recovered_cases","total_number_of_cases"
+"1:1",2021-02-01,"Manufacturing","Little Rock","Pulaski",7,56,63
+"1:2",2021-02-01,"Administrative and Support and Waste Management and
+Remediation Services","Ft Smith","Sebastian",6,23,29
+"1:3",2021-02-01,"Manufacturing","Nashville","Howard",9,106,115
+"1:4",2021-02-01,"Manufacturing","Little Rock","Pulaski",5,33,38
+"2:1",2021-01-28,"Manufacturing","Russellville","Pope",5,337,342
+"2:2",2021-01-28,"Manufacturing","Little Rock","Pulaski",6,54,60
+"2:3",2021-01-28,"Manufacturing","Camden","Ouachita",6,64,70
+"2:4",2021-01-28,"Manufacturing","Clarksville","Johnson",8,276,284
+"2:5",2021-01-28,"Manufacturing","Nashville","Howard",12,97,109
+"3:1",2021-01-25,"Public Administration","Camden","Ouachita",6,2,8
+"3:2",2021-01-25,"Manufacturing","Russellville","Pope",6,333,339
+"3:3",2021-01-25,"Manufacturing","Stuttgart","Arkansas",5,80,85
+"3:4",2021-01-25,"Manufacturing","Camden","Ouachita",7,62,69
+"3:5",2021-01-25,"Manufacturing","Hope","Hempstead",5,85,90
+"3:6",2021-01-25,"Manufacturing","Springdale","Washington",6,410,416
+"3:7",2021-01-25,"Manufacturing","Clarksville","Johnson",10,272,282
+"3:8",2021-01-25,"Manufacturing","Dardanelle","Yell",8,158,166
+"3:9",2021-01-25,"Manufacturing","Nashville","Howard",11,92,103
+"4:1",2021-01-11,"Manufacturing","Waldron","Scott",24,69,93
+"4:2",2021-01-11,"Manufacturing","Russellville","Pope",12,303,315
+"4:3",2021-01-11,"Manufacturing","Jonesboro","Craighead",7,121,128
+"4:4",2021-01-11,"Manufacturing","Siloam Springs","Benton",7,26,33
+"4:5",2021-01-11,"Manufacturing","Atkins","Pope",6,107,113
+"4:6",2021-01-11,"Manufacturing","Clarksville","Johnson",6,254,260
+"4:7",2021-01-11,"Manufacturing","Dardanelle","Yell",6,141,147
+"4:8",2021-01-11,"Finance and Insurance","Little Rock","Pulaski",5,15,20
+"4:9",2021-01-11,"Administrative and Support and Waste Management and
+Remediation Services","El Dorado","Union",5,21,26
+"4:10",2021-01-11,"Retail Trade","Danville","Yell",5,12,17
+"4:11",2021-01-11,"Manufacturing","Jonesboro","Craighead",5,38,43
+"5:1",2021-01-07,"Manufacturing","Russellville","Pope",20,296,316
+"5:2",2021-01-07,"Manufacturing","Jonesboro","Craighead",9,117,126
+"5:3",2021-01-07,"Retail Trade","Little Rock","Pulaski",8,13,21
+"5:4",2021-01-07,"Manufacturing","Springdale","Washington",8,86,94
+"5:5",2021-01-07,"Finance and Insurance","Little Rock","Pulaski",7,14,21
+"5:6",2021-01-07,"Manufacturing","Gentry","Benton",7,46,53
+"5:7",2021-01-07,"Manufacturing","Rogers","Benton",7,119,126
+"5:8",2021-01-07,"Manufacturing","Ola","Yell",6,13,19
+"5:9",2021-01-07,"Manufacturing","Jonesboro","Craighead",6,37,43
+"5:10",2021-01-07,"Manufacturing","Fort Smith","Sebastian",5,84,89
+"5:11",2021-01-07,"Manufacturing","Osceola","Mississippi",5,58,63
+"6:1",2021-01-04,"Manufacturing","Russellville","Pope",10,295,305
+"6:2",2021-01-04,"Manufacturing","Rogers","Benton",6,118,124
+"6:3",2021-01-04,"Manufacturing","Gentry","Benton",6,41,47
+"7:1",2020-12-31,"Manufacturing","Russellville","Pope",8,285,293
+"7:2",2020-12-31,"Manufacturing","Rogers","Benton",8,112,120
+"7:3",2020-12-31,"Administrative and Support and Waste Management and
+Remediation Services","Springdale","Washington",7,44,51
+"7:4",2020-12-31,"Manufacturing","Springdale","Washington",6,397,403
+"7:5",2020-12-31,"Manufacturing","Green Forest","Carroll",5,271,276
+"7:6",2020-12-31,"Manufacturing","Russellville","Pope",5,124,129
+"8:1",2020-12-28,"Manufacturing","Rogers","Benton",9,103,112
+"8:2",2020-12-28,"Manufacturing","Glenwood","Pike",6,5,11
+"8:3",2020-12-28,"Manufacturing","Russellville","Pope",5,276,281
+"8:4",2020-12-28,"Finance and Insurance","Little Rock","Pulaski",5,7,12
+"9:1",2020-12-03,"Manufacturing","Green Forest","Carroll",7,199,206
+"9:2",2020-12-03,"Manufacturing","Russellville","Pope",6,231,237
+"9:3",2020-12-03,"Manufacturing","Jonesboro","Craighead",6,90,96
+"9:4",2020-12-03,"Manufacturing","Paragould","Greene",6,34,40
+"9:5",2020-12-03,"Manufacturing","Waldron","Scott",5,32,37
+"10:1",2020-12-24,"Manufacturing","Russellville","Pope",15,265,280
+"10:2",2020-12-24,"Manufacturing","Ashdown","Little River",11,30,41
+"10:3",2020-12-24,"Manufacturing","Osceola","Mississippi",11,2,13
+"10:4",2020-12-24,"Manufacturing","Rogers","Benton",9,313,322
+"10:5",2020-12-24,"Manufacturing","Danville","Yell",9,221,230
+"10:6",2020-12-24,"Manufacturing","Dardanelle","Yell",9,127,136
+"10:7",2020-12-24,"Manufacturing","Olrich St","Rogers, Benton",9,96,105
+"10:8",2020-12-24,"Manufacturing","Nashville","Howard",9,62,71
+"10:9",2020-12-24,"Manufacturing","Russellville","Pope",8,112,120
+"10:10",2020-12-24,"Manufacturing","Jonesboro","Craighead",8,108,116
+"10:11",2020-12-24,"Manufacturing","Jonesboro","Craighead",7,42,49
+"10:12",2020-12-24,"Utilities","Russellville","Pope",7,31,38
+"10:13",2020-12-24,"Manufacturing","Gentry","Benton",7,29,36
+"10:14",2020-12-24,"Manufacturing","Pocahontas","Randolph",6,104,110
+"10:15",2020-12-24,"Manufacturing","Fordyce","Dallas",6,7,13
+"10:16",2020-12-24,"Retail Trade","Siloam Springs","Benton",6,1,7
+"10:17",2020-12-24,"Manufacturing","Green Forest","Carroll",5,259,264
+"10:18",2020-12-24,"Manufacturing","Jonesboro","Craighead",5,104,109
+"10:19",2020-12-24,"Manufacturing","Berryville","Carroll",5,88,93
+"11:1",2020-12-21,"Manufacturing","Russellville","Pope",9,259,268
+"11:2",2020-12-21,"Manufacturing","Jonesboro","Craighead",8,107,115
+"11:3",2020-12-21,"Manufacturing","Berryville","Carroll",7,79,86
+"11:4",2020-12-21,"Manufacturing","Ash Down","Little River",6,26,32
+"11:5",2020-12-21,"Manufacturing","Nashville","Howard",6,62,68
+"11:6",2020-12-21,"Manufacturing","Osceola","Mississippi",6,1,7
+"11:7",2020-12-21,"Manufacturing","Atkins","Pope",6,154,160
+"11:8",2020-12-21,"Manufacturing","Fayetteville","Washington",5,16,21
+"11:9",2020-12-21,"Manufacturing","Gentry","Benton",5,24,29
+"11:10",2020-12-21,"Manufacturing","Dardanelle","Yell",5,125,130
+"12:1",2020-12-17,"Manufacturing","Jonesboro","Craighead",12,92,104
+"12:2",2020-12-17,"Manufacturing","Russellville","Pope",9,240,249
+"12:3",2020-12-17,"Manufacturing","Green Forest","Carroll",9,221,230
+"12:4",2020-12-17,"Manufacturing","Dardanelle","Yell",7,115,122
+"12:5",2020-12-17,"Manufacturing","Berryville","Carroll",7,59,66
+"12:6",2020-12-17,"Manufacturing","Ft Smith","Sebastian",7,40,47
+"12:7",2020-12-17,"Manufacturing","Jonesboro","Craighead",7,11,18
+"12:8",2020-12-17,"Manufacturing","Clarksville","Johnson",6,241,247
+"12:9",2020-12-17,"Manufacturing","Nashville","Howard",6,57,63
+"12:10",2020-12-17,"Manufacturing","Jonesboro","Craighead",6,23,29
+"12:11",2020-12-17,"Manufacturing","Russellville","Pope",5,97,102
+"12:12",2020-12-17,"Manufacturing","Jonesboro","Craighead",5,85,90
+"12:13",2020-12-17,"Manufacturing","Osceola","Mississippi",5,40,45
+"12:14",2020-12-17,"Manufacturing","Jonesboro","Craighead",5,35,40
+"12:15",2020-12-17,"Manufacturing","Fayetteville","Washington",5,13,18
+"13:1",2020-12-14,"Manufacturing","Green Forest","Carroll",27,220,247
+"13:2",2020-12-14,"Manufacturing","Russellville","Pope",19,237,256
+"13:3",2020-12-14,"Manufacturing","Dardanelle","Yell",13,109,122
+"13:4",2020-12-14,"Manufacturing","Clarksville","Johnson",12,234,246
+"13:5",2020-12-14,"Manufacturing","Ft Smith","Sebastian",10,65,75
+"13:6",2020-12-14,"Manufacturing","Waldron","Scott",10,46,56
+"13:7",2020-12-14,"Manufacturing","Jonesboro","Craighead",10,3,13
+"13:8",2020-12-14,"Manufacturing","Fayetteville","Washington",9,105,114
+"13:9",2020-12-14,"Manufacturing","Jonesboro","Craighead",8,95,103
+"13:10",2020-12-14,"Manufacturing","Ft Smith","Sebastian",8,9,17
+"13:11",2020-12-14,"Manufacturing","Russellville","Pope",7,100,107
+"13:12",2020-12-14,"Manufacturing","Jonesboro","Craighead",7,97,104
+"13:13",2020-12-14,"Manufacturing","Osceola","Mississippi",7,60,67
+"13:14",2020-12-14,"Manufacturing","Siloam Springs","Benton",6,110,116
+"13:15",2020-12-14,"Manufacturing","Hope","Hempstead",6,59,65
+"13:16",2020-12-14,"Manufacturing","Osceola","Mississippi",6,37,43
+"13:17",2020-12-14,"Manufacturing","Van Buren","Crawford",5,262,267
+"13:18",2020-12-14,"Manufacturing","Danville","Yell",5,211,216
+"13:19",2020-12-14,"Manufacturing","Pocahontas","Randolph",5,92,97
+"13:20",2020-12-14,"Manufacturing","Nashville","Howard",5,56,61
+"13:21",2020-12-14,"Manufacturing","Paragould","Greene",5,34,39
+"13:22",2020-12-14,"Manufacturing","Little Rock","Pulaski",5,33,38
+"13:23",2020-12-14,"Manufacturing","Springdale","Washington",5,31,36
+"13:24",2020-12-14,"Manufacturing","Roland","Pulaski",5,1,6
+"14:1",2020-11-09,"Manufacturing","Jonesboro","Craighead",9,68,77
+"14:2",2020-11-09,"Manufacturing","Jonesboro","Craighead",8,64,72
+"14:3",2020-11-09,"Manufacturing","Pine Bluff","Jefferson",7,73,80
+"14:4",2020-11-09,"Manufacturing","Pocahontas","Randolph",5,74,79
+"14:5",2020-11-09,"Manufacturing","Ft Smith","Sebastian",5,32,37
+"14:6",2020-11-09,"Manufacturing","Waldron","Scott",5,13,18
+"15:1",2020-11-05,"Manufacturing","Jonesboro","Craighead",10,66,76
+"15:2",2020-11-05,"Manufacturing","De Queen","Sevier",7,268,275
+"15:3",2020-11-05,"Manufacturing","Pocahontas","Randolph",7,72,79
+"15:4",2020-11-05,"Manufacturing","Green Forest","Carroll",6,144,150
+"15:5",2020-11-05,"Manufacturing","Pine Bluff","Jefferson",6,68,74
+"15:6",2020-11-05,"Manufacturing","Jonesboro","Craighead",6,61,67
+"15:7",2020-11-05,"Manufacturing","Van Buren","Crawford",5,225,230
+"15:8",2020-11-05,"Manufacturing","Jonesboro","Craighead",5,41,46
+"15:9",2020-11-05,"Manufacturing","Ft Smith","Sebastian",5,41,46
+"15:10",2020-11-05,"Manufacturing","Trumann","Poinsett",5,14,19
+"16:1",2020-11-30,"Manufacturing","Russellville","Pope",10,219,229
+"16:2",2020-11-30,"Manufacturing","Green Forest","Carroll",10,183,193
+"16:3",2020-11-30,"Manufacturing","Waldron","Scott",8,28,36
+"16:4",2020-11-30,"Manufacturing","Berryville","Carroll",7,57,64
+"16:5",2020-11-30,"Manufacturing","Huntsville","Madison",5,163,168
+"16:6",2020-11-30,"Manufacturing","Blytheville","Mississippi",5,29,34
+"16:7",2020-11-30,"Manufacturing","Jonesboro","Craighead",5,17,22
+"17:1",2020-11-26,"Manufacturing","Russellville","Pope",14,208,222
+"17:2",2020-11-26,"Manufacturing","Green Forest","Carroll",10,165,175
+"17:3",2020-11-26,"Manufacturing","Waldron","Scott",7,20,27
+"17:4",2020-11-26,"Manufacturing","Van Buren","Crawford",5,248,253
+"17:5",2020-11-26,"Manufacturing","Pocahontas","Randolph",5,81,86
+"17:6",2020-11-26,"Manufacturing","Berryville","Carroll",5,56,61
+"17:7",2020-11-26,"Manufacturing","Haskell","Saline",5,7,12
+"18:1",2020-11-23,"Manufacturing","Russellville","Pope",14,207,221
+"18:2",2020-11-23,"Manufacturing","Ft Smith","Sebastian",7,42,49
+"18:3",2020-11-23,"Manufacturing","Haskell","Saline",6,5,11
+"18:4",2020-11-23,"Manufacturing","Jonesboro","Craighead",5,83,88
+"18:5",2020-11-23,"Manufacturing","Jonesboro","Craighead",5,76,81
+"18:6",2020-11-23,"Manufacturing","Fayetteville","Washington",5,3,8
+"19:1",2020-11-02,"Manufacturing","Pine Bluff","Jefferson",9,65,74
+"19:2",2020-11-02,"Manufacturing","Pocahontas","Randolph",7,71,78
+"19:3",2020-11-02,"Manufacturing","Green Forest","Carroll",6,141,147
+"19:4",2020-11-02,"Manufacturing","Jonesboro","Craighead",6,64,70
+"19:5",2020-11-02,"Manufacturing","Ft Smith","Sebastian",6,40,46
+"19:6",2020-11-02,"Manufacturing","Russellville","Pope",5,79,84
+"19:7",2020-11-02,"Manufacturing","Jonesboro","Craighead",5,60,65
+"19:8",2020-11-02,"Manufacturing","Stuttgart","Arkansas",5,35,40
+"19:9",2020-11-02,"Manufacturing","Trumann","Poinsett",5,12,17
+"20:1",2020-11-19,"Manufacturing","Green Forest","Carroll",8,152,160
+"20:2",2020-11-19,"Manufacturing","Van Buren","Crawford",7,236,243
+"20:3",2020-11-19,"Manufacturing","Siloam Springs","Benton",7,97,104
+"20:4",2020-11-19,"Manufacturing","Ft Smith","Sebastian",7,40,47
+"20:5",2020-11-19,"Manufacturing","Russellville","Pope",6,205,211
+"20:6",2020-11-19,"Manufacturing","Jonesboro","Craighead",6,80,86
+"20:7",2020-11-19,"Manufacturing","Pocahontas","Randolph",5,75,80
+"20:8",2020-11-19,"Manufacturing","Alma","Crawford",5,2,7
+"21:1",2020-11-16,"Manufacturing","Jonesboro","Craighead",8,75,83
+"21:2",2020-11-16,"Manufacturing","Jonesboro","Craighead",7,69,76
+"21:3",2020-11-16,"Construction","Conway","Faulkner",7,4,11
+"21:4",2020-11-16,"Manufacturing","Waldron","Scott",7,13,20
+"21:5",2020-11-16,"Manufacturing","Siloam Springs","Benton",6,96,102
+"21:6",2020-11-16,"Manufacturing","Pocahontas","Randolph",6,74,80
+"21:7",2020-11-16,"Manufacturing","Van Buren","Crawford",5,231,236
+"21:8",2020-11-16,"Manufacturing","Green Forest","Carroll",5,148,153
+"21:9",2020-11-16,"Manufacturing","De Queen","Sevier",5,278,283
+"21:10",2020-11-16,"Manufacturing","Fort Smith","Sebastian",5,36,41
+"22:1",2020-11-12,"Manufacturing","Van Buren","Crawford",8,228,236
+"22:2",2020-11-12,"Manufacturing","Jonesboro","Craighead",8,73,81
+"22:3",2020-11-12,"Manufacturing","De Queen","Sevier",7,276,283
+"22:4",2020-11-12,"Manufacturing","Siloam Springs","Benton",7,92,99
+"22:5",2020-11-12,"Manufacturing","Jonesboro","Craighead",7,68,75
+"22:6",2020-11-12,"Manufacturing","Pine Bluff","Jefferson",6,75,81
+"22:7",2020-11-12,"Manufacturing","Waldron","Scott",6,14,20
+"22:8",2020-11-12,"Manufacturing","Ft Smith","Sebastian",5,35,40
+"22:9",2020-11-12,"Manufacturing","Camden","Ouachita",5,15,20
+"23:1",2020-10-08,"Arts","Entertainment","and Recreation, Conway, Faulkner",10,2,12
+"23:2",2020-10-08,"Manufacturing","Fort Smith","Sebastian",8,262,270
+"23:3",2020-10-08,"Manufacturing","Green Forest","Carroll",8,104,112
+"23:4",2020-10-08,"Agriculture","Forestry","Fishing and Hunting, Colt, St. Francis",6,20,26
+"23:5",2020-10-08,"Manufacturing","Jonesboro","Craighead",6,47,53
+"23:6",2020-10-08,"Manufacturing","Russellville","Pope",6,190,196
+"23:7",2020-10-08,"Manufacturing","Pine Bluff","Jefferson",6,57,63
+"24:1",2020-10-05,"Agriculture","Forestry","Fishing and Hunting, Colt, St. Francis",26,0,26
+"24:2",2020-10-05,"Manufacturing","Berryville","Carroll",7,35,42
+"24:3",2020-10-05,"Arts","Entertainment","and Recreation, Conway, Faulkner",7,1,8
+"24:4",2020-10-05,"Manufacturing","Pine Bluff","Jefferson",6,56,62
+"24:5",2020-10-05,"Manufacturing","Russellville","Pope",5,190,195
+"24:6",2020-10-05,"Manufacturing","Osceola","Mississippi",5,38,43
+"25:1",2020-10-29,"Manufacturing","Green Forest","Carroll",10,137,147
+"25:2",2020-10-29,"Manufacturing","Trumann","Poinsett",8,9,17
+"25:3",2020-10-29,"Manufacturing","Pocahontas","Randolph",7,69,76
+"25:4",2020-10-29,"Manufacturing","Waldron","Scott",6,7,13
+"25:5",2020-10-29,"Manufacturing","Springdale","Washington",5,377,382
+"25:6",2020-10-29,"Manufacturing","Pine Bluff","Jefferson",5,87,92
+"25:7",2020-10-29,"Manufacturing","Pine Bluff","Jefferson",5,65,70
+"25:8",2020-10-29,"Manufacturing","Nashville","Howard",5,64,69
+"25:9",2020-10-29,"Manufacturing","Stuttgart","Arkansas",5,34,39
+"25:10",2020-10-29,"Manufacturing","Dumas","Desha",5,12,17
+"26:1",2020-10-22,"Manufacturing","Green Forest","Carroll",9,125,134
+"26:2",2020-10-22,"Manufacturing","Stuggart","Arkansas",7,29,36
+"26:3",2020-10-22,"Manufacturing","Pine Bluff","Jefferson",6,79,85
+"26:4",2020-10-22,"Manufacturing","Pocahontas","Randolph",6,66,72
+"26:5",2020-10-22,"Manufacturing","Texarkana","Miller",5,24,29
+"27:1",2020-10-19,"Manufacturing","Green Forest","Carroll",9,117,126
+"27:2",2020-10-19,"Manufacturing","Jonesboro","Craighead",8,3,11
+"27:3",2020-10-19,"Manufacturing","Pine Bluff","Jefferson",7,58,65
+"27:4",2020-10-19,"Manufacturing","Pine Bluff","Jefferson",6,77,83
+"28:1",2020-10-26,"Manufacturing","Green Forest","Carroll",10,131,141
+"28:2",2020-10-26,"Manufacturing","Pine Bluff","Jefferson",8,79,87
+"28:3",2020-10-26,"Manufacturing","Pocahontas","Randolph",7,67,74
+"28:4",2020-10-26,"Manufacturing","Stuttgart","Arkansas",6,30,36
+"28:5",2020-10-26,"Manufacturing","Paragould","Greene",6,15,21
+"28:6",2020-10-26,"Manufacturing","Waldron","Scott",6,4,10
+"28:7",2020-10-26,"Manufacturing","Stuttgart","Arkansas",5,54,59
+"28:8",2020-10-26,"Manufacturing","Dumas","Desha",5,10,15
+"29:1",2020-10-15,"Manufacturing","Jonesboro","Craighead",8,3,11
+"29:2",2020-10-15,"Manufacturing","Pine Bluff","Jefferson",7,58,65
+"29:3",2020-10-15,"Manufacturing","Searcy","White",7,7,14
+"29:4",2020-10-15,"Construction","Little Rock","Pulaski",7,0,7
+"29:5",2020-10-15,"Manufacturing","Green Forest","Carroll",6,106,112
+"29:6",2020-10-15,"Manufacturing","Fort Smith","Sebastian",6,263,269
+"29:7",2020-10-15,"Manufacturing","Jonesboro","Craighead",5,53,58
+"29:8",2020-10-15,"Manufacturing","Stuttgart","Arkansas",5,45,50
+"29:9",2020-10-15,"Manufacturing","Stuttgart","Arkansas",5,26,31
+"30:1",2020-10-12,"Arts","Entertainment","and Recreation, Conway, Faulkner",8,5,13
+"30:2",2020-10-12,"Manufacturing","Jonesboro","Craighead",8,49,57
+"30:3",2020-10-12,"Manufacturing","Pine Bluff","Jefferson",7,58,65
+"30:4",2020-10-12,"Manufacturing","Fort Smith","Sebastian",7,262,270
+"30:5",2020-10-12,"Manufacturing","Searcy","White",6,6,12
+"30:6",2020-10-12,"Manufacturing","Russellville","Pope",5,193,198
+"30:7",2020-10-12,"Manufacturing","Green Forest","Carroll",5,105,110
+"31:1",2020-10-10,"Agriculture","Forestry","Fishing and Hunting, Colt, St. Francis",26,0,26
+"31:2",2020-10-10,"Public Administration","Pine Bluff","Jefferson",7,3,10
+"31:3",2020-10-10,"Manufacturing","Berryville","Carroll",6,34,40
+"31:4",2020-10-10,"Manufacturing","Pine Bluff","Jefferson",6,55,61
+"31:5",2020-10-10,"Manufacturing","Stuttgart","Arkansas",5,36,41
+"32:1",2020-12-07,"Manufacturing","Green Forest","Carroll",11,204,215
+"32:2",2020-12-07,"Manufacturing","Waldron","Scott",11,39,50
+"32:3",2020-12-07,"Manufacturing","Russellville","Pope",10,229,239
+"32:4",2020-12-07,"Manufacturing","Ft Smith","Sebastian",10,60,70
+"32:5",2020-12-07,"Manufacturing","Van Buren","Crawford",8,255,263
+"32:6",2020-12-07,"Manufacturing","Rogers","Benton",7,301,308
+"32:7",2020-12-07,"Manufacturing","Clarksville","Johnson",7,230,237
+"32:8",2020-12-07,"Manufacturing","Fayetteville","Washington",7,99,106
+"32:9",2020-12-07,"Manufacturing","Jonesboro","Craighead",7,92,99
+"32:10",2020-12-07,"Manufacturing","Jonesboro","Craighead",7,91,98
+"32:11",2020-12-07,"Manufacturing","Russellville","Pope",6,95,101
+"32:12",2020-12-07,"Manufacturing","Camden","Ouachita",6,30,36
+"32:13",2020-12-07,"Manufacturing","Dardanelle","Yell",5,105,110
+"32:14",2020-12-07,"Manufacturing","Berryville","Carroll",5,12,17
+"32:15",2020-12-07,"Manufacturing","Warren","Bradley",5,11,16
+"33:1",2020-09-28,"Manufacturing","Pine Bluff","Jefferson",6,53,59
+"33:2",2020-09-28,"Manufacturing","Stuttgart","Arkansas",6,31,37
+"33:3",2020-09-28,"Public Administration","Pine Bluff","Jefferson",6,3,9
+"34:1",2021-01-21,"Manufacturing","Camden","Ouachita",5,46,51
+"34:2",2021-01-21,"Finance and Insurance","North Little Rock","Pulaski",5,5,10
+"34:3",2021-01-21,"Manufacturing","Russellville","Pope",5,331,336
+"34:4",2021-01-21,"Manufacturing","Springdale","Washington",7,408,415
+"34:5",2021-01-21,"Manufacturing","Berryville","Carroll",7,112,119
+"34:6",2021-01-21,"Manufacturing","Clarksville","Johnson",5,269,274
+"34:7",2021-01-21,"Manufacturing","Dardanelle","Yell",6,154,160
+"35:1",2021-01-18,"Finance and Insurance","North Little Rock","Pulaski",7,2,9
+"35:2",2021-01-18,"Manufacturing","Russellville","Pope",7,326,333
+"35:3",2021-01-18,"Manufacturing","Fayetteville","Washington",5,54,59
+"35:4",2021-01-18,"Manufacturing","Siloam Springs","Benton",5,32,37
+"35:5",2021-01-18,"Manufacturing","Jonesboro","Craighead",5,116,121
+"35:6",2021-01-18,"Manufacturing","North Little Rock","Pulaski",5,11,16
+"35:7",2021-01-18,"Manufacturing","Camden","Ouachita",7,53,60
+"35:8",2021-01-18,"Manufacturing","Atkins","Pope",6,116,122
+"35:9",2021-01-18,"Manufacturing","Hope","Hempstead",7,78,85
+"35:10",2021-01-18,"Manufacturing","Springdale","Washington",7,406,413
+"35:11",2021-01-18,"Manufacturing","Berryville","Carroll",8,106,114
+"35:12",2021-01-18,"Manufacturing","Clarksville","Johnson",7,265,272
+"35:13",2021-01-18,"Manufacturing","Dardanelle","Yell",9,151,160
+"35:14",2021-01-18,"Manufacturing","Green Forest","Carroll",5,283,288
+"35:15",2021-01-18,"Manufacturing","Waldron","Scott",20,73,93
+"36:1",2021-01-14,"Manufacturing","Waldron","Scott",18,71,89
+"36:2",2021-01-14,"Manufacturing","Atkins","Pope",10,112,122
+"36:3",2021-01-14,"Manufacturing","Russellville","Pope",8,323,331
+"36:4",2021-01-14,"Manufacturing","Van Buren","Crawford",7,274,281
+"36:5",2021-01-14,"Manufacturing","Siloam Springs","Benton",7,31,38
+"36:6",2021-01-14,"Manufacturing","Dardanelle","Yell",6,149,155
+"36:7",2021-01-14,"Manufacturing","Jonesboro","Craighead",6,115,121
+"36:8",2021-01-14,"Manufacturing","Hope","Hempstead",6,74,80
+"36:9",2021-01-14,"Manufacturing","Clarksville","Johnson",5,261,266
+"36:10",2021-01-14,"Manufacturing","Berryville","Carroll",5,104,109
+"36:11",2021-01-14,"Manufacturing","Jonesboro","Craighead",5,38,43
+"36:12",2021-01-14,"Accommodation and Food Services","North Little Rock","Pulaski",5,3,8
