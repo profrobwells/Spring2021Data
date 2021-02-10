@@ -1,7 +1,7 @@
 ---
 title: "Occupational Data"
 author: "Mary Hennigan and Rob Wells and Abby Zimmardi" 
-date: "2/4/2021"
+date: "2/10/2021"
 output: pdf_document
 ---
 
@@ -35,7 +35,10 @@ library(reshape2)
 library(slider)
 ```
 
-#Import data from Hard Drive 
+#We have two spreadsheets in Google. One has the data from May 25-August 20
+
+
+Import data from Hard Drive 
 ```{r}
  # occupation5_25 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/OccupationMaster.xlsx", which = "525 Occupational")
 ```
@@ -104,21 +107,21 @@ write.csv(occupation_may_august, "occupationalmay_august.csv")
 
 ```
 
+#The second spreadsheet has the data from September to February 2021
+# https://docs.google.com/spreadsheets/d/1R5dVT4QN586ANvAH1SJ7ye94Br5OtrZsAA2e4KlWn0o/edit#gid=100802501
 
-### Follow the template above to import the occupational sheets from the second spreadsheet
+
 ##import the file from your hard drive
-##adapt this below
+
 ```{r}
 # occupation10_1 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/Occupationals from PDFs.xlsx", which = "Occupational 10-1")
-
-  # occupation10_1 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/Occupationals from PDFs.xlsx", which = "Occupational 10-1")
 
 ```
 
 ##pull in the sheets
 #This section for building the table from individual sheets
 ```{r include=FALSE}
- occupation10_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10-1")
+ occupation10_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.1")
 occupation10_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.5")
 occupation10_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.8")
 occupation10_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.12")
@@ -278,6 +281,10 @@ glimpse(names)
 names <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/names.csv")
 #311 records from Sept 28 to Feb 1
 industry_master <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/industry_master.csv")
+
+
+#This is the first problem: ADH gave us more names than industry records. Check that Sept 17 doesn't have 18 record that would account for the difference.
+
 ```
 
 #We now join the industry db with a list of company names and dates
@@ -288,11 +295,34 @@ joined_industry_names <- industry_master %>%
 
 write.csv(joined_industry_names,"joined_indstry_names.csv")
 
+#Now 375 records. 64 extra than the source industry file
 
 #Problem: 369 records, 58 extra than the source industry file
 #It is posting double entries on some dates
 ```
 
+```{r}
+#Analyze records by date and location
+names %>% 
+  select(Date, City, County) %>% 
+  group_by(Date, City, County) %>% 
+  count() %>% 
+  arrange(desc(n))
+  
+```
+
+```{r}
+industry_master %>% 
+  select(date, city, county) %>% 
+  group_by(date, city, county) %>% 
+  count() %>% 
+  arrange(desc(n))
+#join all of the one values
+#filter to 1 and join that to original df (master)
+
+#clean industry master to get rid of entertainment
+#Test on 12-17-2020 Jonesboro. five cases dont match with the five companies.
+```
 
 #Possible Fix: Have them all the same date period: Sept 28-Jan 28
 ```{r}
@@ -314,7 +344,7 @@ joined2 <- industry_master2 %>%
   inner_join(names2, by=c("date"="Date", "city"="City", "county"="County"))
 
 
-#Problem: Still 369 records, now 51 extra than the source industry file
+#Problem: Still 375 records, now 68 extra than the source industry file
 #It is still posting double entries on some dates
 ```
 
