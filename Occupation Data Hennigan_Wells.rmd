@@ -320,6 +320,26 @@ joined2 <- industry_master2 %>%
 
 #End of dilemma#
 
+```{r}
+industry_date <- industry_master %>% 
+  count(date)
+
+names_date <- names %>% 
+  count(Date)
+```
+
+```{r}
+nomatches <- industry_date %>% 
+  anti_join(names_date, by=c("date"="Date", "n"="n"))
+nomatches
+#Oct 10, 5 records not in the Names file
+#Nov 16 11 in names but 10 in industry
+#Jan 18 14 in names but 15 in industry
+#Feb 1 4 records not in Names file
+
+```
+
+
 #Notes Below#
 
 
