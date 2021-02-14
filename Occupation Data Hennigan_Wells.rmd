@@ -45,7 +45,7 @@ Import data from Hard Drive
 
 #Wells 
 ```{r}
-  occupation5_25 <- rio::import("/Users/rswells/Dropbox/Classes/Data Spring 2021/Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
+  # occupation5_25 <- rio::import("/Users/rswells/Dropbox/Classes/Data Spring 2021/Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
 
 
 ```
@@ -53,44 +53,47 @@ Import data from Hard Drive
 
 #This section for building the table from individual sheets
 ```{r include=FALSE}
- occupation5_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
- occupation5_29 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "529 Occupational")
- occupation6_2 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "62 Occupational")
- occupation5_25$date <- "2020-5-25"
- occupation5_29$date <- "2020-5-29"
- occupation6_2$date <- "2020-6-2"
- occupation6_5 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "65 Occupational")
- occupation6_9 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "69 Occupational")
- occupation6_12 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "612 Occupational")
- occupation6_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "614 Occupational")
- occupation6_18 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "618 Occupational")
- occupation6_5$date <- "2020-6-05"
- occupation6_9$date <- "2020-6-09"
- occupation6_12$date <- "2020-6-12"
- occupation6_14$date <- "2020-6-14"
- occupation6_18$date <- "2020-6-18"
- occupation6_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "625 Occupational")
- occupation6_28 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "628 Occupational")
- occupation7_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "73 Occupational")
- occupation7_6 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "76 Occupational")
- occupation6_25$date <- "2020-6-25"
- occupation6_28$date <- "2020-6-28"
- occupation7_3$date <- "2020-7-03"
- occupation7_6$date <- "2020-7-06"
- occupation7_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "714 Occupational")
- occupation7_21 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "721 Occupational")
- occupation7_24 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "724 Occupational")
- occupation8_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "83 Occupational")
- occupation8_7 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "87 Occupational")
- occupation7_14$date <- "2020-7-14"
- occupation7_21$date <- "2020-7-21"
- occupation7_24$date <- "2020-7-24"
- occupation8_3$date <- "2020-8-03"
- occupation8_7$date <- "2020-8-07"
- occupation8_10 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "810 Occupational")
- occupation8_20 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "820 Occupational")
- occupation8_10$date <- "2020-8-10"
- occupation8_20$date <- "2020-8-20"
+#Import 19 Sheets, from May 25-Aug 20, 2020
+occupation5_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
+occupation5_29 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "529 Occupational")
+occupation6_2 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "62 Occupational")
+occupation6_5 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "65 Occupational")
+occupation6_9 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "69 Occupational")
+occupation6_12 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "612 Occupational")
+occupation6_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "614 Occupational")
+occupation6_18 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "618 Occupational")
+occupation6_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "625 Occupational")
+occupation6_28 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "628 Occupational")
+occupation7_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "73 Occupational")
+occupation7_6 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "76 Occupational")
+occupation7_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "714 Occupational")
+occupation7_21 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "721 Occupational")
+occupation7_24 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "724 Occupational")
+occupation8_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "83 Occupational")
+occupation8_7 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "87 Occupational")
+occupation8_10 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "810 Occupational")
+occupation8_20 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "820 Occupational")
+
+#Assign dates
+occupation5_25$date <- "2020-5-25"
+occupation5_29$date <- "2020-5-29"
+occupation6_2$date <- "2020-6-2"
+occupation6_5$date <- "2020-6-05"
+occupation6_9$date <- "2020-6-09"
+occupation6_12$date <- "2020-6-12"
+occupation6_14$date <- "2020-6-14"
+occupation6_18$date <- "2020-6-18"
+occupation6_25$date <- "2020-6-25"
+occupation6_28$date <- "2020-6-28"
+occupation7_3$date <- "2020-7-03"
+occupation7_6$date <- "2020-7-06"
+occupation7_14$date <- "2020-7-14"
+occupation7_21$date <- "2020-7-21"
+occupation7_24$date <- "2020-7-24"
+occupation8_3$date <- "2020-8-03"
+occupation8_7$date <- "2020-8-07"
+occupation8_10$date <- "2020-8-10"
+occupation8_20$date <- "2020-8-20"
 ```
 
 
@@ -99,12 +102,23 @@ glimpse(occupation5_25)
 ```
 
 ```{r warning=FALSE}
-#Changed name to occupation_may_august
-occupation_may_august <- smartbind(occupation5_25, occupation5_29, occupation6_2, occupation6_12, occupation6_25, occupation6_28, occupation6_9, occupation7_14, occupation7_21, occupation7_24, occupation7_3, occupation7_6, occupation8_10, occupation8_20, occupation8_3, occupation8_7)
+#Wells Note: IMPORTANT
 
-#This combines occupational data from May 25 through Aug 20
+#Missing numerous tables from above. Wells fixed. Always put in sequential order to see the gaps
+
+#Changed name to occupation_may_august to better keep track
+
+
+occupation_may_august <- smartbind(occupation5_25, occupation5_29, occupation6_2, occupation6_5,  occupation6_9, occupation6_12, occupation6_14, occupation6_18, occupation6_25, occupation6_28, occupation7_3, occupation7_6, occupation7_14, occupation7_21, occupation7_24,occupation8_3, occupation8_7,  occupation8_10, occupation8_20)
+
+#Wells note: Add this step so we can combine the two DFs later
+#Clean and Normalize Names
+occupation_may_august <- clean_names(occupation_may_august)
+
+#This combines 19 occupational data sheets from May 25 through Aug 20
 write.csv(occupation_may_august, "occupationalmay_august.csv")
 
+#Wells Note: Check this data against originals. No positives reported prior to June 5
 ```
 
 #The second spreadsheet has the data from September to February 2021
@@ -121,7 +135,7 @@ write.csv(occupation_may_august, "occupationalmay_august.csv")
 ##pull in the sheets
 #This section for building the table from individual sheets
 ```{r include=FALSE}
- occupation10_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.1")
+occupation10_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.1")
 occupation10_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.5")
 occupation10_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.8")
 occupation10_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.12")
@@ -217,7 +231,7 @@ occupation1_21 <- clean_names(occupation1_21)
 occupation1_25 <- clean_names(occupation1_25)
 occupation1_28 <- clean_names(occupation1_28)
 occupation2_1 <- clean_names(occupation2_1)
-
+#add the most recent dates here
 ```
 
 
@@ -225,11 +239,21 @@ occupation2_1 <- clean_names(occupation2_1)
 #This creates an employer db from Aug 17-Sept 14
 ```{r warning=FALSE}
 
-employer_master <- smartbind(occupation8_17, occupation8_24, occupation8_27, occupation8_31, occupation9_14, occupation9_3, occupation9_7, occupation9_9)
+employer_masterAugSept <- smartbind(occupation8_17, occupation8_24, occupation8_27, occupation8_31, occupation9_14, occupation9_3, occupation9_7, occupation9_9)
+
+#dates
+employer_masterAugSept$date <- ymd(employer_masterAugSept$date)
+
+#Separate the fields to industry, city, county
+employer_masterAugSept <- separate(data = employer_masterAugSept, col = employer_city_county, into = c("company_name", "city", "county"), sep = ",", extra = "merge", fill = "right")
+
+#write.csv(employer_masterAugSept,"employer_masterAugSept.csv")
+
+
 ```
 
 
-#This creates an industry db from Sept 28-Feb 1, 2021. It lacks the Employer Names
+#This creates an industry db from Sept 28-Feb 1, 2021. 
 ```{r warning=FALSE}
 #This creates an industry db from Sept 28-Feb 1, 2021. It lacks the Employer Names
 industry_master <- smartbind(occupation2_1, occupation1_28, occupation1_25, occupation1_11, occupation1_7, occupation1_4, occupation12_31, occupation12_28, occupation12_3, occupation12_24, occupation12_21, occupation12_17, occupation12_14, occupation11_9, occupation11_5, occupation11_30, occupation11_26, occupation11_23, occupation11_2, occupation11_19, occupation11_16, occupation11_12, occupation10_8, occupation10_5, occupation10_29, occupation10_22, occupation10_19, occupation10_26, occupation10_15, occupation10_12, occupation10_1, occupation12_7, occupation9_28, occupation1_21, occupation1_18, occupation1_14)
@@ -237,10 +261,8 @@ industry_master <- smartbind(occupation2_1, occupation1_28, occupation1_25, occu
 #occupation_master2 <- occupation_master2[ -c(3,4,5,6) ]
 
 #arrange(occupation_master2,desc(Date))
-employer_master$date <- ymd(employer_master$date)
 industry_master$date <- ymd(industry_master$date)   
 
-write.csv(employer_master,"employer_master.csv")
 
 glimpse(industry_master)
 
@@ -248,12 +270,9 @@ glimpse(industry_master)
 
 
 #separate the company and city by comma
-#from this script: https://profrobwells.github.io/HomelessSP2020/SF_311_Calls_UofA.html
-#split data into two columns
-#SF <- separate(data = SF, col = crime1, into = c("crime2", "crime3", "crime4"), sep = " ", extra = "merge", fill = "right")
 
 ```{r}
-#311 records
+#Separate the fields to industry, city, county
 industry_master <- separate(data = industry_master, col = industry_city_county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
 
 industry_master <- clean_names(industry_master)
@@ -264,6 +283,59 @@ industry_master$county <- str_trim(industry_master$county,  side = c("both"))
 write.csv(industry_master,"industry_master.csv")
 glimpse(industry_master)
 ```
+
+#Combine the industry_master, employer_masterAugSept, occupation_may_august into a single new data frame. You'll need to fix the business to company_name in occupation_may_august. See if there are other fixes. Drop the Misty calculations - we will do our own. Make note of what Misty was calculating.
+
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+#Part 2: Analysis
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+
+
+```{r}
+industry_date <- industry_master %>% 
+  count(date)
+
+names_date <- names %>% 
+  count(Date)
+```
+
+```{r}
+#Analyze records by date and location
+names %>% 
+  select(Date, City, County) %>% 
+  group_by(Date, City, County) %>% 
+  count() %>% 
+  arrange(desc(n))
+  
+```
+
+```{r}
+industry_master %>% 
+  select(date, city, county) %>% 
+  group_by(date, city, county) %>% 
+  count() %>% 
+  arrange(desc(n))
+#join all of the one values
+#filter to 1 and join that to original df (master)
+
+#clean industry master to get rid of entertainment
+#Test on 12-17-2020 Jonesboro. five cases dont match with the five companies.
+```
+
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+#NOTES BELOW THIS LINE. OUTDATED SEQUENCE OF MATCHING NAMES TO RECORDS
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+
+
+#Stop Here
+
+
+
+
 
 #Import 329 records of company names and dates.
 ```{r}
@@ -301,29 +373,6 @@ write.csv(joined_industry_names,"joined_indstry_names.csv")
 #It is posting double entries on some dates
 ```
 
-```{r}
-#Analyze records by date and location
-names %>% 
-  select(Date, City, County) %>% 
-  group_by(Date, City, County) %>% 
-  count() %>% 
-  arrange(desc(n))
-  
-```
-
-```{r}
-industry_master %>% 
-  select(date, city, county) %>% 
-  group_by(date, city, county) %>% 
-  count() %>% 
-  arrange(desc(n))
-#join all of the one values
-#filter to 1 and join that to original df (master)
-
-#clean industry master to get rid of entertainment
-#Test on 12-17-2020 Jonesboro. five cases dont match with the five companies.
-```
-
 #Possible Fix: Have them all the same date period: Sept 28-Jan 28
 ```{r}
 #318 records
@@ -350,13 +399,6 @@ joined2 <- industry_master2 %>%
 
 #End of dilemma#
 
-```{r}
-industry_date <- industry_master %>% 
-  count(date)
-
-names_date <- names %>% 
-  count(Date)
-```
 
 ```{r}
 nomatches <- industry_date %>% 
