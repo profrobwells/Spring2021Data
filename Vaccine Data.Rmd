@@ -7,8 +7,7 @@ output: html_document
 
 ```{r}
 
-vaccinecounty <- rio::import("/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/vaccine county doses_2_12raw.xlsx", skip=3, col_names = c("county", "dose1", "dose2", "dose2pct", "unknown_dose", "unkpct", "population"))
-
+vaccinecounty <- rio::import("https://github.com/profrobwells/Spring2021Data/blob/main/vaccine%20county%20doses_2_12raw.xlsx?raw=true", skip=3, col_names = c("county", "dose1", "dose2", "dose2pct", "unknown_dose", "unkpct", "population"))
 
 vaccinecounty <- separate(data = vaccinecounty, col = dose1, into = c("dose1x", "dose1pct"), sep = " ", extra = "merge", fill = "right")
 
