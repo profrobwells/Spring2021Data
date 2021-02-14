@@ -1,0 +1,23 @@
+---
+title: "Vaccine Data"
+author: "Rob Wells"
+date: "2/13/2021"
+output: html_document
+---
+
+```{r}
+
+vaccinecounty <- rio::import("/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/vaccine county doses_2_12raw.xlsx", skip=3, col_names = c("county", "dose1", "dose2", "dose2pct", "unknown_dose", "unkpct", "population"))
+
+
+vaccinecounty <- separate(data = vaccinecounty, col = dose1, into = c("dose1x", "dose1pct"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty <- separate(data = vaccinecounty, col = dose2, into = c("dose2x", "dose2pctx"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty$dose2percent <- paste(vaccinecounty$dose2pct, vaccinecounty$dose2pctx)
+
+head(vaccinecounty)
+
+```
+#Please clean out the NAs, the parentheses, format as integers
+#filter to a final df as county, dose1, dose1pct, dose2, dose2pct, unknown_dose, unkpct, population
