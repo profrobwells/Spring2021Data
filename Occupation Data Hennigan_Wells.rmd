@@ -1,15 +1,13 @@
 ---
 title: "Occupational Data"
 author: "Mary Hennigan and Rob Wells and Abby Zimmardi" 
-date: "2/10/2021"
+date: "2/16/2021"
 output: pdf_document
 ---
 
 # Compilation of Occupational COVID-19 Reports for Calculations
 
 - **This notebook retrieves data from a Google sheet and compiles a time series of ADH occupational infection reports**
-
---**This 1/26 version created a time series from May 17 - Aug 20**
 
 -**It will create a masterfile: occupation_master.csv**
 
@@ -40,7 +38,7 @@ library(slider)
 
 Import data from Hard Drive 
 ```{r}
- # occupation5_25 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/OccupationMaster.xlsx", which = "525 Occupational")
+  occupation5_25 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/OccupationMaster.xlsx", which = "525 Occupational")
 ```
 
 #Wells 
@@ -115,6 +113,7 @@ occupation_may_august <- clean_names(occupation_may_august)
 write.csv(occupation_may_august, "occupationalmay_august.csv")
 
 #Wells Note: Check this data against originals. No positives reported prior to June 5
+#Hennigan Note: I did not ask for original data before August. We should to check Misty's entries and collect any missing data. 
 ```
 
 #The second spreadsheet has the data from September to February 2021
@@ -124,7 +123,7 @@ write.csv(occupation_may_august, "occupationalmay_august.csv")
 ##import the file from your hard drive
 
 ```{r}
-# occupation10_1 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/Occupationals from PDFs.xlsx", which = "Occupational 10-1")
+ occupation10_1 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/Occupationals from PDFs.xlsx", which = "Occupational 10.1")
 
 ```
 
@@ -194,6 +193,7 @@ occupation9_3 <- clean_names(occupation9_3)
 occupation9_7 <- clean_names(occupation9_7)
 occupation9_9 <- clean_names(occupation9_9)
 occupation9_14 <- clean_names(occupation9_14)
+occupation9_17 <- clean_names(occupation9_17)
 occupation9_24 <- clean_names(occupation9_24)
 occupation9_28 <- clean_names(occupation9_28)
 occupation10_1 <- clean_names(occupation10_1)
@@ -295,9 +295,9 @@ industry_master <- smartbind(occupation2_11,
                              occupation11_5, 
                              occupation11_2, 
                              occupation10_29, 
-                             occupation10_22, 
-                             occupation10_19, 
                              occupation10_26, 
+                             occupation10_22,
+                             occupation10_19, 
                              occupation10_15, 
                              occupation10_12, 
                              occupation10_8, 
@@ -321,6 +321,7 @@ glimpse(industry_master)
 #separate the company and city by comma
 
 ```{r}
+
 #Separate the fields to industry, city, county
 industry_master <- separate(data = industry_master, col = industry_city_county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
 
@@ -335,6 +336,27 @@ glimpse(industry_master)
 
 #Combine the industry_master, employer_masterAugSept, occupation_may_august into a single new data frame. You'll need to fix the business to company_name in occupation_may_august. See if there are other fixes. Drop the Misty calculations - we will do our own. Make note of what Misty was calculating.
 
+#Rename Misty File Columns to match
+```{r}
+occupation_may_august <- occupation_may_august %>% 
+  rename(company_name = business, number_active_cases = active, number_recovered_cases = closed, total_number_of_cases = total_positivies)
+occupation_may_august
+
+#Hennigan Note: text in number fields "less than 5" should be changed, but I'm not sure what to. "Unknown" should become NA?
+```
+
+#Join Tables
+```{r}
+occupation_master1 <- smartbind(occupation_may_august, employer_masterAugSept, industry_master) %>% 
+arrange(desc(date)) 
+  
+occupation_master1
+write.csv(occupation_master1, "occupation_master1.csv")
+
+```
+
+
+
 #--------------------------------------------------------------------#
 #--------------------------------------------------------------------#
 #Part 2: Analysis
@@ -343,23 +365,65 @@ glimpse(industry_master)
 
 
 ```{r}
-industry_date <- industry_master %>% 
+master_date <- occupation_master1 %>% 
   count(date)
 
-names_date <- names %>% 
-  count(Date)
+#names_date <- names %>% 
+  #count(Date)
 ```
 
 ```{r}
 #Analyze records by date and location
-names %>% 
-  select(Date, City, County) %>% 
-  group_by(Date, City, County) %>% 
+occupation_master1 %>% 
+  select(date, city, county) %>% 
+  group_by(date, city, county) %>% 
   count() %>% 
   arrange(desc(n))
   
 ```
 
+
+```{r}
+#Analyze records by county location
+occupation_master1 %>% 
+  select(date, city, county) %>% 
+  group_by(county) %>% 
+  count() %>% 
+  arrange(desc(n))
+  
+```
+
+
+
+
+
+```{r}
+#Analyze records by city location
+occupation_master1 %>% 
+  select(date, city, county) %>% 
+  group_by(city) %>% 
+  count() %>% 
+  arrange(desc(n))
+  
+```
+
+
+
+```{r}
+#Analyze records by company name
+#Names need to be further cleaned to exclude addresses within the name field.
+occupation_master1 %>% 
+  select(date, city, county, company_name) %>% 
+  group_by(company_name) %>% 
+  count() %>% 
+  arrange(desc(n))
+  
+```
+
+
+
+
+#Hennigan note: is this old and no longer needed?
 ```{r}
 industry_master %>% 
   select(date, city, county) %>% 
