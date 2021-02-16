@@ -349,8 +349,11 @@ occupation_may_august
 ```{r}
 occupation_master1 <- smartbind(occupation_may_august, employer_masterAugSept, industry_master) %>% 
 arrange(desc(date)) 
+
+occupation_master1 <- occupation_master1 %>% 
+  select(date, company_name, address, city, county, number_active_cases, number_recovered_cases, industry, total_business, new_total, total_new, total_number_of_cases, percent_closed, x12, latitude, longitude)
   
-occupation_master1
+glimpse(occupation_master1)
 write.csv(occupation_master1, "occupation_master1.csv")
 
 ```
@@ -365,17 +368,66 @@ write.csv(occupation_master1, "occupation_master1.csv")
 
 
 ```{r}
-master_date <- occupation_master1 %>% 
-  count(date)
+occupation_master1 %>% 
+  count(company_name) %>% 
+  arrange(desc(n))
+
+#The Plan
+#Ask Gavin for data prior to August
+#Compile into occupational master
+
+
+#Figure out how it works with Tyson Berry street records
+
+#Do your data cleaning.
+
+
+
+#Wells note: Clean out the Poultry(general) and have that in the industry column
+#Dont have industry from May to August
+#After August don't have a poultry category
+#Poultry / non-poultry reports ended Sept 14
+#Total business May 25 to June 2
+#Rename as Total New Cases: "New total is a Misty calcualtion. Positives current vs previous.Same as Total new."
+#percent closed. closed / total positives  (closed renamed as total recovered cases)
+
+##Once we get the Gavin documents, we decided whether the poultry county / general duplicates individual records or not
+
+#How to do a total: The company is in the report if they have 5 or more case
+
+#Figure out how it works with Tyson Berry street
+
 
 #names_date <- names %>% 
   #count(Date)
+
 ```
+```{r}
+occupation_master1 %>% 
+  select(date, company_name, city, county, total_number_of_cases) %>% 
+  filter(company_name == "Tyson")
+
+
+x <- filter(occupation_master1, grepl ("Tyson", company_name)) %>% 
+  select(date, company_name, address, city, county, total_number_of_cases)
+
+tyson_berry <- filter(x, grepl ("Springdale", city))
+
+
+```
+
+```{r}
+#Use contains to search by string to find the variables by name
+#this grabs everything except date
+x <- select(master, contains("death"))
+names(x)
+```
+
 
 ```{r}
 #Analyze records by date and location
 occupation_master1 %>% 
-  select(date, city, county) %>% 
+  select(date, company_name, city, county) %>% 
   group_by(date, city, county) %>% 
   count() %>% 
   arrange(desc(n))
