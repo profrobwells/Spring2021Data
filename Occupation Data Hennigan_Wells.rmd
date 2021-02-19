@@ -401,7 +401,6 @@ occupation_master1 %>%
 #names_date <- names %>% 
   #count(Date)
 
-```
 ```{r}
 occupation_master1 %>% 
   select(date, company_name, city, county, total_number_of_cases) %>% 
@@ -412,10 +411,19 @@ x <- filter(occupation_master1, grepl ("Tyson", company_name)) %>%
   select(date, company_name, address, city, county, total_number_of_cases)
 
 tyson_berry <- filter(x, grepl ("Springdale", city))
-
+write.csv(tyson_berry,"tyson_berry.csv")
 
 ```
 
+```{r}
+#Use contains to search by string to find the variables by name
+#this grabs everything except date
+#berryst <- select(tyson_berry, contains("Berry"))
+#names(berryst)
+```
+
+
+#Queries: County, City, Company Name, Industry, Month
 ```{r}
 #Use contains to search by string to find the variables by name
 #this grabs everything except date
@@ -437,39 +445,81 @@ occupation_master1 %>%
 
 ```{r}
 #Analyze records by county location
-occupation_master1 %>% 
+countyreports <- occupation_master1 %>% 
   select(date, city, county) %>% 
   group_by(county) %>% 
   count() %>% 
   arrange(desc(n))
+
+#Need Help Cleaning More
+#countyreports <- separate(data = countyreports, col = county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
+
+write.csv(countyreports, "countyreports.csv")
   
 ```
 
 
 
-
-
 ```{r}
 #Analyze records by city location
-occupation_master1 %>% 
+cityreports <- occupation_master1 %>% 
   select(date, city, county) %>% 
   group_by(city) %>% 
   count() %>% 
   arrange(desc(n))
   
+cityreports$city<- gsub("[[:punct:]]", "", cityreports$city)
+#cityreports$city<- str_replace_all(cityreports$city, pattern=fixed(' '), replacement=fixed("_") )
+
+write.csv(cityreports, "cityreports.csv")
 ```
 
 
 
 ```{r}
 #Analyze records by company name
-#Names need to be further cleaned to exclude addresses within the name field.
-occupation_master1 %>% 
+companyreports <- occupation_master1 %>% 
   select(date, city, county, company_name) %>% 
   group_by(company_name) %>% 
   count() %>% 
   arrange(desc(n))
   
+write.csv(companyreports, "companyreports.csv")
+```
+
+
+```{r}
+#Analyze records by industry
+industryreports <- occupation_master1 %>% 
+  select(date, city, county, company_name, industry) %>% 
+  group_by(industry) %>% 
+  count() %>% 
+  arrange(desc(n))
+industryreports
+  
+write.csv(industryreports, "industryreports.csv")
+```
+
+#Split Dates for Analysis
+```{r}
+occupation_master1$year <- year(occupation_master1$date)
+occupation_master1$month <- month(occupation_master1$date, label=TRUE)
+#occupation_master1$week <- week(occupation_master1$date)
+#occupation_master1$day <- day(occupation_master1$date)
+#occupation_master1$weekday <- wday(occupation_master1$date, label=TRUE, abbr=FALSE)
+
+occupation_master1
+```
+
+#Group by Month
+```{r}
+month_counts <- occupation_master1 %>%
+  select(date, city, county, company_name, industry, month) %>% 
+  group_by(month) %>% 
+  count() %>% 
+  arrange(desc(n))
+month_counts
+write.csv(month_counts,"month_counts.csv")
 ```
 
 
