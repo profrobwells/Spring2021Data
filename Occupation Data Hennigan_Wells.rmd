@@ -401,7 +401,6 @@ occupation_master1 %>%
 #names_date <- names %>% 
   #count(Date)
 
-```
 ```{r}
 occupation_master1 %>% 
   select(date, company_name, city, county, total_number_of_cases) %>% 
@@ -425,6 +424,14 @@ write.csv(tyson_berry,"tyson_berry.csv")
 
 
 #Queries: County, City, Company Name, Industry, Month
+```{r}
+#Use contains to search by string to find the variables by name
+#this grabs everything except date
+x <- select(master, contains("death"))
+names(x)
+```
+
+
 ```{r}
 #Analyze records by date and location
 occupation_master1 %>% 
