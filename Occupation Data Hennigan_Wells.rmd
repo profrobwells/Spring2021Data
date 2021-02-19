@@ -36,19 +36,6 @@ library(slider)
 #We have two spreadsheets in Google. One has the data from May 25-August 20
 
 
-Import data from Hard Drive 
-```{r}
-  occupation5_25 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/OccupationMaster.xlsx", which = "525 Occupational")
-```
-
-#Wells 
-```{r}
-  # occupation5_25 <- rio::import("/Users/rswells/Dropbox/Classes/Data Spring 2021/Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
-
-
-```
-
-
 #This section for building the table from individual sheets
 ```{r include=FALSE}
 #Import 19 Sheets, from May 25-Aug 20, 2020
@@ -94,11 +81,6 @@ occupation8_10$date <- "2020-8-10"
 occupation8_20$date <- "2020-8-20"
 ```
 
-
-```{r}
-glimpse(occupation5_25)
-```
-
 ```{r warning=FALSE}
 #Wells Note: 19 sheets, May 25-Aug 20
 #Changed name to occupation_may_august to better keep track
@@ -118,16 +100,6 @@ write.csv(occupation_may_august, "occupationalmay_august.csv")
 
 #The second spreadsheet has the data from September to February 2021
 # https://docs.google.com/spreadsheets/d/1R5dVT4QN586ANvAH1SJ7ye94Br5OtrZsAA2e4KlWn0o/edit#gid=100802501
-
-
-##import the file from your hard drive
-
-```{r}
- occupation10_1 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/Occupationals from PDFs.xlsx", which = "Occupational 10.1")
-
-```
-
-##pull in the sheets
 #This section for building the table from individual sheets
 ```{r include=FALSE}
 occupation8_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.17")
@@ -366,12 +338,21 @@ write.csv(occupation_master1, "occupation_master1.csv")
 #--------------------------------------------------------------------#
 #--------------------------------------------------------------------#
 
+#Wells Comments Feb 18: 
+#Need the business names for the Feb 11 records
+
+
+```{r}
+occupation_master1 <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/occupation_master1.csv")
+
+```
+
 
 ```{r}
 occupation_master1 %>% 
   count(company_name) %>% 
   arrange(desc(n))
-
+```
 #The Plan
 #Ask Gavin for data prior to August
 #Compile into occupational master
@@ -409,10 +390,14 @@ occupation_master1 %>%
 
 x <- filter(occupation_master1, grepl ("Tyson", company_name)) %>% 
   select(date, company_name, address, city, county, total_number_of_cases)
+x
+```
 
+```{r}
 tyson_berry <- filter(x, grepl ("Springdale", city))
+tyson_berry
 write.csv(tyson_berry,"tyson_berry.csv")
-
+tyson_berry
 ```
 
 ```{r}
@@ -427,8 +412,8 @@ write.csv(tyson_berry,"tyson_berry.csv")
 ```{r}
 #Use contains to search by string to find the variables by name
 #this grabs everything except date
-x <- select(master, contains("death"))
-names(x)
+#x <- select(master, contains("death"))
+#names(x)
 ```
 
 
@@ -474,8 +459,213 @@ cityreports$city<- gsub("[[:punct:]]", "", cityreports$city)
 write.csv(cityreports, "cityreports.csv")
 ```
 
+#Wells Note:
+#Please list the companies with overlapping names that I need to extract
+#For example, sort this DF below in alphabetical order (there's a sort function in the header when you bring the table up in R)
+#You'll see three Butterball entries:
+Butterball
+Butterball Huntsville
+Butterball Ozark
+#Just write here: Butterball. Tyson. Simmons, George's etc. 
+#We'll use that list to extract a new column with common names.
+#See this tutorial, Part 4: Using Mutate
+#https://profrobwells.github.io/HomelessSP2020/SF_311_Calls_UofA.html#part_2:_cleaning__analysis
+#See Use grepl to search and tabulate
+#Follow those steps to extract the company names and create a new column, company1, that contains the simplified version
+#Example:
+x915 <- SF %>% 
+  filter(grepl ("915", original_crime_type_name)) %>% 
+  mutate(cleaned = "homeless_complaint")
+  
+  
+#Group Reoccuring Names - Company Names
+```{r}
+tyson <- occupation_master1 %>% 
+  filter(grepl ("Tyson", company_name)) %>% 
+  mutate(cleaned = "tyson")
+
+butterball <- occupation_master1 %>% 
+  filter(grepl ("Butterball", company_name)) %>% 
+  mutate(cleaned = "butterball")
+
+cargill <- occupation_master1 %>% 
+  filter(grepl ("Cargill", company_name)) %>% 
+  mutate(cleaned = "cargill")
+
+fritolay <- occupation_master1 %>% 
+  filter(grepl ("Frito Lay", company_name)) %>% 
+  mutate(cleaned = "fritolay")
+
+gates <- occupation_master1 %>% 
+  filter(grepl ("Gates", company_name)) %>% 
+  mutate(cleaned = "gates")
+
+georges <- occupation_master1 %>% 
+  filter(grepl ("George's", company_name)) %>% 
+  mutate(cleaned = "georges")
+
+peco <- occupation_master1 %>% 
+  filter(grepl ("Peco", company_name)) %>% 
+  mutate(cleaned = "peco")
+
+pilgrims <- occupation_master1 %>% 
+  filter(grepl ("Pilgrim's", company_name)) %>% 
+  mutate(cleaned = "pilgrims")
+
+simmons <- occupation_master1 %>% 
+  filter(grepl ("Simmons", company_name)) %>% 
+  mutate(cleaned = "simmons")
+
+triumph <- occupation_master1 %>% 
+  filter(grepl ("Triumph", company_name)) %>% 
+  mutate(cleaned = "triumph")
+
+walmart <- occupation_master1 %>% 
+  filter(grepl ("Walmart", company_name)) %>% 
+  mutate(cleaned = "walmart")
+
+```
 
 
+#Group Reoccuring Names - County 
+```{r}
+arkansasco <- occupation_master1 %>% 
+  filter(grepl ("Arkansas", county)) %>% 
+  mutate(cleaned = "arkansas")
+
+benton <- occupation_master1 %>% 
+  filter(grepl ("Benton", county)) %>% 
+  mutate(cleaned = "benton")
+
+carroll <- occupation_master1 %>% 
+  filter(grepl ("Carroll", county)) %>% 
+  mutate(cleaned = "carroll")
+
+cleveland <- occupation_master1 %>% 
+  filter(grepl ("Cleveland", county)) %>% 
+  mutate(cleaned = "cleveland")
+
+craighead <- occupation_master1 %>% 
+  filter(grepl ("Craighead", county)) %>% 
+  mutate(cleaned = "craighead")
+
+crawford <- occupation_master1 %>% 
+  filter(grepl ("Crawford", county)) %>% 
+  mutate(cleaned = "crawford")
+
+garland <- occupation_master1 %>% 
+  filter(grepl ("Garland", county)) %>% 
+  mutate(cleaned = "garland")
+
+independence <- occupation_master1 %>% 
+  filter(grepl ("Independence", county)) %>% 
+  mutate(cleaned = "independence")
+
+jefferson <- occupation_master1 %>% 
+  filter(grepl ("Jefferson", county)) %>% 
+  mutate(cleaned = "jefferson")
+
+mississippi <- occupation_master1 %>% 
+  filter(grepl ("Mississippi", county)) %>% 
+  mutate(cleaned = "mississippi")
+
+pope <- occupation_master1 %>% 
+  filter(grepl ("Pope", county)) %>% 
+  mutate(cleaned = "pope")
+
+randolph <- occupation_master1 %>% 
+  filter(grepl ("Randolph", county)) %>% 
+  mutate(cleaned = "randolph")
+
+sebastian <- occupation_master1 %>% 
+  filter(grepl ("Sebastian", county)) %>% 
+  mutate(cleaned = "sebastian")
+
+vanburenco <- occupation_master1 %>% 
+  filter(grepl ("Van Buren", county)) %>% 
+  mutate(cleaned = "van_buren")
+
+washington <- occupation_master1 %>% 
+  filter(grepl ("Washington", county)) %>% 
+  mutate(cleaned = "washington")
+
+```
+
+#Group reoccuring names - City 
+```{r}
+batesville <- occupation_master1 %>% 
+  filter(grepl ("Batesville", city)) %>% 
+  mutate(cleaned = "batesville")
+
+clarksville <- occupation_master1 %>% 
+  filter(grepl ("Clarksville", city)) %>% 
+  mutate(cleaned = "clarksville")
+
+clinton <- occupation_master1 %>% 
+  filter(grepl ("Clinton", city)) %>% 
+  mutate(cleaned = "clinton")
+
+fortsmith <- occupation_master1 %>% 
+  filter(grepl ("Smith", city)) %>% 
+  mutate(cleaned = "fortsmith")
+
+gentry <- occupation_master1 %>% 
+  filter(grepl ("Gentry", city)) %>% 
+  mutate(cleaned = "gentry")
+
+greenforest <- occupation_master1 %>% 
+  filter(grepl ("Green", city)) %>% 
+  mutate(cleaned = "green_forest")
+
+hotsprings <- occupation_master1 %>% 
+  filter(grepl ("Hot Springs", city)) %>% 
+  mutate(cleaned = "hot_springs")
+
+jonesboro <- occupation_master1 %>% 
+  filter(grepl ("Jonesboro", city)) %>% 
+  mutate(cleaned = "jonesboro")
+
+osceola <- occupation_master1 %>% 
+  filter(grepl ("Osceola", city)) %>% 
+  mutate(cleaned = "osceola")
+
+pinebluff <- occupation_master1 %>% 
+  filter(grepl ("Pine", city)) %>% 
+  mutate(cleaned = "pine_bluff")
+
+pocahontas <- occupation_master1 %>% 
+  filter(grepl ("Pocahontas", city)) %>% 
+  mutate(cleaned = "pocahontas")
+
+rison <- occupation_master1 %>% 
+  filter(grepl ("Rison", city)) %>% 
+  mutate(cleaned = "rison")
+
+russellville <- occupation_master1 %>% 
+  filter(grepl ("Russellville", city)) %>% 
+  mutate(cleaned = "russellsville")
+
+siloamsprings <- occupation_master1 %>% 
+  filter(grepl ("Siloam", city)) %>% 
+  mutate(cleaned = "siloam_springs")
+
+springdale <- occupation_master1 %>% 
+  filter(grepl ("Springdale", city)) %>% 
+  mutate(cleaned = "springdale")
+
+stuttgart <- occupation_master1 %>% 
+  filter(grepl ("Stuttgart", city)) %>% 
+  mutate(cleaned = "stuttgart")
+
+vanburencity <- occupation_master1 %>% 
+  filter(grepl ("Van", city)) %>% 
+  mutate(cleaned = "van_buren_city")
+
+```
+
+
+
+#Continued Analysis
 ```{r}
 #Analyze records by company name
 companyreports <- occupation_master1 %>% 
@@ -485,6 +675,7 @@ companyreports <- occupation_master1 %>%
   arrange(desc(n))
   
 write.csv(companyreports, "companyreports.csv")
+companyreports
 ```
 
 
@@ -495,9 +686,10 @@ industryreports <- occupation_master1 %>%
   group_by(industry) %>% 
   count() %>% 
   arrange(desc(n))
+write.csv(industryreports, "industryreports.csv")
 industryreports
   
-write.csv(industryreports, "industryreports.csv")
+
 ```
 
 #Split Dates for Analysis
@@ -510,14 +702,14 @@ occupation_master1$month <- month(occupation_master1$date, label=TRUE)
 
 occupation_master1
 ```
-
+#WELLS COMMENT: Let's do a ggplot graphic with this
 #Group by Month
 ```{r}
 month_counts <- occupation_master1 %>%
   select(date, city, county, company_name, industry, month) %>% 
   group_by(month) %>% 
   count() %>% 
-  arrange(desc(n))
+  arrange(desc(month))
 month_counts
 write.csv(month_counts,"month_counts.csv")
 ```
@@ -525,7 +717,15 @@ write.csv(month_counts,"month_counts.csv")
 
 
 
-#Hennigan note: is this old and no longer needed?
+
+
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+#NOTES BELOW THIS LINE. OUTDATED SEQUENCE OF MATCHING NAMES TO RECORDS
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+
+#this old 
 ```{r}
 industry_master %>% 
   select(date, city, county) %>% 
@@ -538,15 +738,19 @@ industry_master %>%
 #clean industry master to get rid of entertainment
 #Test on 12-17-2020 Jonesboro. five cases dont match with the five companies.
 ```
-
-#--------------------------------------------------------------------#
-#--------------------------------------------------------------------#
-#NOTES BELOW THIS LINE. OUTDATED SEQUENCE OF MATCHING NAMES TO RECORDS
-#--------------------------------------------------------------------#
-#--------------------------------------------------------------------#
-
-
 #Stop Here
+#Background: Manual Import data from Hard Drive 
+```{r}
+#  occupation5_25 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/OccupationMaster.xlsx", which = "525 Occupational")
+
+#Wells 
+  # occupation5_25 <- rio::import("/Users/rswells/Dropbox/Classes/Data Spring 2021/Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
+
+##import the file from your hard drive
+
+# occupation10_1 <- rio::import("/Users/maryhennigan/Downloads/OSHA Project 2021/Occupationals from PDFs.xlsx", which = "Occupational 10.1")
+
+```
 
 
 
