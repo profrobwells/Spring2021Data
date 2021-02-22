@@ -477,7 +477,6 @@ x915 <- SF %>%
   filter(grepl ("915", original_crime_type_name)) %>% 
   mutate(cleaned = "homeless_complaint")
   
-  
 #Group Reoccuring Names - Company Names
 ```{r}
 tyson <- occupation_master1 %>% 
