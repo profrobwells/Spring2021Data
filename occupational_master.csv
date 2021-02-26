@@ -1,0 +1,820 @@
+"","date","company_name","city","county","number_active_cases","number_recovered_cases","total_number_of_cases","address","industry"
+"1:1","2020-05-19","Belleville Boot Company","Forrest City","St. Francis",29,6,35,NA,NA
+"1:2","2020-05-19","Tyson","Various Locations","---",14,32,46,NA,NA
+"1:3","2020-05-19","Nebo Poultry","Dardanelle, Russellville","Yell, Pope",14,0,14,NA,NA
+"1:4","2020-05-19","Best Manufacturing","Jonesboro","Craighead",9,0,9,NA,NA
+"1:5","2020-05-19","Riceland Foods, Inc.","Jonesboro","Craighead",7,2,9,NA,NA
+"1:6","2020-05-19","Pilgrim's Pride","De Queen","Sevier",6,1,7,NA,NA
+"1:7","2020-05-19","Frito Lay","Jonesboro","Craighead",6,4,10,NA,NA
+"1:8","2020-05-19","Saracen Casino Construction Site, multiple contracted businesses","Pine Bluff","Jefferson",5,51,56,NA,NA
+"2:1","2020-05-22","Nebo Poultry","Dardanelle, Russellville","Yell, Pope",48,2,50,NA,NA
+"2:2","2020-05-22","Pilgrim's Pride Poultry","De Queen","Sevier",18,2,20,NA,NA
+"2:3","2020-05-22","Ozark Mountain Poultry","Rogers","Benton",16,1,17,NA,NA
+"2:4","2020-05-22","Cargill Poultry","Springdale","Washington",9,1,10,NA,NA
+"2:5","2020-05-22","Belleville Boot","Forrest City","St. Francis",9,26,35,NA,NA
+"2:6","2020-05-22","Butterball","Hunstville","Madison",7,0,7,NA,NA
+"2:7","2020-05-22","Best Manufacturing","Jonesboro","Craighead",7,5,12,NA,NA
+"2:8","2020-05-22","George's Poultry","Springdale","Washington",5,2,7,NA,NA
+"2:9","2020-05-22","Saracen Casino Construction","Pine Bluff","Jefferson",5,51,56,NA,NA
+"3:1","2020-05-26","Nebo Poultry","Dardanelle","Yell",57,6,63,NA,NA
+"3:2","2020-05-26","Ozark Mountain Poultry (OMP)/George’s","Rogers","Benton",46,2,48,NA,NA
+"3:3","2020-05-26","Pilgrim's Pride Poultry","De Queen","Sevier",37,4,41,NA,NA
+"3:4","2020-05-26","Cargill Poultry","Springdale","Washington",24,1,25,NA,NA
+"3:5","2020-05-26","Butterball","Huntsville","Madison",7,1,8,NA,NA
+"3:6","2020-05-26","Belleville Boot","Forrest City","St. Francis",6,29,35,NA,NA
+"3:7","2020-05-26","Best Manufacturing","Jonesboro","Craighead",6,6,12,NA,NA
+"4:1","2020-05-29","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",86,6,92,NA,NA
+"4:2","2020-05-29","Pilgrim's Pride"," De Queen"," Sevier",46,13,59,NA,NA
+"4:3","2020-05-29","Cargill Poultry"," Springdale"," Washington",43,1,44,NA,NA
+"4:4","2020-05-29","Nebo Poultry"," Dardanelle"," Yell",39,23,62,NA,NA
+"4:5","2020-05-29","Tyson"," Dardanelle"," Yell",7,2,9,NA,NA
+"4:6","2020-05-29","Butterball"," Huntsville"," Madison",5,5,10,NA,NA
+"4:7","2020-05-29","Tyson"," Clarksville"," Johnson",5,9,14,NA,NA
+"4:8","2020-05-29","Tyson"," Rogers"," Benton",5,1,6,NA,NA
+"4:9","2020-06-02","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",114,27,141,NA,NA
+"4:10","2020-06-02","Pilgrim's Pride"," De Queen"," Sevier",53,34,87,NA,NA
+"4:11","2020-06-02","Cargill Poultry"," Springdale"," Washington",48,17,65,NA,NA
+"4:12","2020-06-02","Butterball"," Huntsville"," Madison",30,9,39,NA,NA
+"4:13","2020-06-02","Nebo Poultry"," Dardanelle"," Yell",19,44,63,NA,NA
+"4:14","2020-06-02","George's Poultry"," Springdale"," Washington",14,1,15,NA,NA
+"4:15","2020-06-02","Tyson's Chick-N-Quick"," Rogers"," Benton",13,2,15,"Olrich St",NA
+"4:16","2020-06-02","Tyson"," Dardanelle"," Yell",9,5,14,NA,NA
+"4:17","2020-06-02","Tyson"," Broken Bow"," OK",9,0,9,NA,NA
+"4:18","2020-06-02","Wayne Farms"," Danville"," Yell",9,1,10,NA,NA
+"4:19","2020-06-02","Simmons Poultry"," Van Buren"," Crawford",8,0,8,NA,NA
+"4:20","2020-06-02","Tyson"," Springdale"," Washington",7,8,15,"Berry St.",NA
+"4:21","2020-06-02","Tyson"," Grannis"," Polk",7,2,9,NA,NA
+"4:22","2020-06-02","Tyson of Rogers"," Rogers"," Benton",7,0,7,"Elm St.",NA
+"4:23","2020-06-05","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",118,48,166,NA,NA
+"4:24","2020-06-05","Pilgrim's Pride"," De Queen"," Sevier",63,48,111,NA,NA
+"4:25","2020-06-05","Cargill Poultry"," Springdale"," Washington",52,28,80,NA,NA
+"4:26","2020-06-05","Butterball"," Huntsville"," Madison",40,8,48,NA,NA
+"4:27","2020-06-05","George's Poultry"," Springdale"," Washington",21,4,25,NA,NA
+"4:28","2020-06-05","Tyson's Chick-N-Quick"," Rogers"," Benton",17,3,20,"Olrich St",NA
+"4:29","2020-06-05","Tyson of Rogers"," Rogers"," Benton",14,1,15,"Elm St.",NA
+"4:30","2020-06-05","Nebo Poultry"," Dardanelle"," Yell",13,50,63,NA,NA
+"4:31","2020-06-05","Tyson"," Springdale"," Washington",12,10,22,"Berry St.",NA
+"4:32","2020-06-05","Simmons Foods"," Van Buren"," Crawford",12,0,12,NA,NA
+"4:33","2020-06-05","Tyson"," Dardanelle"," Yell",11,6,17,NA,NA
+"4:34","2020-06-05","Tyson"," Broken Bow"," OK",11,1,12,NA,NA
+"4:35","2020-06-05","Wayne Farms"," Danville"," Yell",11,1,12,NA,NA
+"4:36","2020-06-05","Tyson"," Grannis"," Polk",10,2,12,NA,NA
+"4:37","2020-06-05","Southeast Poultry"," Rogers"," Benton",5,4,9,NA,NA
+"4:38","2020-06-05","Tyson Mexican Original"," Fayetteville"," Washington",5,3,8,NA,NA
+"4:39","2020-06-05","Simmons Foods"," Gentry"," Benton",5,0,5,NA,NA
+"4:40","2020-06-05","Simmons Foods"," Siloam Springs"," Benton",5,0,5,NA,NA
+"4:41","2020-06-05","Hino Motors"," Marion"," AR",5,3,8,NA,NA
+"4:42","2020-06-08","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",105,76,181,NA,NA
+"4:43","2020-06-08","Pilgrim's Pride"," De Queen"," Sevier",67,65,132,NA,NA
+"4:44","2020-06-08","Butterball"," Huntsville"," Madison",54,13,67,NA,NA
+"4:45","2020-06-08","Cargill Poultry"," Springdale"," Washington",45,44,89,NA,NA
+"4:46","2020-06-08","George's Poultry"," Springdale"," Washington",26,6,32,NA,NA
+"4:47","2020-06-08","Tyson"," Springdale"," Washington",17,10,27,"Berry St.",NA
+"4:48","2020-06-08","Tyson's Chick-N-Quick"," Rogers"," Benton",17,5,22,"Olrich St,",NA
+"4:49","2020-06-08","Wayne Farms"," Danville"," Yell",17,3,20,NA,NA
+"4:50","2020-06-08","Tyson of Rogers"," Rogers"," Benton",13,3,16,"Elm St.",NA
+"4:51","2020-06-08","Tyson"," Dardanelle"," Yell",12,8,20,NA,NA
+"4:52","2020-06-08","Tyson"," Broken Bow"," OK",11,2,13,NA,NA
+"4:53","2020-06-08","Southeast Poultry"," Rogers"," Benton",11,4,15,NA,NA
+"4:54","2020-06-08","Simmons Foods"," Van Buren"," Crawford",11,2,13,NA,NA
+"4:55","2020-06-08","Nebo Poultry"," Dardanelle"," Yell",8,55,63,NA,NA
+"4:56","2020-06-08","Tyson"," Clarksville"," Johnson",6,14,20,NA,NA
+"4:57","2020-06-08","Tyson"," Grannis"," Polk",6,6,12,NA,NA
+"4:58","2020-06-08","Twin Rivers Foods"," Atkins"," Pope",6,5,11,NA,NA
+"4:59","2020-06-08","Simmons Foods"," Gentry"," Benton",6,0,6,NA,NA
+"4:60","2020-06-08","Tyson Mexican Original"," Fayetteville"," Washington",5,3,8,NA,NA
+"4:61","2020-06-08","Simmons Foods"," Siloam Springs"," Benton",5,2,7,NA,NA
+"4:62","2020-06-08","Hino Motors"," Marion"," Crittenden",11,4,15,NA,NA
+"4:63","2020-06-08","Husqvarna"," Nashville"," Howard",6,1,7,NA,NA
+"4:64","2020-06-08","Consulate of Mexico"," Little Rock"," Pulaski",5,0,5,NA,NA
+"4:65","2020-06-14","Tyson"," Springdale"," Washington",186,33,219,"Berry St.",NA
+"4:66","2020-06-14","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",63,161,224,NA,NA
+"4:67","2020-06-14","Butterball"," Huntsville"," Madison",43,49,92,NA,NA
+"4:68","2020-06-14","Pilgrim's Pride"," De Queen"," Sevier",38,119,157,NA,NA
+"4:69","2020-06-14","George's Poultry"," Springdale"," Washington",26,26,52,NA,NA
+"4:70","2020-06-14","Wayne Farms"," Danville"," Yell",24,13,37,NA,NA
+"4:71","2020-06-14","Tyson of Rogers"," Rogers"," Benton",22,23,45,"Elm St.",NA
+"4:72","2020-06-14","Southeast Poultry"," Rogers"," Benton",22,11,33,NA,NA
+"4:73","2020-06-14","Cargill Poultry"," Springdale"," Washington",21,100,121,NA,NA
+"4:74","2020-06-14","Tyson's Chick-N-Quick"," Rogers"," Benton",14,17,31,"Olrich St",NA
+"4:75","2020-06-14","Tyson"," Dardanelle"," Yell",14,16,30,NA,NA
+"4:76","2020-06-14","Tyson"," Grannis"," Polk",12,12,24,NA,NA
+"4:77","2020-06-14","Simmons Foods"," Van Buren"," Crawford",10,13,23,NA,NA
+"4:78","2020-06-14","Tyson"," Broken Bow"," OK",10,10,20,NA,NA
+"4:79","2020-06-14","Tyson"," Clarksville"," Johnson",9,17,26,NA,NA
+"4:80","2020-06-14","Tyson"," Van Buren"," Crawford",6,0,6,NA,NA
+"4:81","2020-06-14","Tyson"," Berryville"," Carroll",5,5,10,NA,NA
+"4:82","2020-06-14","Tyson"," Green Forrest"," Carroll",5,2,7,NA,NA
+"4:83","2020-06-14","Park Hill Collection Warehouse"," Little Rock"," Pulaski",7,3,10,NA,NA
+"4:84","2020-06-14","Walmart Regional Distribution Center 6094"," Bentonville"," Benton",6,1,7,NA,NA
+"4:85","2020-06-14","Hino Motors"," Marion"," Crittenden",5,11,16,NA,NA
+"4:86","2020-06-14","Springdale Public School District",NA,NA,5,0,5,NA,NA
+"4:87","2020-06-18","Tyson"," Springdale"," Washington",141,84,225,"Berry St.",NA
+"4:88","2020-06-18","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",55,186,241,NA,NA
+"4:89","2020-06-18","George's Poultry"," Springdale"," Washington",39,41,80,NA,NA
+"4:90","2020-06-18","Butterball"," Huntsville"," Madison",34,77,111,NA,NA
+"4:91","2020-06-18","Pilgrim's Pride"," De Queen"," Sevier",30,143,173,NA,NA
+"4:92","2020-06-18","Wayne Farms"," Danville"," Yell",25,29,54,NA,NA
+"4:93","2020-06-18","Tyson of Rogers"," Rogers"," Benton",15,32,47,"Elm St.",NA
+"4:94","2020-06-18","Southeast Poultry"," Rogers"," Benton",15,26,41,NA,NA
+"4:95","2020-06-18","Tyson"," Broken Bow"," OK",14,13,27,NA,NA
+"4:96","2020-06-18","Cargill Poultry"," Springdale"," Washington",13,114,127,NA,NA
+"4:97","2020-06-18","Tyson"," Van Buren"," Crawford",10,2,12,NA,NA
+"4:98","2020-06-18","Tyson's Chick-N-Quick"," Rogers"," Benton",9,24,33,"Olrich St",NA
+"4:99","2020-06-18","Tyson"," Grannis"," Polk",8,18,26,NA,NA
+"4:100","2020-06-18","Twin Rivers Foods"," Atkins"," Pope",8,11,19,NA,NA
+"4:101","2020-06-18","Simmons Foods"," Gentry"," Benton",8,8,16,NA,NA
+"4:102","2020-06-18","Tyson"," Clarksville"," Johnson",7,24,31,NA,NA
+"4:103","2020-06-18","Tyson"," Dardanelle"," Yell",7,24,31,NA,NA
+"4:104","2020-06-18","Simmons Foods"," Van Buren"," Crawford",7,17,24,NA,NA
+"4:105","2020-06-18","Rockline Industries"," Russellville"," Pope",5,10,15,NA,NA
+"4:106","2020-06-18","Springdale Public School District",NA,NA,5,2,7,NA,NA
+"4:107","2020-06-18","Target"," Fayetteville"," Washington",5,1,6,NA,NA
+"4:108","2020-06-21","Tyson"," Springdale"," Washington",124,114,268,"Berry St.",NA
+"4:109","2020-06-21","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",53,204,257,NA,NA
+"4:110","2020-06-21","George's Poultry"," Springdale"," Washington",40,54,94,NA,NA
+"4:111","2020-06-21","Pilgrim's Pride"," De Queen"," Sevier",36,156,192,NA,NA
+"4:112","2020-06-21","Butterball"," Huntsville"," Madison",36,83,119,NA,NA
+"4:113","2020-06-21","Wayne Farms"," Danville"," Yell",36,35,71,NA,NA
+"4:114","2020-06-21","Tyson"," Van Buren"," Crawford",27,4,31,NA,NA
+"4:115","2020-06-21","Cargill Poultry"," Springdale"," Washington",19,126,145,NA,NA
+"4:116","2020-06-21","Tyson of Rogers"," Rogers"," Benton",19,49,68,"Elm St.",NA
+"4:117","2020-06-21","Southeast Poultry"," Rogers"," Benton",16,32,48,NA,NA
+"4:118","2020-06-21","Tyson"," Broken Bow"," OK",16,16,32,NA,NA
+"4:119","2020-06-21","Tyson"," Dardanelle"," Yell",12,27,39,NA,NA
+"4:120","2020-06-21","Twin Rivers Foods"," Atkins"," Pope",12,13,25,NA,NA
+"4:121","2020-06-21","Simmons Foods"," Gentry"," Benton",11,8,19,NA,NA
+"4:122","2020-06-21","Tyson's Chick-N-Quick"," Rogers"," Benton",9,26,35,"Olrich St",NA
+"4:123","2020-06-21","Tyson"," Clarksville"," Johnson",8,26,34,NA,NA
+"4:124","2020-06-21","Simmons Foods"," Van Buren"," Crawford",8,19,27,NA,NA
+"4:125","2020-06-21","Tyson"," Grannis"," Polk",7,21,28,NA,NA
+"4:126","2020-06-21","Tyson"," Green Forrest"," Carroll",6,8,14,NA,NA
+"4:127","2020-06-21","OK Foods"," Ft Smith"," Sebastian",6,4,10,NA,NA
+"4:128","2020-06-21","Rockline Industries"," Russellville"," Pope",6,10,16,NA,NA
+"4:129","2020-06-21","Springdale School District"," Washington",NA,5,3,8,NA,NA
+"4:130","2020-06-21","Nashville School District"," Howard",NA,5,0,5,NA,NA
+"4:131","2020-06-25","Tyson of Rogers"," Rogers"," Benton",163,63,226,"Elm St.",NA
+"4:132","2020-06-25","Tyson"," Springdale"," Washington",109,174,283,"Berry St.",NA
+"4:133","2020-06-25","Wayne Farms"," Danville"," Yell",59,50,109,NA,NA
+"4:134","2020-06-25","George's Poultry"," Springdale"," Washington",38,82,120,NA,NA
+"4:135","2020-06-25","Pilgrim's Pride"," De Queen"," Sevier",36,174,210,NA,NA
+"4:136","2020-06-25","Butterball"," Huntsville"," Madison",33,105,138,NA,NA
+"4:137","2020-06-25","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",32,236,268,NA,NA
+"4:138","2020-06-25","Tyson"," Springdale"," Washington",31,6,37,"Randall Rd.",NA
+"4:139","2020-06-25","Tyson"," Van Buren"," Crawford",30,11,41,NA,NA
+"4:140","2020-06-25","Tyson's Mexican Original"," Fayetteville"," Washington",26,13,39,NA,NA
+"4:141","2020-06-25","Tyson"," Rogers"," Benton",32,32,64,"Olrich St",NA
+"4:142","2020-06-25","Tyson"," Clarksville"," Johnson",23,31,54,NA,NA
+"4:143","2020-06-25","Cargill Poultry"," Springdale"," Washington",15,141,156,NA,NA
+"4:144","2020-06-25","Tyson"," Broken Bow"," OK",15,22,37,NA,NA
+"4:145","2020-06-25","Twin Rivers Foods"," Atkins"," Pope",14,19,33,NA,NA
+"4:146","2020-06-25","Southeast Poultry"," Rogers"," Benton",13,44,57,NA,NA
+"4:147","2020-06-25","Tyson"," Dardanelle"," Yell",11,34,45,NA,NA
+"4:148","2020-06-25","Simmons Foods"," Gentry"," Benton",11,12,23,NA,NA
+"4:149","2020-06-25","Tyson"," Green Forrest"," Carroll",10,15,25,NA,NA
+"4:150","2020-06-25","Butterball"," Ozark"," Franklin",8,5,13,NA,NA
+"4:151","2020-06-25","Tyson"," Russellville"," Pope",7,6,13,"Tyler Rd",NA
+"4:152","2020-06-25","OK Foods"," Ft Smith"," Sebastian",5,8,13,NA,NA
+"4:153","2020-06-25","Nashville School District"," Howard",NA,6,2,8,NA,NA
+"4:154","2020-06-25","Rockline Industries"," Springdale"," Washington",5,16,21,NA,NA
+"4:155","2020-06-25","ConAgra"," Russellville"," Pope",5,8,13,NA,NA
+"4:156","2020-07-03","Tyson of Rogers"," Rogers"," Benton",123,114,237,"Elm St.",NA
+"4:157","2020-07-03","Tyson"," Springdale"," Washington",102,203,305,"Berry St.",NA
+"4:158","2020-07-03","Wayne Farms"," Danville"," Yell",64,96,160,NA,NA
+"4:159","2020-07-03","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",32,241,273,NA,NA
+"4:160","2020-07-03","Tyson"," Van Buren"," Crawford",31,36,67,NA,NA
+"4:161","2020-07-03","Pilgrim's Pride"," De Queen"," Sevier",28,196,224,NA,NA
+"4:162","2020-07-03","George's Poultry"," Springdale"," Washington",28,122,150,NA,NA
+"4:163","2020-07-03","Butterball"," Huntsville"," Madison",23,123,146,NA,NA
+"4:164","2020-07-03","Tyson"," Rogers"," Benton",31,44,75,"Olrich St",NA
+"4:165","2020-07-03","Tyson"," Springdale"," Washington",22,15,37,"Randall Rd.",NA
+"4:166","2020-07-03","Tyson"," Clarksville"," Johnson",20,58,78,NA,NA
+"4:167","2020-07-03","Tyson"," Dardanelle"," Yell",18,41,59,NA,NA
+"4:168","2020-07-03","Cargill Poultry"," Springdale"," Washington",13,156,169,NA,NA
+"4:169","2020-07-03","Tyson's Mexican Original"," Fayetteville"," Washington",13,29,42,NA,NA
+"4:170","2020-07-03","Southeast Poultry"," Rogers"," Benton",11,59,70,NA,NA
+"4:171","2020-07-03","Nebo Poultry"," Dardanelle"," Yell",11,55,66,NA,NA
+"4:172","2020-07-03","OK Foods"," Ft Smith"," Sebastian",11,14,25,NA,NA
+"4:173","2020-07-03","Tyson"," Russellville"," Pope",11,13,24,"Tyler Rd",NA
+"4:174","2020-07-03","Tyson"," Green Forest"," Carroll",10,26,36,NA,NA
+"4:175","2020-07-03","Twin Rivers Foods"," Atkins"," Pope",7,35,42,NA,NA
+"4:176","2020-07-03","Tyson"," Broken Bow"," OK",5,40,45,NA,NA
+"4:177","2020-07-03","Simmons Foods"," Gentry"," Benton",5,24,29,NA,NA
+"4:178","2020-07-03","Tyson"," Grannis"," Polk",5,24,29,NA,NA
+"4:179","2020-07-03","Butterball"," Ozark"," Franklin",5,12,17,NA,NA
+"4:180","2020-07-03","ConAgra"," Russellville"," Pope",13,12,25,NA,NA
+"4:181","2020-07-03","TMC Logistics"," Bentonville"," Benton",9,3,12,NA,NA
+"4:182","2020-07-03","Springdale Public School District",NA,NA,5,8,13,NA,NA
+"4:183","2020-07-06","Tyson of Rogers"," Rogers"," Benton",122,117,239,"Elm St.",NA
+"4:184","2020-07-06","Tyson"," Springdale"," Washington",80,226,306,"Berry St.",NA
+"4:185","2020-07-06","Wayne Farms"," Danville"," Yell",45,115,160,NA,NA
+"4:186","2020-07-06","Tyson"," Rogers"," Benton",30,44,74,"Olrich St",NA
+"4:187","2020-07-06","George's Poultry"," Springdale"," Washington",23,139,162,NA,NA
+"4:188","2020-07-06","Tyson"," Van Buren"," Crawford",23,46,69,NA,NA
+"4:189","2020-07-06","Tyson"," Clarksville"," Johnson",22,60,82,NA,NA
+"4:190","2020-07-06","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",20,256,276,NA,NA
+"4:191","2020-07-06","Pilgrim's Pride"," De Queen"," Sevier",19,204,223,NA,NA
+"4:192","2020-07-06","Tyson"," Springdale"," Washington",19,18,37,"Randall Rd.",NA
+"4:193","2020-07-06","Butterball"," Huntsville"," Madison",15,131,146,NA,NA
+"4:194","2020-07-06","Tyson"," Dardanelle"," Yell",14,42,56,NA,NA
+"4:195","2020-07-06","Tyson's Mexican Original"," Fayetteville"," Washington",11,31,42,NA,NA
+"4:196","2020-07-06","Tyson"," Green Forest"," Carroll",11,28,39,NA,NA
+"4:197","2020-07-06","Cargill Poultry"," Springdale"," Washington",9,161,170,NA,NA
+"4:198","2020-07-06","Tyson"," Russellville"," Pope",8,16,24,"Tyler Rd",NA
+"4:199","2020-07-06","Southeast Poultry"," Rogers"," Benton",7,66,73,NA,NA
+"4:200","2020-07-06","OK Foods"," Ft Smith"," Sebastian",7,21,28,NA,NA
+"4:201","2020-07-06","ConAgra"," Russellville"," Pope",17,14,31,NA,NA
+"4:202","2020-07-06","TMC Logistics"," Bentonville"," Benton",6,8,14,NA,NA
+"4:203","2020-07-13","Tyson of Rogers"," Rogers"," Benton",76,180,256,"Elm St.",NA
+"4:204","2020-07-13","Tyson"," Springdale"," Washington",53,263,316,"Berry St.",NA
+"4:205","2020-07-13","Wayne Farms"," Danville"," Yell",34,151,185,NA,NA
+"4:206","2020-07-13","Tyson"," Clarksville"," Johnson",25,89,114,NA,NA
+"4:207","2020-07-13","Tyson"," Rogers"," Benton",21,64,85,"Olrich St",NA
+"4:208","2020-07-13","OK Foods"," Ft Smith"," Sebastian",20,40,60,NA,NA
+"4:209","2020-07-13","Tyson"," Springdale"," Washington",15,25,40,"Randall Rd.",NA
+"4:210","2020-07-13","Pilgrim's Pride"," De Queen"," Sevier",14,222,236,NA,NA
+"4:211","2020-07-13","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",13,264,277,NA,NA
+"4:212","2020-07-13","Tyson"," Van Buren"," Crawford",13,70,83,NA,NA
+"4:213","2020-07-13","Tyson"," Dardanelle"," Yell",13,53,66,NA,NA
+"4:214","2020-07-13","George's Poultry"," Springdale"," Washington",11,175,186,NA,NA
+"4:215","2020-07-13","Tyson"," Russellville"," Pope",9,25,34,"Tyler Rd",NA
+"4:216","2020-07-13","Butterball"," Huntsville"," Madison",8,143,151,NA,NA
+"4:217","2020-07-13","Cargill Poultry"," Springdale"," Washington",7,174,181,NA,NA
+"4:218","2020-07-13","Tyson"," Green Forest"," Carroll",7,40,47,NA,NA
+"4:219","2020-07-13","Tyson"," Broken Bow"," OK",6,51,57,NA,NA
+"4:220","2020-07-13","ConAgra"," Russellville"," Pope",21,30,51,NA,NA
+"4:221","2020-07-13","Evergreen Packaging"," Pine Bluff"," Jefferson",7,12,19,NA,NA
+"4:222","2020-07-20","Tyson"," Springdale"," Washington",36,290,326,"Berry St.",NA
+"4:223","2020-07-20","Tyson of Rogers"," Rogers"," Benton",31,229,260,"Elm St.",NA
+"4:224","2020-07-20","Tyson"," Clarksville"," Johnson",28,132,160,NA,NA
+"4:225","2020-07-20","Wayne Farms"," Danville"," Yell",19,172,191,NA,NA
+"4:226","2020-07-20","Pilgrim's Pride"," De Queen"," Sevier",13,230,243,NA,NA
+"4:227","2020-07-20","George's Poultry"," Springdale"," Washington",13,199,212,NA,NA
+"4:228","2020-07-20","George's/Ozark Mtn. Poultry (OMP)"," Rogers"," Benton",12,266,278,NA,NA
+"4:229","2020-07-20","Tyson"," Dardanelle"," Yell",9,63,72,NA,NA
+"4:230","2020-07-20","Tyson"," Russellville"," Pope",8,35,43,"Tyler Rd",NA
+"4:231","2020-07-20","Cargill Poultry"," Springdale"," Washington",7,186,193,NA,NA
+"4:232","2020-07-20","Tyson"," Van Buren"," Crawford",7,78,85,NA,NA
+"4:233","2020-07-20","Tyson"," Nashville"," Howard",7,16,23,NA,NA
+"4:234","2020-07-20","Tyson"," Springdale"," Washington",6,44,50,"Randall Rd.",NA
+"4:235","2020-07-20","Simmons Foods"," Van Buren"," Crawford",6,35,41,NA,NA
+"4:236","2020-07-20","Peco"," Pocahontas"," Randolph",6,19,25,NA,NA
+"4:237","2020-07-20","Butterball"," Huntsville"," Madison",5,151,156,NA,NA
+"4:238","2020-07-20","ConAgra"," Russellville"," Pope",31,60,91,NA,NA
+"4:239","2020-07-20","Evergreen Packaging"," Pine Bluff"," Jefferson",8,28,36,NA,NA
+"4:240","2020-07-20","Producers Rice Mill Inc"," Stuttgart"," Arkansas",8,4,12,NA,NA
+"4:241","2020-07-20","Adams Fertilizer Equipment"," Dewitt"," Arkansas",7,1,8,NA,NA
+"4:242","2020-07-20","Wal-Mart #0119"," Batesville"," Independence",5,0,5,NA,NA
+"4:243","2020-07-24","Tyson"," Springdale"," Washington",32,301,333,"Berry St.",NA
+"4:244","2020-07-24","OK Foods"," Ft Smith"," Sebastian",30,99,129,NA,NA
+"4:245","2020-07-24","Tyson of Rogers"," Rogers"," Benton",27,237,264,"Elm St.",NA
+"4:246","2020-07-24","Tyson"," Clarksville"," Johnson",23,162,185,NA,NA
+"4:247","2020-07-24","Tyson"," Rogers"," Benton",16,79,95,"Olrich St,",NA
+"4:248","2020-07-24","George's Poultry"," Springdale"," Washington",10,222,232,NA,NA
+"4:249","2020-07-24","Wayne Farms"," Danville"," Yell",9,185,194,NA,NA
+"4:250","2020-07-24","Pilgrim's Pride"," De Queen"," Sevier",9,236,245,NA,NA
+"4:251","2020-07-24","Simmons Foods"," Gentry"," Benton",8,46,54,NA,NA
+"4:252","2020-07-24","Tyson"," Nashville"," Howard",7,19,26,NA,NA
+"4:253","2020-07-24","Butterball"," Ozark"," Franklin",7,24,31,NA,NA
+"4:254","2020-07-24","Tyson"," Dardanelle"," Yell",7,70,77,NA,NA
+"4:255","2020-07-24","Tyson"," Van Buren"," Crawford",5,82,87,NA,NA
+"4:256","2020-07-24","ConAgra"," Russellville"," Pope",25,83,108,NA,NA
+"4:257","2020-07-24","Frito Lay"," Jonesboro"," Craighead",5,18,23,NA,NA
+"4:258","2020-07-24","Producers Rice Mill Inc"," Stuttgart"," Arkansas",5,7,12,NA,NA
+"4:259","2021-07-27","OK Foods"," Ft Smith"," Sebastian",27,116,143,NA,NA
+"4:260","2021-07-27","Tyson of Rogers"," Rogers"," Benton",26,240,266,"Elm St.",NA
+"4:261","2021-07-27","Tyson"," Springdale"," Washington",23,315,338,"Berry St.",NA
+"4:262","2021-07-27","Tyson"," Clarksville"," Johnson",16,178,194,NA,NA
+"4:263","2021-07-27","Tyson"," Rogers"," Benton",13,84,97,"Olrich St",NA
+"4:264","2021-07-27","Pilgrim's Pride"," De Queen"," Sevier",11,242,253,NA,NA
+"4:265","2021-07-27","Simmons Foods"," Gentry"," Benton",8,51,59,NA,NA
+"4:266","2021-07-27","Tyson"," Nashville"," Howard",8,21,29,NA,NA
+"4:267","2021-07-27","Peco"," Batesville"," Independence",8,3,11,NA,NA
+"4:268","2021-07-27","George's Poultry"," Springdale"," Washington",7,231,238,NA,NA
+"4:269","2021-07-27","Wayne Farms"," Danville"," Yell",6,191,197,NA,NA
+"4:270","2021-07-27","Tyson"," Dardanelle"," Yell",6,72,78,NA,NA
+"4:271","2021-07-27","Tyson"," Van Buren"," Crawford",5,83,88,NA,NA
+"4:272","2021-07-27","Simmons Foods"," Siloam Springs"," Benton",5,20,25,NA,NA
+"4:273","2021-07-27","ConAgra"," Russellville"," Pope",22,89,111,NA,NA
+"4:274","2020-07-31","Tyson"," Springdale"," Washington",25,319,344,"Berry St.",NA
+"4:275","2020-07-31","OK Foods"," Ft Smith"," Sebastian",25,133,158,NA,NA
+"4:276","2020-07-31","Tyson of Rogers"," Rogers"," Benton",19,248,267,"Elm St.",NA
+"4:277","2020-07-31","Tyson"," Clarksville"," Johnson",15,188,203,NA,NA
+"4:278","2020-07-31","Peco"," Pocahontas"," Randolph",12,30,42,NA,NA
+"4:279","2020-07-31","Tyson"," Rogers"," Benton",11,89,100,"Olrich St",NA
+"4:280","2020-07-31","Tyson"," Green Forest"," Carroll",10,62,72,NA,NA
+"4:281","2020-07-31","Simmons Foods"," Gentry"," Benton",10,61,71,NA,NA
+"4:282","2020-07-31","Peco"," Batesville"," Independence",10,10,20,NA,NA
+"4:283","2020-07-31","George's Poultry"," Springdale"," Washington",9,237,246,NA,NA
+"4:284","2020-07-31","Pilgrim's Pride"," De Queen"," Sevier",8,247,255,NA,NA
+"4:285","2020-07-31","Tyson"," Dardanelle"," Yell",8,72,80,NA,NA
+"4:286","2020-07-31","Tyson"," Nashville"," Howard",6,33,39,NA,NA
+"4:287","2020-07-31","George's Poultry"," Batesville"," Independence",6,4,10,NA,NA
+"4:288","2020-07-31","Cargill Poultry"," Springdale"," Washington",5,203,208,NA,NA
+"4:289","2020-07-31","Wayne Farms"," Danville"," Yell",5,193,198,NA,NA
+"4:290","2020-07-31","Tyson"," Van Buren"," Crawford",5,88,93,NA,NA
+"4:291","2020-07-31","Simmons Foods"," Van Buren"," Crawford",5,45,50,NA,NA
+"4:292","2020-07-31","Simmons Foods"," Ft Smith"," Sebastian",5,24,29,NA,NA
+"4:293","2020-07-31","ConAgra"," Russellville"," Pope",26,101,127,NA,NA
+"4:294","2020-07-31","Frito Lay"," Jonesboro"," Craighead",7,18,25,NA,NA
+"4:295","2020-07-31","Hytrol Conveyor Company"," Jonesboro"," Craighead",5,8,13,NA,NA
+"4:296","2020-07-31","Pace Industries"," Harrison"," Boone",5,3,8,NA,NA
+"4:297","2020-07-31","West Tree Services"," Little Rock"," Pulaski",5,1,6,NA,NA
+"4:298","2020-08-03","Tyson"," Springdale"," Washington",25,321,346,"Berry St.",NA
+"4:299","2020-08-03","OK Foods"," Ft Smith"," Sebastian",24,140,164,NA,NA
+"4:300","2020-08-03","Tyson of Rogers"," Rogers"," Benton",20,249,269,"Elm St.",NA
+"4:301","2020-08-03","Peco"," Batesville"," Independence",14,14,28,NA,NA
+"4:302","2020-08-03","Tyson"," Rogers"," Benton",11,90,101,"Olrich St",NA
+"4:303","2020-08-03","George's Poultry"," Springdale"," Washington",9,238,247,NA,NA
+"4:304","2020-08-03","Tyson"," Clarksville"," Johnson",9,197,206,NA,NA
+"4:305","2020-08-03","Simmons Foods"," Gentry"," Benton",9,61,70,NA,NA
+"4:306","2020-08-03","Peco"," Pocahontas"," Randolph",9,33,42,NA,NA
+"4:307","2020-08-03","Tyson"," Green Forest"," Carroll",8,64,72,NA,NA
+"4:308","2020-08-03","Pilgrim's Pride"," De Queen"," Sevier",7,250,257,NA,NA
+"4:309","2020-08-03","Tyson"," Dardanelle"," Yell",7,73,80,NA,NA
+"4:310","2020-08-03","Tyson"," Tyler Rd"," Russellville, Pope",7,49,56,NA,NA
+"4:311","2020-08-03","Wayne Farms"," Danville"," Yell",6,193,199,NA,NA
+"4:312","2020-08-03","Tyson"," Nashville"," Howard",6,35,41,NA,NA
+"4:313","2020-08-03","George's Poultry"," Batesville"," Independence",6,4,10,NA,NA
+"4:314","2020-08-03","Simmons Foods"," Van Buren"," Crawford",5,47,52,NA,NA
+"4:315","2020-08-03","ConAgra"," Russellville"," Pope",30,113,143,NA,NA
+"4:316","2020-08-03","Frito Lay"," Jonesboro"," Craighead",7,23,30,NA,NA
+"4:317","2020-08-03","Hytrol Conveyor Company"," Jonesboro"," Craighead",6,9,15,NA,NA
+"4:318","2020-08-03","Pace Industries"," Harrison"," Boone",5,4,9,NA,NA
+"4:319","2020-08-03","West Tree Services"," Little Rock"," Pulaski",5,2,7,NA,NA
+"4:320","2020-08-03","Kagome Foods"," Osceola"," Mississippi",5,2,7,NA,NA
+"4:321","2020-08-07","OK Foods"," Ft Smith"," Sebastian",28,172,200,NA,NA
+"4:322","2020-08-07","Peco"," Batesville"," Independence",22,26,48,NA,NA
+"4:323","2020-08-07","Tyson"," Springdale"," Washington",14,331,345,"Berry St.",NA
+"4:324","2020-08-07","Tyson"," Van Buren"," Crawford",13,97,110,NA,NA
+"4:325","2020-08-07","Peco"," Pocahontas"," Randolph",10,40,50,NA,NA
+"4:326","2020-08-07","Simmons Foods"," Siloam Springs"," Benton",10,39,49,NA,NA
+"4:327","2020-08-07","Tyson"," Hope"," Hempstead",7,15,22,"275 Hempstead 278",NA
+"4:328","2020-08-07","Custom Craft Poultry"," Batesville"," Independence",7,2,9,NA,NA
+"4:329","2020-08-07","Tyson"," Clarksville"," Johnson",6,207,213,NA,NA
+"4:330","2020-08-07","Tyson"," Dardanelle"," Yell",6,78,84,NA,NA
+"4:331","2020-08-07","Simmons Foods"," Gentry"," Benton",6,70,76,NA,NA
+"4:332","2020-08-07","Simmons Foods"," Van Buren"," Crawford",6,48,54,NA,NA
+"4:333","2020-08-07","George's Poultry"," Springdale"," Washington",5,253,258,NA,NA
+"4:334","2020-08-07","Tyson"," Rogers"," Benton",5,100,105,"Olrich St",NA
+"4:335","2020-08-07","Tyson"," Springdale"," Washington",5,59,64,"Randall Rd.",NA
+"4:336","2020-08-07","Simmons Foods"," Ft Smith"," Sebastian",5,26,31,NA,NA
+"4:337","2020-08-07","ConAgra"," Russellville"," Pope",24,132,156,NA,NA
+"4:338","2020-08-07","Radius Aerospace"," Hot Springs"," Garland",10,0,10,NA,NA
+"4:339","2020-08-07","Kagome Foods"," Osceola"," Mississippi",8,6,14,NA,NA
+"4:340","2020-08-10","OK Foods"," Ft Smith"," Sebastian",24,177,201,NA,NA
+"4:341","2020-08-10","Peco"," Batesville"," Independence",22,32,54,NA,NA
+"4:342","2020-08-10","Tyson"," Springdale"," Washington",14,332,346,"Berry St.",NA
+"4:343","2020-08-10","Tyson"," Van Buren"," Crawford",12,100,112,NA,NA
+"4:344","2020-08-10","Simmons Foods"," Siloam Springs"," Benton",12,42,54,NA,NA
+"4:345","2020-08-10","Peco"," Pocahontas"," Randolph",10,40,50,NA,NA
+"4:346","2020-08-10","Tyson"," Hope"," Hempstead",8,17,25,"275 Hempstead 278",NA
+"4:347","2020-08-10","Tyson"," Clarksville"," Johnson",6,208,214,NA,NA
+"4:348","2020-08-10","Tyson"," Dardanelle"," Yell",6,79,85,NA,NA
+"4:349","2020-08-10","Simmons Foods"," Van Buren"," Crawford",6,48,54,NA,NA
+"4:350","2020-08-10","George's Poultry"," Batesville"," Independence",6,8,14,NA,NA
+"4:351","2020-08-10","Simmons Foods"," Gentry"," Benton",5,73,78,NA,NA
+"4:352","2020-08-10","ConAgra"," Russellville"," Pope",19,144,163,NA,NA
+"4:353","2020-08-10","Wilson Brothers Lumber Co"," Rison"," Cleveland",15,0,15,NA,NA
+"4:354","2020-08-10","Radius Aerospace"," Hot Springs"," Garland",10,0,10,NA,NA
+"4:355","2020-08-10","Kagome Foods"," Osceola"," Mississippi",7,9,16,NA,NA
+"4:356","2020-08-10","JB Hunt Transport Services"," Lowell"," Benton",5,23,28,NA,NA
+"4:357","2020-08-13","Peco"," Batesville"," Independence",24,51,75,NA,NA
+"4:358","2020-08-13","OK Foods"," Ft Smith"," Sebastian",19,187,206,NA,NA
+"4:359","2020-08-13","Tyson"," Springdale"," Washington",12,334,346,"Berry St.",NA
+"4:360","2020-08-13","Simmons Foods"," Siloam Springs"," Benton",9,59,68,NA,NA
+"4:361","2020-08-13","Tyson"," Hope"," Hempstead",9,23,32,"275 Hempstead 278",NA
+"4:362","2020-08-13","Tyson"," Van Buren"," Crawford",8,108,116,NA,NA
+"4:363","2020-08-13","Tyson"," Clarksville"," Johnson",6,207,213,NA,NA
+"4:364","2020-08-13","Simmons Foods"," Gentry"," Benton",6,76,82,NA,NA
+"4:365","2020-08-13","Twin Rivers Foods"," Ft Smith"," Sebastian",6,10,16,NA,NA
+"4:366","2020-08-13","Pilgrim's Pride"," De Queen"," Sevier",5,254,259,NA,NA
+"4:367","2020-08-13","George's Poultry"," Batesville"," Independence",5,14,19,NA,NA
+"4:368","2020-08-13","ConAgra"," Russellville"," Pope",11,164,175,NA,NA
+"4:369","2020-08-13","Wilson Brothers Lumber Co"," Rison"," Cleveland",11,4,15,NA,NA
+"4:370","2020-08-13","Frito Lay"," Jonesboro"," Craighead",8,30,38,NA,NA
+"4:371","2020-08-13","Kagome Foods"," Osceola"," Mississippi",5,14,19,NA,NA
+"4:372","2020-08-13","Fulton County Road Department",NA,NA,5,0,5,NA,NA
+"4:373","2020-08-17","Wilson Brothers Lumber Co"," Rison"," Cleveland",10,6,16,NA,NA
+"4:374","2020-08-17","ConAgra"," Russellville"," Pope",6,172,178,NA,NA
+"4:375","2020-08-17","Frito Lay"," Jonesboro"," Craighead",6,34,40,NA,NA
+"4:376","2020-08-17","Kagome Foods"," Osceola"," Mississippi",5,14,19,NA,NA
+"4:377","2020-08-17","Peco"," Batesville"," Independence",19,62,81,NA,NA
+"4:378","2020-08-17","OK Foods"," Ft Smith"," Sebastian",17,193,210,NA,NA
+"4:379","2020-08-17","Tyson"," Berry St."," Springdale, Washington",11,336,347,NA,NA
+"4:380","2020-08-17","Tyson"," Van Buren"," Crawford",8,111,119,NA,NA
+"4:381","2020-08-17","Simmons Foods"," Siloam Springs"," Benton",7,67,74,NA,NA
+"4:382","2020-08-17","Simmons Foods"," Gentry"," Benton",6,78,84,NA,NA
+"4:383","2020-08-17","Tyson"," 275 Hempstead 278"," Hope, Hempstead",6,26,32,NA,NA
+"4:384","2020-08-17","Tyson"," Clarksville"," Johnson",5,213,218,NA,NA
+"4:385","2020-08-17","Tyson"," Pine Bluff"," Jefferson",5,32,37,NA,NA
+"4:386","2020-08-17","Twin Rivers Foods"," Ft Smith"," Sebastian",5,11,16,NA,NA
+"4:387","2020-08-24","Wilson Brothers Lumber Co"," Rison"," Cleveland",5,10,15,NA,NA
+"4:388","2020-08-24","Peco"," Batesville"," Independence",30,109,139,NA,NA
+"4:389","2020-08-24","Tyson"," Van Buren"," Crawford",16,115,131,NA,NA
+"4:390","2020-08-24","Peco"," Pocahontas"," Randolph",11,49,60,NA,NA
+"4:391","2020-08-24","Tyson"," Green Forest"," Carroll",5,79,84,NA,NA
+"4:392","2020-08-27","Triumph Airborne Structures"," Hot Springs"," Garland",10,0,10,NA,NA
+"4:393","2020-08-27","Global Food Group"," Clinton"," Van Buren",7,1,8,NA,NA
+"4:394","2020-08-27","JW Aluminum Co."," Russellville"," Pope",6,0,6,NA,NA
+"4:395","2020-08-27","Wilson Brothers Lumber Co"," Rison"," Cleveland",5,10,15,NA,NA
+"4:396","2020-08-27","Peco"," Batesville"," Independence",25,118,143,NA,NA
+"4:397","2020-08-27","Tyson"," Van Buren"," Crawford",24,128,152,NA,NA
+"4:398","2020-08-27","OK Foods"," Ft Smith"," Sebastian",11,223,234,NA,NA
+"4:399","2020-08-27","Peco"," Pocahontas"," Randolph",7,54,61,NA,NA
+"4:400","2020-08-31","Triumph Airborne Structures"," Hot Springs"," Garland",13,2,15,NA,NA
+"4:401","2020-08-31","JW Aluminum Co."," Russellville"," Pope",7,0,7,NA,NA
+"4:402","2020-08-31","Global Food Group"," Clinton"," Van Buren",6,2,8,NA,NA
+"4:403","2020-08-31","Tyson"," Van Buren"," Crawford",51,149,200,NA,NA
+"4:404","2020-08-31","Peco"," Batesville"," Independence",11,136,147,NA,NA
+"4:405","2020-08-31","OK Foods"," Ft Smith"," Sebastian",8,226,234,NA,NA
+"4:406","2020-08-31","Peco"," Pocahontas"," Randolph",5,56,61,NA,NA
+"4:407","2020-09-03","Tyson"," Van Buren"," Crawford",31,175,206,NA,NA
+"4:408","2020-09-03","Peco"," Batesville"," Independence",5,146,151,NA,NA
+"4:409","2020-09-03","Peco"," Pocahontas"," Randolph",5,59,64,NA,NA
+"4:410","2020-09-03","Triumph Airborne Structures in Hot Springs"," AR",NA,11,8,19,NA,NA
+"4:411","2020-09-03","JW Aluminum Co."," Russellville"," Pope",5,3,8,NA,NA
+"4:412","2020-09-07","Tyson"," Van Buren"," Crawford",24,185,209,NA,NA
+"4:413","2020-09-07","George's Poultry"," Springdale"," Washington",5,275,280,NA,NA
+"4:414","2020-09-07","Tyson"," Green Forest"," Carroll",5,90,95,NA,NA
+"4:415","2020-09-07","Peco"," Pocahontas"," Randolph",5,58,63,NA,NA
+"4:416","2020-09-07","Triumph Airborne Structures"," Hot Springs"," Garland",9,10,19,NA,NA
+"4:417","2020-09-07","Big River Steel"," Osceola"," Mississippi",8,8,16,NA,NA
+"4:418","2020-09-07","Textbook Brokers"," Jonesboro"," Craighead",8,1,9,NA,NA
+"4:419","2020-09-07","MAHLE Engine Components"," Russellville"," Pope",7,1,8,NA,NA
+"4:420","2020-09-09","Tyson"," Van Buren"," Crawford",17,195,212,NA,NA
+"4:421","2020-09-09","George's Poultry"," Springdale"," Washington",8,274,282,NA,NA
+"4:422","2020-09-09","Tyson"," Green Forest"," Carroll",5,93,98,NA,NA
+"4:423","2020-09-09","Peco"," Pocahontas"," Randolph",5,57,62,NA,NA
+"4:424","2020-09-09","Triumph Airborne Structures"," Hot Springs"," Garland",8,12,20,NA,NA
+"4:425","2020-09-09","MAHLE Engine Components"," Russellville"," Pope",6,5,11,NA,NA
+"4:426","2020-09-09","Textbook Brokers"," Jonesboro"," Craighead",6,4,10,NA,NA
+"4:427","2020-09-09","Lennox Industries"," Stuttgart"," Arkansas",5,21,26,NA,NA
+"4:428","2020-09-09","Big River Steel"," Osceola"," Mississippi",5,11,16,NA,NA
+"4:429","2020-09-14","George's Poultry"," Springdale"," Washington",10,277,287,NA,NA
+"4:430","2020-09-14","Tyson"," Van Buren"," Crawford",7,207,214,NA,NA
+"4:431","2020-09-14","Peco"," Pocahontas"," Randolph",6,59,65,NA,NA
+"4:432","2020-09-14","Cargill Poultry"," Springdale"," Washington",5,219,224,NA,NA
+"4:433","2020-09-14","Textbook Brokers"," Jonesboro"," Craighead",6,5,11,NA,NA
+"4:434","2020-09-14","Lennox Industries"," Stuttgart"," Arkansas",5,22,27,NA,NA
+"4:435","2020-09-14","Triumph Airborne Structures"," Hot Springs"," Garland",5,15,20,NA,NA
+"5:1","2020-09-17","George's Poultry"," Springdale"," Washington",12,278,290,NA,"Manufacturing"
+"5:2","2020-09-17","George's Poultry"," Batesville"," Independence",7,35,42,NA,"Manufacturing"
+"5:3","2020-09-17","Tyson"," Van Buren"," Crawford",6,209,215,NA,"Manufacturing"
+"5:4","2020-09-17","Tyson"," Springdale"," Washington",5,360,365,"Berry St.","Manufacturing"
+"5:5","2020-09-17","Peco"," Pocahontas"," Randolph",5,59,64,NA,"Manufacturing"
+"5:6","2020-09-24","Tyson"," Pine Bluff"," Jefferson",8,49,57,NA,"Manufacturing"
+"5:7","2020-09-24","Tyson"," Van Buren"," Crawford",5,213,218,NA,"Manufacturing"
+"5:8","2020-09-24","Tyson"," Green Forest"," Carroll",5,98,103,NA,"Manufacturing"
+"5:9","2020-09-24","Peco"," Pocahontas"," Randolph",5,61,66,NA,"Manufacturing"
+"5:10","2020-09-24","Hytrol Conveyor Company"," Jonesboro"," Craighead",5,38,43,NA,"Manufacturing"
+"5:11","2020-09-24","Lennox Industries"," Stuttgart"," Arkansas",5,29,34,NA,"Manufacturing"
+"5:12","2020-09-28","Tyson"," Pine Bluff"," Jefferson",6,53,59,NA,"Manufacturing"
+"5:13","2020-09-28","Lennox Industries"," Stuttgart"," Arkansas",6,31,37,NA,"Manufacturing"
+"5:14","2020-09-28","Pine Bluff Fire and Emergency"," Pine Bluff"," Jefferson",6,3,9,NA,"Public Administration"
+"5:15","2020-10-01","Dooley Agri"," Forestry"," Fishing and Hunting, Colt, St. Francis",26,0,26,NA,"Agriculture"
+"5:16","2020-10-01","Pine Bluff Fire and Emergency"," Pine Bluff"," Jefferson",7,3,10,NA,"Public Administration"
+"5:17","2020-10-01","Tyson"," Berryville"," Carroll",6,34,40,NA,"Manufacturing"
+"5:18","2020-10-01","Tyson"," Pine Bluff"," Jefferson",6,55,61,NA,"Manufacturing"
+"5:19","2020-10-01","Lennox Industries"," Stuttgart"," Arkansas",5,36,41,NA,"Manufacturing"
+"5:20","2020-10-05","Dooley Agri"," Forestry"," Fishing and Hunting, Colt, St. Francis",26,0,26,NA,"Agriculture"
+"5:21","2020-10-05","Tyson"," Berryville"," Carroll",7,35,42,NA,"Manufacturing"
+"5:22","2020-10-05","Vacation Tour and Travel"," Entertainment"," and Recreation, Conway, Faulkner",7,1,8,NA,"Arts"
+"5:23","2020-10-05","Tyson"," Pine Bluff"," Jefferson",6,56,62,NA,"Manufacturing"
+"5:24","2020-10-05","ConAgra"," Russellville"," Pope",5,190,195,NA,"Manufacturing"
+"5:25","2020-10-05","DENSO Manufacturing"," Osceola"," Mississippi",5,38,43,NA,"Manufacturing"
+"5:26","2020-10-08","Vacation Tour and Travel"," Entertainment"," and Recreation, Conway, Faulkner",10,2,12,NA,"Arts"
+"5:27","2020-10-08","OK Foods"," Fort Smith"," Sebastian",8,262,270,NA,"Manufacturing"
+"5:28","2020-10-08","Tyson"," Green Forest"," Carroll",8,104,112,NA,"Manufacturing"
+"5:29","2020-10-08","Dooley Agri"," Forestry"," Fishing and Hunting, Colt, St. Francis",6,20,26,NA,"Agriculture"
+"5:30","2020-10-08","Hytrol Conveyor Company"," Jonesboro"," Craighead",6,47,53,NA,"Manufacturing"
+"5:31","2020-10-08","ConAgra"," Russellville"," Pope",6,190,196,NA,"Manufacturing"
+"5:32","2020-10-08","Tyson"," Pine Bluff"," Jefferson",6,57,63,NA,"Manufacturing"
+"5:33","2020-10-12","Vacation Tour and Travel"," Entertainment"," and Recreation, Conway, Faulkner",8,5,13,NA,"Arts"
+"5:34","2020-10-12","Hytrol Conveyor Company"," Jonesboro"," Craighead",8,49,57,NA,"Manufacturing"
+"5:35","2020-10-12","Tyson"," Pine Bluff"," Jefferson",7,58,65,NA,"Manufacturing"
+"5:36","2020-10-12","OK Foods"," Fort Smith"," Sebastian",7,262,270,NA,"Manufacturing"
+"5:37","2020-10-12","Land O'Frost"," Searcy"," White",6,6,12,NA,"Manufacturing"
+"5:38","2020-10-12","ConAgra"," Russellville"," Pope",5,193,198,NA,"Manufacturing"
+"5:39","2020-10-12","Tyson"," Green Forest"," Carroll",5,105,110,NA,"Manufacturing"
+"5:40","2020-10-15","Arkansas Glass Container"," Jonesboro"," Craighead",8,3,11,NA,"Manufacturing"
+"5:41","2020-10-15","Tyson"," Pine Bluff"," Jefferson",7,58,65,NA,"Manufacturing"
+"5:42","2020-10-15","Land O'Frost"," Searcy"," White",7,7,14,NA,"Manufacturing"
+"5:43","2020-10-15","Big Rock KangaRoof"," Little Rock"," Pulaski",7,0,7,NA,"Construction"
+"5:44","2020-10-15","Tyson"," Green Forest"," Carroll",6,106,112,NA,"Manufacturing"
+"5:45","2020-10-15","OK Foods"," Fort Smith"," Sebastian",6,263,269,NA,"Manufacturing"
+"5:46","2020-10-15","Hytrol Conveyor Company"," Jonesboro"," Craighead",5,53,58,NA,"Manufacturing"
+"5:47","2020-10-15","Lennox Industries"," Stuttgart"," Arkansas",5,45,50,NA,"Manufacturing"
+"5:48","2020-10-15","Riceland Foods"," Stuttgart"," Arkansas",5,26,31,NA,"Manufacturing"
+"5:49","2020-10-19","Tyson"," Green Forest"," Carroll",9,117,126,NA,"Manufacturing"
+"5:50","2020-10-19","Arkansas Glass Container"," Jonesboro"," Craighead",8,3,11,NA,"Manufacturing"
+"5:51","2020-10-19","Tyson"," Pine Bluff"," Jefferson",7,58,65,NA,"Manufacturing"
+"5:52","2020-10-19","Evergreen Packaging"," Pine Bluff"," Jefferson",6,77,83,NA,"Manufacturing"
+"5:53","2020-10-22","Tyson"," Green Forest"," Carroll",9,125,134,NA,"Manufacturing"
+"5:54","2020-10-22","Riceland Foods"," Stuggart"," Arkansas",7,29,36,NA,"Manufacturing"
+"5:55","2020-10-22","Evergreen Packaging"," Pine Bluff"," Jefferson",6,79,85,NA,"Manufacturing"
+"5:56","2020-10-22","Peco"," Pocahontas"," Randolph",6,66,72,NA,"Manufacturing"
+"5:57","2020-10-22","Cooper Tire"," Texarkana"," Miller",5,24,29,NA,"Manufacturing"
+"5:58","2020-10-26","Tyson"," Green Forest"," Carroll",10,131,141,NA,"Manufacturing"
+"5:59","2020-10-26","Evergreen Packaging"," Pine Bluff"," Jefferson",8,79,87,NA,"Manufacturing"
+"5:60","2020-10-26","Peco"," Pocahontas"," Randolph",7,67,74,NA,"Manufacturing"
+"5:61","2020-10-26","Riceland Foods"," Stuttgart"," Arkansas",6,30,36,NA,"Manufacturing"
+"5:62","2020-10-26","Greenbrier Rail"," Paragould"," Greene",6,15,21,NA,"Manufacturing"
+"5:63","2020-10-26","Tyson"," Waldron"," Scott",6,4,10,"Plant St.","Manufacturing"
+"5:64","2020-10-26","Lennox Industries"," Stuttgart"," Arkansas",5,54,59,NA,"Manufacturing"
+"5:65","2020-10-26","Diamond Pet Foods"," Dumas"," Desha",5,10,15,NA,"Manufacturing"
+"5:66","2020-10-29","Tyson"," Green Forest"," Carroll",10,137,147,NA,"Manufacturing"
+"5:67","2020-10-29","Roach Manufacturing"," Trumann"," Poinsett",8,9,17,NA,"Manufacturing"
+"5:68","2020-10-29","Peco"," Pocahontas"," Randolph",7,69,76,NA,"Manufacturing"
+"5:69","2020-10-29","Tyson"," Waldron"," Scott",6,7,13,"Plant St.","Manufacturing"
+"5:70","2020-10-29","Tyson"," Springdale"," Washington",5,377,382,"Berry St.","Manufacturing"
+"5:71","2020-10-29","Evergreen Packaging"," Pine Bluff"," Jefferson",5,87,92,NA,"Manufacturing"
+"5:72","2020-10-29","Tyson"," Pine Bluff"," Jefferson",5,65,70,NA,"Manufacturing"
+"5:73","2020-10-29","Tyson"," Nashville"," Howard",5,64,69,NA,"Manufacturing"
+"5:74","2020-10-29","Riceland Foods"," Stuttgart"," Arkansas",5,34,39,NA,"Manufacturing"
+"5:75","2020-10-29","Diamond Pet Foods"," Dumas"," Desha",5,12,17,NA,"Manufacturing"
+"5:76","2020-11-02","Tyson"," Pine Bluff"," Jefferson",9,65,74,NA,"Manufacturing"
+"5:77","2020-11-02","Peco"," Pocahontas"," Randolph",7,71,78,NA,"Manufacturing"
+"5:78","2020-11-02","Tyson"," Green Forest"," Carroll",6,141,147,NA,"Manufacturing"
+"5:79","2020-11-02","Hytrol Conveyor Company"," Jonesboro"," Craighead",6,64,70,NA,"Manufacturing"
+"5:80","2020-11-02","Simmons Foods"," Ft Smith"," Sebastian",6,40,46,NA,"Manufacturing"
+"5:81","2020-11-02","Tyson"," Russellville"," Pope",5,79,84,"Tyler Rd.","Manufacturing"
+"5:82","2020-11-02","Frito Lay"," Jonesboro"," Craighead",5,60,65,NA,"Manufacturing"
+"5:83","2020-11-02","Riceland Foods"," Stuttgart"," Arkansas",5,35,40,NA,"Manufacturing"
+"5:84","2020-11-02","Roach Manufacturing"," Trumann"," Poinsett",5,12,17,NA,"Manufacturing"
+"5:85","2020-11-05","Hytrol Conveyor Company"," Jonesboro"," Craighead",10,66,76,NA,"Manufacturing"
+"5:86","2020-11-05","Pilgrim's Pride"," De Queen"," Sevier",7,268,275,NA,"Manufacturing"
+"5:87","2020-11-05","Peco"," Pocahontas"," Randolph",7,72,79,NA,"Manufacturing"
+"5:88","2020-11-05","Tyson"," Green Forest"," Carroll",6,144,150,NA,"Manufacturing"
+"5:89","2020-11-05","Tyson"," Pine Bluff"," Jefferson",6,68,74,NA,"Manufacturing"
+"5:90","2020-11-05","Frito Lay"," Jonesboro"," Craighead",6,61,67,NA,"Manufacturing"
+"5:91","2020-11-05","Tyson"," Van Buren"," Crawford",5,225,230,NA,"Manufacturing"
+"5:92","2020-11-05","Nestle"," Jonesboro"," Craighead",5,41,46,NA,"Manufacturing"
+"5:93","2020-11-05","Simmons Foods"," Ft Smith"," Sebastian",5,41,46,NA,"Manufacturing"
+"5:94","2020-11-05","Roach Manufacturing"," Trumann"," Poinsett",5,14,19,NA,"Manufacturing"
+"5:95","2020-11-09","Hytrol Conveyor Company"," Jonesboro"," Craighead",9,68,77,NA,"Manufacturing"
+"5:96","2020-11-09","Frito Lay"," Jonesboro"," Craighead",8,64,72,NA,"Manufacturing"
+"5:97","2020-11-09","Tyson"," Pine Bluff"," Jefferson",7,73,80,NA,"Manufacturing"
+"5:98","2020-11-09","Peco"," Pocahontas"," Randolph",5,74,79,NA,"Manufacturing"
+"5:99","2020-11-09","ABB"," Ft Smith"," Sebastian",5,32,37,NA,"Manufacturing"
+"5:100","2020-11-09","Tyson"," Waldron"," Scott",5,13,18,"Plant St.","Manufacturing"
+"5:101","2020-11-12","Tyson"," Van Buren"," Crawford",8,228,236,NA,"Manufacturing"
+"5:102","2020-11-12","Hytrol Conveyor Company"," Jonesboro"," Craighead",8,73,81,NA,"Manufacturing"
+"5:103","2020-11-12","Pilgrim's Pride"," De Queen"," Sevier",7,276,283,NA,"Manufacturing"
+"5:104","2020-11-12","Simmons Foods"," Siloam Springs"," Benton",7,92,99,NA,"Manufacturing"
+"5:105","2020-11-12","Frito Lay"," Jonesboro"," Craighead",7,68,75,NA,"Manufacturing"
+"5:106","2020-11-12","Tyson"," Pine Bluff"," Jefferson",6,75,81,NA,"Manufacturing"
+"5:107","2020-11-12","Tyson"," Waldron"," Scott",6,14,20,"Plant St.","Manufacturing"
+"5:108","2020-11-12","ABB"," Ft Smith"," Sebastian",5,35,40,NA,"Manufacturing"
+"5:109","2020-11-12","Lockheed Martin"," Camden"," Ouachita",5,15,20,NA,"Manufacturing"
+"5:110","2020-11-16","Hytrol Conveyor Company"," Jonesboro"," Craighead",8,75,83,NA,"Manufacturing"
+"5:111","2020-11-16","Frito Lay"," Jonesboro"," Craighead",7,69,76,NA,"Manufacturing"
+"5:112","2020-11-16","Nabholz"," Conway"," Faulkner",7,4,11,NA,"Construction"
+"5:113","2020-11-16","Tyson"," Waldron"," Scott",7,13,20,NA,"Manufacturing"
+"5:114","2020-11-16","Simmons Foods"," Siloam Springs"," Benton",6,96,102,NA,"Manufacturing"
+"5:115","2020-11-16","Peco"," Pocahontas"," Randolph",6,74,80,NA,"Manufacturing"
+"5:116","2020-11-16","Tyson"," Van Buren"," Crawford",5,231,236,NA,"Manufacturing"
+"5:117","2020-11-16","Tyson"," Green Forest"," Carroll",5,148,153,NA,"Manufacturing"
+"5:118","2020-11-16","Pilgrim's Pride"," De Queen"," Sevier",5,278,283,NA,"Manufacturing"
+"5:119","2020-11-16","ABB"," Fort Smith"," Sebastian",5,36,41,NA,"Manufacturing"
+"5:120","2020-11-19","Tyson"," Green Forest"," Carroll",8,152,160,NA,"Manufacturing"
+"5:121","2020-11-19","Tyson"," Van Buren"," Crawford",7,236,243,NA,"Manufacturing"
+"5:122","2020-11-19","Simmons Foods"," Siloam Springs"," Benton",7,97,104,NA,"Manufacturing"
+"5:123","2020-11-19","ABB"," Ft Smith"," Sebastian",7,40,47,NA,"Manufacturing"
+"5:124","2020-11-19","ConAgra"," Russellville"," Pope",6,205,211,NA,"Manufacturing"
+"5:125","2020-11-19","Hytrol Conveyor Company"," Jonesboro"," Craighead",6,80,86,NA,"Manufacturing"
+"5:126","2020-11-19","Peco"," Pocahontas"," Randolph",5,75,80,NA,"Manufacturing"
+"5:127","2020-11-19","Alma Tractor"," Alma"," Crawford",5,2,7,NA,"Manufacturing"
+"5:128","2020-11-23","ConAgra"," Russellville"," Pope",14,207,221,NA,"Manufacturing"
+"5:129","2020-11-23","ABB"," Ft Smith"," Sebastian",7,42,49,NA,"Manufacturing"
+"5:130","2020-11-23","Rineco Chemical Industries"," Haskell"," Saline",6,5,11,NA,"Manufacturing"
+"5:131","2020-11-23","Hytrol Conveyor Company"," Jonesboro"," Craighead",5,83,88,NA,"Manufacturing"
+"5:132","2020-11-23","Frito Lay"," Jonesboro"," Craighead",5,76,81,NA,"Manufacturing"
+"5:133","2020-11-23","Maynard Inc."," Fayetteville"," Washington",5,3,8,NA,"Manufacturing"
+"5:134","2020-11-26","ConAgra"," Russellville"," Pope",14,208,222,NA,"Manufacturing"
+"5:135","2020-11-26","Tyson"," Green Forest"," Carroll",10,165,175,NA,"Manufacturing"
+"5:136","2020-11-26","Tyson"," Waldron"," Scott",7,20,27,"Plant St.","Manufacturing"
+"5:137","2020-11-26","Tyson"," Van Buren"," Crawford",5,248,253,NA,"Manufacturing"
+"5:138","2020-11-26","Peco"," Pocahontas"," Randolph",5,81,86,NA,"Manufacturing"
+"5:139","2020-11-26","Tyson"," Berryville"," Carroll",5,56,61,NA,"Manufacturing"
+"5:140","2020-11-26","Rineco Chemical Industries"," Haskell"," Saline",5,7,12,NA,"Manufacturing"
+"5:141","2020-11-30","ConAgra"," Russellville"," Pope",10,219,229,NA,"Manufacturing"
+"5:142","2020-11-30","Tyson"," Green Forest"," Carroll",10,183,193,NA,"Manufacturing"
+"5:143","2020-11-30","Tyson"," Waldron"," Scott",8,28,36,"Plant St.","Manufacturing"
+"5:144","2020-11-30",NA," Berryville"," Carroll",7,57,64,NA,"Manufacturing"
+"5:145","2020-11-30","Tyson"," Huntsville"," Madison",5,163,168,NA,"Manufacturing"
+"5:146","2020-11-30","Nucor-Yamato Steel"," Blytheville"," Mississippi",5,29,34,NA,"Manufacturing"
+"5:147","2020-11-30","Butterball"," Jonesboro"," Craighead",5,17,22,NA,"Manufacturing"
+"5:148","2020-12-03","Tyson"," Green Forest"," Carroll",7,199,206,NA,"Manufacturing"
+"5:149","2020-12-03","ConAgra"," Russellville"," Pope",6,231,237,NA,"Manufacturing"
+"5:150","2020-12-03","Hytrol Conveyor Company"," Jonesboro"," Craighead",6,90,96,NA,"Manufacturing"
+"5:151","2020-12-03","Tenneco Inc."," Paragould"," Greene",6,34,40,NA,"Manufacturing"
+"5:152","2020-12-03","Tyson"," Waldron"," Scott",5,32,37,"Plant St.","Manufacturing"
+"5:153","2020-12-07","Tyson"," Green Forest"," Carroll",11,204,215,NA,"Manufacturing"
+"5:154","2020-12-07","Tyson"," Waldron"," Scott",11,39,50,"Plant St.","Manufacturing"
+"5:155","2020-12-07","ConAgra"," Russellville"," Pope",10,229,239,NA,"Manufacturing"
+"5:156","2020-12-07","ABB"," Ft Smith"," Sebastian",10,60,70,NA,"Manufacturing"
+"5:157","2020-12-07","Tyson"," Van Buren"," Crawford",8,255,263,NA,"Manufacturing"
+"5:158","2020-12-07","Tyson of Rogers"," Rogers"," Benton",7,301,308,"Elm St.","Manufacturing"
+"5:159","2020-12-07","Tyson"," Clarksville"," Johnson",7,230,237,NA,"Manufacturing"
+"5:160","2020-12-07","Tyson's Mexican Original"," Fayetteville"," Washington",7,99,106,NA,"Manufacturing"
+"5:161","2020-12-07","Hytrol Conveyor Company"," Jonesboro"," Craighead",7,92,99,NA,"Manufacturing"
+"5:162","2020-12-07","Frito Lay"," Jonesboro"," Craighead",7,91,98,NA,"Manufacturing"
+"5:163","2020-12-07","Tyson"," Russellville"," Pope",6,95,101,"Tyler Rd.","Manufacturing"
+"5:164","2020-12-07","Lockheed Martin"," Camden"," Ouachita",6,30,36,NA,"Manufacturing"
+"5:165","2020-12-07","Tyson"," Dardanelle"," Yell",5,105,110,NA,"Manufacturing"
+"5:166","2020-12-07","Wilson Combat Scattergun Tech"," Berryville"," Carroll",5,12,17,NA,"Manufacturing"
+"5:167","2020-12-07","PotlatchDeltic"," Warren"," Bradley",5,11,16,NA,"Manufacturing"
+"5:168","2020-12-10","Tyson"," Green Forest"," Carroll",20,208,228,NA,"Manufacturing"
+"5:169","2020-12-10","ConAgra"," Russellville"," Pope",13,230,243,NA,"Manufacturing"
+"5:170","2020-12-10","Tyson"," Clarksville"," Johnson",11,231,242,NA,"Manufacturing"
+"5:171","2020-12-10","ABB"," Ft Smith"," Sebastian",9,63,72,NA,"Manufacturing"
+"5:172","2020-12-10","DENSO Manufacturing"," Osceola"," Mississippi",7,60,67,NA,"Manufacturing"
+"5:173","2020-12-10","Quality Voices"," Jonesboro"," Craighead",7,1,8,NA,"Other Services"
+"5:174","2020-12-10","Tyson"," Dardanelle"," Yell",7,105,112,NA,"Manufacturing"
+"5:175","2020-12-10","Tyson's Mexican Original"," Fayetteville"," Washington",7,102,109,NA,"Manufacturing"
+"5:176","2020-12-10","Peco"," Pocahontas"," Randolph",6,90,96,NA,"Manufacturing"
+"5:177","2020-12-10","American Greetings Co."," Osceola"," Mississippi",5,37,42,NA,"Manufacturing"
+"5:178","2020-12-10","PotlatchDeltic"," Warren"," Bradley",5,12,17,NA,"Manufacturing"
+"5:179","2020-12-10","Tyson"," Waldron"," Scott",5,45,50,"Plant St.","Manufacturing"
+"5:180","2020-12-14","Tyson"," Green Forest"," Carroll",27,220,247,NA,"Manufacturing"
+"5:181","2020-12-14","ConAgra"," Russellville"," Pope",19,237,256,NA,"Manufacturing"
+"5:182","2020-12-14","Tyson"," Dardanelle"," Yell",13,109,122,NA,"Manufacturing"
+"5:183","2020-12-14","Tyson"," Clarksville"," Johnson",12,234,246,NA,"Manufacturing"
+"5:184","2020-12-14","ABB"," Ft Smith"," Sebastian",10,65,75,NA,"Manufacturing"
+"5:185","2020-12-14","Tyson"," Waldron"," Scott",10,46,56,"Plant St.","Manufacturing"
+"5:186","2020-12-14","Spirit Fitness"," Jonesboro"," Craighead",10,3,13,NA,"Manufacturing"
+"5:187","2020-12-14","Tyson's Mexican Original"," Fayetteville"," Washington",9,105,114,NA,"Manufacturing"
+"5:188","2020-12-14","Frito Lay"," Jonesboro"," Craighead",8,95,103,NA,"Manufacturing"
+"5:189","2020-12-14","WeatherBarr Windows & Doors"," Ft Smith"," Sebastian",8,9,17,NA,"Manufacturing"
+"5:190","2020-12-14","Tyson"," Russellville"," Pope",7,100,107,"Tyler Rd.","Manufacturing"
+"5:191","2020-12-14","Hytrol Conveyor Company"," Jonesboro"," Craighead",7,97,104,NA,"Manufacturing"
+"5:192","2020-12-14","DENSO Manufacturing"," Osceola"," Mississippi",7,60,67,NA,"Manufacturing"
+"5:193","2020-12-14","Simmons Foods"," Siloam Springs"," Benton",6,110,116,NA,"Manufacturing"
+"5:194","2020-12-14","Tyson"," Hope"," Hempstead",6,59,65,"275 Hempstead 278","Manufacturing"
+"5:195","2020-12-14","American Greetings Co."," Osceola"," Mississippi",6,37,43,NA,"Manufacturing"
+"5:196","2020-12-14","Tyson"," Van Buren"," Crawford",5,262,267,NA,"Manufacturing"
+"5:197","2020-12-14","Wayne Farms"," Danville"," Yell",5,211,216,NA,"Manufacturing"
+"5:198","2020-12-14","Peco"," Pocahontas"," Randolph",5,92,97,NA,"Manufacturing"
+"5:199","2020-12-14","Husqvarna"," Nashville"," Howard",5,56,61,NA,"Manufacturing"
+"5:200","2020-12-14","Utility Trailer Manufacturing Co."," Paragould"," Greene",5,34,39,NA,"Manufacturing"
+"5:201","2020-12-14","Dassault Falcon Jet LLC"," Little Rock"," Pulaski",5,33,38,NA,"Manufacturing"
+"5:202","2020-12-14","Tyson Corporate"," Springdale"," Washington",5,31,36,"Don Tyson Pkwy","Manufacturing"
+"5:203","2020-12-14","Duke Custom Cabinets Inc."," Roland"," Pulaski",5,1,6,NA,"Manufacturing"
+"5:204","2020-12-17","Frito Lay"," Jonesboro"," Craighead",12,92,104,NA,"Manufacturing"
+"5:205","2020-12-17","ConAgra"," Russellville"," Pope",9,240,249,NA,"Manufacturing"
+"5:206","2020-12-17","Tyson"," Green Forest"," Carroll",9,221,230,NA,"Manufacturing"
+"5:207","2020-12-17","Tyson"," Dardanelle"," Yell",7,115,122,NA,"Manufacturing"
+"5:208","2020-12-17","Tyson"," Berryville"," Carroll",7,59,66,NA,"Manufacturing"
+"5:209","2020-12-17","Twin Rivers Foods"," Ft Smith"," Sebastian",7,40,47,NA,"Manufacturing"
+"5:210","2020-12-17","Spirit Fitness"," Jonesboro"," Craighead",7,11,18,NA,"Manufacturing"
+"5:211","2020-12-17","Tyson"," Clarksville"," Johnson",6,241,247,NA,"Manufacturing"
+"5:212","2020-12-17","Husqvarna"," Nashville"," Howard",6,57,63,NA,"Manufacturing"
+"5:213","2020-12-17","Unilever"," Jonesboro"," Craighead",6,23,29,NA,"Manufacturing"
+"5:214","2020-12-17","Tyson"," Russellville"," Pope",5,97,102,"Tyler Rd.","Manufacturing"
+"5:215","2020-12-17","Hytrol Conveyor Company"," Jonesboro"," Craighead",5,85,90,NA,"Manufacturing"
+"5:216","2020-12-17","American Greetings Co."," Osceola"," Mississippi",5,40,45,NA,"Manufacturing"
+"5:217","2020-12-17","Nice Pak"," Jonesboro"," Craighead",5,35,40,NA,"Manufacturing"
+"5:218","2020-12-17","APAC-Central"," Fayetteville"," Washington",5,13,18,NA,"Manufacturing"
+"5:219","2020-12-21","ConAgra"," Russellville"," Pope",9,259,268,NA,"Manufacturing"
+"5:220","2020-12-21","Frito Lay"," Jonesboro"," Craighead",8,107,115,NA,"Manufacturing"
+"5:221","2020-12-21","Tyson"," Berryville"," Carroll",7,79,86,NA,"Manufacturing"
+"5:222","2020-12-21","Domtar Paper Co."," Ash Down"," Little River",6,26,32,NA,"Manufacturing"
+"5:223","2020-12-21","Husqvarna"," Nashville"," Howard",6,62,68,NA,"Manufacturing"
+"5:224","2020-12-21","Roehm America"," Osceola"," Mississippi",6,1,7,NA,"Manufacturing"
+"5:225","2020-12-21","Twin Rivers Foods"," Atkins"," Pope",6,154,160,NA,"Manufacturing"
+"5:226","2020-12-21","APAC-Central"," Fayetteville"," Washington",5,16,21,NA,"Manufacturing"
+"5:227","2020-12-21","McKee Foods"," Gentry"," Benton",5,24,29,NA,"Manufacturing"
+"5:228","2020-12-21","Tyson"," Dardanelle"," Yell",5,125,130,NA,"Manufacturing"
+"5:229","2020-12-24","ConAgra"," Russellville"," Pope",15,265,280,NA,"Manufacturing"
+"5:230","2020-12-24","Domtar Paper Co."," Ashdown"," Little River",11,30,41,NA,"Manufacturing"
+"5:231","2020-12-24","Roehm America/Evonik"," Osceola"," Mississippi",11,2,13,NA,"Manufacturing"
+"5:232","2020-12-24","Tyson of Rogers"," Rogers"," Benton",9,313,322,"Elm St.","Manufacturing"
+"5:233","2020-12-24","Wayne Farms"," Danville"," Yell",9,221,230,NA,"Manufacturing"
+"5:234","2020-12-24","Tyson"," Dardanelle"," Yell",9,127,136,NA,"Manufacturing"
+"5:235","2020-12-24","Tyson's Chick-N-Quick"," Olrich St"," Rogers, Benton",9,96,105,"Olrich St.","Manufacturing"
+"5:236","2020-12-24","Husqvarna"," Nashville"," Howard",9,62,71,NA,"Manufacturing"
+"5:237","2020-12-24","Tyson"," Russellville"," Pope",8,112,120,"Tyler Rd.","Manufacturing"
+"5:238","2020-12-24","Frito Lay"," Jonesboro"," Craighead",8,108,116,NA,"Manufacturing"
+"5:239","2020-12-24","Nice Pak"," Jonesboro"," Craighead",7,42,49,NA,"Manufacturing"
+"5:240","2020-12-24","Arkansas Nuclear One"," Russellville"," Pope",7,31,38,NA,"Utilities"
+"5:241","2020-12-24","McKee Foods"," Gentry"," Benton",7,29,36,NA,"Manufacturing"
+"5:242","2020-12-24","Peco"," Pocahontas"," Randolph",6,104,110,NA,"Manufacturing"
+"5:243","2020-12-24","Shippers Products"," Fordyce"," Dallas",6,7,13,NA,"Manufacturing"
+"5:244","2020-12-24","La-Z-Boy Furniture"," Siloam Springs"," Benton",6,1,7,NA,"Retail Trade"
+"5:245","2020-12-24","Tyson"," Green Forest"," Carroll",5,259,264,NA,"Manufacturing"
+"5:246","2020-12-24","Hytrol Conveyor Company"," Jonesboro"," Craighead",5,104,109,NA,"Manufacturing"
+"5:247","2020-12-24","Tyson"," Berryville"," Carroll",5,88,93,NA,"Manufacturing"
+"5:248","2020-12-28","Tyson's Chick-N-Quick"," Rogers"," Benton",9,103,112,"Olrich St.","Manufacturing"
+"5:249","2020-12-28","Shelby Group International Inc."," Glenwood"," Pike",6,5,11,NA,"Manufacturing"
+"5:250","2020-12-28","ConAgra"," Russellville"," Pope",5,276,281,NA,"Manufacturing"
+"5:251","2020-12-28","Stephens Inc."," Little Rock"," Pulaski",5,7,12,NA,"Finance and Insurance"
+"5:252","2020-12-31","ConAgra"," Russellville"," Pope",8,285,293,NA,"Manufacturing"
+"5:253","2020-12-31","Tyson's Chick-N-Quick"," Rogers"," Benton",8,112,120,"Olrich St.","Manufacturing"
+"5:254","2020-12-31","Tyson Corporate"," Springdale"," Washington",7,44,51,"Don Tyson Pkwy","Administrative and Support and Waste Management and
+Remediation Services"
+"5:255","2020-12-31","Tyson"," Springdale"," Washington",6,397,403,"Berry St.","Manufacturing"
+"5:256","2020-12-31","Tyson"," Green Forest"," Carroll",5,271,276,NA,"Manufacturing"
+"5:257","2020-12-31","Tyson"," Russellville"," Pope",5,124,129,"Tyler Rd.","Manufacturing"
+"5:258","2021-01-04","ConAgra"," Russellville"," Pope",10,295,305,NA,"Manufacturing"
+"5:259","2021-01-04","Tyson's Chick-N-Quick"," Rogers"," Benton",6,118,124,"Olrich St.","Manufacturing"
+"5:260","2021-01-04","McKee Foods"," Gentry"," Benton",6,41,47,NA,"Manufacturing"
+"5:261","2021-01-07","ConAgra"," Russellville"," Pope",20,296,316,NA,"Manufacturing"
+"5:262","2021-01-07","Frito Lay"," Jonesboro"," Craighead",9,117,126,NA,"Manufacturing"
+"5:263","2021-01-07","Dillar's Corporate Headquarters"," Little Rock"," Pulaski",8,13,21,NA,"Retail Trade"
+"5:264","2021-01-07","George's Poultry"," Springdale"," Washington",8,86,94,"Kansas St.","Manufacturing"
+"5:265","2021-01-07","Centene Corporation"," Little Rock"," Pulaski",7,14,21,NA,"Finance and Insurance"
+"5:266","2021-01-07","McKee Foods"," Gentry"," Benton",7,46,53,NA,"Manufacturing"
+"5:267","2021-01-07","Tyson's Chick-N-Quick"," Rogers"," Benton",7,119,126,"Olrich St.","Manufacturing"
+"5:268","2021-01-07","PotlatchDeltic"," Ola"," Yell",6,13,19,NA,"Manufacturing"
+"5:269","2021-01-07","Unilever"," Jonesboro"," Craighead",6,37,43,NA,"Manufacturing"
+"5:270","2021-01-07","ABB"," Fort Smith"," Sebastian",5,84,89,NA,"Manufacturing"
+"5:271","2021-01-07","American Greetings Co."," Osceola"," Mississippi",5,58,63,NA,"Manufacturing"
+"5:272","2021-01-11","Tyson"," Waldron"," Scott",24,69,93,NA,"Manufacturing"
+"5:273","2021-01-11","ConAgra"," Russellville"," Pope",12,303,315,NA,"Manufacturing"
+"5:274","2021-01-11","Frito Lay"," Jonesboro"," Craighead",7,121,128,NA,"Manufacturing"
+"5:275","2021-01-11","Gates Corportation"," Siloam Springs"," Benton",7,26,33,NA,"Manufacturing"
+"5:276","2021-01-11","Twin Rivers Foods"," Atkins"," Pope",6,107,113,NA,"Manufacturing"
+"5:277","2021-01-11","Tyson"," Clarksville"," Johnson",6,254,260,NA,"Manufacturing"
+"5:278","2021-01-11","Tyson"," Dardanelle"," Yell",6,141,147,NA,"Manufacturing"
+"5:279","2021-01-11","Centene Corporation"," Little Rock"," Pulaski",5,15,20,NA,"Finance and Insurance"
+"5:280","2021-01-11","Clean Harbors Evnvironmental Services"," El Dorado"," Union",5,21,26,NA,"Administrative and Support and Waste Management and
+Remediation Services"
+"5:281","2021-01-11","Pet Solutions"," Danville"," Yell",5,12,17,NA,"Retail Trade"
+"5:282","2021-01-11","Unilever"," Jonesboro"," Craighead",5,38,43,NA,"Manufacturing"
+"5:283","2021-01-14","Tyson"," Waldron"," Scott",18,71,89,"Plant. St","Manufacturing"
+"5:284","2021-01-14","Twin Rivers Foods"," Atkins"," Pope",10,112,122,NA,"Manufacturing"
+"5:285","2021-01-14","ConAgra"," Russellville"," Pope",8,323,331,NA,"Manufacturing"
+"5:286","2021-01-14","Tyson"," Van Buren"," Crawford",7,274,281,NA,"Manufacturing"
+"5:287","2021-01-14","Gates Rubber Corportation"," Siloam Springs"," Benton",7,31,38,NA,"Manufacturing"
+"5:288","2021-01-14","Tyson"," Dardanelle"," Yell",6,149,155,NA,"Manufacturing"
+"5:289","2021-01-14","Hytrol Conveyor Company"," Jonesboro"," Craighead",6,115,121,NA,"Manufacturing"
+"5:290","2021-01-14","Tyson"," Hope"," Hempstead",6,74,80,"275 Hempstead 278","Manufacturing"
+"5:291","2021-01-14","Tyson"," Clarksville"," Johnson",5,261,266,NA,"Manufacturing"
+"5:292","2021-01-14","Tyson"," Berryville"," Carroll",5,104,109,NA,"Manufacturing"
+"5:293","2021-01-14","Unilever"," Jonesboro"," Craighead",5,38,43,NA,"Manufacturing"
+"5:294","2021-01-14","Hooters"," North Little Rock"," Pulaski",5,3,8,NA,"Accommodation and Food Services"
+"5:295","2021-01-18","Bell & Company"," North Little Rock"," Pulaski",7,2,9,NA,"Finance and Insurance"
+"5:296","2021-01-18","ConAgra"," Russellville"," Pope",7,326,333,NA,"Manufacturing"
+"5:297","2021-01-18","ConAgra/Pinnacle Foods"," Fayetteville"," Washington",5,54,59,NA,"Manufacturing"
+"5:298","2021-01-18","Hytrol Conveyor Company"," Siloam Springs"," Benton",5,32,37,NA,"Manufacturing"
+"5:299","2021-01-18","Gates Rubber Corportation"," Jonesboro"," Craighead",5,116,121,NA,"Manufacturing"
+"5:300","2021-01-18","L'Oreal Manufacturing center"," North Little Rock"," Pulaski",5,11,16,NA,"Manufacturing"
+"5:301","2021-01-18","Lockheed Martin"," Camden"," Ouachita",7,53,60,NA,"Manufacturing"
+"5:302","2021-01-18","Twin Rivers Foods"," Atkins"," Pope",6,116,122,NA,"Manufacturing"
+"5:303","2021-01-18","Tyson"," Hope"," Hempstead",7,78,85,"275 Hempstead 278","Manufacturing"
+"5:304","2021-01-18","Tyson"," Springdale"," Washington",7,406,413,"Berry St.","Manufacturing"
+"5:305","2021-01-18","Tyson"," Berryville"," Carroll",8,106,114,NA,"Manufacturing"
+"5:306","2021-01-18","Tyson"," Clarksville"," Johnson",7,265,272,NA,"Manufacturing"
+"5:307","2021-01-18","Tyson"," Dardanelle"," Yell",9,151,160,NA,"Manufacturing"
+"5:308","2021-01-18","Tyson"," Green Forest"," Carroll",5,283,288,NA,"Manufacturing"
+"5:309","2021-01-18","Tyson"," Waldron"," Scott",20,73,93,"Plant St.","Manufacturing"
+"5:310","2021-01-21","Aerojet Rocketdyne"," Camden"," Ouachita",5,46,51,NA,"Manufacturing"
+"5:311","2021-01-21","Bell & Company"," North Little Rock"," Pulaski",5,5,10,NA,"Finance and Insurance"
+"5:312","2021-01-21","ConAgra"," Russellville"," Pope",5,331,336,NA,"Manufacturing"
+"5:313","2021-01-21","Tyson"," Springdale"," Washington",7,408,415,"Berry St.","Manufacturing"
+"5:314","2021-01-21","Tyson"," Berryville"," Carroll",7,112,119,NA,"Manufacturing"
+"5:315","2021-01-21","Tyson"," Clarksville"," Johnson",5,269,274,NA,"Manufacturing"
+"5:316","2021-01-21","Tyson"," Dardanelle"," Yell",6,154,160,NA,"Manufacturing"
+"5:317","2021-01-25","City of Camden"," Camden"," Ouachita",6,2,8,NA,"Public Administration"
+"5:318","2021-01-25","ConAgra"," Russellville"," Pope",6,333,339,NA,"Manufacturing"
+"5:319","2021-01-25","Lennox Industries"," Stuttgart"," Arkansas",5,80,85,NA,"Manufacturing"
+"5:320","2021-01-25","Lockheed Martin"," Camden"," Ouachita",7,62,69,NA,"Manufacturing"
+"5:321","2021-01-25","Tyson"," Hope"," Hempstead",5,85,90,"275 Hempstead 278","Manufacturing"
+"5:322","2021-01-25","Tyson"," Springdale"," Washington",6,410,416,"Berry St.","Manufacturing"
+"5:323","2021-01-25","Tyson"," Clarksville"," Johnson",10,272,282,NA,"Manufacturing"
+"5:324","2021-01-25","Tyson"," Dardanelle"," Yell",8,158,166,NA,"Manufacturing"
+"5:325","2021-01-25","Tyson"," Nashville"," Howard",11,92,103,NA,"Manufacturing"
+"5:326","2021-01-28","ConAgra"," Russellville"," Pope",5,337,342,NA,"Manufacturing"
+"5:327","2021-01-28","Dassault Falcon Jet LLC"," Little Rock"," Pulaski",6,54,60,NA,"Manufacturing"
+"5:328","2021-01-28","Lockheed Martin"," Camden"," Ouachita",6,64,70,NA,"Manufacturing"
+"5:329","2021-01-28","Tyson"," Clarksville"," Johnson",8,276,284,NA,"Manufacturing"
+"5:330","2021-01-28","Tyson"," Nashville"," Howard",12,97,109,NA,"Manufacturing"
+"5:331","2021-02-01","Dassault Falcon Jet LLC"," Little Rock"," Pulaski",7,56,63,NA,"Manufacturing"
+"5:332","2021-02-01","SYKES Enterprises Call Center"," Ft Smith"," Sebastian",6,23,29,NA,"Administrative and Support and Waste Management and
+Remediation Services"
+"5:333","2021-02-01","Tyson"," Nashville"," Howard",9,106,115,NA,"Manufacturing"
+"5:334","2021-02-01","Welspun Pipes Inc."," Little Rock"," Pulaski",5,33,38,NA,"Manufacturing"
+"5:335","2021-02-04","Tyson"," Nashville"," Howard",7,117,124,NA,"Manufacturing"
+"5:336","2021-02-04","Welspun Pipes Inc."," Little Rock"," Pulaski",6,33,39,NA,"Manufacturing"
+"5:337","2021-02-04","Dillards Fulfillment Center"," Stuttgart"," Arkansas",5,59,64,NA,"Manufacturing"
+"5:338","2021-02-04","Riceland Foods"," Ft Smith"," Sebastian",5,26,31,NA,"Other Services"
+"5:339","2021-02-04","SYKES Enterprises Call Center"," Maumelle"," Pulaski",5,7,12,NA,"Retail Trade"
+"5:340","2021-02-08","Claudia's Canine Bakery"," Maumelle"," Pulaski",10,9,19,NA,"Manufacturing"
+"5:341","2021-02-08","ConAgra"," Russellville"," Pope",6,345,351,NA,"Manufacturing"
+"5:342","2021-02-08","De Wafelbakkers"," North Little Rock"," Pulaski",6,34,40,NA,"Manufacturing"
+"5:343","2021-02-08","Great Dane Trailers"," Jonesboro"," Craighead",5,27,32,NA,"Manufacturing"
+"5:344","2021-02-08","Lamb & Associates Packaging"," Maumelle"," Pulaski",5,7,12,NA,"Manufacturing"
+"5:345","2021-02-08","Lockheed Martin"," Camden"," Ouachita",6,71,77,NA,"Manufacturing"
+"5:346","2021-02-08","Tyson Corporate"," Springdale"," Washington",5,70,75,"Don Tyson Pkwy","Administrative and Support and Waste Management and
+Remediation Services"
+"5:347","2021-02-08","Tyson"," Nashville"," Howard",5,116,121,NA,"Manufacturing"
+"5:348","2021-02-11","Claudia's Canine Bakery"," Maumelle"," Pulaski",9,10,19,NA,"Manufacturing"
+"5:349","2021-02-11","ConAgra"," Russellville"," Pope",6,347,353,NA,"Manufacturing"
+"5:350","2021-02-11","De Wafelbakkers"," North Little Rock"," Pulaski",6,37,43,NA,"Manufacturing"
+"5:351","2021-02-11","Great Dane Trailers"," Jonesboro"," Craighead",8,27,35,NA,"Manufacturing"
+"5:352","2021-02-11","Lamb & Associates Packaging"," Maumelle"," Pulaski",6,9,15,NA,"Manufacturing"
+"5:353","2021-02-11","Lockheed Martin"," Camden"," Ouachita",6,72,78,NA,"Manufacturing"
+"5:354","2021-02-11","SYKES Enterprises Call Center"," Ft Smith"," Sebastian",5,30,35,NA,"Administrative and Support and Waste Management and
+Remediation Services"
+"5:355","2021-02-22",NA," Mountain Home"," Baxter",5,1,6,NA,"Manufacturing"
