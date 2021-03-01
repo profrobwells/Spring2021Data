@@ -591,7 +591,15 @@ occupational_final %>%
 ```
 
 #NEXT: FILTER THIS TO THE SPECIFIC WORKPLACE AND THE HIGHEST VALUE OF CASES
+```{r}
+companytotals <- occupational_final %>% 
+  select(company_name, cleaned, date, address, city, county, total_number_of_cases) %>% 
+  group_by(company_name, address, city,county) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) 
 
+sum(companytotals$total_number_of_cases)
+  
+```
 
 #Group reoccuring names - City 
 #I don't think this is changing the names in the column to be regrouped? I don't understand
