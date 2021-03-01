@@ -1,7 +1,7 @@
 ---
 title: "Occupational Data"
 author: "Mary Hennigan and Rob Wells and Abby Zimmardi" 
-date: "2/24/2021"
+date: "2/26/2021"
 output: pdf_document
 ---
 
@@ -9,7 +9,7 @@ output: pdf_document
 
 - **This notebook retrieves data from a Google sheet and compiles a time series of ADH occupational infection reports**
 
--**It will create a masterfile: occupation_master.csv**
+-**It will create a masterfile: occupational_master.csv**
 
 # Part 1: Import Data, Clean It
 
@@ -35,526 +35,58 @@ library(slider)
 
 
 
-#--------------------------------------------------------------------#
-#--------------------------------------------------------------------#
-#Part 1: Analysis
-#--------------------------------------------------------------------#
-#--------------------------------------------------------------------#
+#THIS IS THE BUILDING PORTION. CAN SKIP TO LINE 363 FOR OCCUPATIONAL_MASTER IMPORT AND ANALYSIS
+ 
+#We have two spreadsheets in Google that contain all occupational outbreak reports from May 19, 2020 - Feb. 22, 2021
+#Occupationals from PDFs https://docs.google.com/spreadsheets/d/1R5dVT4QN586ANvAH1SJ7ye94Br5OtrZsAA2e4KlWn0o/edit#gid=1215399371 
+#Leftovers https://docs.google.com/spreadsheets/d/1iuxIguTLVKhVBxAeIGg2enB5cmhDhTbOqWb6w7XHIzI/edit#gid=1206136585
 
-#Wells Comments Feb 18: 
-#Need the business names for the Feb 11 records
+#Start master file by pulling in individual sheets 
+#23 reports from May 19 - August 7 
 
+#Wells Question: So these are all of the new sheets you got from Gavin and put in, correct?
 
-```{r}
-occupation_master1 <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/occupation_master1.csv")
 
-```
 
-
-#The Plan
-#Ask Gavin for data prior to August
-#Doing that today. Feb 24
-
-#Compile into occupational master
-
-#Figure out how it works with Tyson Berry street records
-
-#Do your data cleaning.
-
-
-
-#Wells note: Clean out the Poultry(general) and have that in the industry column
-#Dont have industry from May to August
-#After August don't have a poultry category
-#Poultry / non-poultry reports ended Sept 14
-#Total business May 25 to June 2
-#Rename as Total New Cases: "New total is a Misty calcualtion. Positives current vs previous.Same as Total new."
-#percent closed. closed / total positives  (closed renamed as total recovered cases)
-
-##Once we get the Gavin documents, we decided whether the poultry county / general duplicates individual records or not
-
-#How to do a total: The company is in the report if they have 5 or more case
-
-#Figure out how it works with Tyson Berry street
-
-
-#names_date <- names %>% 
-  #count(Date)
-
-```{r}
-occupation_master1 %>% 
-  select(date, company_name, city, county, total_number_of_cases) %>% 
-  filter(company_name == "Tyson")
-
-
-x <- filter(occupation_master1, grepl ("Tyson", company_name)) %>% 
-  select(date, company_name, address, city, county, total_number_of_cases)
-x
-#This table below shows 283 Tyson observations since xxxx
-```
-
-```{r}
-tyson_berry <- filter(x, grepl ("Springdale", city))
-tyson_berry
-#write.csv(tyson_berry,"tyson_berry.csv")
-tyson_berry
-#This preliminary search gives us 33 results on Tyson Berry. The problems with this involve....
-```
-
-```{r}
-#Use contains to search by string to find the variables by name
-#this grabs everything except date
-#berryst <- select(tyson_berry, contains("Berry"))
-#names(berryst)
-```
-
-
-#Queries: County, City, Company Name, Industry, Month
-```{r}
-#Use contains to search by string to find the variables by name
-#this grabs everything except date
-#x <- select(master, contains("death"))
-#names(x)
-```
-
-
-```{r}
-#We need this after we do the full cleaning of the "clean" column.
-
-#Analyze records by date and location
-occupation_master1 %>% 
-  select(date, company_name, city, county) %>% 
-  group_by(date, city, county) %>% 
-  count() %>% 
-  arrange(desc(n))
-  
-```
-
-
-```{r}
-#Analyze records by county location
-countyreports <- occupation_master1 %>% 
-  select(date, city, county) %>% 
-  group_by(county) %>% 
-  count() %>% 
-  arrange(desc(n))
-
-#Need Help Cleaning More
-#countyreports <- separate(data = countyreports, col = county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
-
-#write.csv(countyreports, "countyreports.csv")
-countyreports  
-```
-
-
-
-```{r}
-#Analyze records by city location
-cityreports <- occupation_master1 %>% 
-  select(date, city, county) %>% 
-  group_by(city) %>% 
-  count() %>% 
-  arrange(desc(n))
-  
-cityreports$city<- gsub("[[:punct:]]", "", cityreports$city)
-#cityreports$city<- str_replace_all(cityreports$city, pattern=fixed(' '), replacement=fixed("_") )
-
-#write.csv(cityreports, "cityreports.csv")
-cityreports
-```
-
-#Wells Note:
-#Please list the companies with overlapping names that I need to extract
-#For example, sort this DF below in alphabetical order (there's a sort function in the header when you bring the table up in R)
-#You'll see three Butterball entries:
-Butterball
-Butterball Huntsville
-Butterball Ozark
-#Just write here: Butterball. Tyson. Simmons, George's etc. 
-#We'll use that list to extract a new column with common names.
-#See this tutorial, Part 4: Using Mutate
-#https://profrobwells.github.io/HomelessSP2020/SF_311_Calls_UofA.html#part_2:_cleaning__analysis
-#See Use grepl to search and tabulate
-#Follow those steps to extract the company names and create a new column, company1, that contains the simplified version
-#Example:
-x915 <- SF %>% 
-  filter(grepl ("915", original_crime_type_name)) %>% 
-  mutate(cleaned = "homeless_complaint")
-  
-#Group Reoccuring Names - Company Names
-```{r}
-tyson <- occupation_master1 %>% 
-  filter(grepl ("Tyson", company_name)) %>% 
-  mutate(cleaned = "tyson")
-
-butterball <- occupation_master1 %>% 
-  filter(grepl ("Butterball", company_name)) %>% 
-  mutate(cleaned = "butterball")
-
-cargill <- occupation_master1 %>% 
-  filter(grepl ("Cargill", company_name)) %>% 
-  mutate(cleaned = "cargill")
-
-fritolay <- occupation_master1 %>% 
-  filter(grepl ("Frito Lay", company_name)) %>% 
-  mutate(cleaned = "fritolay")
-
-gates <- occupation_master1 %>% 
-  filter(grepl ("Gates", company_name)) %>% 
-  mutate(cleaned = "gates")
-
-georges <- occupation_master1 %>% 
-  filter(grepl ("George's", company_name)) %>% 
-  mutate(cleaned = "georges")
-
-peco <- occupation_master1 %>% 
-  filter(grepl ("Peco", company_name)) %>% 
-  mutate(cleaned = "peco")
-
-pilgrims <- occupation_master1 %>% 
-  filter(grepl ("Pilgrim's", company_name)) %>% 
-  mutate(cleaned = "pilgrims")
-
-simmons <- occupation_master1 %>% 
-  filter(grepl ("Simmons", company_name)) %>% 
-  mutate(cleaned = "simmons")
-
-triumph <- occupation_master1 %>% 
-  filter(grepl ("Triumph", company_name)) %>% 
-  mutate(cleaned = "triumph")
-
-walmart <- occupation_master1 %>% 
-  filter(grepl ("Walmart", company_name)) %>% 
-  mutate(cleaned = "walmart")
-
-#problem with this is it takes the all_counties totals.
-poultry <- occupation_master1 %>% 
-  filter(grepl ('(general)', company_name)) %>% 
-  mutate(cleaned = "poultry_general")
-
-```
-
-#Combined the "cleaned" into a single DF
-#Yields 454 results
-#But is missing a lot since occupational_master has 1004.
-#Challenge to reconcile these two.
-```{r}
-occupational_master2 <- rbind(butterball, cargill, fritolay, gates, georges, peco, pilgrims,
-                              simmons, tyson, walmart)
-glimpse(occupational_master2)  
-```
-
-
-```{r}
-occupational_master2 %>% 
-  count(cleaned) %>% 
-  arrange(desc(n))
-```
-```{r}
-occupation_master1 %>% 
-  count(company_name) %>% 
-  arrange(desc(n))
-```
-#Poultry puzzle
-
-```{r}
-#as of aug 20, 2020, there were 4,770 cases in the poultry industry
-#see the total column
-poultry2 <- poultry %>% 
-  filter(grepl ("All Counties", company_name)) %>% 
-  mutate(cleaned = "all_counties_poultry")
-
-#problems with summing. active cases total is 6,830
-#the total cases by Aug 20 is 4,770
-poultry2$number_active_cases <- as.numeric(poultry2$number_active_cases)
-sum(poultry2$number_active_cases)
-#total new = 3,893
-sum(poultry2$total_new)
-
-```
-
-
-#Group Reoccuring Names - County 
-```{r}
-washington <- occupation_master1 %>% 
-  filter(grepl ("Washington", county)) %>% 
-  mutate(cleaned = "washington")
-
-```
-
-
-
-#Group Reoccuring Names - County 
-#this could have been done with tolower in one line
-#apply the remove punctuation
-```{r}
-arkansasco <- occupation_master1 %>% 
-  filter(grepl ("Arkansas", county)) %>% 
-  mutate(cleaned = "arkansas")
-
-benton <- occupation_master1 %>% 
-  filter(grepl ("Benton", county)) %>% 
-  mutate(cleaned = "benton")
-
-carroll <- occupation_master1 %>% 
-  filter(grepl ("Carroll", county)) %>% 
-  mutate(cleaned = "carroll")
-
-cleveland <- occupation_master1 %>% 
-  filter(grepl ("Cleveland", county)) %>% 
-  mutate(cleaned = "cleveland")
-
-craighead <- occupation_master1 %>% 
-  filter(grepl ("Craighead", county)) %>% 
-  mutate(cleaned = "craighead")
-
-crawford <- occupation_master1 %>% 
-  filter(grepl ("Crawford", county)) %>% 
-  mutate(cleaned = "crawford")
-
-garland <- occupation_master1 %>% 
-  filter(grepl ("Garland", county)) %>% 
-  mutate(cleaned = "garland")
-
-independence <- occupation_master1 %>% 
-  filter(grepl ("Independence", county)) %>% 
-  mutate(cleaned = "independence")
-
-jefferson <- occupation_master1 %>% 
-  filter(grepl ("Jefferson", county)) %>% 
-  mutate(cleaned = "jefferson")
-
-mississippi <- occupation_master1 %>% 
-  filter(grepl ("Mississippi", county)) %>% 
-  mutate(cleaned = "mississippi")
-
-pope <- occupation_master1 %>% 
-  filter(grepl ("Pope", county)) %>% 
-  mutate(cleaned = "pope")
-
-randolph <- occupation_master1 %>% 
-  filter(grepl ("Randolph", county)) %>% 
-  mutate(cleaned = "randolph")
-
-sebastian <- occupation_master1 %>% 
-  filter(grepl ("Sebastian", county)) %>% 
-  mutate(cleaned = "sebastian")
-
-vanburenco <- occupation_master1 %>% 
-  filter(grepl ("Van Buren", county)) %>% 
-  mutate(cleaned = "van_buren")
-
-washington <- occupation_master1 %>% 
-  filter(grepl ("Washington", county)) %>% 
-  mutate(cleaned = "washington")
-
-```
-
-#Group reoccuring names - City 
-```{r}
-batesville <- occupation_master1 %>% 
-  filter(grepl ("Batesville", city)) %>% 
-  mutate(cleaned = "batesville")
-
-clarksville <- occupation_master1 %>% 
-  filter(grepl ("Clarksville", city)) %>% 
-  mutate(cleaned = "clarksville")
-
-clinton <- occupation_master1 %>% 
-  filter(grepl ("Clinton", city)) %>% 
-  mutate(cleaned = "clinton")
-
-fortsmith <- occupation_master1 %>% 
-  filter(grepl ("Smith", city)) %>% 
-  mutate(cleaned = "fortsmith")
-
-gentry <- occupation_master1 %>% 
-  filter(grepl ("Gentry", city)) %>% 
-  mutate(cleaned = "gentry")
-
-greenforest <- occupation_master1 %>% 
-  filter(grepl ("Green", city)) %>% 
-  mutate(cleaned = "green_forest")
-
-hotsprings <- occupation_master1 %>% 
-  filter(grepl ("Hot Springs", city)) %>% 
-  mutate(cleaned = "hot_springs")
-
-jonesboro <- occupation_master1 %>% 
-  filter(grepl ("Jonesboro", city)) %>% 
-  mutate(cleaned = "jonesboro")
-
-osceola <- occupation_master1 %>% 
-  filter(grepl ("Osceola", city)) %>% 
-  mutate(cleaned = "osceola")
-
-pinebluff <- occupation_master1 %>% 
-  filter(grepl ("Pine", city)) %>% 
-  mutate(cleaned = "pine_bluff")
-
-pocahontas <- occupation_master1 %>% 
-  filter(grepl ("Pocahontas", city)) %>% 
-  mutate(cleaned = "pocahontas")
-
-rison <- occupation_master1 %>% 
-  filter(grepl ("Rison", city)) %>% 
-  mutate(cleaned = "rison")
-
-russellville <- occupation_master1 %>% 
-  filter(grepl ("Russellville", city)) %>% 
-  mutate(cleaned = "russellsville")
-
-siloamsprings <- occupation_master1 %>% 
-  filter(grepl ("Siloam", city)) %>% 
-  mutate(cleaned = "siloam_springs")
-
-springdale <- occupation_master1 %>% 
-  filter(grepl ("Springdale", city)) %>% 
-  mutate(cleaned = "springdale")
-
-stuttgart <- occupation_master1 %>% 
-  filter(grepl ("Stuttgart", city)) %>% 
-  mutate(cleaned = "stuttgart")
-
-vanburencity <- occupation_master1 %>% 
-  filter(grepl ("Van", city)) %>% 
-  mutate(cleaned = "van_buren_city")
-
-```
-
-
-
-#Continued Analysis
-```{r}
-#Analyze records by company name
-companyreports <- occupation_master1 %>% 
-  select(date, city, county, company_name) %>% 
-  group_by(company_name) %>% 
-  count() %>% 
-  arrange(desc(n))
-  
-#write.csv(companyreports, "companyreports.csv")
-companyreports
-```
-
-
-```{r}
-#Analyze records by industry
-industryreports <- occupation_master1 %>% 
-  select(date, city, county, company_name, industry) %>% 
-  group_by(industry) %>% 
-  count() %>% 
-  arrange(desc(n))
-write.csv(industryreports, "industryreports.csv")
-industryreports
-  
-
-```
-
-#Split Dates for Analysis
-```{r}
-occupation_master1$year <- year(occupation_master1$date)
-occupation_master1$month <- month(occupation_master1$date, label=TRUE)
-#occupation_master1$week <- week(occupation_master1$date)
-#occupation_master1$day <- day(occupation_master1$date)
-#occupation_master1$weekday <- wday(occupation_master1$date, label=TRUE, abbr=FALSE)
-
-occupation_master1
-```
-#WELLS COMMENT: Let's do a ggplot graphic with this
-#Group by Month
-```{r}
-month_counts <- occupation_master1 %>%
-  select(date, city, county, company_name, industry, month) %>% 
-  group_by(month) %>% 
-  count() %>% 
-  arrange(desc(month))
-month_counts
-write.csv(month_counts,"month_counts.csv")
-```
-
-
-
-#--------------------------------------------------------------------#
-#--------------------------------------------------------------------#
-#Part 2: Building the Tables
-#--------------------------------------------------------------------#
-#--------------------------------------------------------------------#
-
-
-#We have two spreadsheets in Google. One has the data from May 25-August 20
-
-
-#This section for building the table from individual sheets
 ```{r include=FALSE}
-#Import 19 Sheets, from May 25-Aug 20, 2020
-occupation5_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
-occupation5_29 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "529 Occupational")
-occupation6_2 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "62 Occupational")
-occupation6_5 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "65 Occupational")
-occupation6_9 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "69 Occupational")
-occupation6_12 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "612 Occupational")
-occupation6_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "614 Occupational")
-occupation6_18 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "618 Occupational")
-occupation6_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "625 Occupational")
-occupation6_28 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "628 Occupational")
-occupation7_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "73 Occupational")
-occupation7_6 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "76 Occupational")
-occupation7_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "714 Occupational")
-occupation7_21 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "721 Occupational")
-occupation7_24 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "724 Occupational")
-occupation8_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "83 Occupational")
-occupation8_7 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "87 Occupational")
-occupation8_10 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "810 Occupational")
-occupation8_20 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "820 Occupational")
+occupation5_19 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 5.19")
+occupation5_22 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 5.22")
+occupation5_26 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 5.26")
+occupation5_29 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 5.29")
+occupation6_2 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.2") 
+occupation6_5 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.5") 
+occupation6_8 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.8") 
+occupation6_14 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.14") 
+occupation6_18 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.18") 
+occupation6_21 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.21") 
+occupation6_25 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.25")
+occupation7_3 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.3")
+occupation7_6 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.6")
+occupation7_13 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.13")
+occupation7_20 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.20")
+occupation7_24 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.24")
+occupation7_27 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.27")
+occupation7_31 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.31")
+occupation8_3 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.3")
+occupation8_7 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.7")
+occupation8_17 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.17")
+occupation8_24 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.24")
+occupation8_27 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.27")
+occupation8_31 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.31")
 
-#Assign dates
-occupation5_25$date <- "2020-5-25"
-occupation5_29$date <- "2020-5-29"
-occupation6_2$date <- "2020-6-2"
-occupation6_5$date <- "2020-6-05"
-occupation6_9$date <- "2020-6-09"
-occupation6_12$date <- "2020-6-12"
-occupation6_14$date <- "2020-6-14"
-occupation6_18$date <- "2020-6-18"
-occupation6_25$date <- "2020-6-25"
-occupation6_28$date <- "2020-6-28"
-occupation7_3$date <- "2020-7-03"
-occupation7_6$date <- "2020-7-06"
-occupation7_14$date <- "2020-7-14"
-occupation7_21$date <- "2020-7-21"
-occupation7_24$date <- "2020-7-24"
-occupation8_3$date <- "2020-8-03"
-occupation8_7$date <- "2020-8-07"
-occupation8_10$date <- "2020-8-10"
-occupation8_20$date <- "2020-8-20"
 ```
 
-```{r warning=FALSE}
-#Wells Note: 19 sheets, May 25-Aug 20
-#Changed name to occupation_may_august to better keep track
-#This is the Misty file
-
-occupation_may_august <- smartbind(occupation5_25, occupation5_29, occupation6_2, occupation6_5,  occupation6_9, occupation6_12, occupation6_14, occupation6_18, occupation6_25, occupation6_28, occupation7_3, occupation7_6, occupation7_14, occupation7_21, occupation7_24,occupation8_3, occupation8_7,  occupation8_10, occupation8_20)
-
-
-occupation_may_august <- clean_names(occupation_may_august)
-
-#This combines 19 occupational data sheets from May 25 through Aug 20
-write.csv(occupation_may_august, "occupationalmay_august.csv")
-
-#Wells Note: Check this data against originals. No positives reported prior to June 5
-#Hennigan Note: I did not ask for original data before August. We should to check Misty's entries and collect any missing data. 
+#Pull in the rest of August that didn't fit into the sheet Occupationals from PDFs. 
+#3 reports from the Leftovers file from Aug. 10, 13, 20
+```{r}
+occupation8_10 <- rio::import("Leftovers.xlsx",which = "Occupational 8.10")
+occupation8_13 <- rio::import("Leftovers.xlsx",which = "Occupational 8.13")
+occupation8_20 <- rio::import("Leftovers.xlsx",which = "Occupational 8.20")
 ```
 
-#The second spreadsheet has the data from September to February 2021
-# https://docs.google.com/spreadsheets/d/1R5dVT4QN586ANvAH1SJ7ye94Br5OtrZsAA2e4KlWn0o/edit#gid=100802501
-#This section for building the table from individual sheets
-```{r include=FALSE}
-occupation8_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.17")
-occupation8_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.24")
-occupation8_27 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.27")
-occupation8_31 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.31")
+#Continue pulling reports from Occupationals from PDFs.
+#46 reports from Sept. 3, 2020 - Feb. 22, 2021
+```{r}
 occupation9_3 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.3")
 occupation9_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.7")
 occupation9_9 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.9")
@@ -601,11 +133,40 @@ occupation2_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupation
 occupation2_4 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.04")
 occupation2_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.08")
 occupation2_11 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.11")
-#Add new dates here
+occupation2_22 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.22")
 ```
 
-#Clean and Normalize Names
+
+#Add new dates here. They will pull from the Leftovers file. 
+```{r}
+#EDIT X with new date
+#occupationalX <- rio::import("Leftovers.xlsx",which = "Occupational X")
+```
+
+#Clean and Normalize All Names
 ```{r include=FALSE}
+occupation5_19 <- clean_names(occupation5_19)
+occupation5_22 <- clean_names(occupation5_22)
+occupation5_26 <- clean_names(occupation5_26)
+occupation5_29 <- clean_names(occupation5_29)
+occupation6_2 <- clean_names(occupation6_2)
+occupation6_5 <- clean_names(occupation6_5)
+occupation6_8 <- clean_names(occupation6_8)
+occupation6_14 <- clean_names(occupation6_14)
+occupation6_18 <- clean_names(occupation6_18)
+occupation6_21 <- clean_names(occupation6_21)
+occupation6_25 <- clean_names(occupation6_25)
+occupation7_3 <- clean_names(occupation7_3)
+occupation7_6 <- clean_names(occupation7_6)
+occupation7_13 <- clean_names(occupation7_13)
+occupation7_20 <- clean_names(occupation7_20)
+occupation7_24 <- clean_names(occupation7_24)
+occupation7_27 <- clean_names(occupation7_27)
+occupation7_31 <- clean_names(occupation7_31)
+occupation8_3 <- clean_names(occupation8_3)
+occupation8_7 <- clean_names(occupation8_7)
+occupation8_10 <- clean_names(occupation8_10)
+occupation8_13 <- clean_names(occupation8_13)
 occupation8_17 <- clean_names(occupation8_17)
 occupation8_24 <- clean_names(occupation8_24)
 occupation8_27 <- clean_names(occupation8_27)
@@ -656,127 +217,464 @@ occupation2_1 <- clean_names(occupation2_1)
 occupation2_4 <- clean_names(occupation2_4)
 occupation2_8 <- clean_names(occupation2_8)
 occupation2_11 <- clean_names(occupation2_11)
+occupation2_22 <- clean_names(occupation2_22)
 
 #add the most recent dates here
 ```
 
+#Cleaning prior to Combination
+#May 19 File renaming
+```{r}
+occupation5_19 <- occupation5_19 %>% 
+  rename(company_name = "business_name",
+         city = "location")
+occupation5_19
 
-#Combine through 9-14
-#This creates an employer db from Aug 17-Sept 14
-```{r warning=FALSE}
-#Poultry and nonpoultry combined
-#Poultry - nonpoultry ends on Sept 14
-employer_masterAugSept <- smartbind(occupation8_17, occupation8_24, occupation8_27, occupation8_31, occupation9_3, occupation9_7, occupation9_9, occupation9_14)
+```
 
-employer_masterAugSept <- clean_names(employer_masterAugSept)
-#dates
-employer_masterAugSept$date <- ymd(employer_masterAugSept$date)
+#Rename files with column "employer, total_cases, number_closed_cases"
+#May 22, 26
+```{r}
+occupation5_22 <- occupation5_22 %>% 
+  rename(company_name = "employer",
+         total_number_of_cases = "total_cases",
+         number_recovered_cases = "number_closed_cases")
+#occupation5_22
+
+occupation5_26 <- occupation5_26 %>% 
+  rename(company_name = "employer",
+         total_number_of_cases = "total_cases",
+         number_recovered_cases = "number_closed_cases")
+#occupation5_26
+```
+
+#Rename files with employer_city_county column
+#Dates May 29, 2020 - Sept. 14, 2020
+```{r}
+employer_column <- smartbind(occupation5_29,
+                             occupation6_2,
+                                 occupation6_5,
+                                 occupation6_8,
+                                 occupation6_14,
+                                 occupation6_18,
+                                 occupation6_21,
+                                 occupation6_25,
+                                 occupation7_3,
+                                 occupation7_6,
+                                 occupation7_13,
+                                 occupation7_20,
+                                 occupation7_24,
+                                 occupation7_27,
+                                 occupation7_31,
+                                 occupation8_3,
+                                 occupation8_7,
+                                 occupation8_10,
+                                 occupation8_13,
+                                 occupation8_17,
+                                 occupation8_24,
+                                 occupation8_27,
+                                 occupation8_31,
+                                 occupation9_3,
+                                 occupation9_7,
+                                 occupation9_9,
+                                 occupation9_14)
+
 
 #Separate the fields to industry, city, county
-employer_masterAugSept <- separate(data = employer_masterAugSept, col = employer_city_county, into = c("company_name", "city", "county"), sep = ",", extra = "merge", fill = "right")
+employer_column <- separate(data = employer_column, col = employer_city_county, into = c("company_name", "city", "county"), sep = ",", extra = "merge", fill = "right")
 
-#write.csv(employer_masterAugSept,"employer_masterAugSept.csv")
-
-
+glimpse(employer_column)
 ```
 
 
-#This creates an industry db from Sept 28-Feb 11, 2021. 
-```{r warning=FALSE}
-#This creates an industry db from Sept 28-Feb 1, 2021. It lacks the Employer Names
-#Redo and sort in order later
-industry_master <- smartbind(occupation2_11, 
-                             occupation2_8, 
-                             occupation2_4, 
-                             occupation2_1, 
-                             occupation1_28, 
-                             occupation1_25, 
-                             occupation1_21, 
-                             occupation1_18, 
-                             occupation1_14,
-                             occupation1_11, 
-                             occupation1_7, 
-                             occupation1_4, 
-                             occupation12_31, 
-                             occupation12_28, 
-                             occupation12_24, 
-                             occupation12_21, 
-                             occupation12_17, 
-                             occupation12_14,
-                             occupation12_10, 
-                             occupation12_7, 
-                             occupation12_3,
-                             occupation11_30, 
-                             occupation11_26, 
-                             occupation11_23, 
-                             occupation11_19, 
-                             occupation11_16, 
-                             occupation11_12, 
-                             occupation11_9, 
-                             occupation11_5, 
-                             occupation11_2, 
-                             occupation10_29, 
-                             occupation10_26, 
-                             occupation10_22,
-                             occupation10_19, 
-                             occupation10_15, 
-                             occupation10_12, 
-                             occupation10_8, 
-                             occupation10_5, 
-                             occupation10_1, 
-                             occupation9_28, 
-                             occupation9_24,
-                             occupation9_17)
 
-#occupation_master2 <- occupation_master2[ -c(3,4,5,6) ]
-
-#arrange(occupation_master2,desc(Date))
-industry_master$date <- ymd(industry_master$date)   
-
-
-glimpse(industry_master)
-
-```
-
-
-#separate the company and city by comma
-
+#Rename files with industry_city_county column
+#Dates Sept. 17, 2020 - Present
 ```{r}
+industry_column <- smartbind(occupation9_17,
+                                 occupation9_24,
+                                 occupation9_28,
+                                 occupation10_1,
+                                 occupation10_5,
+                                 occupation10_8,
+                                 occupation10_12,
+                                 occupation10_15,
+                                 occupation10_19,
+                                 occupation10_22,
+                                 occupation10_26,
+                                 occupation10_29,
+                                 occupation11_2,
+                                 occupation11_5,
+                                 occupation11_9,
+                                 occupation11_12,
+                                 occupation11_16,
+                                 occupation11_19,
+                                 occupation11_23,
+                                 occupation11_26,
+                                 occupation11_30,
+                                 occupation12_3,
+                                 occupation12_7,
+                                 occupation12_10,
+                                 occupation12_14,
+                                 occupation12_17,
+                                 occupation12_21,
+                                 occupation12_24,
+                                 occupation12_28,
+                                 occupation12_31,
+                                 occupation1_4,
+                                 occupation1_7,
+                                 occupation1_11,
+                                 occupation1_14,
+                                 occupation1_18,
+                                 occupation1_21,
+                                 occupation1_25,
+                                 occupation1_28,
+                                 occupation2_1,
+                                 occupation2_4,
+                                 occupation2_8,
+                                 occupation2_11,
+                                 occupation2_22)
+
 
 #Separate the fields to industry, city, county
-industry_master <- separate(data = industry_master, col = industry_city_county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
+industry_column <- separate(data = industry_column, col = industry_city_county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
 
-industry_master <- clean_names(industry_master)
-
-
-industry_master$city <- str_trim(industry_master$city, side = c("both"))
-industry_master$county <- str_trim(industry_master$county,  side = c("both"))
-write.csv(industry_master,"industry_master.csv")
-glimpse(industry_master)
+glimpse(industry_column)
 ```
 
-#Combine the industry_master, employer_masterAugSept, occupation_may_august into a single new data frame. You'll need to fix the business to company_name in occupation_may_august. See if there are other fixes. Drop the Misty calculations - we will do our own. Make note of what Misty was calculating.
+#Combine May 19, 2020 - Feb. 22, 2021
+#Recreating occupational_master
 
-#Rename Misty File Columns to match
-```{r}
-occupation_may_august <- occupation_may_august %>% 
-  rename(company_name = business, number_active_cases = active, number_recovered_cases = closed, total_number_of_cases = total_positivies)
-occupation_may_august
+#WELLS NOTE: Excellent. You answered my question.
+#Next question: What did we lost by eliminating the poultry general rows?
 
-#Hennigan Note: text in number fields "less than 5" should be changed, but I'm not sure what to. "Unknown" should become NA?
+#Has 814 observations. Our previous master had 1004. We have removed all of the poultry general rows.
+
+#WELLS NOTE Collect the poultry in a separate dataframe
+```{r warning=FALSE}
+occupational_master <- smartbind(occupation5_19,
+                                 occupation5_22,
+                                 occupation5_26,
+                                 employer_column,
+                                 industry_column)
+glimpse(occupational_master)
+
+write.csv(occupational_master, "occupational_master.csv")
+
 ```
 
-#Join Tables
-```{r}
-occupation_master1 <- smartbind(occupation_may_august, employer_masterAugSept, industry_master) %>% 
-arrange(desc(date)) 
+#Wells NOTE: We needed to keep the original company names and create a second cleaned company names column. need the dirty one and the clean one on the same df.
 
-occupation_master1 <- occupation_master1 %>% 
-  select(date, company_name, address, city, county, number_active_cases, number_recovered_cases, industry, total_business, new_total, total_new, total_number_of_cases, percent_closed, x12, latitude, longitude)
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+#Part 2: Analysis
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+
+#Import occupational_master from github. New version needs to be imported 
+
+#Feb. 26 2:20 p.m. update: The occupational_master.csv needs to be reimported to github, corrections were made after initial upload.
+
+#I did this already.
+
+
+```{r}
+#occupational_master <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/occupational_master.csv")
+
+```
+
+
+#Initial Look at the company names 
+```{r}
+#Company Name count shows Tyson has a huge presence with 250 appearances in the reports. 
+#This Tyson count does NOT include Tyson Corporate, Tyson Mexican Original, Tyson of Rogers, Tyson's Chick-N-Quick and Tyson's Mexican Original. 
+#Hennigan: Missing company name on 11-30 and most recent 2-22 report
+occupational_master %>% 
+  count(company_name) %>% 
+  arrange(desc(n))
+```
+
+#Notes on Company Names
+#Tyson needs to be further consolidated to encompass all entities (Tyson Corporate, Tyson Mexican Original, Tyson of Rogers, Tyson's Chick-N-Quick and Tyson's Mexican Original.)
+
+#Other companies with slight differences are: ConAgra, George's/Ozark Mountain Poultry, Pilgrim's Pride, Riceland Foods, Roehm America, Saracen Construction ---These are listed as reoccurring company names at line 489. 
+
+#Need to ensure these are the same entitiy: Simmons Foods and Simmons Poultry 
+
+
+#Quick Check on Tyson and evolution
+```{r}
+tyson <- occupational_master %>% 
+  select(date, company_name, city, county, total_number_of_cases) %>% 
+  filter(company_name == "Tyson")
+tyson
+
+```
+
+#WELLS NOTE: For example, we lost tyson_berry as a detail.
+
+
+```{r}
+tyson_berry <- filter(tyson, grepl ("Springdale", city))
+tyson_berry
+#write.csv(tyson_berry,"tyson_berry.csv")
+
+```
+
+#Note:
+```{r}
+#Use contains to search by string to find the variables by name
+#this grabs everything except date
+#berryst <- select(tyson_berry, contains("Berry"))
+#names(berryst)
+```
+
+
+#TOTAL REPORTS BY CITY BY DAY
+```{r}
+#Analyze records by date and location
+
+occupational_master %>% 
+  select(date, company_name, city, county) %>% 
+  group_by(date, city, county) %>% 
+  count() %>% 
+  arrange(desc(n))
   
-glimpse(occupation_master1)
-write.csv(occupation_master1, "occupation_master1.csv")
+```
 
+
+#County Work
+#Needs more cleaning: Some early records have two cities in city and two counties in county. Three December reports have part of the Industry type in the county column
+
+
+#WELLS NOTE: Two of the wealthiest counties in Arkansas have the highest number of occupational reports Benton, 95; Washington 83;
+
+
+```{r}
+#Analyze records by county location
+countyreports <- occupational_master %>% 
+  select(date, city, county) %>% 
+  group_by(county) %>% 
+  count() %>% 
+  arrange(desc(n))
+
+countyreports
+
+#apply the remove punctuation
+occupational_master$county <- gsub("[[:space:]]", "", occupational_master$county)
+
+
+#write.csv(countyreports, "countyreports.csv")
+
+#Notes: Benton, 95; Washington 83; Pope 68;Craighead 56 are the top counties. This is not 100% cleaned yet, but nearly finished.
+  
+```
+
+#City Work
+#Needs more cleaning. "AR" is not a city. Two reports from May have two cities listed in one cell. Six reports from October have part of the Industry type split between City and County column. Ft Smith and Fort Smith need to be mutated, GreenForest and GreenForrest. "Various locations" is not a city. Springdale Public school is in Springdale City, Washington County. 
+```{r}
+#Analyze records by city location
+cityreports <- occupational_master %>% 
+  select(date, city, county) %>% 
+  group_by(city) %>% 
+  count() %>% 
+  arrange(desc(n))
+  
+occupational_master$city <- gsub("[[:space:]]", "", occupational_master$city)
+
+cityreports
+
+#write.csv(cityreports, "cityreports.csv")
+
+#Notes: Springdale has most reports with 70, Russellville follows with 59 then Rogers, 58. 
+```
+
+#Wells Note:
+#Please list the companies with overlapping names that I need to extract
+#For example, sort this DF below in alphabetical order (there's a sort function in the header when you bring the table up in R)
+#You'll see three Butterball entries:
+Butterball
+Butterball Huntsville
+Butterball Ozark
+#Just write here: Butterball. Tyson. Simmons, George's etc. 
+#We'll use that list to extract a new column with common names.
+#See this tutorial, Part 4: Using Mutate
+#https://profrobwells.github.io/HomelessSP2020/SF_311_Calls_UofA.html#part_2:_cleaning__analysis
+#See Use grepl to search and tabulate
+#Follow those steps to extract the company names and create a new column, company1, that contains the simplified version
+#Example:
+x915 <- SF %>% 
+  filter(grepl ("915", original_crime_type_name)) %>% 
+  mutate(cleaned = "homeless_complaint")
+  
+  
+#Group Reoccuring Names - Company Names
+#I don't think this is changing the names in the column to be regrouped? I don't understand
+
+#WELLS NOTE: 
+#This process below creates separate DFs with a new cleaned variable and the company original.
+#The DFs then would be recombined into a new one 
+
+
+```{r}
+tyson <- occupational_master %>% 
+  filter(grepl ("Tyson", company_name)) %>% 
+  mutate(cleaned = "tyson")
+
+conagra <- occupational_master %>% 
+  filter(grepl ("ConAgra", company_name)) %>% 
+  mutate(cleaned = "conagra")
+
+georges <- occupational_master %>% 
+  filter(grepl ("George's", company_name)) %>% 
+  mutate(cleaned = "georges")
+
+pilgrims <- occupational_master %>% 
+  filter(grepl ("Pilgrim's", company_name)) %>% 
+  mutate(cleaned = "pilgrims")
+
+simmons <- occupational_master %>% 
+  filter(grepl ("Simmons", company_name)) %>% 
+  mutate(cleaned = "simmons")
+
+riceland <- occupational_master %>% 
+  filter(grepl ("Riceland", company_name)) %>% 
+  mutate(cleaned = "riceland")
+
+roehm <- occupational_master %>% 
+  filter(grepl ("Roehm", company_name)) %>% 
+  mutate(cleaned = "roehm_america")
+
+saracen <- occupational_master %>% 
+  filter(grepl ("Saracen", company_name)) %>% 
+  mutate(cleaned = "saracen")
+
+```
+
+#CLEANED IS 402 records
+```{r warning=FALSE}
+occupational_cleaned <- smartbind(tyson, conagra, georges, pilgrims, simmons, 
+                                  riceland, roehm, saracen)
+glimpse(occupational_cleaned)
+
+#write.csv(occupational_cleaned, "occupational_cleaned.csv")
+
+```
+
+#Extracts the records that were not cleaned: 
+
+```{r}
+notcleaned <- occupational_master %>% 
+  anti_join(occupational_cleaned, by=("company_name"))
+```
+
+
+```{r}
+notcleaned$cleaned <- notcleaned$company_name
+glimpse(notcleaned)
+```
+```{r}
+occupational_final <- smartbind(notcleaned, occupational_cleaned)
+glimpse(occupational_final)
+write.csv(occupational_final,"occupational_final.csv")
+```
+
+#Revised Look at the company names 
+#add the function that produces percent of the whole
+```{r}
+occupational_final %>% 
+  count(cleaned) %>% 
+  arrange(desc(n))
+#TOTAL NUMBER OF ARK STATE HEATH DEPT REPORTS PER COMPANY SINCE MAY 19, 2020
+#SIX OF TEN ARE POULTRY PROCESSING
+#TYSON IS 36% OF ALL REPORTS
+```
+
+#NEXT: FILTER THIS TO THE SPECIFIC WORKPLACE AND THE HIGHEST VALUE OF CASES
+
+
+#Group reoccuring names - City 
+#I don't think this is changing the names in the column to be regrouped? I don't understand
+```{r}
+fortsmith <- occupational_master %>% 
+  filter(grepl ("Smith", city)) %>% 
+  mutate(cleaned = "fort_smith")
+
+greenforest <- occupational_master %>% 
+  filter(grepl ("Green", city)) %>% 
+  mutate(cleaned = "green_forest")
+
+```
+
+
+#-----------------------------
+#Hennigan Stopped here 
+#Everything below needs to be adjusted to the new occupational_master file. 
+#Zimmardi adjusted everything below to the new occupational_master file.
+#---------------------------
+
+#Continued Analysis
+```{r}
+#Analyze records by cleaned company name
+companyreports <- occupational_master %>% 
+  select(date, city, county, cleaned) %>% 
+  group_by(cleaned) %>% 
+  count() %>% 
+  arrange(desc(n))
+  
+#write.csv(companyreports, "companyreports.csv")
+companyreports
+
+#Notes: Tyson, 250, ConAgra, 39, Simmons Foods, 39
+```
+
+
+```{r}
+#Analyze records by industry
+industryreports <- occupational_master %>% 
+  select(date, city, county, company_name, industry) %>% 
+  group_by(industry) %>% 
+  count() %>% 
+  arrange(desc(n))
+#write.csv(industryreports, "industryreports.csv")
+industryreports
+  
+#Notes: Largest industry category is NA with 459, from 5.19 to 9.14. These are when the reports were Poulty, Non-Poultry.
+#Manufacturing has 326 records
+```
+
+#Split Dates for Analysis
+```{r}
+occupational_master$year <- year(occupational_master$date)
+occupational_master$month <- month(occupational_master$date, label=TRUE)
+#occupation_master1$week <- week(occupation_master1$date)
+#occupation_master1$day <- day(occupation_master1$date)
+#occupation_master1$weekday <- wday(occupation_master1$date, label=TRUE, abbr=FALSE)
+
+occupational_master
+```
+#WELLS COMMENT: Let's do a ggplot graphic with this
+#Group by Month
+```{r}
+month_counts <- occupational_master %>%
+  select(date, city, county, company_name, industry, month) %>% 
+  group_by(month) %>% 
+  count() %>% 
+  arrange(desc(n))
+month_counts
+write.csv(month_counts,"month_counts.csv")
+#Notes: June, 147, July, 142, Dec, 110 and Aug, 109 are the top months and only months above 100.
+```
+
+#Zimmardi attempt at a ggplot graphic
+```{r}
+#install.packages("ggplot2")
+library(ggplot2)
+#ggplot(month_counts, aes(x=month, y=n))
+ggplot(month_counts) + geom_point(aes(x=month, y=n, color=n)) + geom_smooth(aes(x=month, y=n, color=n))
+
+
+#Zimmardi note: I have been looking up different codes, and I can't figure out how to change the label names and add a title. But this shows the number of records by month.
 ```
 
 
@@ -990,6 +888,375 @@ write.csv(oct, "oct_industry.csv")
 
 ```
 
+
+
+
+#------Under this is Old Building with Misty file, poultry, non-poultry, etc. No longer needed as of Feb. 26, 2021
+
+#OLD
+#This section for building the table from individual sheets
+```{r include=FALSE}
+#Import 19 Sheets, from May 25-Aug 20, 2020
+occupation5_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "525 Occupational")
+occupation5_29 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "529 Occupational")
+occupation6_2 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "62 Occupational")
+occupation6_5 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "65 Occupational")
+occupation6_9 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "69 Occupational")
+occupation6_12 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "612 Occupational")
+occupation6_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "614 Occupational")
+occupation6_18 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "618 Occupational")
+occupation6_25 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "625 Occupational")
+occupation6_28 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "628 Occupational")
+occupation7_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "73 Occupational")
+occupation7_6 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "76 Occupational")
+occupation7_14 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "714 Occupational")
+occupation7_21 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "721 Occupational")
+occupation7_24 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "724 Occupational")
+occupation8_3 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "83 Occupational")
+occupation8_7 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "87 Occupational")
+occupation8_10 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "810 Occupational")
+occupation8_20 <- rio::import("Facilities-Occupational Cases-Deaths.xlsx", which = "820 Occupational")
+
+#Assign dates
+occupation5_25$date <- "2020-5-25"
+occupation5_29$date <- "2020-5-29"
+occupation6_2$date <- "2020-6-2"
+occupation6_5$date <- "2020-6-05"
+occupation6_9$date <- "2020-6-09"
+occupation6_12$date <- "2020-6-12"
+occupation6_14$date <- "2020-6-14"
+occupation6_18$date <- "2020-6-18"
+occupation6_25$date <- "2020-6-25"
+occupation6_28$date <- "2020-6-28"
+occupation7_3$date <- "2020-7-03"
+occupation7_6$date <- "2020-7-06"
+occupation7_14$date <- "2020-7-14"
+occupation7_21$date <- "2020-7-21"
+occupation7_24$date <- "2020-7-24"
+occupation8_3$date <- "2020-8-03"
+occupation8_7$date <- "2020-8-07"
+occupation8_10$date <- "2020-8-10"
+occupation8_20$date <- "2020-8-20"
+```
+
+
+#OLD
+```{r warning=FALSE}
+#Wells Note: 19 sheets, May 25-Aug 20
+#Changed name to occupation_may_august to better keep track
+#This is the Misty file
+
+occupation_may_august <- smartbind(occupation5_25, occupation5_29, occupation6_2, occupation6_5,  occupation6_9, occupation6_12, occupation6_14, occupation6_18, occupation6_25, occupation6_28, occupation7_3, occupation7_6, occupation7_14, occupation7_21, occupation7_24,occupation8_3, occupation8_7,  occupation8_10, occupation8_20)
+
+
+occupation_may_august <- clean_names(occupation_may_august)
+
+#This combines 19 occupational data sheets from May 25 through Aug 20
+write.csv(occupation_may_august, "occupationalmay_august.csv")
+
+#Wells Note: Check this data against originals. No positives reported prior to June 5
+#Hennigan Note: I did not ask for original data before August. We should to check Misty's entries and collect any missing data. 
+```
+
+
+#OLD
+#The second spreadsheet has the data from September to February 2021
+# https://docs.google.com/spreadsheets/d/1R5dVT4QN586ANvAH1SJ7ye94Br5OtrZsAA2e4KlWn0o/edit#gid=100802501
+#This section for building the table from individual sheets
+```{r include=FALSE}
+occupation8_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.17")
+occupation8_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.24")
+occupation8_27 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.27")
+occupation8_31 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 8.31")
+occupation9_3 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.3")
+occupation9_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.7")
+occupation9_9 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.9")
+occupation9_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.14")
+occupation9_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.17")
+occupation9_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.24")
+occupation9_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.28")
+occupation10_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.1")
+occupation10_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.5")
+occupation10_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.8")
+occupation10_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.12")
+occupation10_15 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.15")
+occupation10_19 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.19")
+occupation10_22 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.22")
+occupation10_26 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.26")
+occupation10_29 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.29")
+occupation11_2 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.02")
+occupation11_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.05")
+occupation11_9 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.09")
+occupation11_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.12")
+occupation11_16 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.16")
+occupation11_19 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.19")
+occupation11_23 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.23")
+occupation11_26 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.26")
+occupation11_30 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.30")
+occupation12_3 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.3")
+occupation12_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.7")
+occupation12_10 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.10")
+occupation12_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.14")
+occupation12_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.17")
+occupation12_21 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.21")
+occupation12_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.24")
+occupation12_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.28")
+occupation12_31 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.31")
+occupation1_4 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.04")
+occupation1_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.07")
+occupation1_11 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.11")
+occupation1_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.14")
+occupation1_18 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.18")
+occupation1_21 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.21")
+occupation1_25 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.25")
+occupation1_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.28")
+occupation2_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.01")
+occupation2_4 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.04")
+occupation2_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.08")
+occupation2_11 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.11")
+#Add new dates here
+```
+
+#OLD
+#Clean and Normalize Names
+```{r include=FALSE}
+occupation8_17 <- clean_names(occupation8_17)
+occupation8_24 <- clean_names(occupation8_24)
+occupation8_27 <- clean_names(occupation8_27)
+occupation8_31 <- clean_names(occupation8_31)
+occupation9_3 <- clean_names(occupation9_3)
+occupation9_7 <- clean_names(occupation9_7)
+occupation9_9 <- clean_names(occupation9_9)
+occupation9_14 <- clean_names(occupation9_14)
+occupation9_17 <- clean_names(occupation9_17)
+occupation9_24 <- clean_names(occupation9_24)
+occupation9_28 <- clean_names(occupation9_28)
+occupation10_1 <- clean_names(occupation10_1)
+occupation10_5 <- clean_names(occupation10_5)
+occupation10_8 <- clean_names(occupation10_8)
+occupation10_12 <- clean_names(occupation10_12)
+occupation10_15 <- clean_names(occupation10_15)
+occupation10_19 <- clean_names(occupation10_19)
+occupation10_22 <- clean_names(occupation10_22)
+occupation10_26 <- clean_names(occupation10_26)
+occupation10_29 <- clean_names(occupation10_29)
+occupation11_2 <- clean_names(occupation11_2)
+occupation11_5 <- clean_names(occupation11_5)
+occupation11_9 <- clean_names(occupation11_9)
+occupation11_12 <- clean_names(occupation11_12)
+occupation11_16 <- clean_names(occupation11_16)
+occupation11_19 <- clean_names(occupation11_19)
+occupation11_23 <- clean_names(occupation11_23)
+occupation11_26 <- clean_names(occupation11_26)
+occupation11_30 <- clean_names(occupation11_30)
+occupation12_3 <- clean_names(occupation12_3)
+occupation12_7 <- clean_names(occupation12_7)
+occupation12_10 <- clean_names(occupation12_10)
+occupation12_14 <- clean_names(occupation12_14)
+occupation12_17 <- clean_names(occupation12_17)
+occupation12_21 <- clean_names(occupation12_21)
+occupation12_24 <- clean_names(occupation12_24)
+occupation12_28 <- clean_names(occupation12_28)
+occupation12_31 <- clean_names(occupation12_31)
+occupation1_4 <- clean_names(occupation1_4)
+occupation1_7 <- clean_names(occupation1_7)
+occupation1_11 <- clean_names(occupation1_11)
+occupation1_14 <- clean_names(occupation1_14)
+occupation1_18 <- clean_names(occupation1_18)
+occupation1_21 <- clean_names(occupation1_21)
+occupation1_25 <- clean_names(occupation1_25)
+occupation1_28 <- clean_names(occupation1_28)
+occupation2_1 <- clean_names(occupation2_1)
+occupation2_4 <- clean_names(occupation2_4)
+occupation2_8 <- clean_names(occupation2_8)
+occupation2_11 <- clean_names(occupation2_11)
+
+#add the most recent dates here
+```
+
+#OLD
+#Combine through 9-14
+#This creates an employer db from Aug 17-Sept 14
+```{r warning=FALSE}
+#Poultry and nonpoultry combined
+#Poultry - nonpoultry ends on Sept 14
+employer_masterAugSept <- smartbind(occupation8_17, occupation8_24, occupation8_27, occupation8_31, occupation9_3, occupation9_7, occupation9_9, occupation9_14)
+
+employer_masterAugSept <- clean_names(employer_masterAugSept)
+#dates
+employer_masterAugSept$date <- ymd(employer_masterAugSept$date)
+
+#Separate the fields to industry, city, county
+employer_masterAugSept <- separate(data = employer_masterAugSept, col = employer_city_county, into = c("company_name", "city", "county"), sep = ",", extra = "merge", fill = "right")
+
+#write.csv(employer_masterAugSept,"employer_masterAugSept.csv")
+
+
+```
+
+#OLD
+#This creates an industry db from Sept 28-Feb 11, 2021. 
+```{r warning=FALSE}
+#This creates an industry db from Sept 28-Feb 1, 2021. It lacks the Employer Names
+#Redo and sort in order later
+industry_master <- smartbind(occupation2_11, 
+                             occupation2_8, 
+                             occupation2_4, 
+                             occupation2_1, 
+                             occupation1_28, 
+                             occupation1_25, 
+                             occupation1_21, 
+                             occupation1_18, 
+                             occupation1_14,
+                             occupation1_11, 
+                             occupation1_7, 
+                             occupation1_4, 
+                             occupation12_31, 
+                             occupation12_28, 
+                             occupation12_24, 
+                             occupation12_21, 
+                             occupation12_17, 
+                             occupation12_14,
+                             occupation12_10, 
+                             occupation12_7, 
+                             occupation12_3,
+                             occupation11_30, 
+                             occupation11_26, 
+                             occupation11_23, 
+                             occupation11_19, 
+                             occupation11_16, 
+                             occupation11_12, 
+                             occupation11_9, 
+                             occupation11_5, 
+                             occupation11_2, 
+                             occupation10_29, 
+                             occupation10_26, 
+                             occupation10_22,
+                             occupation10_19, 
+                             occupation10_15, 
+                             occupation10_12, 
+                             occupation10_8, 
+                             occupation10_5, 
+                             occupation10_1, 
+                             occupation9_28, 
+                             occupation9_24,
+                             occupation9_17)
+
+#occupation_master2 <- occupation_master2[ -c(3,4,5,6) ]
+
+#arrange(occupation_master2,desc(Date))
+industry_master$date <- ymd(industry_master$date)   
+
+
+glimpse(industry_master)
+
+```
+
+#OLD
+#separate the company and city by comma
+```{r}
+
+#Separate the fields to industry, city, county
+industry_master <- separate(data = industry_master, col = industry_city_county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
+
+industry_master <- clean_names(industry_master)
+
+
+industry_master$city <- str_trim(industry_master$city, side = c("both"))
+industry_master$county <- str_trim(industry_master$county,  side = c("both"))
+write.csv(industry_master,"industry_master.csv")
+glimpse(industry_master)
+```
+
+#Combine the industry_master, employer_masterAugSept, occupation_may_august into a single new data frame. You'll need to fix the business to company_name in occupation_may_august. See if there are other fixes. Drop the Misty calculations - we will do our own. Make note of what Misty was calculating.
+
+#Rename Misty File Columns to match
+```{r}
+occupation_may_august <- occupation_may_august %>% 
+  rename(company_name = business, number_active_cases = active, number_recovered_cases = closed, total_number_of_cases = total_positivies)
+occupation_may_august
+
+#Hennigan Note: text in number fields "less than 5" should be changed, but I'm not sure what to. "Unknown" should become NA?
+```
+
+#OLD
+#Join Tables
+```{r}
+occupation_master1 <- smartbind(occupation_may_august, employer_masterAugSept, industry_master) %>% 
+arrange(desc(date)) 
+
+occupation_master1 <- occupation_master1 %>% 
+  select(date, company_name, address, city, county, number_active_cases, number_recovered_cases, industry, total_business, new_total, total_new, total_number_of_cases, percent_closed, x12, latitude, longitude)
+  
+glimpse(occupation_master1)
+write.csv(occupation_master1, "occupation_master1.csv")
+
+```
+
+#OLD
+#Group Reoccuring Names - County 
+```{r}
+arkansasco <- occupation_master1 %>% 
+  filter(grepl ("Arkansas", county)) %>% 
+  mutate(cleaned = "arkansas")
+
+benton <- occupation_master1 %>% 
+  filter(grepl ("Benton", county)) %>% 
+  mutate(cleaned = "benton")
+
+carroll <- occupation_master1 %>% 
+  filter(grepl ("Carroll", county)) %>% 
+  mutate(cleaned = "carroll")
+
+cleveland <- occupation_master1 %>% 
+  filter(grepl ("Cleveland", county)) %>% 
+  mutate(cleaned = "cleveland")
+
+craighead <- occupation_master1 %>% 
+  filter(grepl ("Craighead", county)) %>% 
+  mutate(cleaned = "craighead")
+
+crawford <- occupation_master1 %>% 
+  filter(grepl ("Crawford", county)) %>% 
+  mutate(cleaned = "crawford")
+
+garland <- occupation_master1 %>% 
+  filter(grepl ("Garland", county)) %>% 
+  mutate(cleaned = "garland")
+
+independence <- occupation_master1 %>% 
+  filter(grepl ("Independence", county)) %>% 
+  mutate(cleaned = "independence")
+
+jefferson <- occupation_master1 %>% 
+  filter(grepl ("Jefferson", county)) %>% 
+  mutate(cleaned = "jefferson")
+
+mississippi <- occupation_master1 %>% 
+  filter(grepl ("Mississippi", county)) %>% 
+  mutate(cleaned = "mississippi")
+
+pope <- occupation_master1 %>% 
+  filter(grepl ("Pope", county)) %>% 
+  mutate(cleaned = "pope")
+
+randolph <- occupation_master1 %>% 
+  filter(grepl ("Randolph", county)) %>% 
+  mutate(cleaned = "randolph")
+
+sebastian <- occupation_master1 %>% 
+  filter(grepl ("Sebastian", county)) %>% 
+  mutate(cleaned = "sebastian")
+
+vanburenco <- occupation_master1 %>% 
+  filter(grepl ("Van Buren", county)) %>% 
+  mutate(cleaned = "van_buren")
+
+washington <- occupation_master1 %>% 
+  filter(grepl ("Washington", county)) %>% 
+  mutate(cleaned = "washington")
+
+```
 
 
 
