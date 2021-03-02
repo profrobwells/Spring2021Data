@@ -332,7 +332,7 @@
 "4:307","2020-08-03","Tyson"," Green Forest"," Carroll",8,64,72,NA,NA
 "4:308","2020-08-03","Pilgrim's Pride"," De Queen"," Sevier",7,250,257,NA,NA
 "4:309","2020-08-03","Tyson"," Dardanelle"," Yell",7,73,80,NA,NA
-"4:310","2020-08-03","Tyson"," Tyler Rd"," Russellville, Pope",7,49,56,NA,NA
+"4:310","2020-08-03","Tyson"," Russellville"," Pope",7,49,56,"Tyler Rd",NA
 "4:311","2020-08-03","Wayne Farms"," Danville"," Yell",6,193,199,NA,NA
 "4:312","2020-08-03","Tyson"," Nashville"," Howard",6,35,41,NA,NA
 "4:313","2020-08-03","George's Poultry"," Batesville"," Independence",6,4,10,NA,NA
@@ -401,11 +401,11 @@
 "4:376","2020-08-17","Kagome Foods"," Osceola"," Mississippi",5,14,19,NA,NA
 "4:377","2020-08-17","Peco"," Batesville"," Independence",19,62,81,NA,NA
 "4:378","2020-08-17","OK Foods"," Ft Smith"," Sebastian",17,193,210,NA,NA
-"4:379","2020-08-17","Tyson"," Berry St."," Springdale, Washington",11,336,347,NA,NA
+"4:379","2020-08-17","Tyson"," Springdale"," Washington",11,336,347,"Berry St.",NA
 "4:380","2020-08-17","Tyson"," Van Buren"," Crawford",8,111,119,NA,NA
 "4:381","2020-08-17","Simmons Foods"," Siloam Springs"," Benton",7,67,74,NA,NA
 "4:382","2020-08-17","Simmons Foods"," Gentry"," Benton",6,78,84,NA,NA
-"4:383","2020-08-17","Tyson"," 275 Hempstead 278"," Hope, Hempstead",6,26,32,NA,NA
+"4:383","2020-08-17","Tyson"," Hope"," Hempstead",6,26,32,"275 Hempstead 278",NA
 "4:384","2020-08-17","Tyson"," Clarksville"," Johnson",5,213,218,NA,NA
 "4:385","2020-08-17","Tyson"," Pine Bluff"," Jefferson",5,32,37,NA,NA
 "4:386","2020-08-17","Twin Rivers Foods"," Ft Smith"," Sebastian",5,11,16,NA,NA
@@ -601,8 +601,8 @@
 "5:141","2020-11-30","ConAgra"," Russellville"," Pope",10,219,229,NA,"Manufacturing"
 "5:142","2020-11-30","Tyson"," Green Forest"," Carroll",10,183,193,NA,"Manufacturing"
 "5:143","2020-11-30","Tyson"," Waldron"," Scott",8,28,36,"Plant St.","Manufacturing"
-"5:144","2020-11-30",NA," Berryville"," Carroll",7,57,64,NA,"Manufacturing"
-"5:145","2020-11-30","Tyson"," Huntsville"," Madison",5,163,168,NA,"Manufacturing"
+"5:144","2020-11-30","Tyson"," Berryville"," Carroll",7,57,64,NA,"Manufacturing"
+"5:145","2020-11-30","Butterball"," Huntsville"," Madison",5,163,168,NA,"Manufacturing"
 "5:146","2020-11-30","Nucor-Yamato Steel"," Blytheville"," Mississippi",5,29,34,NA,"Manufacturing"
 "5:147","2020-11-30","Butterball"," Jonesboro"," Craighead",5,17,22,NA,"Manufacturing"
 "5:148","2020-12-03","Tyson"," Green Forest"," Carroll",7,199,206,NA,"Manufacturing"
@@ -692,7 +692,7 @@
 "5:232","2020-12-24","Tyson of Rogers"," Rogers"," Benton",9,313,322,"Elm St.","Manufacturing"
 "5:233","2020-12-24","Wayne Farms"," Danville"," Yell",9,221,230,NA,"Manufacturing"
 "5:234","2020-12-24","Tyson"," Dardanelle"," Yell",9,127,136,NA,"Manufacturing"
-"5:235","2020-12-24","Tyson's Chick-N-Quick"," Olrich St"," Rogers, Benton",9,96,105,"Olrich St.","Manufacturing"
+"5:235","2020-12-24","Tyson's Chick-N-Quick"," Rogers"," Benton",9,96,105,"Olrich St.","Manufacturing"
 "5:236","2020-12-24","Husqvarna"," Nashville"," Howard",9,62,71,NA,"Manufacturing"
 "5:237","2020-12-24","Tyson"," Russellville"," Pope",8,112,120,"Tyler Rd.","Manufacturing"
 "5:238","2020-12-24","Frito Lay"," Jonesboro"," Craighead",8,108,116,NA,"Manufacturing"
