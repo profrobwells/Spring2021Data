@@ -50,6 +50,15 @@ occupational_master <- rio::import("https://raw.githubusercontent.com/profrobwel
 
 ```
 
+#Clean addresses
+```{r}
+cleaned_data <- occupational_master %>% 
+  mutate(cleaned_address = tolower(address)) %>% 
+  mutate(cleaned_address = str_remove_all(cleaned_address, pattern =  "[[:punct:]]"))
+cleaned_data
+
+```
+
 
 #City Work--------
 #Needs refined: "AR" is not a city, need to pull this info from a separate column. Springdale Public school is in Springdale City, Washington County, need to pull this info from a separate column. 
@@ -62,7 +71,7 @@ occupational_master <- rio::import("https://raw.githubusercontent.com/profrobwel
 
 ```{r}
 #Thanks Sean, Kara and Nick:
-cleaned_data <- occupational_master %>%
+cleaned_data <- cleaned_data %>%
   mutate(cleaned_city = tolower(city)) %>%
   #mutate(cleaned_city = str_remove(" ",cleaned_city)) %>%
   mutate(cleaned_city = case_when(
@@ -163,8 +172,8 @@ write.csv(cleaned_master, "cleaned_master.csv")
 #This yieled 11,448 total cases of infected employees in Arkansas workplaces. 
 ```{r}
 companytotals <- cleaned_master %>% 
-  select(company_name, cleaned_company, date, address, city, county, total_number_of_cases) %>% 
-  group_by(cleaned_company, address, city,county) %>% 
+  select(company_name, cleaned_company, date, address, cleaned_address, city, county, total_number_of_cases) %>% 
+  group_by(cleaned_company, cleaned_address, city,county) %>% 
   filter(total_number_of_cases == max(total_number_of_cases)) 
 
 sum(companytotals$total_number_of_cases)
@@ -242,6 +251,32 @@ cleaned_company_report
 #TYSON IS 36% OF ALL REPORTS
 ```
 
+#Tyson Total Cases
+```{r}
+tysontotals <- cleaned_master %>% 
+  select(company_name, cleaned_company, date, address, cleaned_address, city, county, total_number_of_cases) %>% 
+  group_by(cleaned_company, cleaned_address, city,county) %>% 
+  filter(cleaned_company == "tyson") %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) 
+tysontotals
+
+sum(tysontotals$total_number_of_cases)
+#This is a good first estimate, I think some of the Rogers, Springdale plants are reoccurring. First total: 3,373 cases at Tyson in Arknasas. 
+```
+
+#Time Series
+```{r}
+chicknquick_rogers <- cleaned_master %>% 
+  select(cleaned_company, date, address, cleaned_address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
+  filter(cleaned_city == "rogers") %>% 
+  filter(cleaned_address == "olrich st") %>% 
+  filter(cleaned_company == "tyson") %>% 
+  arrange(desc(date))
+
+chicknquick_rogers
+write.csv(chicknquick_rogers, "chicknquick_rogers.csv")
+```
+
 #For time series example: Filter city Huntsville filter company Butterball
 
 
@@ -249,12 +284,12 @@ cleaned_company_report
 #FIX
 ```{r}
 butterball_huntsville <- cleaned_master %>% 
-  select(cleaned_company, date, address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
-  filter(cleaned_city == "huntsville")
+  select(cleaned_company, date, address, cleaned_address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
+  filter(cleaned_city == "huntsville") %>% 
   filter(cleaned_company == "butterball") %>% 
-  arrange(desc(total_number_of_cases))
-butterball_huntsville
+  arrange(desc(date))
 
+butterball_huntsville
 #write.csv(butterballhuntsville, "butterballhuntsville.csv")
 
 ```
@@ -292,6 +327,46 @@ ggplot(month_counts) + geom_point(aes(x=month, y=n, color=n)) + geom_smooth(aes(
 
 #Zimmardi note: I have been looking up different codes, and I can't figure out how to change the label names and add a title. But this shows the number of records by month.
 ```
+
+
+
+#Matching OSHA to ADH
+#the file is on the google drive, needs to be on GitHub
+```{r}
+AR_OSHA <- rio::import("/Users/abbyzimmardi/Downloads/Data Spring 2021/OSHA/AR Closed Complaints/AR Closed Complaints.xlsx")
+```
+
+#clean city and county columns
+```{r}
+AR_OSHA$`Site City`<- str_replace_all(AR_OSHA$`Site City`, pattern=fixed(' '), replacement=fixed('_') )
+AR_OSHA$`Site City` = tolower(AR_OSHA$`Site City`)
+AR_OSHA$`Site County`<- str_replace_all(AR_OSHA$`Site County`, pattern=fixed(' '), replacement=fixed('_') )
+AR_OSHA$`Site County` = tolower(AR_OSHA$`Site County`)
+AR_OSHA
+```
+
+#Rename column names
+```{r}
+AR_OSHA <- AR_OSHA %>%
+  rename(address = 'Site Address 1', cleaned_city = 'Site City', date = 'UPA Receipt Date')
+AR_OSHA
+```
+
+#Match by company name (matching by company name duplicated all the names)
+
+```{r}
+#OSHA_master <- inner_join(AR_OSHA, cleaned_master, #by=c("cleaned_company"="cleaned_company"))
+#OSHA_master
+```
+
+#Match by address
+#Zimmardi note: I'm stuck here - I'm able to match it, but not correctly. I need the addresses on cleaned_master to be exact to match that to AR_OSHA, and I don't know how to do that when we only have street names for ADH data (OSHA data has exact addresses)
+```{r}
+OSHA_master <- inner_join(AR_OSHA, cleaned_master, by=c("address"="address"))
+OSHA_master
+#write.csv(OSHA_master, "OSHA_master.csv")
+```
+
 
 
 
