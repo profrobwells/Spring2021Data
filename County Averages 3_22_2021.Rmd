@@ -1,0 +1,216 @@
+---
+title: "County Averages"
+author: "Rob Wells"
+date: "3/22/2021"
+output: html_document
+---
+# Part 1: Import State Data, Clean It
+
+```{r include=FALSE}
+#install.packages("slider")
+#install.packages("zoo")
+#install.packages("gtools")
+#install.packages("formattable")
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(tidyr)
+library(jsonlite)
+library(gtools)
+library(zoo)  
+library(reshape2)
+library(slider)
+library(formattable)
+```
+
+## Retrieve State Arkansas Covid Data from ADH FEED
+```{r}
+#New County json feed
+#38 Variables
+q <- fromJSON('https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/UPDATED_ADH_COVID19_COUNTY_METRICS/FeatureServer/0/query?where=0%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&returnCentroid=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson&token=')
+
+df3 <- q[["features"]][["attributes"]]
+#print's today's date as a date field
+df3$mydate <- Sys.Date()
+#file.exists(filename)
+#austin help on that
+#if file exists = check if current data is different and if that is true then append today's data set to master dataset and resave
+today_county <- df3
+```
+
+```{r}
+#If this fails, check the backup from Austin
+#https://docs.google.com/spreadsheets/d/1WRITgZZdI5PwiJiJeutBjJigSifOaNPDyTW_jHizfGQ/edit?usp=sharing
+```
+
+
+
+```{r}
+today_county <- janitor::clean_names(today_county)
+```
+
+
+#Set Dates
+```{r}
+#today's date
+today <- Sys.Date()
+
+#NOTE: IF YOU ARE RUNNING THIS A DAY LATE, USE THIS CODE TO WORK PROPERLY
+#today <- Sys.Date()-1
+#today_county$mydate <-"2020-09-22- THE OLD DATE...."
+
+#yesterday's date
+yesterday <- (today-1)
+
+```
+
+#Quick Calculation of State Totals 
+```{r}
+today_county <- today_county [ -c(1) ]
+today_county [2:37] <- lapply(today_county [2:37], as.numeric)
+#Calculate statewide totals
+
+today_county <- today_county %>%
+  janitor::adorn_totals("row") %>% 
+  mutate(mydate=(today))
+
+today_county$county_nam <- str_replace_all(today_county$county_nam, pattern=fixed('Arkansas'), replacement=fixed('Arkansas_county') )
+today_county$county_nam <- str_replace_all(today_county$county_nam, pattern=fixed('Total'), replacement=fixed('Arkansas_all_counties') )
+today_county$county_nam  <- gsub("[[:space:]]", "", today_county$county_nam)
+today_county$mydate <- as.Date(today_county$mydate)
+```
+
+-**Import and Clean Yesterday's Data**
+```{r}
+yesterday_county <- rio::import("https://raw.githubusercontent.com/Arkansascovid/Main/master/master_file.csv")
+#yesterday_county <- yesterday_county [ -c(1) ]
+yesterday_county$mydate <- as.Date(yesterday_county$mydate)
+#ran this to test it out on today's data
+ yesterday_county <- yesterday_county %>% 
+  filter(mydate<=(yesterday))
+yesterday_county[4:45] <- lapply(yesterday_county[4:45], as.numeric)
+```
+# .
+# Previous Date Calculations
+#  .
+-**This section performs all of the county calculations**   
+-**It updates master_file.csv**  
+-**Create Temporary Table Two Days' Worth of Data**   
+-**Sort Alphbetically and Run Calculations**   
+
+```{r}
+countytemp <- yesterday_county %>% 
+  filter(mydate>=(yesterday)) %>%  
+  arrange(county_nam) 
+```
+
+You should get a df with 154 observations (two days' worth a data)
+```{r}
+df_master <- smartbind(today_county, countytemp)
+
+twodays <- df_master %>% 
+  arrange((county_nam))
+```
+
+
+-**The Today-Yesterday Calculations**
+
+```{r}
+twodays <- twodays %>%
+  mutate(Number_Tested=(positive+negative)) %>% 
+  mutate(New_Cases_Today = (positive-lead(positive))) %>%
+  mutate(Recovered_Since_Yesterday = (recoveries-lead(recoveries))) %>%
+  mutate(New_Deaths_Today = (deaths-lead(deaths))) %>%
+  mutate(New_Tests_Dashboard = (Number_Tested-lead(Number_Tested)))
+```
+
+- **IMPORTANT: FILTER TABLE TO TODAY'S RESULTS**
+```{r}
+twodays <- twodays %>% filter(mydate > yesterday) #SHOULD GET 77 ROWS IN twodays
+```
+
+
+```{r}
+glimpse(twodays)
+```
+
+-**The Percentage Calculations**
+
+```{r}
+twodays <- twodays %>%
+  mutate(Cases_Population = (positive / pop_5yr_est_2018)*100) %>% 
+  mutate(Tested_Population = (Number_Tested / pop_5yr_est_2018)*100) %>% 
+  mutate(New_Cases_Today_10k_Pop = (New_Cases_Today/pop_5yr_est_2018)*10000) %>% 
+  mutate(Active_Cases_10k_Pop = (confirmed_active/pop_5yr_est_2018)*10000) %>% 
+  mutate(Pct_Positive_Cumulative = (positive/Number_Tested)*100) %>% 
+  mutate(Pct_Positive_New_to_Dashboard = (New_Cases_Today/New_Tests_Dashboard)*100) %>% 
+  mutate(Closed = (recoveries + deaths)) %>% 
+  mutate(Pct_Deaths_vs_Recoveries = (deaths/Closed)*100) %>% 
+  mutate(Pct_Recoveries_vs_Deaths = (recoveries/Closed)*100)
+  
+twodays
+```
+
+#Merges the Today's Arkanas_All_Counties line with yesterday's data. 
+```{r}
+master2 <- smartbind(twodays, yesterday_county, fill=0)
+```
+
+```{r}
+
+master2 <- master2 %>% 
+  select("county_nam","mydate","deaths","fhwa_numbe","fips","positive","negative","recoveries","total_tests","active_cases","pop_5yr_est_2018","confirmed_pos","probable_pos","confirmed_neg","probable_neg","confirmed_recov","probable_recov","confirmed_death","probable_death", "confirmed_active","probable_active","pcr_test","antigen_test","pcr_pos_test", "pcr_neg_test","antigen_pos_test","antigen_neg_test","total_pos_test","total_neg_test",
+"New_Cases_Today","Recovered_Since_Yesterday","New_Deaths_Today","New_Tests_Dashboard","Cases_Population","Tested_Population","New_Cases_Today_10k_Pop","Active_Cases_10k_Pop","Pct_Positive_Cumulative","Pct_Positive_New_to_Dashboard","Closed","Pct_Deaths_vs_Recoveries","Pct_Recoveries_vs_Deaths","lab_prvt","lab_pub")
+master2$mydate <- as.Date(master2$mydate)
+glimpse(master2)
+```
+
+
+#Save master file
+```{r}
+master2$Cases_Population <- round(master2$Cases_Population, 2)
+master2$Tested_Population <- round(master2$Tested_Population, 2)
+master2$New_Cases_Today_10k_Pop <- round(master2$New_Cases_Today_10k_Pop, 2)
+master2$Active_Cases_10k_Pop <- round(master2$Active_Cases_10k_Pop, 2)
+master2$Pct_Positive_Cumulative <- round(master2$Pct_Positive_Cumulative, 2)
+master2$Pct_Positive_New_to_Dashboard <- round(master2$Pct_Positive_New_to_Dashboard, 2)
+master2$Pct_Deaths_vs_Recoveries <- round(master2$Pct_Deaths_vs_Recoveries, 2)
+master2$Pct_Recoveries_vs_Deaths <- round(master2$Pct_Recoveries_vs_Deaths, 2)
+
+#write.csv(master2, "master_file_9_18.csv")
+#write.csv(master2, file = "MasterData/master_file.csv")
+```
+# AVERAGE CALCULATIONS 
+```{r}
+test <- master2 %>% 
+  group_by(county_nam) %>%
+  arrange(county_nam, mydate) %>%
+  mutate(Positive_7_Day_Avg = slider::slide_dbl(positive, mean, .before = 6, .after = 0)) %>%
+  mutate(New_Cases_7_Day_Avg = slider::slide_dbl(New_Cases_Today, mean, .before = 6, .after = 0)) %>%
+  mutate(New_Deaths_7_Day_Avg = slider::slide_dbl(New_Deaths_Today, mean, .before = 6, .after = 0)) %>%
+    mutate(Active_Cases_7_Day_Avg = slider::slide_dbl(active_cases, mean, .before = 6, .after = 0)) %>%
+ungroup()
+
+#Run this before writing script to get back in descending order by date
+
+test <- test %>% 
+  arrange(desc(mydate))
+
+county_averages <- test %>% 
+  select(mydate, county_nam, positive, Positive_7_Day_Avg, New_Cases_Today, New_Cases_7_Day_Avg, New_Deaths_Today, New_Deaths_7_Day_Avg, Recovered_Since_Yesterday, active_cases, Active_Cases_7_Day_Avg) 
+
+#Alex Nichol decimal rounding:
+county_averages$Positive_7_Day_Avg <-round(county_averages$Positive_7_Day_Avg, 2)
+county_averages$New_Cases_7_Day_Avg <-round(county_averages$New_Cases_7_Day_Avg, 2)
+county_averages$New_Deaths_7_Day_Avg <-round(county_averages$New_Deaths_7_Day_Avg, 2)
+county_averages$Active_Cases_7_Day_Avg <-round(county_averages$Active_Cases_7_Day_Avg, 2)
+
+write.csv(county_averages, "county_averages.csv")
+```
+
+```{r}
+county_latest <- subset(county_averages, mydate > "2021-03-14" & mydate < "2021-03-22")
+
+write.csv(county_latest, "county_latest.csv")
+```
+
