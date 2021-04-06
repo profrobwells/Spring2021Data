@@ -1,0 +1,315 @@
+---
+title: "Vaccine Data"
+author: "Rob Wells"
+date: "4/1/2021"
+output: html_document
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(tidyr)
+library(jsonlite)
+library(gtools)
+library(zoo)  
+library(reshape2)
+library(slider)
+library(formattable)
+```
+
+#Unmerge the spreadsheet
+
+#For 8 Columns
+
+```{r}
+
+vaccinecounty <- rio::import("/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/County vaccination numbers 4.5.21.xlsx", skip=3, col_names = c("county", "partial_vax", "partialpct", "full_vax", "fullpct", "unknown_dose", "unknownpct", "population"))
+
+vaccinecounty <- separate(data = vaccinecounty, col = partial_vax, into = c("Partial_Vax", "Partial_Pct_a"), sep = " ", extra = "merge", fill = "right")
+
+#use this
+vaccinecounty$Partial_Pct <- paste(vaccinecounty$partialpct, vaccinecounty$Partial_Pct_a)
+
+vaccinecounty <- separate(data = vaccinecounty, col = full_vax, into = c("Full_Vax", "Full_Pcta"), sep = " ", extra = "merge", fill = "right")
+
+#use this
+vaccinecounty$Full_Pct <- paste(vaccinecounty$fullpct, vaccinecounty$Full_Pcta)
+
+
+vaccinecounty <- separate(data = vaccinecounty, col = unknown_dose, into = c("Unknown_Dose", "Unknown_Pcta"), sep = " ", extra = "merge", fill = "right")
+
+#use this
+vaccinecounty$Unknown_Pct <- paste(vaccinecounty$Unknown_Pcta, vaccinecounty$unknownpct)
+
+
+vaccinecounty [2:14] <- as.data.frame(lapply(vaccinecounty [2:14], function(y) gsub("[N/A]", "", y)))
+vaccinecounty <- as.data.frame(lapply(vaccinecounty, function(y) gsub("[,]", "", y)))
+vaccinecounty <- as.data.frame(lapply(vaccinecounty, function(y) gsub("[(%)]", "", y)))
+
+#Format as integers
+vaccinecounty[2:14] <- lapply((vaccinecounty)[2:14], function(x) as.numeric(as.character(x)))
+
+vaccinecounty$date <- Sys.Date()
+
+vaccinecounty1 <- vaccinecounty %>% 
+  select(county, Partial_Vax, Partial_Pct, Full_Vax, Full_Pct, Unknown_Dose, Unknown_Pct, population, date)
+
+head(vaccinecounty1)
+
+write.csv(vaccinecounty1, file = "MasterData/vaccinecounty.csv")
+```
+
+#For 5 Columns
+
+```{r}
+
+vaccinecounty <- rio::import("/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/County Vaccination numbers 3.31.21.xlsx", skip=3, col_names = c("county", "partial_vax", "full_vax", "unknown_dose", "population"))
+
+vaccinecounty <- separate(data = vaccinecounty, col = partial_vax, into = c("Partial_Vax", "Partial_Pct"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty <- separate(data = vaccinecounty, col = full_vax, into = c("Full_Vax", "Full_Pct"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty <- separate(data = vaccinecounty, col = unknown_dose, into = c("Unknown_Dose", "Unknown_Pct"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty [2:8] <- as.data.frame(lapply(vaccinecounty [2:8], function(y) gsub("[N/A]", "", y)))
+vaccinecounty <- as.data.frame(lapply(vaccinecounty, function(y) gsub("[,]", "", y)))
+vaccinecounty <- as.data.frame(lapply(vaccinecounty, function(y) gsub("[(%)]", "", y)))
+
+#Format as integers
+vaccinecounty[2:8] <- lapply((vaccinecounty)[2:8], function(x) as.numeric(as.character(x)))
+
+vaccinecounty$date <- Sys.Date()-1
+
+
+```
+
+```{r}
+names(vaccinecounty)
+```
+
+
+```{r}
+#Final table
+
+
+#Clean up column names
+vaccinecounty <- vaccinecounty %>% 
+  rename(Date = date, County = county, Population = population)
+
+#Delete NA row
+#May not be in same row
+#vaccinecounty2 = vaccinecounty2[-c(39),]
+
+
+glimpse(vaccinecounty)
+write.csv(vaccinecounty, file = "MasterData/vaccinecounty.csv")
+```
+
+
+#Add the total for missing and out of state vaccine data 
+```{r}
+missing <- vaccinecounty1 %>% 
+  select(county, Full_Vax, Partial_Vax) %>% 
+  filter(county=="Missing" | county=="Out of State") 
+
+Fulltotal <- sum(missing$Full_Vax)
+Partialtotal <- sum(missing$Partial_Vax)
+total <- sum(Fulltotal + Partialtotal)
+total
+ 
+ 
+```
+
+#----------------
+#Old format with 1-2 doses
+#----------------
+
+
+
+
+
+#For 7 Columns
+
+```{r}
+
+vaccinecounty <- rio::import("/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/Vaccine_Brief_ADH_2021_03_26.xlsx", skip=3, col_names = c("county", "dose1", "dose1pct", "dose2", "unknown_dose", "unkpct", "population"))
+
+vaccinecounty <- separate(data = vaccinecounty, col = dose1, into = c("dose1x", "dose1pctx"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty$dose1percent <- paste(vaccinecounty$dose1pct, vaccinecounty$dose1pctx)
+
+vaccinecounty <- separate(data = vaccinecounty, col = dose2, into = c("dose2x", "dose2pctx"), sep = " ", extra = "merge", fill = "right")
+
+#vaccinecounty$dose2percent <- paste(vaccinecounty$dose2pct, vaccinecounty$dose2pctx)
+
+## Unknown doses and percent columns separated 
+vaccinecounty <- separate(data = vaccinecounty, col = unknown_dose, into = c("unknown_dosex", "unkpctx"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty$unkpercent <- paste(vaccinecounty$unkpct, vaccinecounty$unkpctx)
+
+vaccinecounty [2:12] <- as.data.frame(lapply(vaccinecounty [2:12], function(y) gsub("[N/A]", "", y)))
+vaccinecounty <- as.data.frame(lapply(vaccinecounty, function(y) gsub("[,]", "", y)))
+vaccinecounty <- as.data.frame(lapply(vaccinecounty, function(y) gsub("[(%)]", "", y)))
+
+#Format as integers
+vaccinecounty[2:12] <- lapply((vaccinecounty)[2:12], function(x) as.numeric(as.character(x)))
+
+vaccinecounty$date <- Sys.Date()
+
+
+```
+
+
+```{r}
+#Final table
+# vaccinecounty2 <- vaccinecounty %>% 
+#   select(date, county, dose1x, dose1percent, dose2x, dose2percent, unknown_dosex, unkpercent, population)
+
+vaccinecounty2 <- vaccinecounty %>% 
+  select(date, county, dose1x, dose1percent, dose2x, dose2pctx, unknown_dosex, unkpercent, population)
+
+
+#Clean up column names
+vaccinecounty2 <- vaccinecounty2 %>% 
+  rename(Date = date, County = county, Dose_1 = dose1x, Dose_2 = dose2x, Dose1_Pct = dose1percent, Dose2_Pct = dose2pctx, Unknown_Dose = unknown_dosex, Unknown_Pct = unkpercent, Population = population)
+
+#Delete NA row
+#May not be in same row
+#vaccinecounty2 = vaccinecounty2[-c(39),]
+
+
+glimpse(vaccinecounty2)
+write.csv(vaccinecounty2, file = "MasterData/vaccinecounty.csv")
+```
+
+#  filter(word1=="exchange" | word1=="currency" | word2=="currency" | word1==“manipulat?!XXX")
+#
+
+
+#Notes Below
+
+
+
+
+####################
+
+#Add a date field, do previous days' calculations
+```{r}
+#Fixed date
+vaccinecounty2$date <- "2021-02-24"
+
+#Today's date
+#vaccinecouty2$date <- "Sys.Date()"
+
+#Compile into master data
+
+#yesterday_vaccine <- rio::import(" xxxx ")
+
+```
+
+
+```{r}
+yesterday_county$mydate <- as.Date(yesterday_county$mydate)
+#ran this to test it out on today's data
+ yesterday_county <- yesterday_county %>% 
+  filter(mydate<=(yesterday))
+yesterday_county[4:45] <- lapply(yesterday_county[4:45], as.numeric)
+```
+# .
+# Previous Date Calculations
+#  .
+-**This section performs all of the county calculations**   
+-**It updates master_file.csv**  
+-**Create Temporary Table Two Days' Worth of Data**   
+-**Sort Alphbetically and Run Calculations**   
+
+```{r}
+countytemp <- yesterday_county %>% 
+  filter(mydate>=(yesterday)) %>%  
+  arrange(county_nam) 
+```
+
+You should get a df with 154 observations (two days' worth a data)
+```{r}
+df_master <- smartbind(today_county, countytemp)
+
+twodays <- df_master %>% 
+  arrange((county_nam))
+```
+
+
+-**The Today-Yesterday Calculations**
+
+```{r}
+twodays <- twodays %>%
+  mutate(Number_Tested=(positive+negative)) %>% 
+  mutate(New_Cases_Today = (positive-lead(positive))) %>%
+  mutate(Recovered_Since_Yesterday = (recoveries-lead(recoveries))) %>%
+  mutate(New_Deaths_Today = (deaths-lead(deaths))) %>%
+  mutate(New_Tests_Dashboard = (Number_Tested-lead(Number_Tested)))
+```
+
+- **IMPORTANT: FILTER TABLE TO TODAY'S RESULTS**
+```{r}
+twodays <- twodays %>% filter(mydate > yesterday) #SHOULD GET 77 ROWS IN twodays
+```
+
+
+```{r}
+glimpse(twodays)
+```
+
+
+write.csv(vaccinecounty2, file = "MasterData/vaccinecounty.csv")
+
+```
+#This data feeds this chart
+#https://app.datawrapper.de/table/dDKzc/publish
+
+
+#If the excel parsing is off, use thi
+#for 8 columns
+```{r}
+
+library(tidyverse)
+
+# vaccinecounty <- rio::import("/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/CovidFall2020/vaccine_brief_county_doses_3_3.xlsx", skip=2)
+
+vaccinecounty <- rio::import("/Users/rswells/Dropbox/Classes/Data Fall 2020/ArkansasCovid/CovidFall2020/vaccine_brief_county_doses_3_3.xlsx", skip=3, col_names = c("county", "dose1", "dose1pct", "dose2", "dose2pct", "unknown_dose", "unkpct", "population"))
+
+vaccinecounty <- separate(data = vaccinecounty, col = dose1, into = c("dose1x", "dose1pctx"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty$dose1percent <- paste(vaccinecounty$dose1pct, vaccinecounty$dose1pctx)
+
+vaccinecounty <- separate(data = vaccinecounty, col = dose2, into = c("dose2x", "dose2pctx"), sep = " ", extra = "merge", fill = "right")
+
+vaccinecounty$dose2percent <- paste(vaccinecounty$dose2pct, vaccinecounty$dose2pctx)
+
+## Unknown doses and percent columns separated 
+vaccinecounty <- separate(data = vaccinecounty, col = unknown_dose, into = c("unknown_dosex", "unkpctx"), sep = " ", extra = "merge", fill = "right")
+# 
+vaccinecounty$unkpercent <- paste(vaccinecounty$unkpct, vaccinecounty$unkpctx)
+
+head(vaccinecounty)
+
+```
+
+#Please clean out the NAs, the parentheses, format as integers
+#filter to a final df as county, dose1, dose1pct, dose2, dose2pct, unknown_dose, unkpct, population
+
+```{r}
+#Clean up the data
+# vaccinecounty [2:12] <- as.data.frame(lapply(vaccinecounty [2:12], function(y) gsub("[N/A]", "", y)))
+vaccinecounty [2:14] <- as.data.frame(lapply(vaccinecounty [2:14], function(y) gsub("[N/A]", "", y)))
+vaccinecounty <- as.data.frame(lapply(vaccinecounty, function(y) gsub("[,]", "", y)))
+vaccinecounty <- as.data.frame(lapply(vaccinecounty, function(y) gsub("[(%)]", "", y)))
+
+#Format as integers
+vaccinecounty[2:14] <- lapply((vaccinecounty)[2:14], function(x) as.numeric(as.character(x)))
+
+head(vaccinecounty)
+# glimpse(vaccinecounty)
+# write.csv(vaccinecounty, file = "MasterData/vaccinecounty.csv")
+```
+
