@@ -1,0 +1,269 @@
+---
+title: "Monthly New Cases - All Counties"
+author: "Rob Wells & Katy Seiter"
+date: "4/10/2021"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(rio)
+library(lubridate)
+library(dplyr)
+```
+
+## Import data
+```{r}
+master2 <- rio::import("https://raw.githubusercontent.com/Arkansascovid/Main/master/master_file.csv")
+```
+
+## Subset dataframe and assign months
+```{r}
+test <- master2 %>% 
+  select(county_nam, mydate, New_Cases_Today) %>% 
+  filter(county_nam!="Arkansas_all_counties") %>% 
+  filter(county_nam!="MissingCountyInfo") %>% 
+  filter(mydate >= "2020-04-01" & mydate <= "2021-03-31")
+
+
+#Process dates** 
+test$date <- ymd(test$mydate)
+test$year <- year(test$date)
+test$month <- month(test$date, label=TRUE)
+
+test <- test %>% 
+  mutate(yearmon = format(date, "%Y-%m"))
+
+```
+
+#Note for later: Needs refining: "ar" needs to be in crittenden county.
+```{r}
+test <- test %>%
+  mutate(cleaned_county = tolower(county_nam)) %>%
+  mutate(cleaned_county = case_when(
+    str_detect(cleaned_county, "little") ~ "little_river",
+    str_detect(cleaned_county, "van") ~ "van_buren",
+    str_detect(cleaned_county, "fishing") ~ "st. francis",
+    str_detect(cleaned_county, "and recreation") ~ "faulkner",
+    # str_detect(cleaned_county, "ar ") ~ "crittenden",
+    TRUE ~ cleaned_county
+  ))
+
+test$cleaned_county <- str_trim(test$cleaned_county) 
+```
+
+
+
+## Calculations ##
+
+
+
+## Master counties and months table, April 2020 - March 2021 ##
+```{r}
+master_counties_months <- test %>%
+  group_by(yearmon, cleaned_county) %>%
+  summarise(New_Cases=sum(New_Cases_Today))
+
+#write.csv(master_counties_months, "master_counties_months.csv")
+names(master_counties_months)
+
+```
+
+```{r}
+# library(tidyr)
+# library(dplyr)
+# library(readr)
+counties_months <- master_counties_months %>% 
+  pivot_wider(names_from = yearmon,
+  values_from = New_Cases)
+
+counties_months <- janitor::clean_names(counties_months)
+counties_months
+```
+
+
+
+
+
+#Math
+```{r}
+counties_months <- counties_months %>% 
+  mutate(MayPct = (x2020_05-x2020_04)/x2020_04) %>% 
+  mutate(JunePct = (x2020_06-x2020_05)/x2020_05) %>% 
+  mutate(JulyPct = (x2020_07-x2020_06)/x2020_06) %>% 
+  mutate(AugPct = (x2020_08-x2020_07)/x2020_07) %>% 
+  mutate(SepPct = (x2020_09-x2020_08)/x2020_08) %>% 
+  mutate(OctPct = (x2020_10-x2020_09)/x2020_09) %>% 
+  mutate(NovPct = (x2020_11-x2020_10)/x2020_10) %>%
+  mutate(DecPct = (x2020_12-x2020_11)/x2020_11) %>%
+  mutate(JanPct = (x2021_01-x2020_12)/x2020_12) %>%
+  mutate(FebPct = (x2021_02-x2021_01)/x2021_01) %>%
+  mutate(MarPct = (x2021_03-x2021_02)/x2021_02) 
+
+
+counties_months <- counties_months %>% 
+  mutate(MayNew = (x2020_05-x2020_04)) %>% 
+  mutate(JuneNew = (x2020_06-x2020_05)) %>% 
+  mutate(JulyNew = (x2020_07-x2020_06)) %>% 
+  mutate(AugNew = (x2020_08-x2020_07)) %>% 
+  mutate(SepNew = (x2020_09-x2020_08)) %>% 
+  mutate(OctNew = (x2020_10-x2020_09)) %>% 
+  mutate(NovNew = (x2020_11-x2020_10)) %>%
+  mutate(DecNew = (x2020_12-x2020_11)) %>%
+  mutate(JanNew = (x2021_01-x2020_12)) %>%
+  mutate(FebNew = (x2021_02-x2021_01)) %>%
+  mutate(MarNew = (x2021_03-x2021_02)) 
+
+```
+
+
+```{r}
+#import Occupational data cleaned master March 26 version
+occupational <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/cleaned_master.csv")
+
+#Process dates** 
+occupational$date <- ymd(occupational$date)
+occupational$year <- year(occupational$date)
+occupational$month <- month(occupational$date, label=TRUE)
+occupational$yearmon <- format(occupational$date, "%Y-%m")
+
+occupational <- occupational[ -c(1,2) ]
+
+```
+
+## Master counties and months table, April 2020 - March 2021 ##
+```{r}
+occupation_month <- occupational %>%
+  group_by(yearmon, cleaned_county) %>%
+  summarise(Occupational_New_Cases=sum(number_active_cases))
+```
+
+```{r}
+zzz <- occupation_month %>% 
+  inner_join(master_counties_months, by=c("cleaned_county"="cleaned_county", "yearmon"="yearmon"))
+```
+
+#calculate ratio of reported workplace outbreaks to total covid cases in a county
+```{r}
+occupation_month <- zzz %>% 
+  mutate(ratio_occupation = (Occupational_New_Cases/New_Cases))
+write.csv(occupation_month, "occupation_month.csv")
+```
+
+
+
+#Next: Figure out companies in counties with highest outbreaks
+
+
+#Wells stopped here
+#Wells stopped here
+#Wells stopped here
+
+
+
+
+
+
+
+
+```{r}
+#Cleaning
+zzz <- occupation_month %>%
+  mutate(cleaned_county = tolower(county)) %>%
+  mutate(cleaned_county = str_remove(" ",cleaned_county)) %>%
+  mutate(cleaned_city = case_when(
+    str_detect(cleaned_city, "pine") ~ "pine_bluff",
+    str_detect(cleaned_city, "hot") ~ "hot_springs",
+    str_detect(cleaned_city, "smith") ~ "fort_smith",
+    str_detect(cleaned_city, "ash") ~ "ashdown",
+    str_detect(cleaned_city, "faulkner") ~ "faulkner",
+    str_detect(cleaned_city, "green") ~ "green_forest",
+    str_detect(cleaned_city, "entertainment") ~ "conway",
+    str_detect(cleaned_city, "Forestry") ~ "colt",
+    TRUE ~ cleaned_city
+  ))
+
+cleaned_data$cleaned_city <- str_trim(cleaned_data$cleaned_city)
+#cleaned_data$cleaned_city <- gsub("[[:space:]]", "", occupational_master$cleaned_city)
+
+```
+
+
+
+```{r}
+zzz <- occupational %>% 
+  pivot_wider(names_from = yearmon,
+  values_from = New_Cases)
+```
+
+counties_months <- janitor::clean_names(counties_months)
+counties_months
+```
+
+
+```
+
+
+
+## Mini tables: total new cases for each county by individual month ##
+```{r}
+april2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Apr")
+#write.csv(april2020, "april2020.csv") 
+
+may2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="May")
+#write.csv(may2020, "may2020.csv") 
+
+june2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Jun")
+#write.csv(june2020, "june2020.csv") 
+
+july2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Jul")
+#write.csv(july2020, "july2020.csv") 
+
+aug2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Aug")
+#write.csv(aug2020, "aug2020.csv") 
+
+sept2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Sep")
+#write.csv(sept2020, "sept2020.csv") 
+
+oct2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Oct")
+#write.csv(oct2020, "oct2020.csv") 
+
+nov2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Nov")
+#write.csv(nov2020, "nov2020.csv") 
+
+dec2020 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Dec")
+#write.csv(dec2020, "dec2020.csv") 
+
+jan2021 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Jan")
+#write.csv(jan2021, "jan2021.csv") 
+
+feb2021 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Feb")
+#write.csv(feb2021, "feb2021.csv") 
+
+march2021 <- master_counties_months %>% 
+  select(county_nam, month, New_Cases) %>% 
+  filter(month=="Mar")
+#write.csv(march2021, "march2021.csv") 
+```
