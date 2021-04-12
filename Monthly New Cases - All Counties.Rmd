@@ -122,20 +122,49 @@ counties_months <- counties_months %>%
 occupational <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/cleaned_master.csv")
 
 #Process dates** 
-occupational$date <- ymd(occupational$date)
-occupational$year <- year(occupational$date)
-occupational$month <- month(occupational$date, label=TRUE)
-occupational$yearmon <- format(occupational$date, "%Y-%m")
+# occupational$date <- ymd(occupational$date)
+# occupational$year <- year(occupational$date)
+# occupational$month <- month(occupational$date, label=TRUE)
+# occupational$yearmon <- format(occupational$date, "%Y-%m")
 
-occupational <- occupational[ -c(1,2) ]
+#occupational <- occupational[ -c(1,2) ]
+glimpse(occupational)
+```
+
+#We are stuck after this point.
+
+
+## Build a table with the final date of the month per company
+##Then substract the companies from the prior month.
+```{r}
+occupation_month <- occupational %>%
+  group_by(yearmon, cleaned_county) %>% 
+  filter(date == max(date)) 
+
+xyz <- occupation_month %>% 
+  group_by(cleaned_company, yearmon, cleaned_county) %>% 
+   arrange(desc(yearmon))
+
+#how to subtract one tyson in madison in one month from a tyson in madison from another month but skip intervening months
 
 ```
 
-## Master counties and months table, April 2020 - March 2021 ##
+
+
+
 ```{r}
 occupation_month <- occupational %>%
   group_by(yearmon, cleaned_county) %>%
-  summarise(Occupational_New_Cases=sum(number_active_cases))
+  filter(date == max(date)) 
+
+sum(occupation_month$total_number_of_cases)
+
+  #filter(total_number_of_cases == max(total_number_of_cases)) %>% 
+
+  #for last date record per month, return the total
+  #subtract from previous total
+
+  #summarise(Occupational_New_Cases=sum(number_active_cases))
 ```
 
 ```{r}
@@ -146,7 +175,7 @@ zzz <- occupation_month %>%
 #calculate ratio of reported workplace outbreaks to total covid cases in a county
 ```{r}
 occupation_month <- zzz %>% 
-  mutate(ratio_occupation = (Occupational_New_Cases/New_Cases))
+  mutate(ratio_occupation = (total_number_of_cases/New_Cases))
 write.csv(occupation_month, "occupation_month.csv")
 ```
 
