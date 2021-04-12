@@ -1,0 +1,794 @@
+---
+title: "Occupational analysis exercises"
+author: "Rob Wells"
+date: "4/12/2021"
+output: 
+  html_document:
+      toc: true
+      toc_float: true
+      toc_depth: 4
+---
+ 
+### Analysis of ADH occupational data
+
+
+- **This tutorial uses a subset of this data** 
+
+    The Calls for Service were filtered as follows: 
+    CONTAINS homeless, 915, 919, 920: Downloaded 157,237 records 3/31/16 to 11/30/2019. 
+    This is 5.1% of all calls in the broader database.
+    File renamed to: SF_311_Jan29.xlsx   
+   
+# Part 1: Import Data, Clean It
+
+```{r include=FALSE}
+#install.packages("slider")
+#install.packages("zoo")
+#install.packages("gtools")
+# vignette("basic-usage", package="googlesheets")
+#install.packages("googledrive")
+#install.packages("googlesheets4")
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(tidyr)
+library(jsonlite)
+library(gtools)
+library(zoo)
+library(reshape2)
+library(slider)
+library(rio)
+library(dplyr)
+```
+
+Load Data
+```{r}
+adh_cleaned <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/cleaned_master.csv") 
+```
+
+```{r}
+glimpse(adh_cleaned)
+```
+
+
+- **Count companies**
+```{r}
+company <- adh_cleaned %>% 
+  count(company_name) %>% 
+  arrange(desc(n))
+company
+```
+
+- **Count cleaned_companies**
+```{r}
+company_cleaned <- adh_cleaned %>% 
+  count(cleaned_company) %>% 
+  arrange(desc(n))
+company_cleaned
+```
+
+#YOUR TURN
+#Count counties, then cleaned counties
+
+
+#Time analysis
+
+- **Cases by month**
+```{r}
+months <- adh_cleaned %>% 
+  count(yearmon) %>% 
+  group_by(yearmon) %>% 
+  arrange(desc(yearmon))
+months
+```
+
+```{r}
+Days <- adh_cleaned %>% 
+  count(date) %>% 
+  group_by(date) %>% 
+  arrange(desc(n))
+Days
+#July 3 was the day with the most reports. Some 25 separate entries on covid workplace cases
+#Feb 21, 2021 had the fewest, with one report
+```
+
+
+#Summary: Using the summary() function, describe the minimum, maximum, median and mean of calls in the various columns with integers
+#number_active_cases  
+#number_recovered_cases 
+#total_number_of_cases  
+```{r}
+summary(adh_cleaned$number_active_cases)
+```
+
+Between May 19, 2020 and Feb. 22, 2021, there were an **an average 13 active COVID-19 cases** per reporting period
+
+
+#Example code to Export a table into a spreadsheet (csv is a comma separated file)
+```{r}
+write.csv(Days,"Days.csv")
+```
+
+
+#---------------------------------------------------------------------------------------------
+#NOTES BELOW
+#---------------------------------------------------------------------------------------------
+#Revision: 10,985 cases total cases of infected employees in Arkansas workplaces. 
+#Previous: 11,103 
+
+```{r}
+companytotals <- cleaned_master %>% 
+  select(company_name, cleaned_company, date, address, cleaned_address, city, county, total_number_of_cases) %>% 
+  group_by(cleaned_company, cleaned_address, city,county) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) 
+
+sum(companytotals$total_number_of_cases)
+
+write.csv(companytotals, "company_totals.csv")
+```
+
+
+```{r}
+dates <- cleaned_master %>% 
+  select(date, cleaned_company, number_active_cases) %>% 
+  group_by(date) %>% 
+  summarise(total = sum(number_active_cases)) %>% 
+  arrange(desc(date))
+
+dates
+write.csv (dates,"active_cases_dates.csv")
+```
+
+#Group reports by Month
+#Reports by Month https://public.flourish.studio/visualisation/5526542/ and https://public.flourish.studio/visualisation/5527511/ 
+```{r}
+month_counts <-cleaned_master %>%
+  select(date,cleaned_city, cleaned_county, cleaned_company, industry, month) %>% 
+  group_by(month) %>% 
+  count() %>% 
+  arrange(desc(n))
+month_counts
+#write.csv(month_counts,"month_counts.csv")
+
+#Notes: June, 147, July, 142, Dec, 110 and Aug, 109 are the top months and only months above 100.
+```
+
+#City Analysis
+#Top Ten Cities Chart https://public.flourish.studio/visualisation/5527182/ 
+```{r}
+cleaned_city_report <- cleaned_master %>% 
+  select(date, city, cleaned_city) %>% 
+  group_by(cleaned_city) %>% 
+  count() %>% 
+  arrange(desc(n)) 
+
+cleaned_city_report
+
+#write.csv(cleaned_city_report, "cleaned_city_report.csv")
+
+#Report shows Springdale, 73; Jonesboro, 61; Rogers, 60
+
+```
+
+#County Analysis
+#Top Ten Counties Chart https://public.flourish.studio/visualisation/5527376/ 
+```{r}
+#Analyze records by county location
+cleaned_county_report <- cleaned_master %>% 
+  select(date, city, county) %>% 
+  group_by(county) %>% 
+  count() %>% 
+  arrange(desc(n))
+
+cleaned_county_report
+
+#write.csv(cleaned_county_report, "cleaned_county_report.csv")
+
+#Notes: Benton, 95; Washington 83; Pope 68;Craighead 56 are the top counties.
+#WELLS NOTE: Two of the wealthiest counties in Arkansas have the highest number of occupational reports
+```
+
+#Company Analysis
+#Top 10 Companies Chart needs work: 
+#Revised Look at the company names 
+#add the function that produces percent of the whole - Hennigan can't figure out the funciton
+
+```{r}
+cleaned_company_report <- cleaned_master %>% 
+  count(cleaned_company) %>% 
+  arrange(desc(n)) 
+
+cleaned_company_report
+#write.csv(cleaned_company_report, "cleaned_company_report.csv")
+  
+
+Example: Here's a table filtering the dispositions column to show "no disposition" or "gone on arrival"
+```{r}
+Nothing <- SF %>% 
+  filter(disposition == "ND" | disposition == "GOA")
+```
+
+- **Question**: Create a table with the serious actions including citations and arrests police took in the dispositions  
+
+Arrest, Cited, Criminal Activation, SF Fire Dept Medical Staff engaged
+```{r}
+Busted <- SF %>% 
+  filter(disposition == "ARR" | disposition == "CIT" | disposition == "CRM" | disposition == "SFD") %>% 
+  count(disposition) %>% 
+  arrange(desc(n))
+```
+- **EXERCISE** - A Basic chart of the crime data
+```{r}
+ggplot(Years, aes(x = year, y = n)) + 
+  geom_bar(stat = "identity") +
+  #coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Homeless Calls Per Year, San Francisco", 
+       subtitle = "SF PD Service Call Data, 3/2016-11/2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Year")
+```
+
+A chart using a dplyr filtering language
+```{r}
+Years %>% 
+  filter(year >= 2017) %>% 
+  ggplot(aes(x = year, y = n)) +
+  geom_bar(stat = "identity") +
+  #coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Homeless Calls After 2017, San Francisco", 
+       subtitle = "SF PD Service Call Data, 2017-2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Year")
+```
+
+A more complex filter
+```{r}
+SF %>% 
+  filter(!is.na(common_location)) %>% 
+  count(common_location) %>% 
+  top_n(10, n) %>% 
+  ggplot(aes(x = common_location, y = n)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Popular Spots for Homeless, San Francisco", 
+       subtitle = "SF PD Service Call Data, 2016-2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Places")
+```
+
+- **Question**: Chart the total dispositions.  
+
+Filter for at least 100 actions. Add color, export image to Blackboard.
+
+```{r}
+Action %>% 
+  filter(n > 100) %>% 
+  ggplot(aes(x = reorder(disposition, n), y = n, fill=n)) + 
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Action on Homeless Calls, San Francisco", 
+       subtitle = "SF PD Service Call Data, 3/2016-11/2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Action")
+```
+
+# Part 3: Cleaning Dispositions
+
+Making our charts less ugly
+
+The disposition column is in cop-speak. We need to clean it up
+
+Step #1: Duplicate the column you want to mess with
+```{r}
+SF$disposition1 <- SF$disposition
+```
+Rename specific strings. Example:  
+
+str_replace_all(test.vector, pattern=fixed('-'), replacement=fixed(':') )
+
+Details on string manipulation:  
+
+https://dereksonderegger.github.io/570L/13-string-manipulation.html
+
+We can do this to replace ABA with "Abated"
+```{r}
+SF$disposition1 <- str_replace_all(SF$disposition1, pattern=fixed('ABA'), replacement=fixed('Abated') )
+#Again with ADM
+SF$disposition1 <- str_replace_all(SF$disposition1, pattern=fixed('ADM'), replacement=fixed('Admonished') )
+```
+We can do that 19 times. OR....  
+
+Look at this example using a lookup table to replace all the values    
+https://stackoverflow.com/questions/50615116/renaming-character-variables-in-a-column-in-data-frame-r   
+
+Build a table to translate the Cop Speak to English:  
+```{r}
+dispo_lkup <- c(ABA="Abated", ADM="Admonish", ADV="Advised", ARR="Arrest", CAN="Cancel", CSA="CPSA", 
+                CIT="Cited", CRM="Criminal", GOA="Gone", HAN="Handled", NCR="No_Criminal", ND="No_Dispo", 
+                NOM="No_Merit", PAS="PlaceSecure", REP="Report", SFD="Medical", UTL="Unfound", VAS="Vehicle_Secure", '22'="Cancel")
+
+#22="Cancel" was handled differently because it is a numeric value: '22'="Cancel"
+
+#This scans "disposition", finds ABA and replaces with Abated, finds ARR, replaces with Arrest, etc
+SF$disposition1 <- as.character(dispo_lkup[SF$disposition])
+```
+
+Rerun Action with disposition1
+```{r}
+Action <- SF %>% 
+  count(disposition1) %>% 
+  arrange(desc(n))
+```
+Compare our renamed variables to the original disposition
+```{r}
+Action <- SF %>% 
+  count(disposition1, disposition) %>% 
+  arrange(desc(n))
+```
+We have codes not listed on the sheet   
+
+NA	Not recorded	4339
+
+Get rid of the space
+```{r}
+SF$disposition <- gsub("Not recorded", "Not_Recorded", SF$disposition)
+```
+
+Add to the list
+```{r}
+dispo_lkup <- c(ABA="Abated", ADM="Admonish", ADV="Advised", ARR="Arrest", CAN="Cancel", CSA="CPSA", 
+                CIT="Cited", CRM="Criminal", GOA="Gone", HAN="Handled", NCR="No_Criminal", ND="No_Dispo", 
+                NOM="No_Merit", PAS="PlaceSecure", REP="Report", SFD="Medical", UTL="Unfound", 
+                VAS="Vehicle_Secure", '22'="Cancel", Not_Recorded="NotRecorded")
+```
+Rerun  
+```{r, echo=FALSE}
+SF$disposition1 <- as.character(dispo_lkup[SF$disposition])
+```
+#
+```{r}
+Action <- SF %>% 
+  count(disposition1) %>% 
+  arrange(desc(n))
+```
+Chart Dispositions  
+```{r}
+Action %>% 
+  filter(n > 100) %>% 
+  ggplot(aes(x = reorder(disposition1, n), y = n, fill=n)) + 
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Action on Homeless Calls, San Francisco", 
+       subtitle = "SF PD Service Call Data, 3/2016-11/2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Action")
+```
+- **Parse out police codes from narrative: original_crime_type_name**
+Look at the Types table: some columns have one code, some have two.
+919	2879
+915 Sleeper	290
+
+Some are separated by a slash
+915/919	161
+
+We need to unpack that
+- **Cleaning Sequence**
+```{r}
+#convert all text to lowercase
+SF$crime1 <- tolower(SF$original_crime_type_name)
+#Replace / with a space
+SF$crime1 <- gsub("/", " ", SF$crime1)
+#Replace '
+SF$crime1 <- gsub("'", "", SF$crime1)
+#fix space in homeless complaint
+SF$crime1 <- gsub("homeless complaint", "homeless_complaint", SF$crime1)
+#split data into two columns
+SF <- separate(data = SF, col = crime1, into = c("crime2", "crime3", "crime4"), sep = " ", extra = "merge", fill = "right")
+```
+Look at the categories now
+```{r}
+Types2 <- SF %>% count(crime2) %>% 
+  group_by(crime2) %>% 
+  arrange(desc(n))
+```
+- **Question** Take the top 10 crime categories from Type2  
+Relabel them from the numeric radio codes into English   
+Using the technique earlier in "Build a table to translate the Cop Speak to English"   
+Relabel the offenses 
+
+```{r}
+clean <- c(homeless_complaint="homeless_complaint", '915'="homeless_call", '919'="sit_lying", '920'="aggress_solicit", '915s'="homeless_call", '915x'="homeless_call", drugs="drugs", '601'="trespasser",
+           poss="poss", aggressive="aggressive", '811'="intoxicated")
+```
+
+```{r}
+SF$crime2 <- as.character(clean[SF$crime2])
+```
+Look at the categories now
+```{r}
+Types2 <- SF %>% count(crime2) %>% 
+  group_by(crime2) %>% 
+  arrange(desc(n))
+```
+- **Question:** Make a chart from your cleaned data  
+
+Basic chart but with a messed up x axis
+```{r}
+Types2 %>% 
+  ggplot(aes(x = crime2, y = n, fill=n)) + 
+  geom_bar(stat = "identity") +
+  coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Top 10 Homeless Complaints, San Francisco", 
+       subtitle = "SF PD Service Call Data, 3/2016-11/2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Complaint")
+```
+Chart with a fixed x axis scale; No values filtered out; Labels added to bars
+```{r}
+Types2 %>% 
+  filter(!is.na(crime2)) %>% 
+  #filter(crime2!=" ") %>%  - a crude alternative to previous line!
+  ggplot(aes(x = reorder(crime2, n), y = n, fill=n)) + #reorder sorts the bars
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  geom_text(aes(label = n), hjust = -.1, size = 3) +
+  scale_y_continuous(limits=c(0, 175000)) + #fixes scientific notation
+  coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Top 10 Homeless Complaints, San Francisco", 
+       subtitle = "SF PD Service Call Data, 3/2016-11/2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Complaint")
+```
+
+# Part 4: Using Mutate, Pct Calcs
+
+mutate - Create new column(s) in the data, or change existing column(s). 
+
+mutate() adds new variables and preserves existing
+
+Example:
+mtcars <- as.data.frame(mtcars)
+View(mtcars)
+
+mtcars2 <- mtcars %>% as_tibble() %>% mutate(
+  cyl2 = cyl * 2,
+  cyl4 = cyl2 * 2
+)
+
+Process dates using lubidate
+```{r}
+SF <- SF %>% 
+  mutate(yearmo = format(call_date, "%Y-%m"))
+```
+
+Chart the number of calls by year and month
+```{r}
+SF %>% 
+  count(yearmo) %>% 
+  group_by(yearmo) %>% 
+  ggplot(aes(x = yearmo, y = n, fill=n)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle=90)) +
+  #Changes angle of x axis labels
+  #coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Homeless Calls After 2017, San Francisco", 
+       subtitle = "SF PD Service Call Data by Month 2017-2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Year")
+```
+
+Percentage change per month
+```{r}
+PCT_CHG_CALLS <- SF %>% 
+  select(original_crime_type_name, disposition, address, call_date2, yearmo) %>% 
+  count(yearmo) %>% 
+  mutate(difference = (n-lag(n))) %>% 
+  mutate(pct_change = (difference/abs(lag(n)))*100)
+```
+
+- **Use grepl to search and tabulate**
+
+grep and grepl: see ??grep  
+
+http://www.endmemo.com/program/R/grepl.php  
+
+Cleaning Sequence
+
+```{r}
+#convert all text to lowercase
+SF$crime1 <- tolower(SF$original_crime_type_name)
+```
+
+- **Search for term, rename, put in new column called "cleaned"**
+```{r}
+x915 <- SF %>% 
+  filter(grepl ("915", original_crime_type_name)) %>% 
+  mutate(cleaned = "homeless_complaint")
+
+x919 <- SF %>% 
+  filter(grepl ("919", original_crime_type_name)) %>% 
+  mutate(cleaned = "sitting_lying")
+
+xsleep <- SF %>% 
+  filter(grepl ("sleep", original_crime_type_name)) %>% 
+  mutate(cleaned = "sleep")
+
+xaggr <- SF %>% 
+  filter(grepl ("aggr", original_crime_type_name)) %>% 
+  mutate(cleaned = "aggressive")
+
+xdrug <- SF %>% 
+  filter(grepl ("drug", original_crime_type_name)) %>% 
+  mutate(cleaned = "drug")
+
+xhomeless <- SF %>% 
+  filter(grepl ("homeless_complaint", crime2)) %>% 
+  mutate(cleaned = "homeless_complaint")
+
+#Moe, Brooke's Work: 
+xnoise <- SF %>% 
+  filter(grepl ("415", original_crime_type_name)) %>% 
+  mutate(cleaned = "noise")
+
+xposs <- SF %>% 
+  filter(grepl ("poss", original_crime_type_name)) %>% 
+  mutate(cleaned = "possession")
+
+xtrespasser <- SF %>% 
+  filter(grepl ("601", original_crime_type_name)) %>% 
+  mutate(cleaned = "trespasser")
+
+xsolicit <- SF %>% 
+  filter(grepl ("920", original_crime_type_name)) %>% 
+  mutate(cleaned = "solicit")
+
+xinterview <- SF %>% 
+  filter(grepl ("909", original_crime_type_name)) %>% 
+  mutate(cleaned = "interview")
+
+xtent <- SF %>%
+  filter(grepl ("tent", crime1)) %>%
+  mutate(cleaned="tent")
+
+xdog <- SF %>%
+  filter(grepl ("dog", crime1)) %>%
+  mutate(cleaned="dog")
+
+xchopshop <- SF %>%
+  filter(grepl ("chop shop", crime1)) %>%
+  mutate(cleaned="chopshop")
+
+xpanhandling <- SF %>%
+  filter(grepl ("panhandling", crime1)) %>%
+  mutate(cleaned="panhandling")
+
+xmusic <- SF %>%
+  filter(grepl ("music", crime1)) %>%
+  mutate(cleaned="music")
+```
+Create new dataframe using rbind 
+```{r}
+new_total <- rbind(xhomeless, x915, x919, xaggr, xdrug, xsleep, xnoise, xposs, xtrespasser, xsolicit, xinterview, xtent, xdog,
+                   xchopshop, xpanhandling, xmusic)
+```
+Count it up!
+```{r}
+Total_Calls_Master <- new_total %>% 
+  count(cleaned) %>% 
+  arrange(desc(n))
+#rename columns
+colnames(Total_Calls_Master)[1:2] <- c("Complaints", "Number")
+#export
+write_csv(Total_Calls_Master, "Total_Calls_Master.csv")
+```
+Make into html table
+```{r}
+#install.packages("kableExtra")
+library(kableExtra)
+```
+
+```{r}
+#This makes html tables called "kables"
+Total_Calls_Master %>% 
+  kable() %>%
+  kable_styling("striped")
+```
+Export from Viewer as .png
+
+- **Task: Tabulate complaints by day of the week**  
+
+https://github.com/profrobwells/Data-Analysis-Class-Jour-405v-5003/blob/master/Readings/dealing-with-dates.pdf
+
+```{r}
+SF <- SF %>% 
+  mutate(weekday = wday(call_date, label=TRUE, abbr=FALSE))
+```
+Build a summary table with the days of the week with the greatest
+number of calls. Create a graphic. Then build a table to see if the complaints vary by day
+
+Below from Matthew Moore, Katy Seiter, Wells edited
+```{r}
+SF <- SF %>% 
+  mutate(weekday = wday(call_date, label=TRUE, abbr=FALSE))
+
+Weekday_Count <- SF %>%
+  select(weekday, crime_id) %>%
+  count(weekday) %>%
+  arrange(desc(n))
+```
+Graphic of calls by weekdays
+
+```{r}
+Weekday_Count %>% 
+  ggplot(aes(x = weekday, y = n, fill=n)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  theme(axis.text.x = element_text(angle=90)) +
+  #Changes angle of x axis labels
+  #coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Homeless Calls By Weekday in San Francisco", 
+       subtitle = "SF PD Service Call Data 2017-2019",
+       caption = "Graphic by Moore and Seiter",
+       y="Number of Calls",
+       x="Weekday")
+```
+
+Create a Bubble graphic
+```{r}
+ggplot(data = Weekday_Count) + 
+  geom_point(mapping = aes(x = weekday, y = n, size = n, color = n), show.legend = FALSE) +
+  theme(axis.text.x = element_text(angle=90)) +
+  labs(title = "Homeless By Weekday in San Francisco", 
+       subtitle = "SF PD Service Call Data 2017-2019: Source: SFPD",
+       caption = "Graphic by Moore and Seiter",
+       y="Number of Calls",
+       x="Weekday")
+```
+
+Improved bubble chart
+
+```{r}
+ggplot(Weekday_Count, aes(x = weekday, y = n)) +
+  xlab("Weekday") +
+  ylab("Number of Calls") +
+  theme_minimal(base_size = 12, base_family = "Georgia") +
+  geom_point(aes(size = n, color = n), alpha = 0.7, show.legend = FALSE) +
+  scale_size_area(guide = FALSE, max_size = 15) +
+  labs(title = "Homeless By Weekday in San Francisco", 
+       subtitle = "SF PD Service Call Data 2017-2019: Source: SFPD",
+       caption = "Graphic by Moore and Seiter")
+```
+- **Task #3: Calls vs Dispositions**
+
+What calls resulted in arrests? What calls resulted in citations?
+```{r}
+Action2 <- SF %>%
+  select(crime_id, original_crime_type_name, disposition) 
+```
+We need to pair the crime type and disposition and then count them
+
+From Michael Adkison:
+```{r}
+callsarrest <- Action2 %>% 
+  filter(grepl("ARR", disposition)) %>% 
+  mutate(cleaned = "Arrest")
+```
+
+To quickly format into percents, load formattable
+```{r}
+#install.packages("formattable")
+library(formattable)
+
+callsarrest2 <- callsarrest %>% 
+  arrange(original_crime_type_name, disposition) %>% 
+  count(original_crime_type_name) %>% 
+#mutate(PctTotal = (n/441)) %>% 
+  arrange(desc(n))
+
+colnames(callsarrest2)[1:2] <- c("Complaints", "Arrests") 
+```
+Build a table to translate the Cop Speak to English:
+
+```{r}
+clean <- c('Homeless Complaint'="homeless_complaint", homeless_complaint="homeless_complaint", '915'="homeless_complaint", 
+           '919'="Sit_lying", '920'="Aggress_solicit", '915s'="homeless_complaint", '915x'="homeless_complaint", 
+           drugs="drugs", '601'="trespasser", poss="poss", aggressive="aggressive", '811'="intoxicated", 
+           'Drugs / 915'="Drugs", 'Drugs/915'="Drugs")
+```
+This scans "disposition", finds ABA and replaces with Abated, finds ARR, replaces with Arrest, etc
+callsarrest2$Complaints <- as.character(clean[callsarrest2$Complaints])
+
+```{r}
+callsarrest3 <- callsarrest2 %>% 
+  select(Complaints, Arrests) %>% 
+  group_by(Complaints) %>% 
+  summarise(total = sum(Arrests)) %>% 
+  mutate(PctTotal = (total/441)) %>% 
+  arrange(desc(total))
+
+colnames(callsarrest3)[2] <- "Arrests" 
+callsarrest3$PctTotal <- percent(callsarrest3$PctTotal)
+
+#This makes kables
+callsarrest3 %>% 
+  kable() %>%
+  kable_styling("striped")
+```
+# Part 5: Trends over time
+
+- **Question**: What were the common days for arrests?
+```{r}
+SF %>%
+  select(weekday, crime_id, disposition) %>%
+  filter(grepl("ARR", disposition)) %>%
+  count(weekday) 
+```
+
+Make bubble chart
+```{r}
+SF %>%
+  select(weekday, crime_id, disposition) %>%
+  filter(grepl("ARR", disposition)) %>%
+  count(weekday) %>% 
+  ggplot(aes(x = weekday, y = n)) +
+  xlab("Weekday") +
+  ylab("Arrests") +
+  theme_minimal(base_size = 12, base_family = "Georgia") +
+  geom_point(aes(size = n, color = n), alpha = 0.7, show.legend = FALSE) +
+  scale_size_area(guide = FALSE, max_size = 15) +
+  labs(title = "Homeless Arrests By Weekday in San Francisco", 
+       subtitle = "SF PD Service Call Data 2017-2019: Source: SFPD",
+       caption = "Graphic by Wells") 
+```
+
+- **Question**: What is the trend for arrests over the time period?  
+
+```{r}
+SF %>% 
+  filter(grepl("ARR", disposition)) %>%
+  count(yearmo) %>% 
+  group_by(yearmo) %>% 
+  ggplot(aes(x = yearmo, y = n, fill=n)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  geom_smooth(method = lm, se=FALSE, color = "red") +
+  theme(axis.text.x = element_text(angle=90)) +
+  #Changes angle of x axis labels
+  #coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Arrest Trends on Homeless Calls in San Francisco", 
+       subtitle = "Arrests Based on SF PD Service Call Data by Month 2017-2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Year")
+```
+
+- **Question**: What are the hours most likely for complaints?    
+```{r}
+#format to hours
+SF$hour <- hour(SF$call_date_time)
+
+SF %>% 
+  count(hour) %>% 
+  group_by(hour) %>% 
+  ggplot(aes(x = hour, y = n, fill=n)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  theme(axis.text.x = element_text(angle=90)) +
+  #Changes angle of x axis labels
+  #coord_flip() +    #this makes it a horizontal bar chart instead of vertical
+  labs(title = "Hours of Homeless Calls, San Francisco", 
+       subtitle = "SF PD Service Call Data by Month 2017-2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Hour")  
+```
+- **Question**: Examine some of the charting options on this tutorial and adapt them to this data using any chart you want
+# https://paldhous.github.io/wcsj/2017/
+
+
+# --30-- 
+
