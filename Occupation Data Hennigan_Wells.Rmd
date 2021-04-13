@@ -1,13 +1,9 @@
 ---
 title: "Occupational Data"
 author: "Mary Hennigan and Rob Wells and Abby Zimmardi" 
-date: "4/11/2021"
+date: "4/12/2021"
 output: pdf_document
 ---
-
-# Mary- Abby:
-# 6) Run totals by company, highest cases
-
 
 # Compilation of Occupational COVID-19 Reports for Calculations
 
@@ -177,19 +173,54 @@ write.csv(cleaned_master, "cleaned_master.csv")
 
 #FILTER TO THE SPECIFIC WORKPLACE AND THE HIGHEST VALUE OF CASES
 
-#Revision: 10,985 cases total cases of infected employees in Arkansas workplaces. 
+#Revision: 9,234 cases total cases of infected employees in Arkansas workplaces. 
 #Previous: 11,103 
 
 ```{r}
 companytotals <- cleaned_master %>% 
-  select(company_name, cleaned_company, date, address, cleaned_address, city, county, total_number_of_cases) %>% 
-  group_by(cleaned_company, cleaned_address, city,county) %>% 
-  filter(total_number_of_cases == max(total_number_of_cases)) 
+  select(company_name, cleaned_company, date, address, cleaned_address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
+  group_by(cleaned_company, cleaned_address, cleaned_city, cleaned_county) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) %>% 
+  filter(date == max(date))
 
 sum(companytotals$total_number_of_cases)
 
 write.csv(companytotals, "company_totals.csv")
 ```
+
+
+#company with the highest monthly totals  
+```{r}
+monthcototals <- cleaned_master %>% 
+  select(company_name, cleaned_company, date, yearmon, address, cleaned_address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
+  group_by(yearmon) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) %>% 
+  filter(yearmon == max(yearmon))
+```
+
+
+#county - company monthly totals  
+```{r}
+month_county <- cleaned_master %>% 
+  select(yearmon, date, cleaned_company, cleaned_address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
+  group_by(yearmon, cleaned_county) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) %>% 
+  filter(yearmon == max(yearmon)) %>% 
+  filter(date == max(date))
+
+write.csv(month_county, "month_county.csv")
+
+```
+
+```{r}
+month_county <- month_county %>% 
+   select(yearmon, date, cleaned_company, cleaned_address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
+  arrange(cleaned_company, cleaned_address, cleaned_city, cleaned_county)
+
+write.csv(month_county, "month_county.csv")
+
+```
+
 
 
 ```{r}
@@ -273,6 +304,30 @@ cleaned_company_report
 #SIX OF TEN ARE POULTRY PROCESSING
 #TYSON IS 36% OF ALL REPORTS
 ```
+
+#Tyson Total Cases
+
+
+#list of total cases by company
+
+```{r}
+totals <- cleaned_master %>% 
+  select(cleaned_company, total_number_of_cases) %>% 
+  group_by(cleaned_company) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) %>% 
+  distinct() %>% 
+  arrange(desc(total_number_of_cases))
+totals
+
+
+#sum(totals$total_number_of_cases)
+
+#write.csv(tysontotals, "tysontotals.csv")
+# 3,028 cases at Tyson in Arknasas. 
+```
+
+
+
 ```{r}
 walmart <- cleaned_master %>% 
   select(date,company_name, cleaned_company, total_number_of_cases) %>% 

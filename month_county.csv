@@ -1,0 +1,168 @@
+"","yearmon","date","cleaned_company","cleaned_address","cleaned_city","cleaned_county","total_number_of_cases"
+"1","2020-11",2020-11-23,"abb",NA,"fort_smith","sebastian",49
+"2","2020-12",2020-12-14,"abb",NA,"fort_smith","sebastian",75
+"3","2021-01",2021-01-07,"abb",NA,"fort_smith","sebastian",89
+"4","2021-01",2021-01-07,"american greetings co.",NA,"osceola","mississippi",63
+"5","2020-05",2020-05-26,"belleville_boot",NA,"forrest city","st. francis",35
+"6","2020-05",2020-05-26,"best manufacturing",NA,"jonesboro","craighead",12
+"7","2020-09",2020-09-09,"big river steel",NA,"osceola","mississippi",16
+"8","2020-10",2020-10-15,"big rock kangaroof",NA,"little rock","pulaski",7
+"9","2020-05",2020-05-29,"butterball",NA,"huntsville","madison",10
+"10","2020-06",2020-06-25,"butterball",NA,"huntsville","madison",138
+"11","2020-07",2020-07-20,"butterball",NA,"huntsville","madison",156
+"12","2020-11",2020-11-30,"butterball",NA,"huntsville","madison",168
+"13","2020-06",2020-06-25,"butterball",NA,"ozark","franklin",13
+"14","2020-07",2020-07-24,"butterball",NA,"ozark","franklin",31
+"15","2020-05",2020-05-29,"cargill poultry",NA,"springdale","washington",44
+"16","2021-01",2021-01-11,"clean harbors evnvironmental services",NA,"el dorado","union",26
+"17","2020-07",2020-07-31,"con_agra",NA,"russellville","pope",127
+"18","2020-08",2020-08-17,"con_agra",NA,"russellville","pope",178
+"19","2020-10",2020-10-12,"con_agra",NA,"russellville","pope",198
+"20","2020-11",2020-11-30,"con_agra",NA,"russellville","pope",229
+"21","2020-12",2020-12-31,"con_agra",NA,"russellville","pope",293
+"22","2021-01",2021-01-28,"con_agra",NA,"russellville","pope",342
+"23","2021-02",2021-02-11,"con_agra",NA,"russellville","pope",353
+"24","2020-10",2020-10-22,"cooper tire",NA,"texarkana","miller",29
+"25","2020-12",2020-12-14,"dassault falcon jet llc",NA,"little rock","pulaski",38
+"26","2021-01",2021-01-28,"dassault falcon jet llc",NA,"little rock","pulaski",60
+"27","2021-02",2021-02-01,"dassault falcon jet llc",NA,"little rock","pulaski",63
+"28","2020-10",2020-10-05,"denso manufacturing",NA,"osceola","mississippi",43
+"29","2020-12",2020-12-14,"denso manufacturing",NA,"osceola","mississippi",67
+"30","2020-10",2020-10-29,"diamond pet foods",NA,"dumas","desha",17
+"31","2021-02",2021-02-04,"dillards",NA,"stuttgart","arkansas",64
+"32","2020-12",2020-12-24,"domtar paper co.",NA,"ashdown","little_river",41
+"33","2020-10",2020-10-08,"dooley agri",NA,"forestry","st. francis",26
+"34","2020-07",2020-07-20,"evergreen packaging",NA,"pine_bluff","jefferson",36
+"35","2020-10",2020-10-29,"evergreen packaging",NA,"pine_bluff","jefferson",92
+"36","2021-04",2021-04-08,"first security bank",NA,"mountain home","baxter",7
+"37","2020-07",2020-07-31,"frito lay",NA,"jonesboro","craighead",25
+"38","2020-08",2020-08-17,"frito lay",NA,"jonesboro","craighead",40
+"39","2020-12",2020-12-24,"frito lay",NA,"jonesboro","craighead",116
+"40","2021-01",2021-01-11,"frito lay",NA,"jonesboro","craighead",128
+"41","2020-05",2020-05-29,"georges_poultry",NA,"rogers","benton",92
+"42","2020-06",2020-06-25,"georges_poultry",NA,"rogers","benton",268
+"43","2020-07",2020-07-20,"georges_poultry",NA,"rogers","benton",278
+"44","2020-08",2020-08-31,"global food group",NA,"clinton","van_buren",8
+"45","2021-02",2021-02-11,"great dane trailers",NA,"jonesboro","craighead",35
+"46","2020-10",2020-10-26,"greenbrier rail",NA,"paragould","greene",21
+"47","2020-06",2020-06-14,"hino motors",NA,"marion","crittenden",16
+"48","2020-06",2020-06-08,"husqvarna",NA,"ashdown","howard",7
+"49","2020-12",2020-12-24,"husqvarna",NA,"ashdown","howard",71
+"50","2020-09",2020-09-24,"hytrol conveyor company",NA,"jonesboro","craighead",43
+"51","2020-10",2020-10-15,"hytrol conveyor company",NA,"jonesboro","craighead",58
+"52","2020-11",2020-11-23,"hytrol conveyor company",NA,"jonesboro","craighead",88
+"53","2021-03",2021-03-22,"k&k veterinary supply",NA,"tontitown","washington",12
+"54","2020-08",2020-08-17,"kagome foods",NA,"osceola","mississippi",19
+"55","2021-03",2021-03-22,"klein tools",NA,"fort_smith","sebastian",26
+"56","2020-10",2020-10-15,"land o'frost",NA,"searcy","white",14
+"57","2020-09",2020-09-28,"lennox industries",NA,"stuttgart","arkansas",37
+"58","2020-10",2020-10-26,"lennox industries",NA,"stuttgart","arkansas",59
+"59","2021-01",2021-01-25,"lennox industries",NA,"stuttgart","arkansas",85
+"60","2020-11",2020-11-12,"lockheed martin",NA,"camden","ouachita",20
+"61","2020-12",2020-12-07,"lockheed martin",NA,"camden","ouachita",36
+"62","2021-01",2021-01-28,"lockheed martin",NA,"camden","ouachita",70
+"63","2021-02",2021-02-11,"lockheed martin",NA,"camden","ouachita",78
+"64","2020-09",2020-09-09,"mahle engine components",NA,"russellville","pope",11
+"65","2020-11",2020-11-23,"maynard inc.",NA,"fayetteville","washington",8
+"66","2020-11",2020-11-16,"nabholz",NA,"conway","faulkner",11
+"67","2020-05",2020-05-26,"nebo poultry",NA,"dardanelle","yell",63
+"68","2020-05",2020-05-22,"nebo poultry",NA,"dardanelle, russellville","yell, pope",50
+"69","2020-11",2020-11-30,"nucor-yamato steel",NA,"blytheville","mississippi",34
+"70","2020-06",2020-06-25,"ok foods",NA,"fort_smith","sebastian",13
+"71","2020-07",2020-07-31,"ok foods",NA,"fort_smith","sebastian",158
+"72","2020-08",2020-08-31,"ok foods",NA,"fort_smith","sebastian",234
+"73","2020-10",2020-10-12,"ok foods",NA,"fort_smith","sebastian",270
+"74","2020-07",2020-07-31,"pace industries",NA,"harrison","boone",8
+"75","2020-08",2020-08-03,"pace industries",NA,"harrison","boone",9
+"76","2020-06",2020-06-14,"park hill collection warehouse",NA,"little rock","pulaski",10
+"77","2020-07",2020-07-31,"peco",NA,"batesville","independence",20
+"78","2020-08",2020-08-31,"peco",NA,"batesville","independence",147
+"79","2020-09",2020-09-03,"peco",NA,"batesville","independence",151
+"80","2020-07",2020-07-31,"peco",NA,"pocahontas","randolph",42
+"81","2020-08",2020-08-31,"peco",NA,"pocahontas","randolph",61
+"82","2020-09",2020-09-24,"peco",NA,"pocahontas","randolph",66
+"83","2020-10",2020-10-29,"peco",NA,"pocahontas","randolph",76
+"84","2020-11",2020-11-26,"peco",NA,"pocahontas","randolph",86
+"85","2020-12",2020-12-24,"peco",NA,"pocahontas","randolph",110
+"86","2020-05",2020-05-29,"pilgrims_pride",NA,"de queen","sevier",59
+"87","2020-06",2020-06-25,"pilgrims_pride",NA,"de queen","sevier",210
+"88","2020-07",2020-07-31,"pilgrims_pride",NA,"de queen","sevier",255
+"89","2020-08",2020-08-13,"pilgrims_pride",NA,"de queen","sevier",259
+"90","2020-11",2020-11-16,"pilgrims_pride",NA,"de queen","sevier",283
+"91","2020-12",2020-12-10,"potlatchdeltic",NA,"warren","bradley",17
+"92","2020-07",2020-07-24,"producers rice mill inc",NA,"stuttgart","arkansas",12
+"93","2021-02",2021-02-25,"rheem manufacturing",NA,"fort_smith","sebastian",72
+"94","2020-11",2020-11-02,"riceland foods",NA,"stuttgart","arkansas",40
+"95","2020-11",2020-11-26,"rineco chemical industries",NA,"haskell","saline",12
+"96","2020-10",2020-10-29,"roach manufacturing",NA,"trumann","poinsett",17
+"97","2020-11",2020-11-05,"roach manufacturing",NA,"trumann","poinsett",19
+"98","2020-05",2020-05-22,"saracen_casino_construction",NA,"pine_bluff","jefferson",56
+"99","2020-12",2020-12-28,"shelby group international inc.",NA,"glenwood","pike",11
+"100","2020-12",2020-12-24,"shippers products",NA,"fordyce","dallas",13
+"101","2020-11",2020-11-19,"simmons_foods",NA,"siloam springs","benton",104
+"102","2020-12",2020-12-03,"tenneco inc.",NA,"paragould","greene",40
+"103","2020-08",2020-08-31,"triumph_airborne_structures",NA,"hot_springs","garland",15
+"104","2020-09",2020-09-14,"triumph_airborne_structures",NA,"hot_springs","garland",20
+"105","2020-06",2020-06-25,"twin rivers foods",NA,"atkins","pope",33
+"106","2021-02",2021-02-25,"twin rivers paper",NA,"pine_bluff","jefferson",22
+"107","2020-08",2020-08-17,"tyson","275 hempstead 278","hope","hempstead",32
+"108","2020-12",2020-12-14,"tyson","275 hempstead 278","hope","hempstead",65
+"109","2021-01",2021-01-25,"tyson","275 hempstead 278","hope","hempstead",90
+"110","2020-06",2020-06-25,"tyson","berry st","springdale","washington",283
+"111","2020-07",2020-07-31,"tyson","berry st","springdale","washington",344
+"112","2020-08",2020-08-17,"tyson","berry st","springdale","washington",347
+"113","2020-09",2020-09-17,"tyson","berry st","springdale","washington",365
+"114","2020-10",2020-10-29,"tyson","berry st","springdale","washington",382
+"115","2020-12",2020-12-31,"tyson","berry st","springdale","washington",403
+"116","2021-01",2021-01-25,"tyson","berry st","springdale","washington",416
+"117","2021-02",2021-02-08,"tyson","don tyson pkwy","springdale","washington",75
+"118","2020-08",2020-08-03,"tyson","elm st","rogers","benton",269
+"119","2020-12",2020-12-24,"tyson","elm st","rogers","benton",322
+"120","2021-01",2021-01-07,"tyson","olrich st","rogers","benton",126
+"121","2020-10",2020-10-29,"tyson","plant st","waldron","scott",13
+"122","2020-11",2020-11-30,"tyson","plant st","waldron","scott",36
+"123","2020-12",2020-12-14,"tyson","plant st","waldron","scott",56
+"124","2021-01",2021-01-18,"tyson","plant st","waldron","scott",93
+"125","2020-07",2020-07-31,"tyson",NA,"ashdown","howard",39
+"126","2020-08",2020-08-03,"tyson",NA,"ashdown","howard",41
+"127","2020-10",2020-10-29,"tyson",NA,"ashdown","howard",69
+"128","2021-01",2021-01-28,"tyson",NA,"ashdown","howard",109
+"129","2021-02",2021-02-04,"tyson",NA,"ashdown","howard",124
+"130","2020-05",2020-05-29,"tyson",NA,"clarksville","johnson",14
+"131","2020-06",2020-06-25,"tyson",NA,"clarksville","johnson",54
+"132","2020-07",2020-07-31,"tyson",NA,"clarksville","johnson",203
+"133","2020-08",2020-08-17,"tyson",NA,"clarksville","johnson",218
+"134","2020-12",2020-12-17,"tyson",NA,"clarksville","johnson",247
+"135","2021-01",2021-01-28,"tyson",NA,"clarksville","johnson",284
+"136","2021-03",2021-03-15,"tyson",NA,"clarksville","johnson",297
+"137","2021-01",2021-01-25,"tyson",NA,"dardanelle","yell",166
+"138","2020-06",2020-06-21,"tyson",NA,"grannis","polk",28
+"139","2020-07",2020-07-03,"tyson",NA,"grannis","polk",29
+"140","2020-06",2020-06-25,"tyson",NA,"green_forest","carroll",25
+"141","2020-07",2020-07-31,"tyson",NA,"green_forest","carroll",72
+"142","2020-08",2020-08-24,"tyson",NA,"green_forest","carroll",84
+"143","2020-09",2020-09-24,"tyson",NA,"green_forest","carroll",103
+"144","2020-10",2020-10-29,"tyson",NA,"green_forest","carroll",147
+"145","2020-11",2020-11-30,"tyson",NA,"green_forest","carroll",193
+"146","2020-12",2020-12-31,"tyson",NA,"green_forest","carroll",276
+"147","2021-01",2021-01-18,"tyson",NA,"green_forest","carroll",288
+"148","2020-08",2020-08-17,"tyson",NA,"pine_bluff","jefferson",37
+"149","2020-09",2020-09-28,"tyson",NA,"pine_bluff","jefferson",59
+"150","2020-11",2020-11-12,"tyson",NA,"pine_bluff","jefferson",81
+"151","2020-06",2020-06-25,"tyson",NA,"van buren","crawford",41
+"152","2020-07",2020-07-31,"tyson",NA,"van buren","crawford",93
+"153","2020-08",2020-08-31,"tyson",NA,"van buren","crawford",200
+"154","2020-09",2020-09-24,"tyson",NA,"van buren","crawford",218
+"155","2020-11",2020-11-26,"tyson",NA,"van buren","crawford",253
+"156","2020-12",2020-12-14,"tyson",NA,"van buren","crawford",267
+"157","2021-01",2021-01-14,"tyson",NA,"van buren","crawford",281
+"158","2020-05",2020-05-19,"tyson",NA,"various locations","---",46
+"159","2020-10",2020-10-12,"vacation tour and travel",NA,"conway","faulkner",13
+"160","2021-02",2021-02-25,"wapsi fly co.",NA,"mountain home","baxter",6
+"161","2020-06",2020-06-25,"wayne farms",NA,"danville","yell",109
+"162","2020-07",2020-07-31,"wayne farms",NA,"danville","yell",198
+"163","2020-08",2020-08-03,"wayne farms",NA,"danville","yell",199
+"164","2020-12",2020-12-24,"wayne farms",NA,"danville","yell",230
+"165","2020-07",2020-07-31,"west tree services",NA,"little rock","pulaski",6
+"166","2020-08",2020-08-03,"west tree services",NA,"little rock","pulaski",7
+"167","2020-08",2020-08-17,"wilson brothers lumber co",NA,"rison","cleveland",16

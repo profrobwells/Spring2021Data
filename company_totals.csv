@@ -1,0 +1,152 @@
+"","company_name","cleaned_company","date","address","cleaned_address","cleaned_city","cleaned_county","total_number_of_cases"
+"1","Tyson","tyson",2020-05-19,NA,NA,"various locations","---",46
+"2","Riceland Foods, Inc.","riceland foods, inc.",2020-05-19,NA,NA,"jonesboro","craighead",9
+"3","Nebo Poultry","nebo poultry",2020-05-22,NA,NA,"dardanelle, russellville","yell, pope",50
+"4","Butterball","butterball",2020-05-22,NA,NA,"hunstville","madison",7
+"5","Saracen Casino Construction","saracen_casino_construction",2020-05-22,NA,NA,"pine_bluff","jefferson",56
+"6","Belleville Boot","belleville_boot",2020-05-26,NA,NA,"forrest city","st. francis",35
+"7","Best Manufacturing","best manufacturing",2020-05-26,NA,NA,"jonesboro","craighead",12
+"8","Tyson","tyson",2020-05-29,NA,NA,"rogers","benton",6
+"9","Consulate of Mexico","consulate of mexico",2020-06-08,NA,NA,"little rock","pulaski",5
+"10","Park Hill Collection Warehouse","park hill collection warehouse",2020-06-14,NA,NA,"little rock","pulaski",10
+"11","Walmart Regional Distribution Center 6094","walmart",2020-06-14,NA,NA,"bentonville","benton",7
+"12","Hino Motors","hino motors",2020-06-14,NA,NA,"marion","crittenden",16
+"13","Target","target",2020-06-18,NA,NA,"fayetteville","washington",6
+"14","Rockline Industries","rockline industries",2020-06-21,NA,NA,"russellville","pope",16
+"15","Rockline Industries","rockline industries",2020-06-25,NA,NA,"springdale","washington",21
+"16","Nebo Poultry","nebo poultry",2020-07-03,NA,NA,"dardanelle","yell",66
+"17","Tyson","tyson",2020-07-03,NA,NA,"grannis","polk",29
+"18","Southeast Poultry","southeast poultry",2020-07-06,NA,NA,"rogers","benton",73
+"19","TMC Logistics","tmc logistics",2020-07-06,NA,NA,"bentonville","benton",14
+"20","George's/Ozark Mtn. Poultry (OMP)","georges_poultry",2020-07-20,NA,NA,"rogers","benton",278
+"21","Adams Fertilizer Equipment","adams fertilizer equipment",2020-07-20,NA,NA,"dewitt","arkansas",8
+"22","Wal-Mart #0119","walmart",2020-07-20,NA,NA,"batesville","independence",5
+"23","Butterball","butterball",2020-07-24,NA,NA,"ozark","franklin",31
+"24","Producers Rice Mill Inc","producers rice mill inc",2020-07-24,NA,NA,"stuttgart","arkansas",12
+"25","Pace Industries","pace industries",2020-08-03,NA,NA,"harrison","boone",9
+"26","West Tree Services","west tree services",2020-08-03,NA,NA,"little rock","pulaski",7
+"27","Custom Craft Poultry","custom craft poultry",2020-08-07,NA,NA,"batesville","independence",9
+"28","Tyson","tyson",2020-08-07,"Randall Rd.","randall rd","springdale","washington",64
+"29","Simmons Foods","simmons_foods",2020-08-10,NA,NA,"van buren","crawford",54
+"30","Radius Aerospace","radius aerospace",2020-08-10,NA,NA,"hot_springs","garland",10
+"31","JB Hunt Transport Services","jb hunt transport services",2020-08-10,NA,NA,"lowell","benton",28
+"32","Wilson Brothers Lumber Co","wilson brothers lumber co",2020-08-17,NA,NA,"rison","cleveland",16
+"33","Kagome Foods","kagome foods",2020-08-17,NA,NA,"osceola","mississippi",19
+"34","Simmons Foods","simmons_foods",2020-08-17,NA,NA,"gentry","benton",84
+"35","Global Food Group","global food group",2020-08-31,NA,NA,"clinton","van_buren",8
+"36","Peco","peco",2020-09-03,NA,NA,"batesville","independence",151
+"37","JW Aluminum Co.","jw aluminum co.",2020-09-03,NA,NA,"russellville","pope",8
+"38","MAHLE Engine Components","mahle engine components",2020-09-09,NA,NA,"russellville","pope",11
+"39","Big River Steel","big river steel",2020-09-09,NA,NA,"osceola","mississippi",16
+"40","Cargill Poultry","cargill poultry",2020-09-14,NA,NA,"springdale","washington",224
+"41","Textbook Brokers","textbook brokers",2020-09-14,NA,NA,"jonesboro","craighead",11
+"42","Triumph Airborne Structures","triumph_airborne_structures",2020-09-14,NA,NA,"hot_springs","garland",20
+"43","George's Poultry","georges_poultry",2020-09-17,NA,NA,"springdale","washington",290
+"44","George's Poultry","georges_poultry",2020-09-17,NA,NA,"batesville","independence",42
+"45","Pine Bluff Fire and Emergency","pine bluff fire and emergency",2020-10-01,NA,NA,"pine_bluff","jefferson",10
+"46","Dooley Agri","dooley agri",2020-10-08,NA,NA,"forestry","st. francis",26
+"47","Vacation Tour and Travel","vacation tour and travel",2020-10-12,NA,NA,"conway","faulkner",13
+"48","OK Foods","ok foods",2020-10-12,NA,NA,"fort_smith","sebastian",270
+"49","Land O'Frost","land o'frost",2020-10-15,NA,NA,"searcy","white",14
+"50","Big Rock KangaRoof","big rock kangaroof",2020-10-15,NA,NA,"little rock","pulaski",7
+"51","Arkansas Glass Container","arkansas glass container",2020-10-19,NA,NA,"jonesboro","craighead",11
+"52","Riceland Foods","riceland foods",2020-10-22,NA,NA,"stuggart","arkansas",36
+"53","Cooper Tire","cooper tire",2020-10-22,NA,NA,"texarkana","miller",29
+"54","Greenbrier Rail","greenbrier rail",2020-10-26,NA,NA,"paragould","greene",21
+"55","Evergreen Packaging","evergreen packaging",2020-10-29,NA,NA,"pine_bluff","jefferson",92
+"56","Diamond Pet Foods","diamond pet foods",2020-10-29,NA,NA,"dumas","desha",17
+"57","Riceland Foods","riceland foods",2020-11-02,NA,NA,"stuttgart","arkansas",40
+"58","Nestle","nestle",2020-11-05,NA,NA,"jonesboro","craighead",46
+"59","Simmons Foods","simmons_foods",2020-11-05,NA,NA,"fort_smith","sebastian",46
+"60","Roach Manufacturing","roach manufacturing",2020-11-05,NA,NA,"trumann","poinsett",19
+"61","Tyson","tyson",2020-11-12,NA,NA,"pine_bluff","jefferson",81
+"62","Nabholz","nabholz",2020-11-16,NA,NA,"conway","faulkner",11
+"63","Pilgrim's Pride","pilgrims_pride",2020-11-16,NA,NA,"de queen","sevier",283
+"64","Alma Tractor","alma tractor",2020-11-19,NA,NA,"alma","crawford",7
+"65","Maynard Inc.","maynard inc.",2020-11-23,NA,NA,"fayetteville","washington",8
+"66","Rineco Chemical Industries","rineco chemical industries",2020-11-26,NA,NA,"haskell","saline",12
+"67","Butterball","butterball",2020-11-30,NA,NA,"huntsville","madison",168
+"68","Nucor-Yamato Steel","nucor-yamato steel",2020-11-30,NA,NA,"blytheville","mississippi",34
+"69","Butterball","butterball",2020-11-30,NA,NA,"jonesboro","craighead",22
+"70","Tenneco Inc.","tenneco inc.",2020-12-03,NA,NA,"paragould","greene",40
+"71","Wilson Combat Scattergun Tech","wilson combat scattergun tech",2020-12-07,NA,NA,"berryville","carroll",17
+"72","Quality Voices","quality voices",2020-12-10,NA,NA,"jonesboro","craighead",8
+"73","PotlatchDeltic","potlatchdeltic",2020-12-10,NA,NA,"warren","bradley",17
+"74","Tyson's Mexican Original","tyson",2020-12-14,NA,NA,"fayetteville","washington",114
+"75","WeatherBarr Windows & Doors","weatherbarr windows & doors",2020-12-14,NA,NA,"fort_smith","sebastian",17
+"76","DENSO Manufacturing","denso manufacturing",2020-12-14,NA,NA,"osceola","mississippi",67
+"77","Simmons Foods","simmons_foods",2020-12-14,NA,NA,"siloam springs","benton",116
+"78","Utility Trailer Manufacturing Co.","utility trailer manufacturing co.",2020-12-14,NA,NA,"paragould","greene",39
+"79","Duke Custom Cabinets Inc.","duke custom cabinets inc.",2020-12-14,NA,NA,"roland","pulaski",6
+"80","Twin Rivers Foods","twin rivers foods",2020-12-17,NA,NA,"fort_smith","sebastian",47
+"81","Spirit Fitness","spirit fitness",2020-12-17,NA,NA,"jonesboro","craighead",18
+"82","Twin Rivers Foods","twin rivers foods",2020-12-21,NA,NA,"atkins","pope",160
+"83","APAC-Central","apac-central",2020-12-21,NA,NA,"fayetteville","washington",21
+"84","Domtar Paper Co.","domtar paper co.",2020-12-24,NA,NA,"ashdown","little_river",41
+"85","Roehm America/Evonik","roehm_america",2020-12-24,NA,NA,"osceola","mississippi",13
+"86","Tyson of Rogers","tyson",2020-12-24,"Elm St.","elm st","rogers","benton",322
+"87","Wayne Farms","wayne farms",2020-12-24,NA,NA,"danville","yell",230
+"88","Husqvarna","husqvarna",2020-12-24,NA,NA,"ashdown","howard",71
+"89","Nice Pak","nice pak",2020-12-24,NA,NA,"jonesboro","craighead",49
+"90","Arkansas Nuclear One","arkansas nuclear one",2020-12-24,NA,NA,"russellville","pope",38
+"91","Peco","peco",2020-12-24,NA,NA,"pocahontas","randolph",110
+"92","Shippers Products","shippers products",2020-12-24,NA,NA,"fordyce","dallas",13
+"93","La-Z-Boy Furniture","la-z-boy furniture",2020-12-24,NA,NA,"siloam springs","benton",7
+"94","Shelby Group International Inc.","shelby group international inc.",2020-12-28,NA,NA,"glenwood","pike",11
+"95","Stephens Inc.","stephens inc.",2020-12-28,NA,NA,"little rock","pulaski",12
+"96","Tyson","tyson",2020-12-31,"Tyler Rd.","tyler rd","russellville","pope",129
+"97","Dillar's Corporate Headquarters","dillards",2021-01-07,NA,NA,"little rock","pulaski",21
+"98","George's Poultry","georges_poultry",2021-01-07,"Kansas St.","kansas st","springdale","washington",94
+"99","Centene Corporation","centene corporation",2021-01-07,NA,NA,"little rock","pulaski",21
+"100","McKee Foods","mckee foods",2021-01-07,NA,NA,"gentry","benton",53
+"101","Tyson's Chick-N-Quick","tyson",2021-01-07,"Olrich St.","olrich st","rogers","benton",126
+"102","PotlatchDeltic","potlatchdeltic",2021-01-07,NA,NA,"ola","yell",19
+"103","ABB","abb",2021-01-07,NA,NA,"fort_smith","sebastian",89
+"104","American Greetings Co.","american greetings co.",2021-01-07,NA,NA,"osceola","mississippi",63
+"105","Tyson","tyson",2021-01-11,NA,NA,"waldron","scott",93
+"106","Frito Lay","frito lay",2021-01-11,NA,NA,"jonesboro","craighead",128
+"107","Gates Corportation","gates corportation",2021-01-11,NA,NA,"siloam springs","benton",33
+"108","Clean Harbors Evnvironmental Services","clean harbors evnvironmental services",2021-01-11,NA,NA,"el dorado","union",26
+"109","Pet Solutions","pet solutions",2021-01-11,NA,NA,"danville","yell",17
+"110","Tyson","tyson",2021-01-14,NA,NA,"van buren","crawford",281
+"111","Gates Rubber Corportation","gates rubber corportation",2021-01-14,NA,NA,"siloam springs","benton",38
+"112","Hytrol Conveyor Company","hytrol conveyor company",2021-01-14,NA,NA,"jonesboro","craighead",121
+"113","Unilever","unilever",2021-01-14,NA,NA,"jonesboro","craighead",43
+"114","Hooters","hooters",2021-01-14,NA,NA,"north little rock","pulaski",8
+"115","ConAgra/Pinnacle Foods","con_agra",2021-01-18,NA,NA,"fayetteville","washington",59
+"116","Hytrol Conveyor Company","hytrol conveyor company",2021-01-18,NA,NA,"siloam springs","benton",37
+"117","Gates Rubber Corportation","gates rubber corportation",2021-01-18,NA,NA,"jonesboro","craighead",121
+"118","L'Oreal Manufacturing center","l'oreal manufacturing center",2021-01-18,NA,NA,"north little rock","pulaski",16
+"119","Tyson","tyson",2021-01-18,NA,NA,"green_forest","carroll",288
+"120","Tyson","tyson",2021-01-18,"Plant St.","plant st","waldron","scott",93
+"121","Aerojet Rocketdyne","aerojet rocketdyne",2021-01-21,NA,NA,"camden","ouachita",51
+"122","Bell & Company","bell & company",2021-01-21,NA,NA,"north little rock","pulaski",10
+"123","Tyson","tyson",2021-01-21,NA,NA,"berryville","carroll",119
+"124","City of Camden","city of camden",2021-01-25,NA,NA,"camden","ouachita",8
+"125","Lennox Industries","lennox industries",2021-01-25,NA,NA,"stuttgart","arkansas",85
+"126","Tyson","tyson",2021-01-25,"275 Hempstead 278","275 hempstead 278","hope","hempstead",90
+"127","Tyson","tyson",2021-01-25,"Berry St.","berry st","springdale","washington",416
+"128","Tyson","tyson",2021-01-25,NA,NA,"dardanelle","yell",166
+"129","Dassault Falcon Jet LLC","dassault falcon jet llc",2021-02-01,NA,NA,"little rock","pulaski",63
+"130","Tyson","tyson",2021-02-04,NA,NA,"ashdown","howard",124
+"131","Welspun Pipes Inc.","welspun pipes inc.",2021-02-04,NA,NA,"little rock","pulaski",39
+"132","Dillards Fulfillment Center","dillards",2021-02-04,NA,NA,"stuttgart","arkansas",64
+"133","Riceland Foods","riceland foods",2021-02-04,NA,NA,"fort_smith","sebastian",31
+"134","SYKES Enterprises Call Center","sykes enterprises call center",2021-02-04,NA,NA,"maumelle","pulaski",12
+"135","Tyson Corporate","tyson",2021-02-08,"Don Tyson Pkwy","don tyson pkwy","springdale","washington",75
+"136","Claudia's Canine Bakery","claudia's canine bakery",2021-02-11,NA,NA,"maumelle","pulaski",19
+"137","ConAgra","con_agra",2021-02-11,NA,NA,"russellville","pope",353
+"138","De Wafelbakkers","de wafelbakkers",2021-02-11,NA,NA,"north little rock","pulaski",43
+"139","Great Dane Trailers","great dane trailers",2021-02-11,NA,NA,"jonesboro","craighead",35
+"140","Lamb & Associates Packaging","lamb & associates packaging",2021-02-11,NA,NA,"maumelle","pulaski",15
+"141","Lockheed Martin","lockheed martin",2021-02-11,NA,NA,"camden","ouachita",78
+"142","SYKES Enterprises Call Center","sykes enterprises call center",2021-02-11,NA,NA,"fort_smith","sebastian",35
+"143","Rheem Manufacturing","rheem manufacturing",2021-02-25,NA,NA,"fort_smith","sebastian",72
+"144","Wapsi Fly Co.","wapsi fly co.",2021-02-25,NA,NA,"mountain home","baxter",6
+"145","Twin Rivers Paper","twin rivers paper",2021-02-25,NA,NA,"pine_bluff","jefferson",22
+"146","Wilkerson's Jewelry","wilkerson's jewelry",2021-02-25,NA,NA,"stuttgart","arkansas",7
+"147","McLarty Daniel Chevrolet","mclarty daniel chevrolet",2021-03-04,NA,NA,"springdale","washington",11
+"148","Tyson","tyson",2021-03-15,NA,NA,"clarksville","johnson",297
+"149","K&K Veterinary Supply","k&k veterinary supply",2021-03-22,NA,NA,"tontitown","washington",12
+"150","Klein Tools","klein tools",2021-03-22,NA,NA,"fort_smith","sebastian",26
+"151","First Security Bank","first security bank",2021-04-08,NA,NA,"mountain home","baxter",7
