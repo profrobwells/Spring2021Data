@@ -8,7 +8,7 @@ output: pdf_document
 # Compilation of Occupational COVID-19 Reports for Calculations
 
 -**It will create a masterfile: occupational_master.csv**
-
+  
 # Part 1: Import Data, Clean It
 
 ```{r include=FALSE}
@@ -116,7 +116,6 @@ cleaned_data <- cleaned_data %>%
 #Company Work------
  
 ```{r}
-#Thanks Sean, Kara and Nick:
 cleaned_data <- cleaned_data %>%
   mutate(cleaned_company = tolower(company_name)) %>%
   #mutate(cleaned_company = str_remove("'",cleaned)) %>%
@@ -172,10 +171,6 @@ write.csv(cleaned_master, "cleaned_master.csv")
 #--------------------------------------------------------------------#
 
 
-#Wells concerned about losing detail with Tyson Berry St. etc, check to make sure nothing is missing. 
-
-
-#FILTER TO THE SPECIFIC WORKPLACE AND THE HIGHEST VALUE OF CASES
 
 #Revision: 9,158 cases total cases of infected employees in Arkansas workplaces. 
 #Previous: 11,103 
@@ -200,7 +195,7 @@ monthcototals <- cleaned_master %>%
   group_by(yearmon) %>% 
   filter(total_number_of_cases == max(total_number_of_cases)) %>% 
   filter(yearmon == max(yearmon))
-
+write.csv(monthcototals, "monthcostotals.csv")
 ```
 
 #max of each worksite by yearmon
@@ -218,11 +213,12 @@ test <- cleaned_master %>%
   select(company_name, cleaned_company, date, yearmon, address, cleaned_address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
   group_by(cleaned_company, cleaned_address, cleaned_city, cleaned_county, yearmon) %>% 
   top_n(1, date) %>% 
+  #top_n(1, cleaned_county) #yields duplicates %>% 
   ungroup() %>% 
   select(cleaned_company, cleaned_address, cleaned_city, cleaned_county, yearmon) %>% 
   group_by(cleaned_company, cleaned_address, cleaned_city, yearmon) %>% 
   count()
-
+test
 ```
 
 #this created max number of each worksite by year and month
@@ -232,7 +228,7 @@ m2axworksite_month <- cleaned_master %>%
   group_by(cleaned_company, cleaned_address, cleaned_city, cleaned_county, yearmon) %>% 
   top_n(1, date) 
   
-
+write.csv(m2axworksite_month, "maxworksite_month.csv")
 ```
 
 
@@ -247,7 +243,9 @@ write.csv(countysum, "countysum.csv")
 ```
 
 
-
+#This may be out of date
+#This may be out of date
+#This may be out of date and replaced by m2axworksite_month
 #county - company monthly totals  
 ```{r}
 month_county <- cleaned_master %>% 
@@ -266,10 +264,14 @@ month_county <- month_county %>%
    select(yearmon, date, cleaned_company, cleaned_address, cleaned_city, cleaned_county, total_number_of_cases) %>% 
   arrange(cleaned_company, cleaned_address, cleaned_city, cleaned_county)
 
-write.csv(month_county, "month_county.csv")
+#write.csv(month_county, "month_county.csv")
 
 ```
 
+#CHECK - MAY BE OUT OF DATE
+#CHECK - MAY BE OUT OF DATE
+
+#Check to see if we should build this table from m2axworksite_month instead
 
 #Group reports by Month
 #Reports by Month https://public.flourish.studio/visualisation/5526542/ and https://public.flourish.studio/visualisation/5527511/ 
@@ -294,7 +296,7 @@ dates <- cleaned_master %>%
   arrange(desc(date))
 
 dates
-write.csv (dates,"active_cases_dates.csv")
+#write.csv (dates,"active_cases_dates.csv")
 ```
 
 
@@ -344,10 +346,10 @@ cleaned_company_report <- cleaned_master %>%
   arrange(desc(n)) 
 
 cleaned_company_report
-#write.csv(cleaned_company_report, "cleaned_company_report.csv")
+write.csv(cleaned_company_report, "cleaned_company_report.csv")
   
 
-##Company analysis shows Tyson 289; George's 41; ConAgra 40; Simmons Foods 39 (Possible 40 with one more cleaning); Peco 37
+##Company analysis shows Tyson 281 (289 previously); George's 41; ConAgra 40; Simmons Foods 39 (Possible 40 with one more cleaning); Peco 37
 
 
 #TOTAL NUMBER OF ARK STATE HEATH DEPT REPORTS PER COMPANY SINCE MAY 19, 2020 (814)
