@@ -1,30 +1,26 @@
 ---
 title: "Monthly New Cases - All Counties"
 author: "Rob Wells & Katy Seiter"
-date: "4/10/2021"
+date: "4/13/2021"
 output: html_document
 ---
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 library(rio)
 library(lubridate)
 library(dplyr)
 ```
 
-## Import data
+## Import master file from Arkansascovid data
 ```{r}
 master2 <- rio::import("https://raw.githubusercontent.com/Arkansascovid/Main/master/master_file.csv")
-```
-
 ## Subset dataframe and assign months
-```{r}
 test <- master2 %>% 
-  select(county_nam, mydate, New_Cases_Today) %>% 
+  select(county_nam, mydate, New_Cases_Today, positive, confirmed_pos) %>% 
   filter(county_nam!="Arkansas_all_counties") %>% 
   filter(county_nam!="MissingCountyInfo") %>% 
-  filter(mydate >= "2020-04-01" & mydate <= "2021-03-31")
-
+  filter(mydate >= "2020-04-09" & mydate <= "2021-04-15")
 
 #Process dates** 
 test$date <- ymd(test$mydate)
@@ -36,7 +32,25 @@ test <- test %>%
 
 ```
 
-#Note for later: Needs refining: "ar" needs to be in crittenden county.
+#combine the positive (confirmed and probable from Sept 13 forward) with the confirmed_pos (Sept 12 and earlier) into a new column called positive2
+```{r}
+test2 <- test %>% 
+  filter(date <= "2020-09-12") %>% 
+  mutate(positive2 = (confirmed_pos))
+
+
+test3 <- test %>% 
+  filter(date > "2020-09-12") %>% 
+  mutate(positive2 = (positive))
+
+test <- smartbind(test2, test3)
+test$date <- ymd(test$mydate)
+glimpse(test)
+
+
+```
+#Clean the county names
+
 ```{r}
 test <- test %>%
   mutate(cleaned_county = tolower(county_nam)) %>%
@@ -53,7 +67,6 @@ test$cleaned_county <- str_trim(test$cleaned_county)
 ```
 
 
-
 ## Calculations ##
 
 
@@ -61,14 +74,46 @@ test$cleaned_county <- str_trim(test$cleaned_county)
 ## Master counties and months table, April 2020 - March 2021 ##
 ```{r}
 master_counties_months <- test %>%
-  group_by(yearmon, cleaned_county) %>%
-  summarise(New_Cases=sum(New_Cases_Today))
+  group_by(yearmon, cleaned_county, positive2) %>%
+  summarise(New_Cases=sum(New_Cases_Today)) %>% 
+  top_n(1, positive2)
 
-#write.csv(master_counties_months, "master_counties_months.csv")
+write.csv(master_counties_months, "master_counties_months.csv")
 names(master_counties_months)
 
 ```
 
+
+#Import countysum from Occupational Data
+
+
+```{r}
+zzz <- countysum %>% 
+  inner_join(master_counties_months, by=c("cleaned_county"="cleaned_county", "yearmon"="yearmon"))
+glimpse(zzz)
+```
+
+
+
+#calculate ratio of reported workplace outbreaks to total covid cases in a county
+```{r}
+occupation_month <- zzz %>% 
+  mutate(ratio_occupation = (total_cases/New_Cases)) %>% 
+  mutate(ratio_occup_positive = (total_cases/positive2)*100)
+write.csv(occupation_month, "occupation_month.csv")
+```
+
+
+
+#------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------
+
+#This section is no longer needed
+#This section is no longer needed
+
+#This section is no longer needed
+
+#This section is no longer needed
 ```{r}
 # library(tidyr)
 # library(dplyr)
@@ -117,6 +162,7 @@ counties_months <- counties_months %>%
 ```
 
 
+
 ```{r}
 #import Occupational data cleaned master March 26 version
 occupational <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/cleaned_master.csv")
@@ -130,108 +176,6 @@ occupational <- rio::import("https://raw.githubusercontent.com/profrobwells/Spri
 #occupational <- occupational[ -c(1,2) ]
 glimpse(occupational)
 ```
-
-#We are stuck after this point.
-
-
-## Build a table with the final date of the month per company
-##Then substract the companies from the prior month.
-```{r}
-occupation_month <- occupational %>%
-  group_by(yearmon, cleaned_county) %>% 
-  filter(date == max(date)) 
-
-xyz <- occupation_month %>% 
-  group_by(cleaned_company, yearmon, cleaned_county) %>% 
-   arrange(desc(yearmon))
-
-#how to subtract one tyson in madison in one month from a tyson in madison from another month but skip intervening months
-
-```
-
-
-
-
-```{r}
-occupation_month <- occupational %>%
-  group_by(yearmon, cleaned_county) %>%
-  filter(date == max(date)) 
-
-sum(occupation_month$total_number_of_cases)
-
-  #filter(total_number_of_cases == max(total_number_of_cases)) %>% 
-
-  #for last date record per month, return the total
-  #subtract from previous total
-
-  #summarise(Occupational_New_Cases=sum(number_active_cases))
-```
-
-```{r}
-zzz <- occupation_month %>% 
-  inner_join(master_counties_months, by=c("cleaned_county"="cleaned_county", "yearmon"="yearmon"))
-```
-
-#calculate ratio of reported workplace outbreaks to total covid cases in a county
-```{r}
-occupation_month <- zzz %>% 
-  mutate(ratio_occupation = (total_number_of_cases/New_Cases))
-write.csv(occupation_month, "occupation_month.csv")
-```
-
-
-
-#Next: Figure out companies in counties with highest outbreaks
-
-
-#Wells stopped here
-#Wells stopped here
-#Wells stopped here
-
-
-
-
-
-
-
-
-```{r}
-#Cleaning
-zzz <- occupation_month %>%
-  mutate(cleaned_county = tolower(county)) %>%
-  mutate(cleaned_county = str_remove(" ",cleaned_county)) %>%
-  mutate(cleaned_city = case_when(
-    str_detect(cleaned_city, "pine") ~ "pine_bluff",
-    str_detect(cleaned_city, "hot") ~ "hot_springs",
-    str_detect(cleaned_city, "smith") ~ "fort_smith",
-    str_detect(cleaned_city, "ash") ~ "ashdown",
-    str_detect(cleaned_city, "faulkner") ~ "faulkner",
-    str_detect(cleaned_city, "green") ~ "green_forest",
-    str_detect(cleaned_city, "entertainment") ~ "conway",
-    str_detect(cleaned_city, "Forestry") ~ "colt",
-    TRUE ~ cleaned_city
-  ))
-
-cleaned_data$cleaned_city <- str_trim(cleaned_data$cleaned_city)
-#cleaned_data$cleaned_city <- gsub("[[:space:]]", "", occupational_master$cleaned_city)
-
-```
-
-
-
-```{r}
-zzz <- occupational %>% 
-  pivot_wider(names_from = yearmon,
-  values_from = New_Cases)
-```
-
-counties_months <- janitor::clean_names(counties_months)
-counties_months
-```
-
-
-```
-
 
 
 ## Mini tables: total new cases for each county by individual month ##
