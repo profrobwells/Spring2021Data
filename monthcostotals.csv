@@ -1,0 +1,14 @@
+"","company_name","cleaned_company","date","yearmon","address","cleaned_address","cleaned_city","cleaned_county","total_number_of_cases"
+"1","George's/Ozark Mtn. Poultry (OMP)","georges_poultry",2020-05-29,"2020-05",NA,NA,"rogers","benton",92
+"2","Tyson","tyson",2020-06-25,"2020-06","Berry St.","berry st","springdale","washington",283
+"3","Tyson","tyson",2020-07-31,"2020-07","Berry St.","berry st","springdale","washington",344
+"4","Tyson","tyson",2020-08-17,"2020-08","Berry St.","berry st","springdale","washington",347
+"5","Tyson","tyson",2020-09-17,"2020-09","Berry St.","berry st","springdale","washington",365
+"6","Tyson","tyson",2020-10-29,"2020-10","Berry St.","berry st","springdale","washington",382
+"7","Pilgrim's Pride","pilgrims_pride",2020-11-12,"2020-11",NA,NA,"de queen","sevier",283
+"8","Pilgrim's Pride","pilgrims_pride",2020-11-16,"2020-11",NA,NA,"de queen","sevier",283
+"9","Tyson","tyson",2020-12-31,"2020-12","Berry St.","berry st","springdale","washington",403
+"10","Tyson","tyson",2021-01-25,"2021-01","Berry St.","berry st","springdale","washington",416
+"11","ConAgra","con_agra",2021-02-11,"2021-02",NA,NA,"russellville","pope",353
+"12","Tyson","tyson",2021-03-15,"2021-03",NA,NA,"clarksville","johnson",297
+"13","First Security Bank","first security bank",2021-04-08,"2021-04",NA,NA,"mountain home","baxter",7
