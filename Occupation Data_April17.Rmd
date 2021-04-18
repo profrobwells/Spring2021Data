@@ -1,0 +1,879 @@
+---
+title: "Occupational Data"
+author: "Mary Hennigan, Rob Wells, Katy Seiter, Abby Zimmardi and Rachell Sanchez-Smith" 
+date: "4/17/2021"
+output: pdf_document
+---
+
+#Many thanks to Sean Mussenden and Nicholas McMillon
+#Many thanks to the Spring 2021 Advanced Reporting Class for Fact Checking: Robert Stewart, Haley Hale, Emma Dannenfelser, Caroline Sellers, Ravi Brock, Graham Smithson, Grayson Green
+
+# Compilation of Occupational COVID-19 Reports for Calculations
+
+# Part 1: Import Data, Clean It
+
+```{r include=FALSE}
+#install.packages("slider")
+#install.packages("zoo")
+#install.packages("gtools")
+# vignette("basic-usage", package="googlesheets")
+#install.packages("googledrive")
+#install.packages("googlesheets4")
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(tidyr)
+library(jsonlite)
+library(gtools)
+library(zoo)
+library(reshape2)
+library(slider)
+library(rio)
+library(dplyr)
+```
+
+
+
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+#Part 1: Analysis
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+
+#Import worker_illness_cleaned_master which has a Unique ID from github
+
+```{r}
+cleaned_master <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/worker_illness_cleaned_master.csv")
+
+cleaned_master$date <- as.Date(cleaned_master$date)
+glimpse(cleaned_master)
+```
+#Revision: 8,921 cases total cases of infected employees in Arkansas workplaces. 
+#Previous: 11,103, 9158 
+
+```{r}
+#totals per worksite
+company_site_totals <- cleaned_master %>% 
+  select(cleaned_company, cleaned_county, Uniqueid, date, total_number_of_cases) %>% 
+  group_by(Uniqueid) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) %>% 
+  filter(date == max(date))
+
+sum(company_site_totals$total_number_of_cases)
+
+write.csv(company_site_totals, "company_site_totals.csv")
+glimpse(company_site_totals)
+```
+
+```{r}
+#totals per company
+companytotals <- company_site_totals  %>% 
+  group_by(cleaned_company) %>% 
+  summarize(total=sum(total_number_of_cases)) %>% 
+  mutate(percent = total / sum(total)) %>% 
+  arrange(desc(total))
+
+companytotals$percent <- formattable::percent(companytotals$percent)
+
+companytotals
+
+
+write.csv(companytotals, "company_totals.csv")
+#Feeds this Datawrapper table: https://www.datawrapper.de/_/N2CYu/
+```
+
+
+
+
+#company with the highest monthly totals  
+```{r}
+monthcototals <- cleaned_master %>% 
+  select(cleaned_company, date, yearmon, Uniqueid, cleaned_city, cleaned_county, total_number_of_cases) %>% 
+  group_by(yearmon) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) %>% 
+  filter(yearmon == max(yearmon)) %>% 
+  arrange(desc(yearmon))
+write.csv(monthcototals, "monthcostotals.csv")
+```
+
+#max of each worksite by yearmon
+```{r}
+maxworksite_month1 <- cleaned_master %>% 
+  select(cleaned_company, date, yearmon, Uniqueid, cleaned_city, cleaned_county, total_number_of_cases) %>% 
+  group_by(cleaned_company, Uniqueid, yearmon) %>% 
+  filter(total_number_of_cases == max(total_number_of_cases)) 
+maxworksite_month1
+```
+
+#internal check
+```{r}
+test <- cleaned_master %>% 
+  select(cleaned_company, date, yearmon, Uniqueid, cleaned_county, total_number_of_cases) %>% 
+  group_by(cleaned_company, Uniqueid, yearmon) %>% 
+  top_n(1, date) %>% 
+  #top_n(1, cleaned_county) #yields duplicates %>% 
+  ungroup() %>% 
+  select(cleaned_company, Uniqueid, cleaned_county, yearmon) %>% 
+  group_by(cleaned_company, Uniqueid, yearmon) %>% 
+  count()
+test
+```
+
+#this created max number of each worksite by year and month
+```{r}
+maxworksite_month <- cleaned_master %>% 
+   select(cleaned_company, date, yearmon, Uniqueid, cleaned_county, total_number_of_cases) %>% 
+  group_by(cleaned_company, Uniqueid, yearmon) %>%  
+  top_n(1, date) 
+maxworksite_month 
+write.csv(maxworksite_month, "maxworksite_month.csv")
+```
+
+#total number of cases in a county
+```{r}
+countysum <- maxworksite_month %>% 
+  group_by(cleaned_county, yearmon) %>% 
+  summarize(total_cases=sum(total_number_of_cases)) 
+
+write.csv(countysum, "countysum.csv")
+```
+
+```{r}
+month_counts <-cleaned_master %>%
+  select(date,cleaned_city, cleaned_county, cleaned_company, month) %>% 
+  group_by(month) %>% 
+  count() %>% 
+  arrange(desc(n))
+month_counts
+write.csv(month_counts,"month_counts.csv")
+
+#Refined: July 139; June 135; Dec 110, Aug 108
+#Notes: June, 147, July, 142, Dec, 110 and Aug, 109 are the top months and only months above 100.
+```
+
+```{r}
+dates <- cleaned_master %>% 
+  select(date, cleaned_company, number_active_cases) %>% 
+  group_by(date) %>% 
+  summarise(total = sum(number_active_cases)) %>% 
+  arrange(desc(date))
+
+dates
+write.csv (dates,"active_cases_dates.csv")
+```
+
+
+#City Analysis
+#Top Ten Cities Chart https://public.flourish.studio/visualisation/5527182/ 
+```{r}
+cleaned_city_report <- cleaned_master %>% 
+  select(date, cleaned_city) %>% 
+  group_by(cleaned_city) %>% 
+  count() %>% 
+  arrange(desc(n)) 
+
+cleaned_city_report
+
+#write.csv(cleaned_city_report, "cleaned_city_report.csv")
+
+#Report shows Springdale, 73; Jonesboro, 61; Rogers, 60
+
+```
+
+#County Analysis
+#Top Ten Counties Chart https://public.flourish.studio/visualisation/5527376/ 
+```{r}
+#Analyze records by county location
+cleaned_county_report <- cleaned_master %>% 
+  select(date,cleaned_county) %>% 
+  group_by(cleaned_county) %>% 
+  count() %>% 
+  arrange(desc(n))
+
+cleaned_county_report
+
+#write.csv(cleaned_county_report, "cleaned_county_report.csv")
+
+#WELLS NOTE: Two of the wealthiest counties in Arkansas have the highest number of occupational reports
+
+#New: Benton, 97; Washington 89; Pope 68; Craighead 61 are the top counties
+#Old: Benton, 95; Washington 83; Pope 68;Craighead 56 are the top counties.
+```
+
+#Company Analysis
+#Top 10 Companies Chart needs work: 
+#Revised Look at the company names 
+#add the function that produces percent of the whole - Hennigan can't figure out the funciton
+
+```{r}
+cleaned_company_report <- cleaned_master %>% 
+  count(cleaned_company) %>% 
+  arrange(desc(n)) 
+
+cleaned_company_report
+write.csv(cleaned_company_report, "cleaned_company_report.csv")
+  
+
+##Company analysis shows Tyson 281 (289 previously); George's 41; ConAgra 40; Simmons Foods 40 (Possible 40 with one more cleaning); Peco 37
+
+
+#TOTAL NUMBER OF ARK STATE HEATH DEPT REPORTS PER COMPANY SINCE MAY 19, 2020 (814)
+#SIX OF TEN ARE POULTRY PROCESSING
+#TYSON IS 36% OF ALL REPORTS
+```
+
+#Matching OSHA to ADH
+#the file is on the google drive, needs to be on GitHub
+```{r}
+AR_OSHA <- rio::import("/Users/abbyzimmardi/Downloads/Data Spring 2021/OSHA/AR Closed Complaints/AR Closed Complaints.xlsx")
+```
+
+#clean city and county columns
+```{r}
+AR_OSHA$`Site City`<- str_replace_all(AR_OSHA$`Site City`, pattern=fixed(' '), replacement=fixed('_') )
+AR_OSHA$`Site City` = tolower(AR_OSHA$`Site City`)
+AR_OSHA$`Site County`<- str_replace_all(AR_OSHA$`Site County`, pattern=fixed(' '), replacement=fixed('_') )
+AR_OSHA$`Site County` = tolower(AR_OSHA$`Site County`)
+AR_OSHA
+```
+
+#Rename column names
+```{r}
+AR_OSHA <- AR_OSHA %>%
+  rename(address = 'Site Address 1', cleaned_city = 'Site City', date = 'UPA Receipt Date')
+AR_OSHA
+```
+
+#Match by company name (matching by company name duplicated all the names)
+
+```{r}
+#OSHA_master <- inner_join(AR_OSHA, cleaned_master, #by=c("cleaned_company"="cleaned_company"))
+#OSHA_master
+```
+
+#Match by address
+#Zimmardi note: I'm stuck here - I'm able to match it, but not correctly. I need the addresses on cleaned_master to be exact to match that to AR_OSHA, and I don't know how to do that when we only have street names for ADH data (OSHA data has exact addresses)
+```{r}
+OSHA_master <- inner_join(AR_OSHA, cleaned_master, by=c("address"="address"))
+OSHA_master
+#write.csv(OSHA_master, "OSHA_master.csv")
+```
+
+
+
+
+#Poultry General Time Series and Analysis Below
+#Poultry General shows the total number of poultry worker COVID-19 cases by their county of residence, not where they are employed. 
+
+#Consdolidated Poultry Reports into one Google Sheet here https://docs.google.com/spreadsheets/d/1kdsxw4Ppcm-HMl7OcnBWgJUeWFE_QPUzCiaP7QbXNHQ/edit#gid=508262715 
+
+
+#----------------------------#
+#--------Building------------#
+#--------Industry------------#
+#----------------------------#
+#Occupationals from PDFs https://docs.google.com/spreadsheets/d/1R5dVT4QN586ANvAH1SJ7ye94Br5OtrZsAA2e4KlWn0o/edit#gid=1215399371 
+```{r}
+industry9_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 9.17")
+industry9_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 9.24")
+industry9_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 9.28")
+industry10_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.1")
+industry10_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.5")
+industry10_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.8")
+industry10_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.12")
+industry10_15 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.15")
+industry10_19 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.19")
+industry10_22 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.22")
+industry10_26 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.26")
+industry10_29 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 10.29")
+industry11_2 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.02")
+industry11_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.05")
+industry11_9 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.09")
+industry11_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.12")
+industry11_16 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.16")
+industry11_19 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.19")
+industry11_23 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.23")
+industry11_26 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.26")
+industry11_30 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 11.30")
+industry12_3 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.3")
+industry12_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.7")
+industry12_10 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.10")
+industry12_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.14")
+industry12_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.17")
+industry12_21 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.21")
+industry12_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.24")
+industry12_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.28")
+industry12_31 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 12.31")
+industry1_4 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 1.04")
+industry1_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 1.07")
+industry1_11 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 1.11")
+industry1_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 1.14")
+industry1_18 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 1.18")
+industry1_21 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 1.21")
+industry1_25 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 1.25")
+industry1_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 1.28")
+industry2_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 2.01")
+industry2_4 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 2.04")
+industry2_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 2.08")
+industry2_11 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 2.11")
+industry2_22 <- rio::import("Occupationals from PDFs.xlsx", which = "Industry 2.22")
+```
+
+#Clean names
+```{r}
+industry9_17 <- clean_names(industry9_17)
+industry9_24 <- clean_names(industry9_24)
+industry9_28 <- clean_names(industry9_28)
+industry10_1 <- clean_names(industry10_1)
+industry10_5 <- clean_names(industry10_5)
+industry10_8 <- clean_names(industry10_8)
+industry10_12 <- clean_names(industry10_12)
+industry10_15 <- clean_names(industry10_15)
+industry10_19 <- clean_names(industry10_19)
+industry10_22 <- clean_names(industry10_22)
+industry10_26 <- clean_names(industry10_26)
+industry10_29 <- clean_names(industry10_29)
+industry11_2 <- clean_names(industry11_2)
+industry11_5 <- clean_names(industry11_5)
+industry11_9 <- clean_names(industry11_9)
+industry11_12 <- clean_names(industry11_12)
+industry11_16 <- clean_names(industry11_16)
+industry11_19 <- clean_names(industry11_19)
+industry11_23 <- clean_names(industry11_23)
+industry11_26 <- clean_names(industry11_26)
+industry11_30 <- clean_names(industry11_30)
+industry12_3 <- clean_names(industry12_3)
+industry12_7 <- clean_names(industry12_7)
+industry12_10 <- clean_names(industry12_10)
+industry12_14 <- clean_names(industry12_14)
+industry12_17 <- clean_names(industry12_17)
+industry12_21 <- clean_names(industry12_21)
+industry12_24 <- clean_names(industry12_24)
+industry12_28 <- clean_names(industry12_28)
+industry12_31 <- clean_names(industry12_31)
+industry1_4 <- clean_names(industry1_4)
+industry1_7 <- clean_names(industry1_7)
+industry1_11 <- clean_names(industry1_11)
+industry1_14 <- clean_names(industry1_14)
+industry1_18 <- clean_names(industry1_18)
+industry1_21 <- clean_names(industry1_21)
+industry1_25 <- clean_names(industry1_25)
+industry1_28 <- clean_names(industry1_28)
+industry2_1 <- clean_names(industry2_1)
+industry2_4 <- clean_names(industry2_4)
+industry2_8 <- clean_names(industry2_8)
+industry2_11 <- clean_names(industry2_11)
+industry2_22 <- clean_names(industry2_22)
+```
+
+#Combine! 
+```{r}
+industry_master <- smartbind(industry9_17,
+                                 industry9_24,
+                                 industry9_28,
+                                 industry10_1,
+                                 industry10_5,
+                                 industry10_8,
+                                 industry10_12,
+                                 industry10_15,
+                                 industry10_19,
+                                 industry10_22,
+                                 industry10_26,
+                                 industry10_29,
+                                 industry11_2,
+                                 industry11_5,
+                                 industry11_9,
+                                 industry11_12,
+                                 industry11_16,
+                                 industry11_19,
+                                 industry11_23,
+                                 industry11_26,
+                                 industry11_30,
+                                 industry12_3,
+                                 industry12_7,
+                                 industry12_10,
+                                 industry12_14,
+                                 industry12_17,
+                                 industry12_21,
+                                 industry12_24,
+                                 industry12_28,
+                                 industry12_31,
+                                 industry1_4,
+                                 industry1_7,
+                                 industry1_11,
+                                 industry1_14,
+                                 industry1_18,
+                                 industry1_21,
+                                 industry1_25,
+                                 industry1_28,
+                                 industry2_1,
+                                 industry2_4,
+                                 industry2_8,
+                                 industry2_11,
+                                 industry2_22)
+
+industry_master
+write.csv(industry_master, "industry_master.csv")
+```
+
+#----------------------------#
+#--------Building------------#
+#------Poultry General-------#
+#----------------------------#
+
+#Start by pulling in each sheet
+```{r}
+pgeneral5_22 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral5.22")
+pgeneral5_26 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral5.26")
+pgeneral5_29 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral5.29")
+pgeneral6_2 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral6.2")
+pgeneral6_5 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral6.5")
+pgeneral6_8 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral6.8")
+pgeneral6_14 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral6.14")
+pgeneral6_18 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral6.18")
+pgeneral6_21 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral6.21")
+pgeneral6_25 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral6.25")
+pgeneral6_28 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral6.28")
+pgeneral7_3 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral7.3")
+pgeneral7_6 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral7.6")
+pgeneral7_13 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral7.13")
+pgeneral7_20 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral7.20")
+pgeneral7_24 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral7.24")
+pgeneral7_27 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral7.27")
+pgeneral7_31 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral7.31")
+pgeneral8_3 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.3")
+pgeneral8_7 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.7")
+pgeneral8_10 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.10")
+pgeneral8_13 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.13")
+pgeneral8_17 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.17")
+pgeneral8_20 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.20")
+pgeneral8_24 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.24")
+pgeneral8_27 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.27")
+pgeneral8_31 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral8.31")
+pgeneral9_3 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral9.3")
+pgeneral9_7 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral9.7")
+pgeneral9_9 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral9.9")
+pgeneral9_14 <- rio::import("Poultry General Sheets 5_22_2020-9_14_2020.xlsx", which = "PGeneral9.14")
+
+
+```
+
+
+#Clean and Normalize All Names
+```{r include=FALSE}
+pgeneral5_22 <- clean_names(pgeneral5_22)
+pgeneral5_26 <- clean_names(pgeneral5_26)
+pgeneral5_29 <- clean_names(pgeneral5_29)
+pgeneral6_2 <- clean_names(pgeneral6_2)
+pgeneral6_5 <- clean_names(pgeneral6_5)
+pgeneral6_8 <- clean_names(pgeneral6_8)
+pgeneral6_14 <- clean_names(pgeneral6_14)
+pgeneral6_18 <- clean_names(pgeneral6_18)
+pgeneral6_21 <- clean_names(pgeneral6_21)
+pgeneral6_25 <- clean_names(pgeneral6_25)
+pgeneral7_3 <- clean_names(pgeneral7_3)
+pgeneral7_6 <- clean_names(pgeneral7_6)
+pgeneral7_13 <- clean_names(pgeneral7_13)
+pgeneral7_20 <- clean_names(pgeneral7_20)
+pgeneral7_24 <- clean_names(pgeneral7_24)
+pgeneral7_27 <- clean_names(pgeneral7_27)
+pgeneral7_31 <- clean_names(pgeneral7_31)
+pgeneral8_3 <- clean_names(pgeneral8_3)
+pgeneral8_7 <- clean_names(pgeneral8_7)
+pgeneral8_10 <- clean_names(pgeneral8_10)
+pgeneral8_13 <- clean_names(pgeneral8_13)
+pgeneral8_17 <- clean_names(pgeneral8_17)
+pgeneral8_24 <- clean_names(pgeneral8_24)
+pgeneral8_27 <- clean_names(pgeneral8_27)
+pgeneral8_31 <- clean_names(pgeneral8_31)
+pgeneral9_3 <- clean_names(pgeneral9_3)
+pgeneral9_7 <- clean_names(pgeneral9_7)
+pgeneral9_9 <- clean_names(pgeneral9_9)
+pgeneral9_14 <- clean_names(pgeneral9_14)
+
+```
+
+#Combine files to create poultry general dataframe
+#This df shows infected poultry workers by county of residence. 
+```{r}
+poultry_general <- smartbind(pgeneral5_29,
+                             pgeneral6_2,
+                                 pgeneral6_5,
+                                 pgeneral6_8,
+                                 pgeneral6_14,
+                                 pgeneral6_18,
+                                 pgeneral6_21,
+                                 pgeneral6_25,
+                                 pgeneral7_3,
+                                 pgeneral7_6,
+                                 pgeneral7_13,
+                                 pgeneral7_20,
+                                 pgeneral7_24,
+                                 pgeneral7_27,
+                                 pgeneral7_31,
+                                 pgeneral8_3,
+                                 pgeneral8_7,
+                                 pgeneral8_10,
+                                 pgeneral8_13,
+                                 pgeneral8_17,
+                                 pgeneral8_24,
+                                 pgeneral8_27,
+                                 pgeneral8_31,
+                                 pgeneral9_3,
+                                 pgeneral9_7,
+                                 pgeneral9_9,
+                                 pgeneral9_14)
+
+glimpse(poultry_general)
+write.csv(poultry_general, "poultry_general.csv")
+```
+
+
+
+
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+#OLD: TABLE BUILDING FOR OCCUPATIONAL_MASTER.CSV
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+
+#April 12 update: Need to redownload these from Google Sheets for updated reports
+#We have two spreadsheets in Google that contain all occupational outbreak reports from May 19, 2020 - Feb. 22, 2021
+#Occupationals from PDFs https://docs.google.com/spreadsheets/d/1R5dVT4QN586ANvAH1SJ7ye94Br5OtrZsAA2e4KlWn0o/edit#gid=1215399371 
+#Leftovers https://docs.google.com/spreadsheets/d/1iuxIguTLVKhVBxAeIGg2enB5cmhDhTbOqWb6w7XHIzI/edit#gid=1206136585
+
+#Start master file by pulling in individual sheets 
+#23 reports from May 19 - August 7 
+```{r include=FALSE}
+occupation5_19 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 5.19")
+occupation5_22 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 5.22")
+occupation5_26 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 5.26")
+occupation5_29 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 5.29")
+occupation6_2 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.2") 
+occupation6_5 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.5") 
+occupation6_8 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.8") 
+occupation6_14 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.14") 
+occupation6_18 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.18") 
+occupation6_21 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.21") 
+occupation6_25 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 6.25")
+occupation7_3 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.3")
+occupation7_6 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.6")
+occupation7_13 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.13")
+occupation7_20 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.20")
+occupation7_24 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.24")
+occupation7_27 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.27")
+occupation7_31 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 7.31")
+occupation8_3 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.3")
+occupation8_7 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.7")
+occupation8_17 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.17")
+occupation8_24 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.24")
+occupation8_27 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.27")
+occupation8_31 <- rio::import("Occupationals from PDFs.xlsx",which = "Occupational 8.31")
+
+```
+
+#Pull in the rest of August that didn't fit into the sheet Occupationals from PDFs. 
+#3 reports from the Leftovers file from Aug. 10, 13, 20
+```{r}
+occupation8_10 <- rio::import("Leftovers.xlsx",which = "Occupational 8.10")
+occupation8_13 <- rio::import("Leftovers.xlsx",which = "Occupational 8.13")
+occupation8_20 <- rio::import("Leftovers.xlsx",which = "Occupational 8.20")
+```
+
+#Continue pulling reports from Occupationals from PDFs.
+#46 reports from Sept. 3, 2020 - Feb. 22, 2021
+```{r}
+occupation9_3 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.3")
+occupation9_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.7")
+occupation9_9 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.9")
+occupation9_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.14")
+occupation9_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.17")
+occupation9_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.24")
+occupation9_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 9.28")
+occupation10_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.1")
+occupation10_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.5")
+occupation10_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.8")
+occupation10_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.12")
+occupation10_15 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.15")
+occupation10_19 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.19")
+occupation10_22 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.22")
+occupation10_26 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.26")
+occupation10_29 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 10.29")
+occupation11_2 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.02")
+occupation11_5 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.05")
+occupation11_9 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.09")
+occupation11_12 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.12")
+occupation11_16 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.16")
+occupation11_19 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.19")
+occupation11_23 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.23")
+occupation11_26 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.26")
+occupation11_30 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 11.30")
+occupation12_3 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.3")
+occupation12_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.7")
+occupation12_10 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.10")
+occupation12_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.14")
+occupation12_17 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.17")
+occupation12_21 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.21")
+occupation12_24 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.24")
+occupation12_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.28")
+occupation12_31 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 12.31")
+occupation1_4 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.04")
+occupation1_7 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.07")
+occupation1_11 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.11")
+occupation1_14 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.14")
+occupation1_18 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.18")
+occupation1_21 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.21")
+occupation1_25 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.25")
+occupation1_28 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 1.28")
+occupation2_1 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.01")
+occupation2_4 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.04")
+occupation2_8 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.08")
+occupation2_11 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.11")
+occupation2_22 <- rio::import("Occupationals from PDFs.xlsx", which = "Occupational 2.22")
+```
+
+#Add new dates here. They will pull from the Leftovers file. 
+#NEW APRIL 12, 2021
+```{r}
+occupation2_25 <- rio::import("Leftovers.xlsx",which = "Occupational 2.25")
+occupation3_1 <- rio::import("Leftovers.xlsx",which = "Occupational 3.1")
+occupation3_4 <- rio::import("Leftovers.xlsx",which = "Occupational 3.4")
+occupation3_15 <- rio::import("Leftovers.xlsx",which = "Occupational 3.15")
+occupation3_18 <- rio::import("Leftovers.xlsx",which = "Occupational 3.18")
+occupation3_22 <- rio::import("Leftovers.xlsx",which = "Occupational 3.22")
+occupation4_8 <- rio::import("Leftovers.xlsx",which = "Occupational 4.8")
+```
+
+#Clean and Normalize All Names
+#NEW APRIL 12, 2021
+```{r include=FALSE}
+occupation5_19 <- clean_names(occupation5_19)
+occupation5_22 <- clean_names(occupation5_22)
+occupation5_26 <- clean_names(occupation5_26)
+occupation5_29 <- clean_names(occupation5_29)
+occupation6_2 <- clean_names(occupation6_2)
+occupation6_5 <- clean_names(occupation6_5)
+occupation6_8 <- clean_names(occupation6_8)
+occupation6_14 <- clean_names(occupation6_14)
+occupation6_18 <- clean_names(occupation6_18)
+occupation6_21 <- clean_names(occupation6_21)
+occupation6_25 <- clean_names(occupation6_25)
+occupation7_3 <- clean_names(occupation7_3)
+occupation7_6 <- clean_names(occupation7_6)
+occupation7_13 <- clean_names(occupation7_13)
+occupation7_20 <- clean_names(occupation7_20)
+occupation7_24 <- clean_names(occupation7_24)
+occupation7_27 <- clean_names(occupation7_27)
+occupation7_31 <- clean_names(occupation7_31)
+occupation8_3 <- clean_names(occupation8_3)
+occupation8_7 <- clean_names(occupation8_7)
+occupation8_10 <- clean_names(occupation8_10)
+occupation8_13 <- clean_names(occupation8_13)
+occupation8_17 <- clean_names(occupation8_17)
+occupation8_24 <- clean_names(occupation8_24)
+occupation8_27 <- clean_names(occupation8_27)
+occupation8_31 <- clean_names(occupation8_31)
+occupation9_3 <- clean_names(occupation9_3)
+occupation9_7 <- clean_names(occupation9_7)
+occupation9_9 <- clean_names(occupation9_9)
+occupation9_14 <- clean_names(occupation9_14)
+occupation9_17 <- clean_names(occupation9_17)
+occupation9_24 <- clean_names(occupation9_24)
+occupation9_28 <- clean_names(occupation9_28)
+occupation10_1 <- clean_names(occupation10_1)
+occupation10_5 <- clean_names(occupation10_5)
+occupation10_8 <- clean_names(occupation10_8)
+occupation10_12 <- clean_names(occupation10_12)
+occupation10_15 <- clean_names(occupation10_15)
+occupation10_19 <- clean_names(occupation10_19)
+occupation10_22 <- clean_names(occupation10_22)
+occupation10_26 <- clean_names(occupation10_26)
+occupation10_29 <- clean_names(occupation10_29)
+occupation11_2 <- clean_names(occupation11_2)
+occupation11_5 <- clean_names(occupation11_5)
+occupation11_9 <- clean_names(occupation11_9)
+occupation11_12 <- clean_names(occupation11_12)
+occupation11_16 <- clean_names(occupation11_16)
+occupation11_19 <- clean_names(occupation11_19)
+occupation11_23 <- clean_names(occupation11_23)
+occupation11_26 <- clean_names(occupation11_26)
+occupation11_30 <- clean_names(occupation11_30)
+occupation12_3 <- clean_names(occupation12_3)
+occupation12_7 <- clean_names(occupation12_7)
+occupation12_10 <- clean_names(occupation12_10)
+occupation12_14 <- clean_names(occupation12_14)
+occupation12_17 <- clean_names(occupation12_17)
+occupation12_21 <- clean_names(occupation12_21)
+occupation12_24 <- clean_names(occupation12_24)
+occupation12_28 <- clean_names(occupation12_28)
+occupation12_31 <- clean_names(occupation12_31)
+occupation1_4 <- clean_names(occupation1_4)
+occupation1_7 <- clean_names(occupation1_7)
+occupation1_11 <- clean_names(occupation1_11)
+occupation1_14 <- clean_names(occupation1_14)
+occupation1_18 <- clean_names(occupation1_18)
+occupation1_21 <- clean_names(occupation1_21)
+occupation1_25 <- clean_names(occupation1_25)
+occupation1_28 <- clean_names(occupation1_28)
+occupation2_1 <- clean_names(occupation2_1)
+occupation2_4 <- clean_names(occupation2_4)
+occupation2_8 <- clean_names(occupation2_8)
+occupation2_11 <- clean_names(occupation2_11)
+occupation2_22 <- clean_names(occupation2_22)
+occupation2_25 <- clean_names(occupation2_25)
+occupation3_1 <- clean_names(occupation3_1)
+occupation3_4 <- clean_names(occupation3_4)
+occupation3_15 <- clean_names(occupation3_15)
+occupation3_18 <- clean_names(occupation3_18)
+occupation3_22 <- clean_names(occupation3_22)
+occupation4_8 <- clean_names(occupation4_8)
+
+#add the most recent dates here
+```
+
+#Cleaning prior to Combination
+#May 19 File renaming
+```{r}
+occupation5_19 <- occupation5_19 %>% 
+  rename(company_name = "business_name",
+         city = "location")
+occupation5_19
+
+```
+
+#Rename files with column "employer, total_cases, number_closed_cases"
+#May 22, 26
+```{r}
+occupation5_22 <- occupation5_22 %>% 
+  rename(company_name = "employer",
+         total_number_of_cases = "total_cases",
+         number_recovered_cases = "number_closed_cases")
+#occupation5_22
+
+occupation5_26 <- occupation5_26 %>% 
+  rename(company_name = "employer",
+         total_number_of_cases = "total_cases",
+         number_recovered_cases = "number_closed_cases")
+#occupation5_26
+```
+
+#Rename files with employer_city_county column
+#Dates May 29, 2020 - Sept. 14, 2020
+```{r}
+employer_column <- smartbind(occupation5_29,
+                             occupation6_2,
+                                 occupation6_5,
+                                 occupation6_8,
+                                 occupation6_14,
+                                 occupation6_18,
+                                 occupation6_21,
+                                 occupation6_25,
+                                 occupation7_3,
+                                 occupation7_6,
+                                 occupation7_13,
+                                 occupation7_20,
+                                 occupation7_24,
+                                 occupation7_27,
+                                 occupation7_31,
+                                 occupation8_3,
+                                 occupation8_7,
+                                 occupation8_10,
+                                 occupation8_13,
+                                 occupation8_17,
+                                 occupation8_24,
+                                 occupation8_27,
+                                 occupation8_31,
+                                 occupation9_3,
+                                 occupation9_7,
+                                 occupation9_9,
+                                 occupation9_14)
+
+
+#Separate the fields to industry, city, county
+employer_column <- separate(data = employer_column, col = employer_city_county, into = c("company_name", "city", "county"), sep = ",", extra = "merge", fill = "right")
+
+glimpse(employer_column)
+```
+
+#Rename files with industry_city_county column
+#Dates Sept. 17, 2020 - Present
+```{r}
+industry_column <- smartbind(occupation9_17,
+                                 occupation9_24,
+                                 occupation9_28,
+                                 occupation10_1,
+                                 occupation10_5,
+                                 occupation10_8,
+                                 occupation10_12,
+                                 occupation10_15,
+                                 occupation10_19,
+                                 occupation10_22,
+                                 occupation10_26,
+                                 occupation10_29,
+                                 occupation11_2,
+                                 occupation11_5,
+                                 occupation11_9,
+                                 occupation11_12,
+                                 occupation11_16,
+                                 occupation11_19,
+                                 occupation11_23,
+                                 occupation11_26,
+                                 occupation11_30,
+                                 occupation12_3,
+                                 occupation12_7,
+                                 occupation12_10,
+                                 occupation12_14,
+                                 occupation12_17,
+                                 occupation12_21,
+                                 occupation12_24,
+                                 occupation12_28,
+                                 occupation12_31,
+                                 occupation1_4,
+                                 occupation1_7,
+                                 occupation1_11,
+                                 occupation1_14,
+                                 occupation1_18,
+                                 occupation1_21,
+                                 occupation1_25,
+                                 occupation1_28,
+                                 occupation2_1,
+                                 occupation2_4,
+                                 occupation2_8,
+                                 occupation2_11,
+                                 occupation2_22,
+                                occupation2_25,
+                                occupation3_1,
+                                occupation3_4,
+                                occupation3_15,
+                                occupation3_18,
+                                occupation3_22,
+                                occupation4_8))
+
+
+#Separate the fields to industry, city, county
+industry_column <- separate(data = industry_column, col = industry_city_county, into = c("industry", "city", "county"), sep = ",", extra = "merge", fill = "right")
+
+glimpse(industry_column)
+```
+
+#Combine May 19, 2020 - April 8, 2021
+#Recreating occupational_master
+
+#Has 814 observations. Our previous master had 1004. We have removed all of the poultry general rows.
+
+#WELLS NOTE Collect the poultry in a separate dataframe
+```{r warning=FALSE}
+occupational_master <- smartbind(occupation5_19,
+                                 occupation5_22,
+                                 occupation5_26,
+                                 employer_column,
+                                 industry_column)
+glimpse(occupational_master)
+
+write.csv(occupational_master, "occupational_master.csv")
+
+```
+
+
+
+

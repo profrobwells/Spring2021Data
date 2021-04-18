@@ -1,146 +1,109 @@
-"","company_name","cleaned_county","Uniqueid","date","total_number_of_cases"
-"1","Belleville Boot","st. francis",1,2020-05-26,35
-"2","Nebo Poultry","yell",2,2020-07-03,66
-"3","Best Manufacturing","craighead",3,2020-05-26,12
-"4","Riceland Foods, Inc.","craighead",4,2020-05-19,9
-"5","Riceland Foods","arkansas",5,2020-11-02,40
-"6","Riceland Foods","sebastian",6,2021-02-04,31
-"7","Pilgrim's Pride","sevier",7,2020-11-16,283
-"8","Frito Lay","craighead",8,2021-01-11,128
-"9","Saracen Casino Construction","jefferson",9,2020-05-22,56
-"10","George's/Ozark Mtn. Poultry (OMP)","benton",10,2020-07-20,278
-"11","George's Poultry","washington",11,2020-09-17,290
-"12","George's Poultry","independence",12,2020-09-17,42
-"13","Cargill Poultry","washington",13,2020-09-14,224
-"14","Butterball","madison",14,2020-11-30,168
-"15","Tyson","yell",15,2021-01-25,166
-"16","Tyson","johnson",16,2021-03-15,297
-"17","Tyson of Rogers","benton",17,2020-12-24,322
-"18","Tyson's Chick-N-Quick","benton",18,2021-01-07,126
-"19","Tyson","washington",19,2021-01-25,416
-"20","Tyson","polk",20,2020-07-03,29
-"21","Tyson's Mexican Original","washington",21,2020-12-14,114
-"22","Tyson","crawford",22,2021-01-14,281
-"23","Tyson","carroll",23,2021-01-21,119
-"24","Tyson","carroll",24,2021-01-18,288
-"25","Tyson","washington",25,2020-08-07,64
-"26","Tyson","pope",26,2020-12-31,129
-"27","Tyson","howard",27,2021-02-04,124
-"28","Tyson","hempstead",28,2021-01-25,90
-"29","Tyson","jefferson",29,2020-11-12,81
-"30","Tyson","scott",30,2021-01-18,93
-"31","Tyson Corporate","washington",31,2021-02-08,75
-"32","Wayne Farms","yell",32,2020-12-24,230
-"33","Simmons Foods","crawford",33,2020-08-10,54
-"34","Simmons Foods","benton",34,2020-08-17,84
-"35","Simmons Foods","benton",35,2020-12-14,116
-"36","Simmons Foods","sebastian",36,2020-11-05,46
-"37","Southeast Poultry","benton",37,2020-07-06,73
-"38","Hino Motors","crittenden",38,2020-06-14,16
-"39","Twin Rivers Foods","pope",39,2020-12-21,160
-"40","Twin Rivers Foods","sebastian",40,2020-12-17,47
-"41","Husqvarna","howard",41,2020-12-24,71
-"42","Consulate of Mexico","pulaski",42,2020-06-08,5
-"43","Park Hill Collection Warehouse","pulaski",43,2020-06-14,10
-"44","Walmart Regional Distribution Center 6094","benton",44,2020-06-14,7
-"45","Wal-Mart #0119","independence",45,2020-07-20,5
-"46","Rockline Industries","pope",46,2020-06-21,16
-"47","Rockline Industries","washington",47,2020-06-25,21
-"48","Target","washington",48,2020-06-18,6
-"49","OK Foods","sebastian",49,2020-10-12,270
-"50","ConAgra","pope",50,2021-02-11,353
-"51","ConAgra/Pinnacle Foods","washington",51,2021-01-18,59
-"52","TMC Logistics","benton",52,2020-07-06,14
-"53","Evergreen Packaging","jefferson",53,2020-10-29,92
-"54","Peco","randolph",54,2020-12-24,110
-"55","Peco","independence",55,2020-09-03,151
-"56","Producers Rice Mill Inc","arkansas",56,2020-07-24,12
-"57","Adams Fertilizer Equipment","arkansas",57,2020-07-20,8
-"58","Hytrol Conveyor Company","craighead",58,2021-01-14,121
-"59","Hytrol Conveyor Company","benton",59,2021-01-18,37
-"60","Pace Industries","boone",60,2020-08-03,9
-"61","West Tree Services","pulaski",61,2020-08-03,7
-"62","Kagome Foods","mississippi",62,2020-08-17,19
-"63","Custom Craft Poultry","independence",63,2020-08-07,9
-"64","Radius Aerospace","garland",64,2020-08-10,10
-"65","Wilson Brothers Lumber Co","cleveland",65,2020-08-17,16
-"66","JB Hunt Transport Services","benton",66,2020-08-10,28
-"67","Triumph Airborne Structures","garland",67,2020-09-14,20
-"68","Global Food Group","van_buren",68,2020-08-31,8
-"69","JW Aluminum Co.","pope",69,2020-09-03,8
-"70","Big River Steel","mississippi",70,2020-09-09,16
-"71","Textbook Brokers","craighead",71,2020-09-14,11
-"72","MAHLE Engine Components","pope",72,2020-09-09,11
-"73","Lennox Industries","arkansas",73,2021-01-25,85
-"74","Pine Bluff Fire and Emergency","jefferson",74,2020-10-01,10
-"75","Dooley Agri","st. francis",75,2020-10-08,26
-"76","Vacation Tour and Travel","faulkner",76,2020-10-12,13
-"77","DENSO Manufacturing","mississippi",77,2020-12-14,67
-"78","Land O'Frost","white",78,2020-10-15,14
-"79","Arkansas Glass Container","craighead",79,2020-10-19,11
-"80","Big Rock KangaRoof","pulaski",80,2020-10-15,7
-"81","Cooper Tire","miller",81,2020-10-22,29
-"82","Greenbrier Rail","greene",82,2020-10-26,21
-"83","Diamond Pet Foods","desha",83,2020-10-29,17
-"84","Roach Manufacturing","poinsett",84,2020-11-05,19
-"85","Nestle","craighead",85,2020-11-05,46
-"86","ABB","sebastian",86,2021-01-07,89
-"87","Lockheed Martin","ouachita",87,2021-02-11,78
-"88","Nabholz","faulkner",88,2020-11-16,11
-"89","Alma Tractor","crawford",89,2020-11-19,7
-"90","Rineco Chemical Industries","saline",90,2020-11-26,12
-"91","Maynard Inc.","washington",91,2020-11-23,8
-"92","Nucor-Yamato Steel","mississippi",92,2020-11-30,34
-"93","Tenneco Inc.","greene",93,2020-12-03,40
-"94","Wilson Combat Scattergun Tech","carroll",94,2020-12-07,17
-"95","PotlatchDeltic","bradley",95,2020-12-10,17
-"96","PotlatchDeltic","yell",96,2021-01-07,19
-"97","Quality Voices","craighead",97,2020-12-10,8
-"98","American Greetings Co.","mississippi",98,2021-01-07,63
-"99","Spirit Fitness","craighead",99,2020-12-17,18
-"100","WeatherBarr Windows & Doors","sebastian",100,2020-12-14,17
-"101","Utility Trailer Manufacturing Co.","greene",101,2020-12-14,39
-"102","Dassault Falcon Jet LLC","pulaski",102,2021-02-01,63
-"103","Duke Custom Cabinets Inc.","pulaski",103,2020-12-14,6
-"104","Unilever","craighead",104,2021-01-14,43
-"105","Nice Pak","craighead",105,2020-12-24,49
-"106","APAC-Central","washington",106,2020-12-21,21
-"107","Domtar Paper Co.","little_river",107,2020-12-24,41
-"108","Roehm America/Evonik","mississippi",108,2020-12-24,13
-"109","McKee Foods","benton",109,2021-01-07,53
-"110","Arkansas Nuclear One","pope",110,2020-12-24,38
-"111","Shippers Products","dallas",111,2020-12-24,13
-"112","La-Z-Boy Furniture","benton",112,2020-12-24,7
-"113","Shelby Group International Inc.","pike",113,2020-12-28,11
-"114","Stephens Inc.","pulaski",114,2020-12-28,12
-"115","Dillar's Corporate Headquarters","pulaski",115,2021-01-07,21
-"116","Dillards Fulfillment Center","arkansas",116,2021-02-04,64
-"117","Centene Corporation","pulaski",117,2021-01-07,21
-"118","Gates Rubber Corportation","benton",118,2021-01-14,38
-"119","Gates Rubber Corportation","craighead",119,2021-01-18,121
-"120","Clean Harbors Evnvironmental Services","union",120,2021-01-11,26
-"121","Pet Solutions","yell",121,2021-01-11,17
-"122","Hooters","pulaski",122,2021-01-14,8
-"123","Bell & Company","pulaski",123,2021-01-21,10
-"124","L'Oreal Manufacturing center","pulaski",124,2021-01-18,16
-"125","Aerojet Rocketdyne","ouachita",125,2021-01-21,51
-"126","City of Camden","ouachita",126,2021-01-25,8
-"127","SYKES Enterprises Call Center","sebastian",127,2021-02-11,35
-"128","SYKES Enterprises Call Center","pulaski",128,2021-02-04,12
-"129","Welspun Pipes Inc.","pulaski",129,2021-02-04,39
-"130","Claudia's Canine Bakery","pulaski",130,2021-02-11,19
-"131","De Wafelbakkers","pulaski",131,2021-02-11,43
-"132","Great Dane Trailers","craighead",132,2021-02-11,35
-"133","Lamb & Associates Packaging","pulaski",133,2021-02-11,15
-"134","Wapsi Fly Co.","baxter",134,2021-02-25,6
-"135","Rheem Manufacturing","sebastian",135,2021-02-25,72
-"136","Twin Rivers Paper","jefferson",136,2021-02-25,22
-"137","Wilkerson's Jewelry","arkansas",137,2021-02-25,7
-"138","McLarty Daniel Chevrolet","washington",138,2021-03-04,11
-"139","Klein Tools","sebastian",139,2021-03-22,26
-"140","K&K Veterinary Supply","washington",140,2021-03-22,12
-"141","First Security Bank","baxter",141,2021-04-08,7
-"142","Butterball","franklin",142,2020-07-24,31
-"143","Butterball","craighead",143,2020-11-30,22
-"144","Tyson","benton",144,2020-05-29,6
-"145","Tyson","---",145,2020-05-19,46
+"","cleaned_company","total","percent"
+"1","tyson",2866,32.13%
+"2","georges_poultry",610,6.84%
+"3","con_agra",412,4.62%
+"4","simmons_foods",300,3.36%
+"5","pilgrims_pride",283,3.17%
+"6","ok foods",270,3.03%
+"7","peco",261,2.93%
+"8","wayne farms",230,2.58%
+"9","cargill poultry",224,2.51%
+"10","butterball",221,2.48%
+"11","twin rivers foods",207,2.32%
+"12","gates_corporation",159,1.78%
+"13","hytrol conveyor company",158,1.77%
+"14","frito lay",128,1.43%
+"15","evergreen packaging",92,1.03%
+"16","abb",89,1.00%
+"17","dillards",85,0.95%
+"18","lennox industries",85,0.95%
+"19","riceland_foods",80,0.90%
+"20","lockheed martin",78,0.87%
+"21","southeast poultry",73,0.82%
+"22","rheem manufacturing",72,0.81%
+"23","husqvarna",71,0.80%
+"24","denso manufacturing",67,0.75%
+"25","nebo poultry",66,0.74%
+"26","american greetings co.",63,0.71%
+"27","dassault falcon jet llc",63,0.71%
+"28","saracen_casino_construction",56,0.63%
+"29","mckee foods",53,0.59%
+"30","aerojet rocketdyne",51,0.57%
+"31","nice pak",49,0.55%
+"32","sykes enterprises call center",47,0.53%
+"33","nestle",46,0.52%
+"34","de wafelbakkers",43,0.48%
+"35","unilever",43,0.48%
+"36","domtar paper co.",41,0.46%
+"37","tenneco inc.",40,0.45%
+"38","utility trailer manufacturing co.",39,0.44%
+"39","welspun pipes inc.",39,0.44%
+"40","arkansas nuclear one",38,0.43%
+"41","rockline industries",37,0.41%
+"42","potlatchdeltic",36,0.40%
+"43","belleville_boot",35,0.39%
+"44","great dane trailers",35,0.39%
+"45","nucor-yamato steel",34,0.38%
+"46","cooper tire",29,0.33%
+"47","jb hunt transport services",28,0.31%
+"48","clean harbors evnvironmental services",26,0.29%
+"49","dooley agri",26,0.29%
+"50","klein tools",26,0.29%
+"51","twin rivers paper",22,0.25%
+"52","apac-central",21,0.24%
+"53","centene corporation",21,0.24%
+"54","greenbrier rail",21,0.24%
+"55","triumph_airborne_structures",20,0.22%
+"56","claudia's canine bakery",19,0.21%
+"57","kagome foods",19,0.21%
+"58","roach manufacturing",19,0.21%
+"59","spirit fitness",18,0.20%
+"60","diamond pet foods",17,0.19%
+"61","pet solutions",17,0.19%
+"62","weatherbarr windows & doors",17,0.19%
+"63","wilson combat scattergun tech",17,0.19%
+"64","big river steel",16,0.18%
+"65","hino motors",16,0.18%
+"66","l'oreal manufacturing center",16,0.18%
+"67","wilson brothers lumber co",16,0.18%
+"68","lamb & associates packaging",15,0.17%
+"69","land o'frost",14,0.16%
+"70","tmc logistics",14,0.16%
+"71","roehm_america",13,0.15%
+"72","shippers products",13,0.15%
+"73","vacation tour and travel",13,0.15%
+"74","best manufacturing",12,0.13%
+"75","k&k veterinary supply",12,0.13%
+"76","producers rice mill inc",12,0.13%
+"77","rineco chemical industries",12,0.13%
+"78","stephens inc.",12,0.13%
+"79","walmart",12,0.13%
+"80","arkansas glass container",11,0.12%
+"81","mahle engine components",11,0.12%
+"82","mclarty daniel chevrolet",11,0.12%
+"83","nabholz",11,0.12%
+"84","shelby group international inc.",11,0.12%
+"85","textbook brokers",11,0.12%
+"86","bell & company",10,0.11%
+"87","park hill collection warehouse",10,0.11%
+"88","pine bluff fire and emergency",10,0.11%
+"89","radius aerospace",10,0.11%
+"90","custom craft poultry",9,0.10%
+"91","pace industries",9,0.10%
+"92","adams fertilizer equipment",8,0.09%
+"93","city of camden",8,0.09%
+"94","global food group",8,0.09%
+"95","hooters",8,0.09%
+"96","jw aluminum co.",8,0.09%
+"97","maynard inc.",8,0.09%
+"98","quality voices",8,0.09%
+"99","alma tractor",7,0.08%
+"100","big rock kangaroof",7,0.08%
+"101","first security bank",7,0.08%
+"102","la-z-boy furniture",7,0.08%
+"103","west tree services",7,0.08%
+"104","wilkerson's jewelry",7,0.08%
+"105","duke custom cabinets inc.",6,0.07%
+"106","target",6,0.07%
+"107","wapsi fly co.",6,0.07%
+"108","consulate of mexico",5,0.06%
