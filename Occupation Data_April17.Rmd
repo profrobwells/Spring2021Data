@@ -133,9 +133,10 @@ write.csv(maxworksite_month, "maxworksite_month.csv")
 ```{r}
 countysum <- maxworksite_month %>% 
   group_by(cleaned_county, yearmon) %>% 
-  summarize(total_cases=sum(total_number_of_cases)) 
+  summarize(total_cases=sum(total_number_of_cases))
+ 
 
-write.csv(countysum, "countysum.csv")
+#write.csv(countysum, "countysum.csv")
 ```
 
 ```{r}
@@ -199,6 +200,109 @@ cleaned_county_report
 #New: Benton, 97; Washington 89; Pope 68; Craighead 61 are the top counties
 #Old: Benton, 95; Washington 83; Pope 68;Craighead 56 are the top counties.
 ```
+
+#----------------------------------------------------------------------------
+#  Calculate Worker Covid Cases as Percentage of All Community Cases By Month
+#----------------------------------------------------------------------------
+
+## Import master file from Arkansascovid data
+```{r}
+master2 <- rio::import("https://raw.githubusercontent.com/Arkansascovid/Main/master/master_file.csv")
+## Subset dataframe and assign months
+test <- master2 %>% 
+  select(county_nam, mydate, New_Cases_Today, positive, confirmed_pos) %>% 
+  filter(county_nam!="Arkansas_all_counties") %>% 
+  filter(county_nam!="MissingCountyInfo") %>% 
+  filter(mydate >= "2020-04-09" & mydate <= "2021-04-15")
+
+#Process dates** 
+test$date <- ymd(test$mydate)
+test$year <- year(test$date)
+test$month <- month(test$date, label=TRUE)
+
+test <- test %>% 
+  mutate(yearmon = format(date, "%Y-%m"))
+
+```
+
+#combine the positive (confirmed and probable from Sept 13 forward) with the confirmed_pos (Sept 12 and earlier) into a new column called positive2
+```{r}
+test2 <- test %>% 
+  filter(date <= "2020-09-12") %>% 
+  mutate(positive2 = (confirmed_pos))
+
+
+test3 <- test %>% 
+  filter(date > "2020-09-12") %>% 
+  mutate(positive2 = (positive))
+
+test <- smartbind(test2, test3)
+test$date <- ymd(test$mydate)
+glimpse(test)
+
+
+```
+#Clean the county names
+
+```{r}
+test <- test %>%
+  mutate(cleaned_county = tolower(county_nam)) %>%
+  mutate(cleaned_county = case_when(
+    str_detect(cleaned_county, "little") ~ "little_river",
+    str_detect(cleaned_county, "van") ~ "van_buren",
+    str_detect(cleaned_county, "fishing") ~ "st. francis",
+    str_detect(cleaned_county, "and recreation") ~ "faulkner",
+    # str_detect(cleaned_county, "ar ") ~ "crittenden",
+    TRUE ~ cleaned_county
+  ))
+
+test$cleaned_county <- str_trim(test$cleaned_county) 
+```
+
+
+## Calculations ##
+
+
+
+## Master counties and months table, May 2020 - April 2021 ##
+```{r}
+master_counties_months <- test %>%
+  group_by(yearmon, cleaned_county, positive2) %>%
+  summarise(New_Cases=sum(New_Cases_Today)) %>% 
+  top_n(1, positive2)
+
+#write.csv(master_counties_months, "master_counties_months.csv")
+#names(master_counties_months)
+
+```
+
+
+#Combine with countysum from Occupational Data
+
+```{r}
+zzz <- countysum %>% 
+  inner_join(master_counties_months, by=c("cleaned_county"="cleaned_county", "yearmon"="yearmon"))
+glimpse(zzz)
+```
+
+#calculate ratio of reported workplace outbreaks to total covid cases in a county
+```{r}
+occupation_month <- zzz %>% 
+  #mutate(ratio_occupation = (total_cases/New_Cases)) %>% 
+  mutate(pct_occup_positive = (total_cases/positive2))
+
+occupation_month$pct_occup_positive <- formattable::percent(occupation_month$pct_occup_positive)
+
+occupation_month <- occupation_month %>% 
+  select(yearmon, cleaned_county, total_cases, positive2, pct_occup_positive) %>% 
+  rename(Year_Month = yearmon, County = cleaned_county, Worker_Covid = total_cases, Community_Covid = positive2, Worker_Community_Pct = pct_occup_positive)
+
+write.csv(occupation_month, "occupation_month.csv")
+#feeds this graphic: https://app.flourish.studio/visualisation/5847959/edit?
+```
+
+
+
 
 #Company Analysis
 #Top 10 Companies Chart needs work: 
