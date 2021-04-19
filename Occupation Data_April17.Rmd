@@ -1,7 +1,7 @@
 ---
 title: "Occupational Data"
 author: "Mary Hennigan, Rob Wells, Katy Seiter, Abby Zimmardi and Rachell Sanchez-Smith" 
-date: "4/17/2021"
+date: "4/19/2021"
 output: pdf_document
 ---
 
@@ -325,6 +325,16 @@ write.csv(cleaned_company_report, "cleaned_company_report.csv")
 #SIX OF TEN ARE POULTRY PROCESSING
 #TYSON IS 36% OF ALL REPORTS
 ```
+
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+# Notes, code in progress below
+# Also, main code for compiling the PDFs is below
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+
+
+
 
 #Matching OSHA to ADH
 #the file is on the google drive, needs to be on GitHub
