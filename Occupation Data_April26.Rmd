@@ -1,7 +1,7 @@
 ---
 title: "Occupational Data"
 author: "Rob Wells, Mary Hennigan, Katy Seiter, Abby Zimmardi and Rachell Sanchez-Smith" 
-date: "4/27/2021"
+date: "4/28/2021"
 output: pdf_document
 ---
 
@@ -101,6 +101,7 @@ maxworksite_month <- as.data.frame(maxworksite_month)
 
 test <- maxworksite_month %>%
   arrange(Uniqueid, date) %>%  
+  #group_by(Uniqueid) %>% 
   mutate(New_Cases = (total_number_of_cases-lag(total_number_of_cases)))  
 #calculation creates erroneous value for first
 
@@ -158,6 +159,8 @@ sum(monthsum$month_total)
 ```
 
 #Revised: New cases per facility, county totals - April 27
+# County Race chart: https://public.flourish.studio/visualisation/5886015/
+# Animated Map of Arkansas Worker Cases by Ravi Brock
 ```{r}
 county_month <- new_cases %>%
    select(cleaned_county, New_Cases, yearmon) %>% 
@@ -174,8 +177,7 @@ write.csv(county_month, "county_month_April27.csv")
 #County Analysis - April 27
 #Top Ten Counties Chart: https://public.flourish.studio/visualisation/5982769/
 #Map: https://datawrapper.dwcdn.net/NwfE2/1/
-# County Race chart: https://public.flourish.studio/visualisation/5886015/
-# Animated Map of Arkansas Worker Cases by Ravi Brock
+
 ```{r}
 countysum <- new_cases %>%
    select(cleaned_county, New_Cases) %>% 
@@ -215,6 +217,9 @@ companytotals <- company_site_totals  %>%
 companytotals$percent <- formattable::percent(companytotals$percent)
 
 companytotals
+
+
+sum(companytotals$total)
 
 write.csv(companytotals, "company_totals.csv")
 
@@ -424,6 +429,70 @@ occupation_month$Worker_Cumulative_Pct <- formattable::percent(occupation_month$
 
 #write.csv(occupation_month, "occupation_month.csv")
 #feeds this graphic: https://app.flourish.studio/visualisation/5847959/edit?
+```
+
+#compare worker cases to total positive cases a month
+#
+```{r}
+master <- master2
+#format dates
+#library(lubridate)
+master$date <- ymd(master$mydate)
+master$year <- year(master$date)
+master$month <- month(master$date, label=TRUE)
+master$week <- week(master$date)
+master$day <- day(master$date)
+master$weekday <- wday(master$date, label=TRUE, abbr=FALSE)
+master$yearmon <- format(master$date, "%Y-%m")
+
+#Mini table
+mini <- master %>% 
+  select(county_nam, date, year, month, week, day, weekday)
+mini
+```
+
+#Create Monday-only table, statewide data
+```{r}
+month <- master %>% 
+  select(county_nam, date, New_Cases_Today, month, yearmon) %>% 
+  filter(county_nam=="Arkansas_all_counties") %>% 
+   arrange(desc(New_Cases_Today))
+
+month
+```
+
+
+#GroupBy
+#Using master_file, develop monthly totals and percentage changes for new cases and deaths
+```{r}
+monthly_cases <- master %>% 
+  select(county_nam, yearmon, New_Cases_Today, New_Deaths_Today) %>% 
+  filter(county_nam=="Arkansas_all_counties") %>% 
+  group_by(yearmon) %>% 
+  summarise(month_newcases = sum(New_Cases_Today, na.rm = TRUE)) %>% 
+  arrange(desc(yearmon))
+
+monthly_cases
+write.csv(monthly_cases, "monthly_cases.csv")
+```
+
+#Combine work months and positive by month
+```{r}
+worker_community <- monthly_cases %>% 
+  inner_join(monthsum, by=c("yearmon"))
+
+worker_community <- worker_community %>% 
+rename(Year_Month = yearmon, Worker_Covid = month_total, All_Covid = month_newcases)
+
+worker_community <- worker_community %>% 
+  mutate(Percent_Worker_Covid =(Worker_Covid/All_Covid))
+
+worker_community$Percent_Worker_Covid <- formattable::percent(worker_community$Percent_Worker_Covid)
+
+names(worker_community)
+
+write.csv(worker_community, "worker_community.csv")
+
 ```
 
 
