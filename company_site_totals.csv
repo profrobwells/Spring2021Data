@@ -1,146 +1,148 @@
 "","cleaned_company","cleaned_county","Uniqueid","date","total_number_of_cases"
 "1","belleville_boot","st. francis",1,2020-05-26,35
-"2","nebo poultry","yell",2,2020-07-03,66
-"3","best manufacturing","craighead",3,2020-05-26,12
-"4","riceland_foods","craighead",4,2020-05-19,9
-"5","riceland_foods","arkansas",5,2020-11-02,40
-"6","riceland_foods","sebastian",6,2021-02-04,31
-"7","pilgrims_pride","sevier",7,2020-11-16,283
-"8","frito lay","craighead",8,2021-01-11,128
-"9","saracen_casino_construction","jefferson",9,2020-05-22,56
-"10","georges_poultry","benton",10,2020-07-20,278
-"11","georges_poultry","washington",11,2020-09-17,290
-"12","georges_poultry","independence",12,2020-09-17,42
-"13","cargill poultry","washington",13,2020-09-14,224
-"14","butterball","madison",14,2020-11-30,168
-"15","tyson","yell",15,2021-01-25,166
-"16","tyson","johnson",16,2021-03-15,297
-"17","tyson","benton",17,2020-12-24,322
-"18","tyson","benton",18,2021-01-07,126
-"19","tyson","washington",19,2021-01-25,416
-"20","tyson","polk",20,2020-07-03,29
-"21","tyson","washington",21,2020-12-14,114
-"22","tyson","crawford",22,2021-01-14,281
-"23","tyson","carroll",23,2021-01-21,119
-"24","tyson","carroll",24,2021-01-18,288
-"25","tyson","washington",25,2020-08-07,64
-"26","tyson","pope",26,2020-12-31,129
-"27","tyson","howard",27,2021-02-04,124
-"28","tyson","hempstead",28,2021-01-25,90
-"29","tyson","jefferson",29,2020-11-12,81
-"30","tyson","scott",30,2021-01-18,93
-"31","tyson","washington",31,2021-02-08,75
-"32","wayne farms","yell",32,2020-12-24,230
-"33","simmons_foods","crawford",33,2020-08-10,54
-"34","simmons_foods","benton",34,2020-08-17,84
-"35","simmons_foods","benton",35,2020-12-14,116
-"36","simmons_foods","sebastian",36,2020-11-05,46
-"37","southeast poultry","benton",37,2020-07-06,73
-"38","hino motors","crittenden",38,2020-06-14,16
-"39","twin rivers foods","pope",39,2020-12-21,160
-"40","twin rivers foods","sebastian",40,2020-12-17,47
-"41","husqvarna","howard",41,2020-12-24,71
-"42","consulate of mexico","pulaski",42,2020-06-08,5
-"43","park hill collection warehouse","pulaski",43,2020-06-14,10
-"44","walmart","benton",44,2020-06-14,7
-"45","walmart","independence",45,2020-07-20,5
-"46","rockline industries","pope",46,2020-06-21,16
-"47","rockline industries","washington",47,2020-06-25,21
-"48","target","washington",48,2020-06-18,6
-"49","ok foods","sebastian",49,2020-10-12,270
-"50","con_agra","pope",50,2021-02-11,353
-"51","con_agra","washington",51,2021-01-18,59
-"52","tmc logistics","benton",52,2020-07-06,14
-"53","evergreen packaging","jefferson",53,2020-10-29,92
-"54","peco","randolph",54,2020-12-24,110
-"55","peco","independence",55,2020-09-03,151
-"56","producers rice mill inc","arkansas",56,2020-07-24,12
-"57","adams fertilizer equipment","arkansas",57,2020-07-20,8
-"58","hytrol conveyor company","craighead",58,2021-01-14,121
-"59","hytrol conveyor company","benton",59,2021-01-18,37
-"60","pace industries","boone",60,2020-08-03,9
-"61","west tree services","pulaski",61,2020-08-03,7
-"62","kagome foods","mississippi",62,2020-08-17,19
-"63","custom craft poultry","independence",63,2020-08-07,9
-"64","radius aerospace","garland",64,2020-08-10,10
-"65","wilson brothers lumber co","cleveland",65,2020-08-17,16
-"66","jb hunt transport services","benton",66,2020-08-10,28
-"67","triumph_airborne_structures","garland",67,2020-09-14,20
-"68","global food group","van_buren",68,2020-08-31,8
-"69","jw aluminum co.","pope",69,2020-09-03,8
-"70","big river steel","mississippi",70,2020-09-09,16
-"71","textbook brokers","craighead",71,2020-09-14,11
-"72","mahle engine components","pope",72,2020-09-09,11
-"73","lennox industries","arkansas",73,2021-01-25,85
-"74","pine bluff fire and emergency","jefferson",74,2020-10-01,10
-"75","dooley agri","st. francis",75,2020-10-08,26
-"76","vacation tour and travel","faulkner",76,2020-10-12,13
-"77","denso manufacturing","mississippi",77,2020-12-14,67
-"78","land o'frost","white",78,2020-10-15,14
-"79","arkansas glass container","craighead",79,2020-10-19,11
-"80","big rock kangaroof","pulaski",80,2020-10-15,7
-"81","cooper tire","miller",81,2020-10-22,29
-"82","greenbrier rail","greene",82,2020-10-26,21
-"83","diamond pet foods","desha",83,2020-10-29,17
-"84","roach manufacturing","poinsett",84,2020-11-05,19
-"85","nestle","craighead",85,2020-11-05,46
-"86","abb","sebastian",86,2021-01-07,89
-"87","lockheed martin","ouachita",87,2021-02-11,78
-"88","nabholz","faulkner",88,2020-11-16,11
-"89","alma tractor","crawford",89,2020-11-19,7
-"90","rineco chemical industries","saline",90,2020-11-26,12
-"91","maynard inc.","washington",91,2020-11-23,8
-"92","nucor-yamato steel","mississippi",92,2020-11-30,34
-"93","tenneco inc.","greene",93,2020-12-03,40
-"94","wilson combat scattergun tech","carroll",94,2020-12-07,17
-"95","potlatchdeltic","bradley",95,2020-12-10,17
-"96","potlatchdeltic","yell",96,2021-01-07,19
-"97","quality voices","craighead",97,2020-12-10,8
-"98","american greetings co.","mississippi",98,2021-01-07,63
-"99","spirit fitness","craighead",99,2020-12-17,18
-"100","weatherbarr windows & doors","sebastian",100,2020-12-14,17
-"101","utility trailer manufacturing co.","greene",101,2020-12-14,39
-"102","dassault falcon jet llc","pulaski",102,2021-02-01,63
-"103","duke custom cabinets inc.","pulaski",103,2020-12-14,6
-"104","unilever","craighead",104,2021-01-14,43
-"105","nice pak","craighead",105,2020-12-24,49
-"106","apac-central","washington",106,2020-12-21,21
-"107","domtar paper co.","little_river",107,2020-12-24,41
-"108","roehm_america","mississippi",108,2020-12-24,13
-"109","mckee foods","benton",109,2021-01-07,53
-"110","arkansas nuclear one","pope",110,2020-12-24,38
-"111","shippers products","dallas",111,2020-12-24,13
-"112","la-z-boy furniture","benton",112,2020-12-24,7
-"113","shelby group international inc.","pike",113,2020-12-28,11
-"114","stephens inc.","pulaski",114,2020-12-28,12
-"115","dillards","pulaski",115,2021-01-07,21
-"116","dillards","arkansas",116,2021-02-04,64
-"117","centene corporation","pulaski",117,2021-01-07,21
-"118","gates_corporation","benton",118,2021-01-14,38
-"119","gates_corporation","craighead",119,2021-01-18,121
-"120","clean harbors evnvironmental services","union",120,2021-01-11,26
-"121","pet solutions","yell",121,2021-01-11,17
-"122","hooters","pulaski",122,2021-01-14,8
-"123","bell & company","pulaski",123,2021-01-21,10
-"124","l'oreal manufacturing center","pulaski",124,2021-01-18,16
-"125","aerojet rocketdyne","ouachita",125,2021-01-21,51
-"126","city of camden","ouachita",126,2021-01-25,8
-"127","sykes enterprises call center","sebastian",127,2021-02-11,35
-"128","sykes enterprises call center","pulaski",128,2021-02-04,12
-"129","welspun pipes inc.","pulaski",129,2021-02-04,39
-"130","claudia's canine bakery","pulaski",130,2021-02-11,19
-"131","de wafelbakkers","pulaski",131,2021-02-11,43
-"132","great dane trailers","craighead",132,2021-02-11,35
-"133","lamb & associates packaging","pulaski",133,2021-02-11,15
-"134","wapsi fly co.","baxter",134,2021-02-25,6
-"135","rheem manufacturing","sebastian",135,2021-02-25,72
-"136","twin rivers paper","jefferson",136,2021-02-25,22
-"137","wilkerson's jewelry","arkansas",137,2021-02-25,7
-"138","mclarty daniel chevrolet","washington",138,2021-03-04,11
-"139","klein tools","sebastian",139,2021-03-22,26
-"140","k&k veterinary supply","washington",140,2021-03-22,12
-"141","first security bank","baxter",141,2021-04-08,7
-"142","butterball","franklin",142,2020-07-24,31
-"143","butterball","craighead",143,2020-11-30,22
-"144","tyson","benton",144,2020-05-29,6
-"145","tyson","---",145,2020-05-19,46
+"2","nebo poultry","yell, pope",146,2020-05-22,50
+"3","nebo poultry","yell",2,2020-07-03,66
+"4","best manufacturing","craighead",3,2020-05-26,12
+"5","riceland_foods","craighead",4,2020-05-19,9
+"6","riceland_foods","arkansas",5,2020-11-02,40
+"7","riceland_foods","sebastian",6,2021-02-04,31
+"8","pilgrims_pride","sevier",7,2020-11-16,283
+"9","frito lay","craighead",8,2021-01-11,128
+"10","saracen_casino_construction","jefferson",9,2020-05-22,56
+"11","georges_poultry","benton",10,2020-07-20,278
+"12","georges_poultry","washington",11,2020-09-17,290
+"13","georges_poultry","washington",147,2021-01-07,94
+"14","georges_poultry","independence",12,2020-09-17,42
+"15","cargill poultry","washington",13,2020-09-14,224
+"16","butterball","madison",14,2020-11-30,168
+"17","tyson","yell",15,2021-01-25,166
+"18","tyson","johnson",16,2021-03-15,297
+"19","tyson","benton",17,2020-12-24,322
+"20","tyson","benton",18,2021-01-07,126
+"21","tyson","washington",19,2021-01-25,416
+"22","tyson","polk",20,2020-07-03,29
+"23","tyson","washington",21,2020-12-14,114
+"24","tyson","crawford",22,2021-01-14,281
+"25","tyson","carroll",23,2021-01-21,119
+"26","tyson","carroll",24,2021-01-18,288
+"27","tyson","washington",25,2020-08-07,64
+"28","tyson","pope",26,2020-12-31,129
+"29","tyson","howard",27,2021-02-04,124
+"30","tyson","hempstead",28,2021-01-25,90
+"31","tyson","jefferson",29,2020-11-12,81
+"32","tyson","scott",30,2021-01-18,93
+"33","tyson","washington",31,2021-02-08,75
+"34","wayne farms","yell",32,2020-12-24,230
+"35","simmons_foods","crawford",33,2020-08-10,54
+"36","simmons_foods","benton",34,2020-08-17,84
+"37","simmons_foods","benton",35,2020-12-14,116
+"38","simmons_foods","sebastian",36,2020-11-05,46
+"39","southeast poultry","benton",37,2020-07-06,73
+"40","hino motors","crittenden",38,2020-06-14,16
+"41","twin rivers foods","pope",39,2020-12-21,160
+"42","twin rivers foods","sebastian",40,2020-12-17,47
+"43","husqvarna","howard",41,2020-12-24,71
+"44","consulate of mexico","pulaski",42,2020-06-08,5
+"45","park hill collection warehouse","pulaski",43,2020-06-14,10
+"46","walmart","benton",44,2020-06-14,7
+"47","walmart","independence",45,2020-07-20,5
+"48","rockline industries","pope",46,2020-06-21,16
+"49","rockline industries","washington",47,2020-06-25,21
+"50","target","washington",48,2020-06-18,6
+"51","ok foods","sebastian",49,2020-10-12,270
+"52","con_agra","pope",50,2021-02-11,353
+"53","con_agra","washington",51,2021-01-18,59
+"54","tmc logistics","benton",52,2020-07-06,14
+"55","evergreen packaging","jefferson",53,2020-10-29,92
+"56","peco","randolph",54,2020-12-24,110
+"57","peco","independence",55,2020-09-03,151
+"58","producers rice mill inc","arkansas",56,2020-07-24,12
+"59","adams fertilizer equipment","arkansas",57,2020-07-20,8
+"60","hytrol conveyor company","craighead",58,2021-01-14,121
+"61","hytrol conveyor company","benton",59,2021-01-18,37
+"62","pace industries","boone",60,2020-08-03,9
+"63","west tree services","pulaski",61,2020-08-03,7
+"64","kagome foods","mississippi",62,2020-08-17,19
+"65","custom craft poultry","independence",63,2020-08-07,9
+"66","radius aerospace","garland",64,2020-08-10,10
+"67","wilson brothers lumber co","cleveland",65,2020-08-17,16
+"68","jb hunt transport services","benton",66,2020-08-10,28
+"69","triumph_airborne_structures","garland",67,2020-09-14,20
+"70","global food group","van_buren",68,2020-08-31,8
+"71","jw aluminum co.","pope",69,2020-09-03,8
+"72","big river steel","mississippi",70,2020-09-09,16
+"73","textbook brokers","craighead",71,2020-09-14,11
+"74","mahle engine components","pope",72,2020-09-09,11
+"75","lennox industries","arkansas",73,2021-01-25,85
+"76","pine bluff fire and emergency","jefferson",74,2020-10-01,10
+"77","dooley agri","st. francis",75,2020-10-08,26
+"78","vacation tour and travel","faulkner",76,2020-10-12,13
+"79","denso manufacturing","mississippi",77,2020-12-14,67
+"80","land o'frost","white",78,2020-10-15,14
+"81","arkansas glass container","craighead",79,2020-10-19,11
+"82","big rock kangaroof","pulaski",80,2020-10-15,7
+"83","cooper tire","miller",81,2020-10-22,29
+"84","greenbrier rail","greene",82,2020-10-26,21
+"85","diamond pet foods","desha",83,2020-10-29,17
+"86","roach manufacturing","poinsett",84,2020-11-05,19
+"87","nestle","craighead",85,2020-11-05,46
+"88","abb","sebastian",86,2021-01-07,89
+"89","lockheed martin","ouachita",87,2021-02-11,78
+"90","nabholz","faulkner",88,2020-11-16,11
+"91","alma tractor","crawford",89,2020-11-19,7
+"92","rineco chemical industries","saline",90,2020-11-26,12
+"93","maynard inc.","washington",91,2020-11-23,8
+"94","nucor-yamato steel","mississippi",92,2020-11-30,34
+"95","tenneco inc.","greene",93,2020-12-03,40
+"96","wilson combat scattergun tech","carroll",94,2020-12-07,17
+"97","potlatchdeltic","bradley",95,2020-12-10,17
+"98","potlatchdeltic","yell",96,2021-01-07,19
+"99","quality voices","craighead",97,2020-12-10,8
+"100","american greetings co.","mississippi",98,2021-01-07,63
+"101","spirit fitness","craighead",99,2020-12-17,18
+"102","weatherbarr windows & doors","sebastian",100,2020-12-14,17
+"103","utility trailer manufacturing co.","greene",101,2020-12-14,39
+"104","dassault falcon jet llc","pulaski",102,2021-02-01,63
+"105","duke custom cabinets inc.","pulaski",103,2020-12-14,6
+"106","unilever","craighead",104,2021-01-14,43
+"107","nice pak","craighead",105,2020-12-24,49
+"108","apac-central","washington",106,2020-12-21,21
+"109","domtar paper co.","little_river",107,2020-12-24,41
+"110","roehm_america","mississippi",108,2020-12-24,13
+"111","mckee foods","benton",109,2021-01-07,53
+"112","arkansas nuclear one","pope",110,2020-12-24,38
+"113","shippers products","dallas",111,2020-12-24,13
+"114","la-z-boy furniture","benton",112,2020-12-24,7
+"115","shelby group international inc.","pike",113,2020-12-28,11
+"116","stephens inc.","pulaski",114,2020-12-28,12
+"117","dillards","pulaski",115,2021-01-07,21
+"118","dillards","arkansas",116,2021-02-04,64
+"119","centene corporation","pulaski",117,2021-01-07,21
+"120","gates_corporation","benton",118,2021-01-14,38
+"121","gates_corporation","craighead",119,2021-01-18,121
+"122","clean harbors evnvironmental services","union",120,2021-01-11,26
+"123","pet solutions","yell",121,2021-01-11,17
+"124","hooters","pulaski",122,2021-01-14,8
+"125","bell & company","pulaski",123,2021-01-21,10
+"126","l'oreal manufacturing center","pulaski",124,2021-01-18,16
+"127","aerojet rocketdyne","ouachita",125,2021-01-21,51
+"128","city of camden","ouachita",126,2021-01-25,8
+"129","sykes enterprises call center","sebastian",127,2021-02-11,35
+"130","sykes enterprises call center","pulaski",128,2021-02-04,12
+"131","welspun pipes inc.","pulaski",129,2021-02-04,39
+"132","claudia's canine bakery","pulaski",130,2021-02-11,19
+"133","de wafelbakkers","pulaski",131,2021-02-11,43
+"134","great dane trailers","craighead",132,2021-02-11,35
+"135","lamb & associates packaging","pulaski",133,2021-02-11,15
+"136","wapsi fly co.","baxter",134,2021-02-25,6
+"137","rheem manufacturing","sebastian",135,2021-02-25,72
+"138","twin rivers paper","jefferson",136,2021-02-25,22
+"139","wilkerson's jewelry","arkansas",137,2021-02-25,7
+"140","mclarty daniel chevrolet","washington",138,2021-03-04,11
+"141","klein tools","sebastian",139,2021-03-22,26
+"142","k&k veterinary supply","washington",140,2021-03-22,12
+"143","first security bank","baxter",141,2021-04-08,7
+"144","butterball","franklin",142,2020-07-24,31
+"145","butterball","craighead",143,2020-11-30,22
+"146","tyson","benton",144,2020-05-29,6
+"147","tyson","---",145,2020-05-19,46
