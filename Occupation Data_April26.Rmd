@@ -1,7 +1,7 @@
 ---
 title: "Occupational Data"
 author: "Rob Wells, Mary Hennigan, Katy Seiter, Abby Zimmardi and Rachell Sanchez-Smith" 
-date: "4/28/2021"
+date: "5/11/2021"
 output: pdf_document
 ---
 
@@ -60,9 +60,8 @@ cleaned_master[101,1] <- 147
 
 ```
 
-
+#Totals per worksite
 ```{r}
-#totals per worksite
 company_site_totals <- cleaned_master %>% 
   select(cleaned_company, cleaned_county, Uniqueid, date, total_number_of_cases) %>% 
   group_by(Uniqueid) %>% 
@@ -75,8 +74,7 @@ sum(company_site_totals$total_number_of_cases)
 glimpse(company_site_totals)
 ```
 
-#Revision: 9,065 cases total cases of infected employees in Arkansas workplaces. 
-#Previous: 11,103, 9158, 8,921 
+#Total: 9,065 cases total cases of infected employees in Arkansas workplaces. 
 
 #totals per worksite per month
 #this created max number of each worksite by year and month
@@ -140,8 +138,7 @@ write.csv(new_cases, "new_cases_april_27.csv")
 sum(new_cases$New_Cases)
 #9021 total for the new cases
 #Difference of 44 from the 9,065 total cases. 
-#Partly due Twin Rivers #39, went from 160 total cases on Dec. 21 to 122 on Jan 18, down -38.
-#
+#Partly due odd data in Twin Rivers #39, went from 160 total cases on Dec. 21 to 122 on Jan 18, down -38.
 ```
 
 
@@ -216,6 +213,13 @@ companytotals <- company_site_totals  %>%
 
 companytotals$percent <- formattable::percent(companytotals$percent)
 
+companytotals <- companytotals %>% 
+  rename(Company = cleaned_company, Total = total, 'Percent of Total' = percent)
+
+
+companytotals$Company <- gsub("_", " ",companytotals$Company)
+companytotals$Company <- str_to_title(companytotals$Company)
+
 companytotals
 
 
@@ -251,9 +255,7 @@ write.csv(tysonberry, "tysonberry.csv")
 
 ```
 
-
-
-#max of each worksite by yearmon
+#Maximum of each worksite by year_month
 ```{r}
 maxworksite_month1 <- cleaned_master %>% 
   select(cleaned_company, date, yearmon, Uniqueid, cleaned_city, cleaned_county, total_number_of_cases) %>% 
@@ -263,7 +265,7 @@ maxworksite_month1
 ```
 
 
-#this created max number of each worksite by year and month
+#Creates table with maximum number of each worksite by year and month
 ```{r}
 maxworksite_month <- cleaned_master %>% 
    select(cleaned_company, date, yearmon, Uniqueid, cleaned_county, total_number_of_cases) %>% 
@@ -273,7 +275,7 @@ maxworksite_month
 write.csv(maxworksite_month, "maxworksite_month.csv")
 ```
 
-#internal check
+#Test for internal check of integrity
 ```{r}
 check <- cleaned_master %>% 
   select(cleaned_company, date, yearmon, Uniqueid, cleaned_county, total_number_of_cases) %>% 
@@ -286,9 +288,6 @@ check <- cleaned_master %>%
   count()
 check
 ```
-
-
-
 
 #City Analysis
 #Top Ten Cities Chart https://public.flourish.studio/visualisation/5527182/ 
@@ -332,7 +331,7 @@ temp <- temp %>%
 
 ```
 
-#combine the positive (confirmed and probable from Sept 13 forward) with the confirmed_pos (Sept 12 and earlier) into a new column called positive2
+#Combine the positive (confirmed and probable from Sept 13 forward) with the confirmed_pos (Sept 12 and earlier) into a new column called positive2
 ```{r}
 temp2 <- temp %>% 
   filter(date <= "2020-09-12") %>% 
@@ -346,8 +345,6 @@ temp3 <- temp %>%
 temp <- smartbind(temp2, temp3)
 temp$date <- ymd(temp$mydate)
 glimpse(temp)
-
-
 ```
 #Clean the county names
 
@@ -368,8 +365,6 @@ temp$cleaned_county <- str_trim(temp$cleaned_county)
 
 
 ## Calculations ##
-
-
 
 ## Master counties and months table, May 2020 - April 2021 ##
 ```{r}
@@ -413,7 +408,7 @@ zzz <- zzz %>%
 glimpse(zzz)
 ```
 
-#calculate ratio of reported workplace outbreaks to total covid cases in a county
+#Calculate ratio of reported workplace outbreaks to total covid cases in a county
 #The companies that appear on the monthly reports represent cumulative totals
 #Worker Community_New_Case is Monthly Cumulative total of the companies reporting / New Cases in Community
 #Worker_Cumulative_Pct is Monthly Cumulative total of the companies reporting / Monthly Cumulative Positive in Community
@@ -431,8 +426,7 @@ occupation_month$Worker_Cumulative_Pct <- formattable::percent(occupation_month$
 #feeds this graphic: https://app.flourish.studio/visualisation/5847959/edit?
 ```
 
-#compare worker cases to total positive cases a month
-#
+#Compare worker cases to total positive cases a month
 ```{r}
 master <- master2
 #format dates
