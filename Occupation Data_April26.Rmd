@@ -1,7 +1,7 @@
 ---
 title: "Occupational Data"
 author: "Rob Wells, Mary Hennigan, Katy Seiter, Abby Zimmardi and Rachell Sanchez-Smith" 
-date: "5/11/2021"
+date: "5/12/2021"
 output: pdf_document
 ---
 
@@ -45,21 +45,9 @@ library(dplyr)
 ```{r}
 cleaned_master <- rio::import("https://raw.githubusercontent.com/profrobwells/Spring2021Data/main/worker_illness_cleaned_master.csv")
 
-cleaned_master$date <- as.Date(cleaned_master$date)
+cleaned_master$date <- mdy(cleaned_master$date)
 glimpse(cleaned_master)
 ```
-#fix Uniqueid of Nebo Poultry in yell-pope create at #146 instead of #2
-
-```{r}
-#Nebo Poultry, "yell, pope" gets own ID
-cleaned_master[4,1] <- 146
-cleaned_master[5,1] <- 146
-#George's Kansas Street gets own ID
-cleaned_master[101,1] <- 147
-
-
-```
-
 #Totals per worksite
 ```{r}
 company_site_totals <- cleaned_master %>% 
