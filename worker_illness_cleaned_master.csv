@@ -1,815 +1,815 @@
-Uniqueid,,date,company_name,city,county,number_active_cases,number_recovered_cases,total_number_of_cases,address,industry,cleaned_address,cleaned_city,cleaned_county,cleaned_company,year,month,yearmon
-1,13,2020-05-22,Belleville Boot,Forrest City,St. Francis,9,26,35,NA,NA,NA,forrest city,st. francis,belleville_boot,2020,May,2020-05
-1,23,2020-05-26,Belleville Boot,Forrest City,St. Francis,6,29,35,NA,NA,NA,forrest city,st. francis,belleville_boot,2020,May,2020-05
-1,1,2020-05-19,Belleville Boot Company,Forrest City,St. Francis,29,6,35,NA,NA,NA,forrest city,st. francis,belleville_boot,2020,May,2020-05
-2,3,2020-05-19,Nebo Poultry,"Dardanelle, Russellville","Yell, Pope",14,0,14,NA,NA,NA,"dardanelle, russellville","yell, pope",nebo poultry,2020,May,2020-05
-2,9,2020-05-22,Nebo Poultry,"Dardanelle, Russellville","Yell, Pope",48,2,50,NA,NA,NA,"dardanelle, russellville","yell, pope",nebo poultry,2020,May,2020-05
-2,18,2020-05-26,Nebo Poultry,Dardanelle,Yell,57,6,63,NA,NA,NA,dardanelle,yell,nebo poultry,2020,May,2020-05
-2,28,2020-05-29,Nebo Poultry, Dardanelle, Yell,39,23,62,NA,NA,NA,dardanelle,yell,nebo poultry,2020,May,2020-05
-2,37,2020-06-02,Nebo Poultry, Dardanelle, Yell,19,44,63,NA,NA,NA,dardanelle,yell,nebo poultry,2020,Jun,2020-06
-2,53,2020-06-05,Nebo Poultry, Dardanelle, Yell,13,50,63,NA,NA,NA,dardanelle,yell,nebo poultry,2020,Jun,2020-06
-2,76,2020-06-08,Nebo Poultry, Dardanelle, Yell,8,55,63,NA,NA,NA,dardanelle,yell,nebo poultry,2020,Jun,2020-06
-2,183,2020-07-03,Nebo Poultry, Dardanelle, Yell,11,55,66,NA,NA,NA,dardanelle,yell,nebo poultry,2020,Jul,2020-07
-3,4,2020-05-19,Best Manufacturing,Jonesboro,Craighead,9,0,9,NA,NA,NA,jonesboro,craighead,best manufacturing,2020,May,2020-05
-3,15,2020-05-22,Best Manufacturing,Jonesboro,Craighead,7,5,12,NA,NA,NA,jonesboro,craighead,best manufacturing,2020,May,2020-05
-3,24,2020-05-26,Best Manufacturing,Jonesboro,Craighead,6,6,12,NA,NA,NA,jonesboro,craighead,best manufacturing,2020,May,2020-05
-4,5,2020-05-19,"Riceland Foods, Inc.",Jonesboro,Craighead,7,2,9,NA,NA,NA,jonesboro,craighead,riceland_foods,2020,May,2020-05
-5,490,2020-10-15,Riceland Foods, Stuttgart, Arkansas,5,26,31,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Oct,2020-10
-5,496,2020-10-22,Riceland Foods, Stuggart, Arkansas,7,29,36,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Oct,2020-10
-5,503,2020-10-26,Riceland Foods, Stuttgart, Arkansas,6,30,36,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Oct,2020-10
-5,516,2020-10-29,Riceland Foods, Stuttgart, Arkansas,5,34,39,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Oct,2020-10
-5,525,2020-11-02,Riceland Foods, Stuttgart, Arkansas,5,35,40,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Nov,2020-11
-6,780,2021-02-04,Riceland Foods, Ft Smith, Sebastian,5,26,31,NA,Other Services,NA,fort_smith,sebastian,riceland_foods,2021,Feb,2021-02
-7,6,2020-05-19,Pilgrim's Pride,De Queen,Sevier,6,1,7,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,May,2020-05
-7,26,2020-05-29,Pilgrim's Pride, De Queen, Sevier,46,13,59,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,May,2020-05
-7,34,2020-06-02,Pilgrim's Pride, De Queen, Sevier,53,34,87,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
-7,47,2020-06-05,Pilgrim's Pride, De Queen, Sevier,63,48,111,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
-7,65,2020-06-08,Pilgrim's Pride, De Queen, Sevier,67,65,132,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
-7,89,2020-06-14,Pilgrim's Pride, De Queen, Sevier,38,119,157,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
-7,110,2020-06-18,Pilgrim's Pride, De Queen, Sevier,30,143,173,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
-7,128,2020-06-21,Pilgrim's Pride, De Queen, Sevier,36,156,192,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
-7,149,2020-06-25,Pilgrim's Pride, De Queen, Sevier,36,174,210,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
-7,173,2020-07-03,Pilgrim's Pride, De Queen, Sevier,28,196,224,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
-7,201,2020-07-06,Pilgrim's Pride, De Queen, Sevier,19,204,223,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
-7,220,2020-07-13,Pilgrim's Pride, De Queen, Sevier,14,222,236,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
-7,235,2020-07-20,Pilgrim's Pride, De Queen, Sevier,13,230,243,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
-7,259,2020-07-24,Pilgrim's Pride, De Queen, Sevier,9,236,245,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
-7,273,2020-07-27,Pilgrim's Pride, De Queen, Sevier,11,242,253,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
-7,293,2020-07-31,Pilgrim's Pride, De Queen, Sevier,8,247,255,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
-7,317,2020-08-03,Pilgrim's Pride, De Queen, Sevier,7,250,257,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Aug,2020-08
-7,375,2020-08-13,Pilgrim's Pride, De Queen, Sevier,5,254,259,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Aug,2020-08
-7,528,2020-11-05,Pilgrim's Pride, De Queen, Sevier,7,268,275,NA,Manufacturing,NA,de queen,sevier,pilgrims_pride,2020,Nov,2020-11
-7,545,2020-11-12,Pilgrim's Pride, De Queen, Sevier,7,276,283,NA,Manufacturing,NA,de queen,sevier,pilgrims_pride,2020,Nov,2020-11
-7,560,2020-11-16,Pilgrim's Pride, De Queen, Sevier,5,278,283,NA,Manufacturing,NA,de queen,sevier,pilgrims_pride,2020,Nov,2020-11
-7,10,2020-05-22,Pilgrim's Pride Poultry,De Queen,Sevier,18,2,20,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,May,2020-05
-7,20,2020-05-26,Pilgrim's Pride Poultry,De Queen,Sevier,37,4,41,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,May,2020-05
-8,7,2020-05-19,Frito Lay,Jonesboro,Craighead,6,4,10,NA,NA,NA,jonesboro,craighead,frito lay,2020,May,2020-05
-8,266,2020-07-24,Frito Lay, Jonesboro, Craighead,5,18,23,NA,NA,NA,jonesboro,craighead,frito lay,2020,Jul,2020-07
-8,303,2020-07-31,Frito Lay, Jonesboro, Craighead,7,18,25,NA,NA,NA,jonesboro,craighead,frito lay,2020,Jul,2020-07
-8,325,2020-08-03,Frito Lay, Jonesboro, Craighead,7,23,30,NA,NA,NA,jonesboro,craighead,frito lay,2020,Aug,2020-08
-8,379,2020-08-13,Frito Lay, Jonesboro, Craighead,8,30,38,NA,NA,NA,jonesboro,craighead,frito lay,2020,Aug,2020-08
-8,383,2020-08-17,Frito Lay, Jonesboro, Craighead,6,34,40,NA,NA,NA,jonesboro,craighead,frito lay,2020,Aug,2020-08
-8,524,2020-11-02,Frito Lay, Jonesboro, Craighead,5,60,65,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
-8,532,2020-11-05,Frito Lay, Jonesboro, Craighead,6,61,67,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
-8,538,2020-11-09,Frito Lay, Jonesboro, Craighead,8,64,72,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
-8,547,2020-11-12,Frito Lay, Jonesboro, Craighead,7,68,75,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
-8,553,2020-11-16,Frito Lay, Jonesboro, Craighead,7,69,76,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
-8,574,2020-11-23,Frito Lay, Jonesboro, Craighead,5,76,81,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
-8,604,2020-12-07,Frito Lay, Jonesboro, Craighead,7,91,98,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
-8,630,2020-12-14,Frito Lay, Jonesboro, Craighead,8,95,103,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
-8,646,2020-12-17,Frito Lay, Jonesboro, Craighead,12,92,104,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
-8,662,2020-12-21,Frito Lay, Jonesboro, Craighead,8,107,115,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
-8,680,2020-12-24,Frito Lay, Jonesboro, Craighead,8,108,116,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
-8,704,2021-01-07,Frito Lay, Jonesboro, Craighead,9,117,126,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2021,Jan,2021-01
-8,716,2021-01-11,Frito Lay, Jonesboro, Craighead,7,121,128,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2021,Jan,2021-01
-9,17,2020-05-22,Saracen Casino Construction,Pine Bluff,Jefferson,5,51,56,NA,NA,NA,pine_bluff,jefferson,saracen_casino_construction,2020,May,2020-05
-9,8,2020-05-19,"Saracen Casino Construction Site, multiple contracted businesses",Pine Bluff,Jefferson,5,51,56,NA,NA,NA,pine_bluff,jefferson,saracen_casino_construction,2020,May,2020-05
-10,25,2020-05-29,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,86,6,92,NA,NA,NA,rogers,benton,georges_poultry,2020,May,2020-05
-10,33,2020-06-02,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,114,27,141,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
-10,46,2020-06-05,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,118,48,166,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
-10,64,2020-06-08,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,105,76,181,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
-10,87,2020-06-14,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,63,161,224,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
-10,107,2020-06-18,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,55,186,241,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
-10,126,2020-06-21,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,53,204,257,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
-10,151,2020-06-25,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,32,236,268,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
-10,171,2020-07-03,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,32,241,273,NA,NA,NA,rogers,benton,georges_poultry,2020,Jul,2020-07
-10,200,2020-07-06,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,20,256,276,NA,NA,NA,rogers,benton,georges_poultry,2020,Jul,2020-07
-10,221,2020-07-13,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,13,264,277,NA,NA,NA,rogers,benton,georges_poultry,2020,Jul,2020-07
-10,237,2020-07-20,George's/Ozark Mtn. Poultry (OMP), Rogers, Benton,12,266,278,NA,NA,NA,rogers,benton,georges_poultry,2020,Jul,2020-07
-10,11,2020-05-22,Ozark Mountain Poultry,Rogers,Benton,16,1,17,NA,NA,NA,rogers,benton,georges_poultry,2020,May,2020-05
-10,19,2020-05-26,Ozark Mountain Poultry (OMP)/George’s,Rogers,Benton,46,2,48,NA,NA,NA,rogers,benton,georges_poultry,2020,May,2020-05
-11,16,2020-05-22,George's Poultry,Springdale,Washington,5,2,7,NA,NA,NA,springdale,washington,georges_poultry,2020,May,2020-05
-11,38,2020-06-02,George's Poultry, Springdale, Washington,14,1,15,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
-11,50,2020-06-05,George's Poultry, Springdale, Washington,21,4,25,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
-11,68,2020-06-08,George's Poultry, Springdale, Washington,26,6,32,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
-11,90,2020-06-14,George's Poultry, Springdale, Washington,26,26,52,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
-11,108,2020-06-18,George's Poultry, Springdale, Washington,39,41,80,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
-11,127,2020-06-21,George's Poultry, Springdale, Washington,40,54,94,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
-11,148,2020-06-25,George's Poultry, Springdale, Washington,38,82,120,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
-11,174,2020-07-03,George's Poultry, Springdale, Washington,28,122,150,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
-11,197,2020-07-06,George's Poultry, Springdale, Washington,23,139,162,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
-11,224,2020-07-13,George's Poultry, Springdale, Washington,11,175,186,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
-11,236,2020-07-20,George's Poultry, Springdale, Washington,13,199,212,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
-11,257,2020-07-24,George's Poultry, Springdale, Washington,10,222,232,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
-11,277,2020-07-27,George's Poultry, Springdale, Washington,7,231,238,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
-11,292,2020-07-31,George's Poultry, Springdale, Washington,9,237,246,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
-11,312,2020-08-03,George's Poultry, Springdale, Washington,9,238,247,NA,NA,NA,springdale,washington,georges_poultry,2020,Aug,2020-08
-11,342,2020-08-07,George's Poultry, Springdale, Washington,5,253,258,NA,NA,NA,springdale,washington,georges_poultry,2020,Aug,2020-08
-11,420,2020-09-07,George's Poultry, Springdale, Washington,5,275,280,NA,NA,NA,springdale,washington,georges_poultry,2020,Sep,2020-09
-11,428,2020-09-09,George's Poultry, Springdale, Washington,8,274,282,NA,NA,NA,springdale,washington,georges_poultry,2020,Sep,2020-09
-11,436,2020-09-14,George's Poultry, Springdale, Washington,10,277,287,NA,NA,NA,springdale,washington,georges_poultry,2020,Sep,2020-09
-11,443,2020-09-17,George's Poultry, Springdale, Washington,12,278,290,NA,Manufacturing,NA,springdale,washington,georges_poultry,2020,Sep,2020-09
-11,706,2021-01-07,George's Poultry, Springdale, Washington,8,86,94,Kansas St.,Manufacturing,kansas st,springdale,washington,georges_poultry,2021,Jan,2021-01
-12,296,2020-07-31,George's Poultry, Batesville, Independence,6,4,10,NA,NA,NA,batesville,independence,georges_poultry,2020,Jul,2020-07
-12,322,2020-08-03,George's Poultry, Batesville, Independence,6,4,10,NA,NA,NA,batesville,independence,georges_poultry,2020,Aug,2020-08
-12,359,2020-08-10,George's Poultry, Batesville, Independence,6,8,14,NA,NA,NA,batesville,independence,georges_poultry,2020,Aug,2020-08
-12,376,2020-08-13,George's Poultry, Batesville, Independence,5,14,19,NA,NA,NA,batesville,independence,georges_poultry,2020,Aug,2020-08
-12,444,2020-09-17,George's Poultry, Batesville, Independence,7,35,42,NA,Manufacturing,NA,batesville,independence,georges_poultry,2020,Sep,2020-09
-13,12,2020-05-22,Cargill Poultry,Springdale,Washington,9,1,10,NA,NA,NA,springdale,washington,cargill poultry,2020,May,2020-05
-13,21,2020-05-26,Cargill Poultry,Springdale,Washington,24,1,25,NA,NA,NA,springdale,washington,cargill poultry,2020,May,2020-05
-13,27,2020-05-29,Cargill Poultry, Springdale, Washington,43,1,44,NA,NA,NA,springdale,washington,cargill poultry,2020,May,2020-05
-13,35,2020-06-02,Cargill Poultry, Springdale, Washington,48,17,65,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
-13,48,2020-06-05,Cargill Poultry, Springdale, Washington,52,28,80,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
-13,67,2020-06-08,Cargill Poultry, Springdale, Washington,45,44,89,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
-13,94,2020-06-14,Cargill Poultry, Springdale, Washington,21,100,121,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
-13,114,2020-06-18,Cargill Poultry, Springdale, Washington,13,114,127,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
-13,132,2020-06-21,Cargill Poultry, Springdale, Washington,19,126,145,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
-13,157,2020-06-25,Cargill Poultry, Springdale, Washington,15,141,156,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
-13,180,2020-07-03,Cargill Poultry, Springdale, Washington,13,156,169,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
-13,207,2020-07-06,Cargill Poultry, Springdale, Washington,9,161,170,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
-13,227,2020-07-13,Cargill Poultry, Springdale, Washington,7,174,181,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
-13,240,2020-07-20,Cargill Poultry, Springdale, Washington,7,186,193,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
-13,297,2020-07-31,Cargill Poultry, Springdale, Washington,5,203,208,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
-13,439,2020-09-14,Cargill Poultry, Springdale, Washington,5,219,224,NA,NA,NA,springdale,washington,cargill poultry,2020,Sep,2020-09
-14,14,2020-05-22,Butterball,Hunstville,Madison,7,0,7,NA,NA,NA,huntsville,madison,butterball,2020,May,2020-05
-14,22,2020-05-26,Butterball,Huntsville,Madison,7,1,8,NA,NA,NA,huntsville,madison,butterball,2020,May,2020-05
-14,30,2020-05-29,Butterball, Huntsville, Madison,5,5,10,NA,NA,NA,huntsville,madison,butterball,2020,May,2020-05
-14,36,2020-06-02,Butterball, Huntsville, Madison,30,9,39,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
-14,49,2020-06-05,Butterball, Huntsville, Madison,40,8,48,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
-14,66,2020-06-08,Butterball, Huntsville, Madison,54,13,67,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
-14,88,2020-06-14,Butterball, Huntsville, Madison,43,49,92,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
-14,109,2020-06-18,Butterball, Huntsville, Madison,34,77,111,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
-14,129,2020-06-21,Butterball, Huntsville, Madison,36,83,119,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
-14,150,2020-06-25,Butterball, Huntsville, Madison,33,105,138,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
-14,175,2020-07-03,Butterball, Huntsville, Madison,23,123,146,NA,NA,NA,huntsville,madison,butterball,2020,Jul,2020-07
-14,203,2020-07-06,Butterball, Huntsville, Madison,15,131,146,NA,NA,NA,huntsville,madison,butterball,2020,Jul,2020-07
-14,226,2020-07-13,Butterball, Huntsville, Madison,8,143,151,NA,NA,NA,huntsville,madison,butterball,2020,Jul,2020-07
-14,246,2020-07-20,Butterball, Huntsville, Madison,5,151,156,NA,NA,NA,huntsville,madison,butterball,2020,Jul,2020-07
-14,587,2020-11-30,Butterball, Huntsville, Madison,5,163,168,NA,Manufacturing,NA,huntsville,madison,butterball,2020,Nov,2020-11
-15,29,2020-05-29,Tyson, Dardanelle, Yell,7,2,9,NA,NA,NA,dardanelle,yell,tyson,2020,May,2020-05
-15,40,2020-06-02,Tyson, Dardanelle, Yell,9,5,14,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
-15,56,2020-06-05,Tyson, Dardanelle, Yell,11,6,17,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
-15,73,2020-06-08,Tyson, Dardanelle, Yell,12,8,20,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
-15,96,2020-06-14,Tyson, Dardanelle, Yell,14,16,30,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
-15,121,2020-06-18,Tyson, Dardanelle, Yell,7,24,31,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
-15,135,2020-06-21,Tyson, Dardanelle, Yell,12,27,39,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
-15,160,2020-06-25,Tyson, Dardanelle, Yell,11,34,45,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
-15,179,2020-07-03,Tyson, Dardanelle, Yell,18,41,59,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
-15,204,2020-07-06,Tyson, Dardanelle, Yell,14,42,56,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
-15,223,2020-07-13,Tyson, Dardanelle, Yell,13,53,66,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
-15,238,2020-07-20,Tyson, Dardanelle, Yell,9,63,72,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
-15,263,2020-07-24,Tyson, Dardanelle, Yell,7,70,77,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
-15,279,2020-07-27,Tyson, Dardanelle, Yell,6,72,78,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
-15,294,2020-07-31,Tyson, Dardanelle, Yell,8,72,80,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
-15,318,2020-08-03,Tyson, Dardanelle, Yell,7,73,80,NA,NA,NA,dardanelle,yell,tyson,2020,Aug,2020-08
-15,339,2020-08-07,Tyson, Dardanelle, Yell,6,78,84,NA,NA,NA,dardanelle,yell,tyson,2020,Aug,2020-08
-15,357,2020-08-10,Tyson, Dardanelle, Yell,6,79,85,NA,NA,NA,dardanelle,yell,tyson,2020,Aug,2020-08
-15,607,2020-12-07,Tyson, Dardanelle, Yell,5,105,110,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
-15,616,2020-12-10,Tyson, Dardanelle, Yell,7,105,112,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
-15,624,2020-12-14,Tyson, Dardanelle, Yell,13,109,122,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
-15,649,2020-12-17,Tyson, Dardanelle, Yell,7,115,122,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
-15,670,2020-12-21,Tyson, Dardanelle, Yell,5,125,130,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
-15,676,2020-12-24,Tyson, Dardanelle, Yell,9,127,136,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
-15,720,2021-01-11,Tyson, Dardanelle, Yell,6,141,147,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
-15,730,2021-01-14,Tyson, Dardanelle, Yell,6,149,155,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
-15,749,2021-01-18,Tyson, Dardanelle, Yell,9,151,160,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
-15,758,2021-01-21,Tyson, Dardanelle, Yell,6,154,160,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
-15,766,2021-01-25,Tyson, Dardanelle, Yell,8,158,166,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
-16,31,2020-05-29,Tyson, Clarksville, Johnson,5,9,14,NA,NA,NA,clarksville,johnson,tyson,2020,May,2020-05
-16,77,2020-06-08,Tyson, Clarksville, Johnson,6,14,20,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
-16,99,2020-06-14,Tyson, Clarksville, Johnson,9,17,26,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
-16,120,2020-06-18,Tyson, Clarksville, Johnson,7,24,31,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
-16,139,2020-06-21,Tyson, Clarksville, Johnson,8,26,34,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
-16,156,2020-06-25,Tyson, Clarksville, Johnson,23,31,54,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
-16,178,2020-07-03,Tyson, Clarksville, Johnson,20,58,78,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
-16,199,2020-07-06,Tyson, Clarksville, Johnson,22,60,82,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
-16,216,2020-07-13,Tyson, Clarksville, Johnson,25,89,114,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
-16,233,2020-07-20,Tyson, Clarksville, Johnson,28,132,160,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
-16,255,2020-07-24,Tyson, Clarksville, Johnson,23,162,185,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
-16,271,2020-07-27,Tyson, Clarksville, Johnson,16,178,194,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
-16,286,2020-07-31,Tyson, Clarksville, Johnson,15,188,203,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
-16,313,2020-08-03,Tyson, Clarksville, Johnson,9,197,206,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
-16,338,2020-08-07,Tyson, Clarksville, Johnson,6,207,213,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
-16,356,2020-08-10,Tyson, Clarksville, Johnson,6,208,214,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
-16,372,2020-08-13,Tyson, Clarksville, Johnson,6,207,213,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
-16,392,2020-08-17,Tyson, Clarksville, Johnson,5,213,218,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
-16,601,2020-12-07,Tyson, Clarksville, Johnson,7,230,237,NA,Manufacturing,NA,clarksville,johnson,tyson,2020,Dec,2020-12
-16,612,2020-12-10,Tyson, Clarksville, Johnson,11,231,242,NA,Manufacturing,NA,clarksville,johnson,tyson,2020,Dec,2020-12
-16,625,2020-12-14,Tyson, Clarksville, Johnson,12,234,246,NA,Manufacturing,NA,clarksville,johnson,tyson,2020,Dec,2020-12
-16,653,2020-12-17,Tyson, Clarksville, Johnson,6,241,247,NA,Manufacturing,NA,clarksville,johnson,tyson,2020,Dec,2020-12
-16,719,2021-01-11,Tyson, Clarksville, Johnson,6,254,260,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
-16,733,2021-01-14,Tyson, Clarksville, Johnson,5,261,266,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
-16,748,2021-01-18,Tyson, Clarksville, Johnson,7,265,272,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
-16,757,2021-01-21,Tyson, Clarksville, Johnson,5,269,274,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
-16,765,2021-01-25,Tyson, Clarksville, Johnson,10,272,282,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
-16,771,2021-01-28,Tyson, Clarksville, Johnson,8,276,284,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
-16,805,2021-03-15,Tyson, Clarksville, Johnson,5,292,297,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Mar,2021-03
-17,45,2020-06-02,Tyson of Rogers, Rogers, Benton,7,0,7,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
-17,52,2020-06-05,Tyson of Rogers, Rogers, Benton,14,1,15,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
-17,72,2020-06-08,Tyson of Rogers, Rogers, Benton,13,3,16,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
-17,92,2020-06-14,Tyson of Rogers, Rogers, Benton,22,23,45,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
-17,112,2020-06-18,Tyson of Rogers, Rogers, Benton,15,32,47,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
-17,133,2020-06-21,Tyson of Rogers, Rogers, Benton,19,49,68,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
-17,145,2020-06-25,Tyson of Rogers, Rogers, Benton,163,63,226,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
-17,168,2020-07-03,Tyson of Rogers, Rogers, Benton,123,114,237,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
-17,193,2020-07-06,Tyson of Rogers, Rogers, Benton,122,117,239,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
-17,213,2020-07-13,Tyson of Rogers, Rogers, Benton,76,180,256,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
-17,232,2020-07-20,Tyson of Rogers, Rogers, Benton,31,229,260,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
-17,254,2020-07-24,Tyson of Rogers, Rogers, Benton,27,237,264,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
-17,269,2020-07-27,Tyson of Rogers, Rogers, Benton,26,240,266,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
-17,285,2020-07-31,Tyson of Rogers, Rogers, Benton,19,248,267,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
-17,309,2020-08-03,Tyson of Rogers, Rogers, Benton,20,249,269,Elm St.,NA,elm st,rogers,benton,tyson,2020,Aug,2020-08
-17,600,2020-12-07,Tyson of Rogers, Rogers, Benton,7,301,308,Elm St.,Manufacturing,elm st,rogers,benton,tyson,2020,Dec,2020-12
-17,674,2020-12-24,Tyson of Rogers, Rogers, Benton,9,313,322,Elm St.,Manufacturing,elm st,rogers,benton,tyson,2020,Dec,2020-12
-18,155,2020-06-25,Tyson, Rogers, Benton,32,32,64,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
-18,176,2020-07-03,Tyson, Rogers, Benton,31,44,75,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
-18,196,2020-07-06,Tyson, Rogers, Benton,30,44,74,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
-18,217,2020-07-13,Tyson, Rogers, Benton,21,64,85,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
-18,256,2020-07-24,Tyson, Rogers, Benton,16,79,95,"Olrich St,",NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
-18,272,2020-07-27,Tyson, Rogers, Benton,13,84,97,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
-18,288,2020-07-31,Tyson, Rogers, Benton,11,89,100,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
-18,311,2020-08-03,Tyson, Rogers, Benton,11,90,101,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Aug,2020-08
-18,343,2020-08-07,Tyson, Rogers, Benton,5,100,105,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Aug,2020-08
-18,39,2020-06-02,Tyson's Chick-N-Quick, Rogers, Benton,13,2,15,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
-18,51,2020-06-05,Tyson's Chick-N-Quick, Rogers, Benton,17,3,20,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
-18,70,2020-06-08,Tyson's Chick-N-Quick, Rogers, Benton,17,5,22,"Olrich St,",NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
-18,95,2020-06-14,Tyson's Chick-N-Quick, Rogers, Benton,14,17,31,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
-18,116,2020-06-18,Tyson's Chick-N-Quick, Rogers, Benton,9,24,33,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
-18,138,2020-06-21,Tyson's Chick-N-Quick, Rogers, Benton,9,26,35,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
-18,677,2020-12-24,Tyson's Chick-N-Quick, Rogers, Benton,9,96,105,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2020,Dec,2020-12
-18,690,2020-12-28,Tyson's Chick-N-Quick, Rogers, Benton,9,103,112,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2020,Dec,2020-12
-18,695,2020-12-31,Tyson's Chick-N-Quick, Rogers, Benton,8,112,120,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2020,Dec,2020-12
-18,701,2021-01-04,Tyson's Chick-N-Quick, Rogers, Benton,6,118,124,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2021,Jan,2021-01
-18,709,2021-01-07,Tyson's Chick-N-Quick, Rogers, Benton,7,119,126,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2021,Jan,2021-01
-19,43,2020-06-02,Tyson, Springdale, Washington,7,8,15,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
-19,54,2020-06-05,Tyson, Springdale, Washington,12,10,22,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
-19,69,2020-06-08,Tyson, Springdale, Washington,17,10,27,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
-19,86,2020-06-14,Tyson, Springdale, Washington,186,33,219,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
-19,106,2020-06-18,Tyson, Springdale, Washington,141,84,225,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
-19,125,2020-06-21,Tyson, Springdale, Washington,124,114,268,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
-19,146,2020-06-25,Tyson, Springdale, Washington,109,174,283,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
-19,169,2020-07-03,Tyson, Springdale, Washington,102,203,305,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
-19,194,2020-07-06,Tyson, Springdale, Washington,80,226,306,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
-19,214,2020-07-13,Tyson, Springdale, Washington,53,263,316,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
-19,231,2020-07-20,Tyson, Springdale, Washington,36,290,326,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
-19,252,2020-07-24,Tyson, Springdale, Washington,32,301,333,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
-19,270,2020-07-27,Tyson, Springdale, Washington,23,315,338,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
-19,283,2020-07-31,Tyson, Springdale, Washington,25,319,344,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
-19,307,2020-08-03,Tyson, Springdale, Washington,25,321,346,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
-19,332,2020-08-07,Tyson, Springdale, Washington,14,331,345,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
-19,351,2020-08-10,Tyson, Springdale, Washington,14,332,346,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
-19,368,2020-08-13,Tyson, Springdale, Washington,12,334,346,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
-19,387,2020-08-17,Tyson, Springdale, Washington,11,336,347,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
-19,446,2020-09-17,Tyson, Springdale, Washington,5,360,365,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2020,Sep,2020-09
-19,512,2020-10-29,Tyson, Springdale, Washington,5,377,382,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2020,Oct,2020-10
-19,697,2020-12-31,Tyson, Springdale, Washington,6,397,403,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2020,Dec,2020-12
-19,746,2021-01-18,Tyson, Springdale, Washington,7,406,413,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2021,Jan,2021-01
-19,755,2021-01-21,Tyson, Springdale, Washington,7,408,415,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2021,Jan,2021-01
-19,764,2021-01-25,Tyson, Springdale, Washington,6,410,416,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2021,Jan,2021-01
-20,44,2020-06-02,Tyson, Grannis, Polk,7,2,9,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
-20,58,2020-06-05,Tyson, Grannis, Polk,10,2,12,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
-20,78,2020-06-08,Tyson, Grannis, Polk,6,6,12,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
-20,97,2020-06-14,Tyson, Grannis, Polk,12,12,24,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
-20,117,2020-06-18,Tyson, Grannis, Polk,8,18,26,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
-20,141,2020-06-21,Tyson, Grannis, Polk,7,21,28,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
-20,189,2020-07-03,Tyson, Grannis, Polk,5,24,29,NA,NA,NA,grannis,polk,tyson,2020,Jul,2020-07
-21,60,2020-06-05,Tyson Mexican Original, Fayetteville, Washington,5,3,8,NA,NA,NA,fayetteville,washington,tyson,2020,Jun,2020-06
-21,81,2020-06-08,Tyson Mexican Original, Fayetteville, Washington,5,3,8,NA,NA,NA,fayetteville,washington,tyson,2020,Jun,2020-06
-21,154,2020-06-25,Tyson's Mexican Original, Fayetteville, Washington,26,13,39,NA,NA,NA,fayetteville,washington,tyson,2020,Jun,2020-06
-21,181,2020-07-03,Tyson's Mexican Original, Fayetteville, Washington,13,29,42,NA,NA,NA,fayetteville,washington,tyson,2020,Jul,2020-07
-21,205,2020-07-06,Tyson's Mexican Original, Fayetteville, Washington,11,31,42,NA,NA,NA,fayetteville,washington,tyson,2020,Jul,2020-07
-21,602,2020-12-07,Tyson's Mexican Original, Fayetteville, Washington,7,99,106,NA,Manufacturing,NA,fayetteville,washington,tyson,2020,Dec,2020-12
-21,617,2020-12-10,Tyson's Mexican Original, Fayetteville, Washington,7,102,109,NA,Manufacturing,NA,fayetteville,washington,tyson,2020,Dec,2020-12
-21,629,2020-12-14,Tyson's Mexican Original, Fayetteville, Washington,9,105,114,NA,Manufacturing,NA,fayetteville,washington,tyson,2020,Dec,2020-12
-22,100,2020-06-14,Tyson, Van Buren, Crawford,6,0,6,NA,NA,NA,van buren,crawford,tyson,2020,Jun,2020-06
-22,115,2020-06-18,Tyson, Van Buren, Crawford,10,2,12,NA,NA,NA,van buren,crawford,tyson,2020,Jun,2020-06
-22,131,2020-06-21,Tyson, Van Buren, Crawford,27,4,31,NA,NA,NA,van buren,crawford,tyson,2020,Jun,2020-06
-22,153,2020-06-25,Tyson, Van Buren, Crawford,30,11,41,NA,NA,NA,van buren,crawford,tyson,2020,Jun,2020-06
-22,172,2020-07-03,Tyson, Van Buren, Crawford,31,36,67,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
-22,198,2020-07-06,Tyson, Van Buren, Crawford,23,46,69,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
-22,222,2020-07-13,Tyson, Van Buren, Crawford,13,70,83,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
-22,241,2020-07-20,Tyson, Van Buren, Crawford,7,78,85,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
-22,264,2020-07-24,Tyson, Van Buren, Crawford,5,82,87,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
-22,280,2020-07-27,Tyson, Van Buren, Crawford,5,83,88,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
-22,299,2020-07-31,Tyson, Van Buren, Crawford,5,88,93,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
-22,333,2020-08-07,Tyson, Van Buren, Crawford,13,97,110,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
-22,352,2020-08-10,Tyson, Van Buren, Crawford,12,100,112,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
-22,371,2020-08-13,Tyson, Van Buren, Crawford,8,108,116,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
-22,388,2020-08-17,Tyson, Van Buren, Crawford,8,111,119,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
-22,397,2020-08-24,Tyson, Van Buren, Crawford,16,115,131,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
-22,405,2020-08-27,Tyson, Van Buren, Crawford,24,128,152,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
-22,411,2020-08-31,Tyson, Van Buren, Crawford,51,149,200,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
-22,415,2020-09-03,Tyson, Van Buren, Crawford,31,175,206,NA,NA,NA,van buren,crawford,tyson,2020,Sep,2020-09
-22,419,2020-09-07,Tyson, Van Buren, Crawford,24,185,209,NA,NA,NA,van buren,crawford,tyson,2020,Sep,2020-09
-22,427,2020-09-09,Tyson, Van Buren, Crawford,17,195,212,NA,NA,NA,van buren,crawford,tyson,2020,Sep,2020-09
-22,437,2020-09-14,Tyson, Van Buren, Crawford,7,207,214,NA,NA,NA,van buren,crawford,tyson,2020,Sep,2020-09
-22,445,2020-09-17,Tyson, Van Buren, Crawford,6,209,215,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Sep,2020-09
-22,449,2020-09-24,Tyson, Van Buren, Crawford,5,213,218,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Sep,2020-09
-22,533,2020-11-05,Tyson, Van Buren, Crawford,5,225,230,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
-22,543,2020-11-12,Tyson, Van Buren, Crawford,8,228,236,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
-22,558,2020-11-16,Tyson, Van Buren, Crawford,5,231,236,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
-22,563,2020-11-19,Tyson, Van Buren, Crawford,7,236,243,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
-22,579,2020-11-26,Tyson, Van Buren, Crawford,5,248,253,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
-22,599,2020-12-07,Tyson, Van Buren, Crawford,8,255,263,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Dec,2020-12
-22,638,2020-12-14,Tyson, Van Buren, Crawford,5,262,267,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Dec,2020-12
-22,728,2021-01-14,Tyson, Van Buren, Crawford,7,274,281,NA,Manufacturing,NA,van buren,crawford,tyson,2021,Jan,2021-01
-23,101,2020-06-14,Tyson, Berryville, Carroll,5,5,10,NA,NA,NA,berryville,carroll,tyson,2020,Jun,2020-06
-23,459,2020-10-01,Tyson, Berryville, Carroll,6,34,40,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Oct,2020-10
-23,463,2020-10-05,Tyson, Berryville, Carroll,7,35,42,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Oct,2020-10
-23,581,2020-11-26,Tyson, Berryville, Carroll,5,56,61,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Nov,2020-11
-23,586,2020-11-30,Tyson, Berryville, Carroll,7,57,64,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Nov,2020-11
-23,650,2020-12-17,Tyson, Berryville, Carroll,7,59,66,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Dec,2020-12
-23,663,2020-12-21,Tyson, Berryville, Carroll,7,79,86,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Dec,2020-12
-23,689,2020-12-24,Tyson, Berryville, Carroll,5,88,93,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Dec,2020-12
-23,734,2021-01-14,Tyson, Berryville, Carroll,5,104,109,NA,Manufacturing,NA,berryville,carroll,tyson,2021,Jan,2021-01
-23,747,2021-01-18,Tyson, Berryville, Carroll,8,106,114,NA,Manufacturing,NA,berryville,carroll,tyson,2021,Jan,2021-01
-23,756,2021-01-21,Tyson, Berryville, Carroll,7,112,119,NA,Manufacturing,NA,berryville,carroll,tyson,2021,Jan,2021-01
-24,102,2020-06-14,Tyson, Green Forrest, Carroll,5,2,7,NA,NA,NA,green_forest,carroll,tyson,2020,Jun,2020-06
-24,142,2020-06-21,Tyson, Green Forrest, Carroll,6,8,14,NA,NA,NA,green_forest,carroll,tyson,2020,Jun,2020-06
-24,162,2020-06-25,Tyson, Green Forrest, Carroll,10,15,25,NA,NA,NA,green_forest,carroll,tyson,2020,Jun,2020-06
-24,186,2020-07-03,Tyson, Green Forest, Carroll,10,26,36,NA,NA,NA,green_forest,carroll,tyson,2020,Jul,2020-07
-24,206,2020-07-06,Tyson, Green Forest, Carroll,11,28,39,NA,NA,NA,green_forest,carroll,tyson,2020,Jul,2020-07
-24,228,2020-07-13,Tyson, Green Forest, Carroll,7,40,47,NA,NA,NA,green_forest,carroll,tyson,2020,Jul,2020-07
-24,289,2020-07-31,Tyson, Green Forest, Carroll,10,62,72,NA,NA,NA,green_forest,carroll,tyson,2020,Jul,2020-07
-24,316,2020-08-03,Tyson, Green Forest, Carroll,8,64,72,NA,NA,NA,green_forest,carroll,tyson,2020,Aug,2020-08
-24,399,2020-08-24,Tyson, Green Forest, Carroll,5,79,84,NA,NA,NA,green_forest,carroll,tyson,2020,Aug,2020-08
-24,421,2020-09-07,Tyson, Green Forest, Carroll,5,90,95,NA,NA,NA,green_forest,carroll,tyson,2020,Sep,2020-09
-24,429,2020-09-09,Tyson, Green Forest, Carroll,5,93,98,NA,NA,NA,green_forest,carroll,tyson,2020,Sep,2020-09
-24,450,2020-09-24,Tyson, Green Forest, Carroll,5,98,103,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Sep,2020-09
-24,470,2020-10-08,Tyson, Green Forest, Carroll,8,104,112,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
-24,481,2020-10-12,Tyson, Green Forest, Carroll,5,105,110,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
-24,486,2020-10-15,Tyson, Green Forest, Carroll,6,106,112,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
-24,491,2020-10-19,Tyson, Green Forest, Carroll,9,117,126,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
-24,495,2020-10-22,Tyson, Green Forest, Carroll,9,125,134,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
-24,500,2020-10-26,Tyson, Green Forest, Carroll,10,131,141,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
-24,508,2020-10-29,Tyson, Green Forest, Carroll,10,137,147,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
-24,520,2020-11-02,Tyson, Green Forest, Carroll,6,141,147,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
-24,530,2020-11-05,Tyson, Green Forest, Carroll,6,144,150,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
-24,559,2020-11-16,Tyson, Green Forest, Carroll,5,148,153,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
-24,562,2020-11-19,Tyson, Green Forest, Carroll,8,152,160,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
-24,577,2020-11-26,Tyson, Green Forest, Carroll,10,165,175,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
-24,584,2020-11-30,Tyson, Green Forest, Carroll,10,183,193,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
-24,590,2020-12-03,Tyson, Green Forest, Carroll,7,199,206,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
-24,595,2020-12-07,Tyson, Green Forest, Carroll,11,204,215,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
-24,610,2020-12-10,Tyson, Green Forest, Carroll,20,208,228,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
-24,622,2020-12-14,Tyson, Green Forest, Carroll,27,220,247,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
-24,648,2020-12-17,Tyson, Green Forest, Carroll,9,221,230,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
-24,687,2020-12-24,Tyson, Green Forest, Carroll,5,259,264,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
-24,698,2020-12-31,Tyson, Green Forest, Carroll,5,271,276,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
-24,750,2021-01-18,Tyson, Green Forest, Carroll,5,283,288,NA,Manufacturing,NA,green_forest,carroll,tyson,2021,Jan,2021-01
-25,152,2020-06-25,Tyson, Springdale, Washington,31,6,37,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jun,2020-06
-25,177,2020-07-03,Tyson, Springdale, Washington,22,15,37,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jul,2020-07
-25,202,2020-07-06,Tyson, Springdale, Washington,19,18,37,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jul,2020-07
-25,219,2020-07-13,Tyson, Springdale, Washington,15,25,40,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jul,2020-07
-25,243,2020-07-20,Tyson, Springdale, Washington,6,44,50,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jul,2020-07
-25,344,2020-08-07,Tyson, Springdale, Washington,5,59,64,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Aug,2020-08
-26,164,2020-06-25,Tyson, Russellville, Pope,7,6,13,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jun,2020-06
-26,185,2020-07-03,Tyson, Russellville, Pope,11,13,24,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jul,2020-07
-26,208,2020-07-06,Tyson, Russellville, Pope,8,16,24,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jul,2020-07
-26,225,2020-07-13,Tyson, Russellville, Pope,9,25,34,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jul,2020-07
-26,239,2020-07-20,Tyson, Russellville, Pope,8,35,43,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jul,2020-07
-26,319,2020-08-03,Tyson, Russellville, Pope,7,49,56,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Aug,2020-08
-26,523,2020-11-02,Tyson, Russellville, Pope,5,79,84,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Nov,2020-11
-26,605,2020-12-07,Tyson, Russellville, Pope,6,95,101,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
-26,632,2020-12-14,Tyson, Russellville, Pope,7,100,107,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
-26,656,2020-12-17,Tyson, Russellville, Pope,5,97,102,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
-26,679,2020-12-24,Tyson, Russellville, Pope,8,112,120,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
-26,699,2020-12-31,Tyson, Russellville, Pope,5,124,129,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
-27,242,2020-07-20,Tyson, Nashville, Howard,7,16,23,NA,NA,NA,ashdown,howard,tyson,2020,Jul,2020-07
-27,261,2020-07-24,Tyson, Nashville, Howard,7,19,26,NA,NA,NA,ashdown,howard,tyson,2020,Jul,2020-07
-27,275,2020-07-27,Tyson, Nashville, Howard,8,21,29,NA,NA,NA,ashdown,howard,tyson,2020,Jul,2020-07
-27,295,2020-07-31,Tyson, Nashville, Howard,6,33,39,NA,NA,NA,ashdown,howard,tyson,2020,Jul,2020-07
-27,321,2020-08-03,Tyson, Nashville, Howard,6,35,41,NA,NA,NA,ashdown,howard,tyson,2020,Aug,2020-08
-27,515,2020-10-29,Tyson, Nashville, Howard,5,64,69,NA,Manufacturing,NA,ashdown,howard,tyson,2020,Oct,2020-10
-27,767,2021-01-25,Tyson, Nashville, Howard,11,92,103,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Jan,2021-01
-27,772,2021-01-28,Tyson, Nashville, Howard,12,97,109,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Jan,2021-01
-27,775,2021-02-01,Tyson, Nashville, Howard,9,106,115,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Feb,2021-02
-27,777,2021-02-04,Tyson, Nashville, Howard,7,117,124,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Feb,2021-02
-27,789,2021-02-08,Tyson, Nashville, Howard,5,116,121,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Feb,2021-02
-28,336,2020-08-07,Tyson, Hope, Hempstead,7,15,22,275 Hempstead 278,NA,275 hempstead 278,hope,hempstead,tyson,2020,Aug,2020-08
-28,355,2020-08-10,Tyson, Hope, Hempstead,8,17,25,275 Hempstead 278,NA,275 hempstead 278,hope,hempstead,tyson,2020,Aug,2020-08
-28,370,2020-08-13,Tyson, Hope, Hempstead,9,23,32,275 Hempstead 278,NA,275 hempstead 278,hope,hempstead,tyson,2020,Aug,2020-08
-28,391,2020-08-17,Tyson, Hope, Hempstead,6,26,32,275 Hempstead 278,NA,275 hempstead 278,hope,hempstead,tyson,2020,Aug,2020-08
-28,636,2020-12-14,Tyson, Hope, Hempstead,6,59,65,275 Hempstead 278,Manufacturing,275 hempstead 278,hope,hempstead,tyson,2020,Dec,2020-12
-28,732,2021-01-14,Tyson, Hope, Hempstead,6,74,80,275 Hempstead 278,Manufacturing,275 hempstead 278,hope,hempstead,tyson,2021,Jan,2021-01
-28,745,2021-01-18,Tyson, Hope, Hempstead,7,78,85,275 Hempstead 278,Manufacturing,275 hempstead 278,hope,hempstead,tyson,2021,Jan,2021-01
-28,763,2021-01-25,Tyson, Hope, Hempstead,5,85,90,275 Hempstead 278,Manufacturing,275 hempstead 278,hope,hempstead,tyson,2021,Jan,2021-01
-29,393,2020-08-17,Tyson, Pine Bluff, Jefferson,5,32,37,NA,NA,NA,pine_bluff,jefferson,tyson,2020,Aug,2020-08
-29,448,2020-09-24,Tyson, Pine Bluff, Jefferson,8,49,57,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Sep,2020-09
-29,454,2020-09-28,Tyson, Pine Bluff, Jefferson,6,53,59,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Sep,2020-09
-29,460,2020-10-01,Tyson, Pine Bluff, Jefferson,6,55,61,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
-29,465,2020-10-05,Tyson, Pine Bluff, Jefferson,6,56,62,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
-29,474,2020-10-08,Tyson, Pine Bluff, Jefferson,6,57,63,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
-29,477,2020-10-12,Tyson, Pine Bluff, Jefferson,7,58,65,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
-29,483,2020-10-15,Tyson, Pine Bluff, Jefferson,7,58,65,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
-29,493,2020-10-19,Tyson, Pine Bluff, Jefferson,7,58,65,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
-29,514,2020-10-29,Tyson, Pine Bluff, Jefferson,5,65,70,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
-29,518,2020-11-02,Tyson, Pine Bluff, Jefferson,9,65,74,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Nov,2020-11
-29,531,2020-11-05,Tyson, Pine Bluff, Jefferson,6,68,74,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Nov,2020-11
-29,539,2020-11-09,Tyson, Pine Bluff, Jefferson,7,73,80,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Nov,2020-11
-29,548,2020-11-12,Tyson, Pine Bluff, Jefferson,6,75,81,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Nov,2020-11
-30,505,2020-10-26,Tyson, Waldron, Scott,6,4,10,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Oct,2020-10
-30,511,2020-10-29,Tyson, Waldron, Scott,6,7,13,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Oct,2020-10
-30,542,2020-11-09,Tyson, Waldron, Scott,5,13,18,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Nov,2020-11
-30,549,2020-11-12,Tyson, Waldron, Scott,6,14,20,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Nov,2020-11
-30,555,2020-11-16,Tyson, Waldron, Scott,7,13,20,NA,Manufacturing,NA,waldron,scott,tyson,2020,Nov,2020-11
-30,578,2020-11-26,Tyson, Waldron, Scott,7,20,27,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Nov,2020-11
-30,585,2020-11-30,Tyson, Waldron, Scott,8,28,36,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Nov,2020-11
-30,594,2020-12-03,Tyson, Waldron, Scott,5,32,37,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Dec,2020-12
-30,596,2020-12-07,Tyson, Waldron, Scott,11,39,50,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Dec,2020-12
-30,621,2020-12-10,Tyson, Waldron, Scott,5,45,50,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Dec,2020-12
-30,627,2020-12-14,Tyson, Waldron, Scott,10,46,56,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Dec,2020-12
-30,714,2021-01-11,Tyson, Waldron, Scott,24,69,93,NA,Manufacturing,NA,waldron,scott,tyson,2021,Jan,2021-01
-30,725,2021-01-14,Tyson, Waldron, Scott,18,71,89,Plant. St,Manufacturing,plant st,waldron,scott,tyson,2021,Jan,2021-01
-30,751,2021-01-18,Tyson, Waldron, Scott,20,73,93,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2021,Jan,2021-01
-31,644,2020-12-14,Tyson Corporate, Springdale, Washington,5,31,36,Don Tyson Pkwy,Manufacturing,don tyson pkwy,springdale,washington,tyson,2020,Dec,2020-12
-31,696,2020-12-31,Tyson Corporate, Springdale, Washington,7,44,51,Don Tyson Pkwy,"Administrative and Support and Waste Management and
+Uniqueid,V2,date,company_name,city,county,number_active_cases,number_recovered_cases,total_number_of_cases,address,industry,cleaned_address,cleaned_city,cleaned_county,cleaned_company,year,month,yearmon
+1,13,5/22/20,Belleville Boot,Forrest City,St. Francis,9,26,35,NA,NA,NA,forrest city,st. francis,belleville_boot,2020,May,2020-05
+1,23,5/26/20,Belleville Boot,Forrest City,St. Francis,6,29,35,NA,NA,NA,forrest city,st. francis,belleville_boot,2020,May,2020-05
+1,1,5/19/20,Belleville Boot Company,Forrest City,St. Francis,29,6,35,NA,NA,NA,forrest city,st. francis,belleville_boot,2020,May,2020-05
+2,18,5/26/20,Nebo Poultry,Dardanelle,Yell,57,6,63,NA,NA,NA,dardanelle,yell,nebo poultry,2020,May,2020-05
+2,28,5/29/20,Nebo Poultry,Dardanelle,Yell,39,23,62,NA,NA,NA,dardanelle,yell,nebo poultry,2020,May,2020-05
+2,37,6/2/20,Nebo Poultry,Dardanelle,Yell,19,44,63,NA,NA,NA,dardanelle,yell,nebo poultry,2020,Jun,2020-06
+2,53,6/5/20,Nebo Poultry,Dardanelle,Yell,13,50,63,NA,NA,NA,dardanelle,yell,nebo poultry,2020,Jun,2020-06
+2,76,6/8/20,Nebo Poultry,Dardanelle,Yell,8,55,63,NA,NA,NA,dardanelle,yell,nebo poultry,2020,Jun,2020-06
+2,183,7/3/20,Nebo Poultry,Dardanelle,Yell,11,55,66,NA,NA,NA,dardanelle,yell,nebo poultry,2020,Jul,2020-07
+3,4,5/19/20,Best Manufacturing,Jonesboro,Craighead,9,0,9,NA,NA,NA,jonesboro,craighead,best manufacturing,2020,May,2020-05
+3,15,5/22/20,Best Manufacturing,Jonesboro,Craighead,7,5,12,NA,NA,NA,jonesboro,craighead,best manufacturing,2020,May,2020-05
+3,24,5/26/20,Best Manufacturing,Jonesboro,Craighead,6,6,12,NA,NA,NA,jonesboro,craighead,best manufacturing,2020,May,2020-05
+4,5,5/19/20,"Riceland Foods, Inc.",Jonesboro,Craighead,7,2,9,NA,NA,NA,jonesboro,craighead,riceland_foods,2020,May,2020-05
+5,490,10/15/20,Riceland Foods,Stuttgart,Arkansas,5,26,31,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Oct,2020-10
+5,496,10/22/20,Riceland Foods,Stuggart,Arkansas,7,29,36,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Oct,2020-10
+5,503,10/26/20,Riceland Foods,Stuttgart,Arkansas,6,30,36,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Oct,2020-10
+5,516,10/29/20,Riceland Foods,Stuttgart,Arkansas,5,34,39,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Oct,2020-10
+5,525,11/2/20,Riceland Foods,Stuttgart,Arkansas,5,35,40,NA,Manufacturing,NA,stuttgart,arkansas,riceland_foods,2020,Nov,2020-11
+6,780,2/4/21,Riceland Foods,Ft Smith,Sebastian,5,26,31,NA,Other Services,NA,fort_smith,sebastian,riceland_foods,2021,Feb,2021-02
+7,6,5/19/20,Pilgrim's Pride,De Queen,Sevier,6,1,7,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,May,2020-05
+7,26,5/29/20,Pilgrim's Pride,De Queen,Sevier,46,13,59,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,May,2020-05
+7,34,6/2/20,Pilgrim's Pride,De Queen,Sevier,53,34,87,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
+7,47,6/5/20,Pilgrim's Pride,De Queen,Sevier,63,48,111,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
+7,65,6/8/20,Pilgrim's Pride,De Queen,Sevier,67,65,132,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
+7,89,6/14/20,Pilgrim's Pride,De Queen,Sevier,38,119,157,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
+7,110,6/18/20,Pilgrim's Pride,De Queen,Sevier,30,143,173,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
+7,128,6/21/20,Pilgrim's Pride,De Queen,Sevier,36,156,192,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
+7,149,6/25/20,Pilgrim's Pride,De Queen,Sevier,36,174,210,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jun,2020-06
+7,173,7/3/20,Pilgrim's Pride,De Queen,Sevier,28,196,224,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
+7,201,7/6/20,Pilgrim's Pride,De Queen,Sevier,19,204,223,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
+7,220,7/13/20,Pilgrim's Pride,De Queen,Sevier,14,222,236,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
+7,235,7/20/20,Pilgrim's Pride,De Queen,Sevier,13,230,243,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
+7,259,7/24/20,Pilgrim's Pride,De Queen,Sevier,9,236,245,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
+7,273,7/27/20,Pilgrim's Pride,De Queen,Sevier,11,242,253,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
+7,293,7/31/20,Pilgrim's Pride,De Queen,Sevier,8,247,255,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Jul,2020-07
+7,317,8/3/20,Pilgrim's Pride,De Queen,Sevier,7,250,257,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Aug,2020-08
+7,375,8/13/20,Pilgrim's Pride,De Queen,Sevier,5,254,259,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,Aug,2020-08
+7,528,11/5/20,Pilgrim's Pride,De Queen,Sevier,7,268,275,NA,Manufacturing,NA,de queen,sevier,pilgrims_pride,2020,Nov,2020-11
+7,545,11/12/20,Pilgrim's Pride,De Queen,Sevier,7,276,283,NA,Manufacturing,NA,de queen,sevier,pilgrims_pride,2020,Nov,2020-11
+7,560,11/16/20,Pilgrim's Pride,De Queen,Sevier,5,278,283,NA,Manufacturing,NA,de queen,sevier,pilgrims_pride,2020,Nov,2020-11
+7,10,5/22/20,Pilgrim's Pride Poultry,De Queen,Sevier,18,2,20,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,May,2020-05
+7,20,5/26/20,Pilgrim's Pride Poultry,De Queen,Sevier,37,4,41,NA,NA,NA,de queen,sevier,pilgrims_pride,2020,May,2020-05
+8,7,5/19/20,Frito Lay,Jonesboro,Craighead,6,4,10,NA,NA,NA,jonesboro,craighead,frito lay,2020,May,2020-05
+8,266,7/24/20,Frito Lay,Jonesboro,Craighead,5,18,23,NA,NA,NA,jonesboro,craighead,frito lay,2020,Jul,2020-07
+8,303,7/31/20,Frito Lay,Jonesboro,Craighead,7,18,25,NA,NA,NA,jonesboro,craighead,frito lay,2020,Jul,2020-07
+8,325,8/3/20,Frito Lay,Jonesboro,Craighead,7,23,30,NA,NA,NA,jonesboro,craighead,frito lay,2020,Aug,2020-08
+8,379,8/13/20,Frito Lay,Jonesboro,Craighead,8,30,38,NA,NA,NA,jonesboro,craighead,frito lay,2020,Aug,2020-08
+8,383,8/17/20,Frito Lay,Jonesboro,Craighead,6,34,40,NA,NA,NA,jonesboro,craighead,frito lay,2020,Aug,2020-08
+8,524,11/2/20,Frito Lay,Jonesboro,Craighead,5,60,65,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
+8,532,11/5/20,Frito Lay,Jonesboro,Craighead,6,61,67,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
+8,538,11/9/20,Frito Lay,Jonesboro,Craighead,8,64,72,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
+8,547,11/12/20,Frito Lay,Jonesboro,Craighead,7,68,75,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
+8,553,11/16/20,Frito Lay,Jonesboro,Craighead,7,69,76,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
+8,574,11/23/20,Frito Lay,Jonesboro,Craighead,5,76,81,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Nov,2020-11
+8,604,12/7/20,Frito Lay,Jonesboro,Craighead,7,91,98,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
+8,630,12/14/20,Frito Lay,Jonesboro,Craighead,8,95,103,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
+8,646,12/17/20,Frito Lay,Jonesboro,Craighead,12,92,104,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
+8,662,12/21/20,Frito Lay,Jonesboro,Craighead,8,107,115,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
+8,680,12/24/20,Frito Lay,Jonesboro,Craighead,8,108,116,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2020,Dec,2020-12
+8,704,1/7/21,Frito Lay,Jonesboro,Craighead,9,117,126,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2021,Jan,2021-01
+8,716,1/11/21,Frito Lay,Jonesboro,Craighead,7,121,128,NA,Manufacturing,NA,jonesboro,craighead,frito lay,2021,Jan,2021-01
+9,17,5/22/20,Saracen Casino Construction,Pine Bluff,Jefferson,5,51,56,NA,NA,NA,pine_bluff,jefferson,saracen_casino_construction,2020,May,2020-05
+9,8,5/19/20,"Saracen Casino Construction Site, multiple contracted businesses",Pine Bluff,Jefferson,5,51,56,NA,NA,NA,pine_bluff,jefferson,saracen_casino_construction,2020,May,2020-05
+10,25,5/29/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,86,6,92,NA,NA,NA,rogers,benton,georges_poultry,2020,May,2020-05
+10,33,6/2/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,114,27,141,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
+10,46,6/5/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,118,48,166,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
+10,64,6/8/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,105,76,181,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
+10,87,6/14/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,63,161,224,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
+10,107,6/18/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,55,186,241,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
+10,126,6/21/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,53,204,257,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
+10,151,6/25/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,32,236,268,NA,NA,NA,rogers,benton,georges_poultry,2020,Jun,2020-06
+10,171,7/3/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,32,241,273,NA,NA,NA,rogers,benton,georges_poultry,2020,Jul,2020-07
+10,200,7/6/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,20,256,276,NA,NA,NA,rogers,benton,georges_poultry,2020,Jul,2020-07
+10,221,7/13/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,13,264,277,NA,NA,NA,rogers,benton,georges_poultry,2020,Jul,2020-07
+10,237,7/20/20,George's/Ozark Mtn. Poultry (OMP),Rogers,Benton,12,266,278,NA,NA,NA,rogers,benton,georges_poultry,2020,Jul,2020-07
+10,11,5/22/20,Ozark Mountain Poultry,Rogers,Benton,16,1,17,NA,NA,NA,rogers,benton,georges_poultry,2020,May,2020-05
+10,19,5/26/20,Ozark Mountain Poultry (OMP)/George’s,Rogers,Benton,46,2,48,NA,NA,NA,rogers,benton,georges_poultry,2020,May,2020-05
+11,16,5/22/20,George's Poultry,Springdale,Washington,5,2,7,NA,NA,NA,springdale,washington,georges_poultry,2020,May,2020-05
+11,38,6/2/20,George's Poultry,Springdale,Washington,14,1,15,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
+11,50,6/5/20,George's Poultry,Springdale,Washington,21,4,25,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
+11,68,6/8/20,George's Poultry,Springdale,Washington,26,6,32,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
+11,90,6/14/20,George's Poultry,Springdale,Washington,26,26,52,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
+11,108,6/18/20,George's Poultry,Springdale,Washington,39,41,80,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
+11,127,6/21/20,George's Poultry,Springdale,Washington,40,54,94,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
+11,148,6/25/20,George's Poultry,Springdale,Washington,38,82,120,NA,NA,NA,springdale,washington,georges_poultry,2020,Jun,2020-06
+11,174,7/3/20,George's Poultry,Springdale,Washington,28,122,150,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
+11,197,7/6/20,George's Poultry,Springdale,Washington,23,139,162,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
+11,224,7/13/20,George's Poultry,Springdale,Washington,11,175,186,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
+11,236,7/20/20,George's Poultry,Springdale,Washington,13,199,212,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
+11,257,7/24/20,George's Poultry,Springdale,Washington,10,222,232,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
+11,277,7/27/20,George's Poultry,Springdale,Washington,7,231,238,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
+11,292,7/31/20,George's Poultry,Springdale,Washington,9,237,246,NA,NA,NA,springdale,washington,georges_poultry,2020,Jul,2020-07
+11,312,8/3/20,George's Poultry,Springdale,Washington,9,238,247,NA,NA,NA,springdale,washington,georges_poultry,2020,Aug,2020-08
+11,342,8/7/20,George's Poultry,Springdale,Washington,5,253,258,NA,NA,NA,springdale,washington,georges_poultry,2020,Aug,2020-08
+11,420,9/7/20,George's Poultry,Springdale,Washington,5,275,280,NA,NA,NA,springdale,washington,georges_poultry,2020,Sep,2020-09
+11,428,9/9/20,George's Poultry,Springdale,Washington,8,274,282,NA,NA,NA,springdale,washington,georges_poultry,2020,Sep,2020-09
+11,436,9/14/20,George's Poultry,Springdale,Washington,10,277,287,NA,NA,NA,springdale,washington,georges_poultry,2020,Sep,2020-09
+11,443,9/17/20,George's Poultry,Springdale,Washington,12,278,290,NA,Manufacturing,NA,springdale,washington,georges_poultry,2020,Sep,2020-09
+12,296,7/31/20,George's Poultry,Batesville,Independence,6,4,10,NA,NA,NA,batesville,independence,georges_poultry,2020,Jul,2020-07
+12,322,8/3/20,George's Poultry,Batesville,Independence,6,4,10,NA,NA,NA,batesville,independence,georges_poultry,2020,Aug,2020-08
+12,359,8/10/20,George's Poultry,Batesville,Independence,6,8,14,NA,NA,NA,batesville,independence,georges_poultry,2020,Aug,2020-08
+12,376,8/13/20,George's Poultry,Batesville,Independence,5,14,19,NA,NA,NA,batesville,independence,georges_poultry,2020,Aug,2020-08
+12,444,9/17/20,George's Poultry,Batesville,Independence,7,35,42,NA,Manufacturing,NA,batesville,independence,georges_poultry,2020,Sep,2020-09
+13,12,5/22/20,Cargill Poultry,Springdale,Washington,9,1,10,NA,NA,NA,springdale,washington,cargill poultry,2020,May,2020-05
+13,21,5/26/20,Cargill Poultry,Springdale,Washington,24,1,25,NA,NA,NA,springdale,washington,cargill poultry,2020,May,2020-05
+13,27,5/29/20,Cargill Poultry,Springdale,Washington,43,1,44,NA,NA,NA,springdale,washington,cargill poultry,2020,May,2020-05
+13,35,6/2/20,Cargill Poultry,Springdale,Washington,48,17,65,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
+13,48,6/5/20,Cargill Poultry,Springdale,Washington,52,28,80,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
+13,67,6/8/20,Cargill Poultry,Springdale,Washington,45,44,89,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
+13,94,6/14/20,Cargill Poultry,Springdale,Washington,21,100,121,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
+13,114,6/18/20,Cargill Poultry,Springdale,Washington,13,114,127,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
+13,132,6/21/20,Cargill Poultry,Springdale,Washington,19,126,145,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
+13,157,6/25/20,Cargill Poultry,Springdale,Washington,15,141,156,NA,NA,NA,springdale,washington,cargill poultry,2020,Jun,2020-06
+13,180,7/3/20,Cargill Poultry,Springdale,Washington,13,156,169,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
+13,207,7/6/20,Cargill Poultry,Springdale,Washington,9,161,170,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
+13,227,7/13/20,Cargill Poultry,Springdale,Washington,7,174,181,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
+13,240,7/20/20,Cargill Poultry,Springdale,Washington,7,186,193,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
+13,297,7/31/20,Cargill Poultry,Springdale,Washington,5,203,208,NA,NA,NA,springdale,washington,cargill poultry,2020,Jul,2020-07
+13,439,9/14/20,Cargill Poultry,Springdale,Washington,5,219,224,NA,NA,NA,springdale,washington,cargill poultry,2020,Sep,2020-09
+14,14,5/22/20,Butterball,Hunstville,Madison,7,0,7,NA,NA,NA,huntsville,madison,butterball,2020,May,2020-05
+14,22,5/26/20,Butterball,Huntsville,Madison,7,1,8,NA,NA,NA,huntsville,madison,butterball,2020,May,2020-05
+14,30,5/29/20,Butterball,Huntsville,Madison,5,5,10,NA,NA,NA,huntsville,madison,butterball,2020,May,2020-05
+14,36,6/2/20,Butterball,Huntsville,Madison,30,9,39,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
+14,49,6/5/20,Butterball,Huntsville,Madison,40,8,48,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
+14,66,6/8/20,Butterball,Huntsville,Madison,54,13,67,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
+14,88,6/14/20,Butterball,Huntsville,Madison,43,49,92,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
+14,109,6/18/20,Butterball,Huntsville,Madison,34,77,111,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
+14,129,6/21/20,Butterball,Huntsville,Madison,36,83,119,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
+14,150,6/25/20,Butterball,Huntsville,Madison,33,105,138,NA,NA,NA,huntsville,madison,butterball,2020,Jun,2020-06
+14,175,7/3/20,Butterball,Huntsville,Madison,23,123,146,NA,NA,NA,huntsville,madison,butterball,2020,Jul,2020-07
+14,203,7/6/20,Butterball,Huntsville,Madison,15,131,146,NA,NA,NA,huntsville,madison,butterball,2020,Jul,2020-07
+14,226,7/13/20,Butterball,Huntsville,Madison,8,143,151,NA,NA,NA,huntsville,madison,butterball,2020,Jul,2020-07
+14,246,7/20/20,Butterball,Huntsville,Madison,5,151,156,NA,NA,NA,huntsville,madison,butterball,2020,Jul,2020-07
+14,587,11/30/20,Butterball,Huntsville,Madison,5,163,168,NA,Manufacturing,NA,huntsville,madison,butterball,2020,Nov,2020-11
+15,29,5/29/20,Tyson,Dardanelle,Yell,7,2,9,NA,NA,NA,dardanelle,yell,tyson,2020,May,2020-05
+15,40,6/2/20,Tyson,Dardanelle,Yell,9,5,14,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
+15,56,6/5/20,Tyson,Dardanelle,Yell,11,6,17,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
+15,73,6/8/20,Tyson,Dardanelle,Yell,12,8,20,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
+15,96,6/14/20,Tyson,Dardanelle,Yell,14,16,30,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
+15,121,6/18/20,Tyson,Dardanelle,Yell,7,24,31,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
+15,135,6/21/20,Tyson,Dardanelle,Yell,12,27,39,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
+15,160,6/25/20,Tyson,Dardanelle,Yell,11,34,45,NA,NA,NA,dardanelle,yell,tyson,2020,Jun,2020-06
+15,179,7/3/20,Tyson,Dardanelle,Yell,18,41,59,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
+15,204,7/6/20,Tyson,Dardanelle,Yell,14,42,56,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
+15,223,7/13/20,Tyson,Dardanelle,Yell,13,53,66,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
+15,238,7/20/20,Tyson,Dardanelle,Yell,9,63,72,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
+15,263,7/24/20,Tyson,Dardanelle,Yell,7,70,77,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
+15,279,7/27/20,Tyson,Dardanelle,Yell,6,72,78,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
+15,294,7/31/20,Tyson,Dardanelle,Yell,8,72,80,NA,NA,NA,dardanelle,yell,tyson,2020,Jul,2020-07
+15,318,8/3/20,Tyson,Dardanelle,Yell,7,73,80,NA,NA,NA,dardanelle,yell,tyson,2020,Aug,2020-08
+15,339,8/7/20,Tyson,Dardanelle,Yell,6,78,84,NA,NA,NA,dardanelle,yell,tyson,2020,Aug,2020-08
+15,357,8/10/20,Tyson,Dardanelle,Yell,6,79,85,NA,NA,NA,dardanelle,yell,tyson,2020,Aug,2020-08
+15,607,12/7/20,Tyson,Dardanelle,Yell,5,105,110,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
+15,616,12/10/20,Tyson,Dardanelle,Yell,7,105,112,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
+15,624,12/14/20,Tyson,Dardanelle,Yell,13,109,122,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
+15,649,12/17/20,Tyson,Dardanelle,Yell,7,115,122,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
+15,670,12/21/20,Tyson,Dardanelle,Yell,5,125,130,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
+15,676,12/24/20,Tyson,Dardanelle,Yell,9,127,136,NA,Manufacturing,NA,dardanelle,yell,tyson,2020,Dec,2020-12
+15,720,1/11/21,Tyson,Dardanelle,Yell,6,141,147,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
+15,730,1/14/21,Tyson,Dardanelle,Yell,6,149,155,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
+15,749,1/18/21,Tyson,Dardanelle,Yell,9,151,160,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
+15,758,1/21/21,Tyson,Dardanelle,Yell,6,154,160,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
+15,766,1/25/21,Tyson,Dardanelle,Yell,8,158,166,NA,Manufacturing,NA,dardanelle,yell,tyson,2021,Jan,2021-01
+16,31,5/29/20,Tyson,Clarksville,Johnson,5,9,14,NA,NA,NA,clarksville,johnson,tyson,2020,May,2020-05
+16,77,6/8/20,Tyson,Clarksville,Johnson,6,14,20,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
+16,99,6/14/20,Tyson,Clarksville,Johnson,9,17,26,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
+16,120,6/18/20,Tyson,Clarksville,Johnson,7,24,31,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
+16,139,6/21/20,Tyson,Clarksville,Johnson,8,26,34,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
+16,156,6/25/20,Tyson,Clarksville,Johnson,23,31,54,NA,NA,NA,clarksville,johnson,tyson,2020,Jun,2020-06
+16,178,7/3/20,Tyson,Clarksville,Johnson,20,58,78,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
+16,199,7/6/20,Tyson,Clarksville,Johnson,22,60,82,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
+16,216,7/13/20,Tyson,Clarksville,Johnson,25,89,114,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
+16,233,7/20/20,Tyson,Clarksville,Johnson,28,132,160,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
+16,255,7/24/20,Tyson,Clarksville,Johnson,23,162,185,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
+16,271,7/27/20,Tyson,Clarksville,Johnson,16,178,194,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
+16,286,7/31/20,Tyson,Clarksville,Johnson,15,188,203,NA,NA,NA,clarksville,johnson,tyson,2020,Jul,2020-07
+16,313,8/3/20,Tyson,Clarksville,Johnson,9,197,206,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
+16,338,8/7/20,Tyson,Clarksville,Johnson,6,207,213,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
+16,356,8/10/20,Tyson,Clarksville,Johnson,6,208,214,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
+16,372,8/13/20,Tyson,Clarksville,Johnson,6,207,213,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
+16,392,8/17/20,Tyson,Clarksville,Johnson,5,213,218,NA,NA,NA,clarksville,johnson,tyson,2020,Aug,2020-08
+16,601,12/7/20,Tyson,Clarksville,Johnson,7,230,237,NA,Manufacturing,NA,clarksville,johnson,tyson,2020,Dec,2020-12
+16,612,12/10/20,Tyson,Clarksville,Johnson,11,231,242,NA,Manufacturing,NA,clarksville,johnson,tyson,2020,Dec,2020-12
+16,625,12/14/20,Tyson,Clarksville,Johnson,12,234,246,NA,Manufacturing,NA,clarksville,johnson,tyson,2020,Dec,2020-12
+16,653,12/17/20,Tyson,Clarksville,Johnson,6,241,247,NA,Manufacturing,NA,clarksville,johnson,tyson,2020,Dec,2020-12
+16,719,1/11/21,Tyson,Clarksville,Johnson,6,254,260,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
+16,733,1/14/21,Tyson,Clarksville,Johnson,5,261,266,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
+16,748,1/18/21,Tyson,Clarksville,Johnson,7,265,272,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
+16,757,1/21/21,Tyson,Clarksville,Johnson,5,269,274,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
+16,765,1/25/21,Tyson,Clarksville,Johnson,10,272,282,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
+16,771,1/28/21,Tyson,Clarksville,Johnson,8,276,284,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Jan,2021-01
+16,805,3/15/21,Tyson,Clarksville,Johnson,5,292,297,NA,Manufacturing,NA,clarksville,johnson,tyson,2021,Mar,2021-03
+17,45,6/2/20,Tyson of Rogers,Rogers,Benton,7,0,7,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
+17,52,6/5/20,Tyson of Rogers,Rogers,Benton,14,1,15,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
+17,72,6/8/20,Tyson of Rogers,Rogers,Benton,13,3,16,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
+17,92,6/14/20,Tyson of Rogers,Rogers,Benton,22,23,45,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
+17,112,6/18/20,Tyson of Rogers,Rogers,Benton,15,32,47,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
+17,133,6/21/20,Tyson of Rogers,Rogers,Benton,19,49,68,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
+17,145,6/25/20,Tyson of Rogers,Rogers,Benton,163,63,226,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jun,2020-06
+17,168,7/3/20,Tyson of Rogers,Rogers,Benton,123,114,237,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
+17,193,7/6/20,Tyson of Rogers,Rogers,Benton,122,117,239,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
+17,213,7/13/20,Tyson of Rogers,Rogers,Benton,76,180,256,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
+17,232,7/20/20,Tyson of Rogers,Rogers,Benton,31,229,260,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
+17,254,7/24/20,Tyson of Rogers,Rogers,Benton,27,237,264,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
+17,269,7/27/20,Tyson of Rogers,Rogers,Benton,26,240,266,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
+17,285,7/31/20,Tyson of Rogers,Rogers,Benton,19,248,267,Elm St.,NA,elm st,rogers,benton,tyson,2020,Jul,2020-07
+17,309,8/3/20,Tyson of Rogers,Rogers,Benton,20,249,269,Elm St.,NA,elm st,rogers,benton,tyson,2020,Aug,2020-08
+17,600,12/7/20,Tyson of Rogers,Rogers,Benton,7,301,308,Elm St.,Manufacturing,elm st,rogers,benton,tyson,2020,Dec,2020-12
+17,674,12/24/20,Tyson of Rogers,Rogers,Benton,9,313,322,Elm St.,Manufacturing,elm st,rogers,benton,tyson,2020,Dec,2020-12
+18,155,6/25/20,Tyson,Rogers,Benton,32,32,64,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
+18,176,7/3/20,Tyson,Rogers,Benton,31,44,75,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
+18,196,7/6/20,Tyson,Rogers,Benton,30,44,74,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
+18,217,7/13/20,Tyson,Rogers,Benton,21,64,85,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
+18,256,7/24/20,Tyson,Rogers,Benton,16,79,95,"Olrich St,",NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
+18,272,7/27/20,Tyson,Rogers,Benton,13,84,97,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
+18,288,7/31/20,Tyson,Rogers,Benton,11,89,100,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jul,2020-07
+18,311,8/3/20,Tyson,Rogers,Benton,11,90,101,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Aug,2020-08
+18,343,8/7/20,Tyson,Rogers,Benton,5,100,105,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Aug,2020-08
+18,39,6/2/20,Tyson's Chick-N-Quick,Rogers,Benton,13,2,15,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
+18,51,6/5/20,Tyson's Chick-N-Quick,Rogers,Benton,17,3,20,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
+18,70,6/8/20,Tyson's Chick-N-Quick,Rogers,Benton,17,5,22,"Olrich St,",NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
+18,95,6/14/20,Tyson's Chick-N-Quick,Rogers,Benton,14,17,31,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
+18,116,6/18/20,Tyson's Chick-N-Quick,Rogers,Benton,9,24,33,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
+18,138,6/21/20,Tyson's Chick-N-Quick,Rogers,Benton,9,26,35,Olrich St,NA,olrich st,rogers,benton,tyson,2020,Jun,2020-06
+18,677,12/24/20,Tyson's Chick-N-Quick,Rogers,Benton,9,96,105,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2020,Dec,2020-12
+18,690,12/28/20,Tyson's Chick-N-Quick,Rogers,Benton,9,103,112,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2020,Dec,2020-12
+18,695,12/31/20,Tyson's Chick-N-Quick,Rogers,Benton,8,112,120,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2020,Dec,2020-12
+18,701,1/4/21,Tyson's Chick-N-Quick,Rogers,Benton,6,118,124,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2021,Jan,2021-01
+18,709,1/7/21,Tyson's Chick-N-Quick,Rogers,Benton,7,119,126,Olrich St.,Manufacturing,olrich st,rogers,benton,tyson,2021,Jan,2021-01
+19,43,6/2/20,Tyson,Springdale,Washington,7,8,15,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
+19,54,6/5/20,Tyson,Springdale,Washington,12,10,22,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
+19,69,6/8/20,Tyson,Springdale,Washington,17,10,27,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
+19,86,6/14/20,Tyson,Springdale,Washington,186,33,219,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
+19,106,6/18/20,Tyson,Springdale,Washington,141,84,225,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
+19,125,6/21/20,Tyson,Springdale,Washington,124,114,268,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
+19,146,6/25/20,Tyson,Springdale,Washington,109,174,283,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jun,2020-06
+19,169,7/3/20,Tyson,Springdale,Washington,102,203,305,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
+19,194,7/6/20,Tyson,Springdale,Washington,80,226,306,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
+19,214,7/13/20,Tyson,Springdale,Washington,53,263,316,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
+19,231,7/20/20,Tyson,Springdale,Washington,36,290,326,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
+19,252,7/24/20,Tyson,Springdale,Washington,32,301,333,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
+19,270,7/27/20,Tyson,Springdale,Washington,23,315,338,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
+19,283,7/31/20,Tyson,Springdale,Washington,25,319,344,Berry St.,NA,berry st,springdale,washington,tyson,2020,Jul,2020-07
+19,307,8/3/20,Tyson,Springdale,Washington,25,321,346,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
+19,332,8/7/20,Tyson,Springdale,Washington,14,331,345,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
+19,351,8/10/20,Tyson,Springdale,Washington,14,332,346,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
+19,368,8/13/20,Tyson,Springdale,Washington,12,334,346,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
+19,387,8/17/20,Tyson,Springdale,Washington,11,336,347,Berry St.,NA,berry st,springdale,washington,tyson,2020,Aug,2020-08
+19,446,9/17/20,Tyson,Springdale,Washington,5,360,365,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2020,Sep,2020-09
+19,512,10/29/20,Tyson,Springdale,Washington,5,377,382,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2020,Oct,2020-10
+19,697,12/31/20,Tyson,Springdale,Washington,6,397,403,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2020,Dec,2020-12
+19,746,1/18/21,Tyson,Springdale,Washington,7,406,413,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2021,Jan,2021-01
+19,755,1/21/21,Tyson,Springdale,Washington,7,408,415,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2021,Jan,2021-01
+19,764,1/25/21,Tyson,Springdale,Washington,6,410,416,Berry St.,Manufacturing,berry st,springdale,washington,tyson,2021,Jan,2021-01
+20,44,6/2/20,Tyson,Grannis,Polk,7,2,9,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
+20,58,6/5/20,Tyson,Grannis,Polk,10,2,12,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
+20,78,6/8/20,Tyson,Grannis,Polk,6,6,12,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
+20,97,6/14/20,Tyson,Grannis,Polk,12,12,24,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
+20,117,6/18/20,Tyson,Grannis,Polk,8,18,26,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
+20,141,6/21/20,Tyson,Grannis,Polk,7,21,28,NA,NA,NA,grannis,polk,tyson,2020,Jun,2020-06
+20,189,7/3/20,Tyson,Grannis,Polk,5,24,29,NA,NA,NA,grannis,polk,tyson,2020,Jul,2020-07
+21,60,6/5/20,Tyson Mexican Original,Fayetteville,Washington,5,3,8,NA,NA,NA,fayetteville,washington,tyson,2020,Jun,2020-06
+21,81,6/8/20,Tyson Mexican Original,Fayetteville,Washington,5,3,8,NA,NA,NA,fayetteville,washington,tyson,2020,Jun,2020-06
+21,154,6/25/20,Tyson's Mexican Original,Fayetteville,Washington,26,13,39,NA,NA,NA,fayetteville,washington,tyson,2020,Jun,2020-06
+21,181,7/3/20,Tyson's Mexican Original,Fayetteville,Washington,13,29,42,NA,NA,NA,fayetteville,washington,tyson,2020,Jul,2020-07
+21,205,7/6/20,Tyson's Mexican Original,Fayetteville,Washington,11,31,42,NA,NA,NA,fayetteville,washington,tyson,2020,Jul,2020-07
+21,602,12/7/20,Tyson's Mexican Original,Fayetteville,Washington,7,99,106,NA,Manufacturing,NA,fayetteville,washington,tyson,2020,Dec,2020-12
+21,617,12/10/20,Tyson's Mexican Original,Fayetteville,Washington,7,102,109,NA,Manufacturing,NA,fayetteville,washington,tyson,2020,Dec,2020-12
+21,629,12/14/20,Tyson's Mexican Original,Fayetteville,Washington,9,105,114,NA,Manufacturing,NA,fayetteville,washington,tyson,2020,Dec,2020-12
+22,100,6/14/20,Tyson,Van Buren,Crawford,6,0,6,NA,NA,NA,van buren,crawford,tyson,2020,Jun,2020-06
+22,115,6/18/20,Tyson,Van Buren,Crawford,10,2,12,NA,NA,NA,van buren,crawford,tyson,2020,Jun,2020-06
+22,131,6/21/20,Tyson,Van Buren,Crawford,27,4,31,NA,NA,NA,van buren,crawford,tyson,2020,Jun,2020-06
+22,153,6/25/20,Tyson,Van Buren,Crawford,30,11,41,NA,NA,NA,van buren,crawford,tyson,2020,Jun,2020-06
+22,172,7/3/20,Tyson,Van Buren,Crawford,31,36,67,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
+22,198,7/6/20,Tyson,Van Buren,Crawford,23,46,69,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
+22,222,7/13/20,Tyson,Van Buren,Crawford,13,70,83,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
+22,241,7/20/20,Tyson,Van Buren,Crawford,7,78,85,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
+22,264,7/24/20,Tyson,Van Buren,Crawford,5,82,87,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
+22,280,7/27/20,Tyson,Van Buren,Crawford,5,83,88,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
+22,299,7/31/20,Tyson,Van Buren,Crawford,5,88,93,NA,NA,NA,van buren,crawford,tyson,2020,Jul,2020-07
+22,333,8/7/20,Tyson,Van Buren,Crawford,13,97,110,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
+22,352,8/10/20,Tyson,Van Buren,Crawford,12,100,112,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
+22,371,8/13/20,Tyson,Van Buren,Crawford,8,108,116,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
+22,388,8/17/20,Tyson,Van Buren,Crawford,8,111,119,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
+22,397,8/24/20,Tyson,Van Buren,Crawford,16,115,131,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
+22,405,8/27/20,Tyson,Van Buren,Crawford,24,128,152,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
+22,411,8/31/20,Tyson,Van Buren,Crawford,51,149,200,NA,NA,NA,van buren,crawford,tyson,2020,Aug,2020-08
+22,415,9/3/20,Tyson,Van Buren,Crawford,31,175,206,NA,NA,NA,van buren,crawford,tyson,2020,Sep,2020-09
+22,419,9/7/20,Tyson,Van Buren,Crawford,24,185,209,NA,NA,NA,van buren,crawford,tyson,2020,Sep,2020-09
+22,427,9/9/20,Tyson,Van Buren,Crawford,17,195,212,NA,NA,NA,van buren,crawford,tyson,2020,Sep,2020-09
+22,437,9/14/20,Tyson,Van Buren,Crawford,7,207,214,NA,NA,NA,van buren,crawford,tyson,2020,Sep,2020-09
+22,445,9/17/20,Tyson,Van Buren,Crawford,6,209,215,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Sep,2020-09
+22,449,9/24/20,Tyson,Van Buren,Crawford,5,213,218,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Sep,2020-09
+22,533,11/5/20,Tyson,Van Buren,Crawford,5,225,230,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
+22,543,11/12/20,Tyson,Van Buren,Crawford,8,228,236,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
+22,558,11/16/20,Tyson,Van Buren,Crawford,5,231,236,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
+22,563,11/19/20,Tyson,Van Buren,Crawford,7,236,243,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
+22,579,11/26/20,Tyson,Van Buren,Crawford,5,248,253,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Nov,2020-11
+22,599,12/7/20,Tyson,Van Buren,Crawford,8,255,263,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Dec,2020-12
+22,638,12/14/20,Tyson,Van Buren,Crawford,5,262,267,NA,Manufacturing,NA,van buren,crawford,tyson,2020,Dec,2020-12
+22,728,1/14/21,Tyson,Van Buren,Crawford,7,274,281,NA,Manufacturing,NA,van buren,crawford,tyson,2021,Jan,2021-01
+23,101,6/14/20,Tyson,Berryville,Carroll,5,5,10,NA,NA,NA,berryville,carroll,tyson,2020,Jun,2020-06
+23,459,10/1/20,Tyson,Berryville,Carroll,6,34,40,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Oct,2020-10
+23,463,10/5/20,Tyson,Berryville,Carroll,7,35,42,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Oct,2020-10
+23,581,11/26/20,Tyson,Berryville,Carroll,5,56,61,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Nov,2020-11
+23,586,11/30/20,Tyson,Berryville,Carroll,7,57,64,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Nov,2020-11
+23,650,12/17/20,Tyson,Berryville,Carroll,7,59,66,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Dec,2020-12
+23,663,12/21/20,Tyson,Berryville,Carroll,7,79,86,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Dec,2020-12
+23,689,12/24/20,Tyson,Berryville,Carroll,5,88,93,NA,Manufacturing,NA,berryville,carroll,tyson,2020,Dec,2020-12
+23,734,1/14/21,Tyson,Berryville,Carroll,5,104,109,NA,Manufacturing,NA,berryville,carroll,tyson,2021,Jan,2021-01
+23,747,1/18/21,Tyson,Berryville,Carroll,8,106,114,NA,Manufacturing,NA,berryville,carroll,tyson,2021,Jan,2021-01
+23,756,1/21/21,Tyson,Berryville,Carroll,7,112,119,NA,Manufacturing,NA,berryville,carroll,tyson,2021,Jan,2021-01
+24,102,6/14/20,Tyson,Green Forrest,Carroll,5,2,7,NA,NA,NA,green_forest,carroll,tyson,2020,Jun,2020-06
+24,142,6/21/20,Tyson,Green Forrest,Carroll,6,8,14,NA,NA,NA,green_forest,carroll,tyson,2020,Jun,2020-06
+24,162,6/25/20,Tyson,Green Forrest,Carroll,10,15,25,NA,NA,NA,green_forest,carroll,tyson,2020,Jun,2020-06
+24,186,7/3/20,Tyson,Green Forest,Carroll,10,26,36,NA,NA,NA,green_forest,carroll,tyson,2020,Jul,2020-07
+24,206,7/6/20,Tyson,Green Forest,Carroll,11,28,39,NA,NA,NA,green_forest,carroll,tyson,2020,Jul,2020-07
+24,228,7/13/20,Tyson,Green Forest,Carroll,7,40,47,NA,NA,NA,green_forest,carroll,tyson,2020,Jul,2020-07
+24,289,7/31/20,Tyson,Green Forest,Carroll,10,62,72,NA,NA,NA,green_forest,carroll,tyson,2020,Jul,2020-07
+24,316,8/3/20,Tyson,Green Forest,Carroll,8,64,72,NA,NA,NA,green_forest,carroll,tyson,2020,Aug,2020-08
+24,399,8/24/20,Tyson,Green Forest,Carroll,5,79,84,NA,NA,NA,green_forest,carroll,tyson,2020,Aug,2020-08
+24,421,9/7/20,Tyson,Green Forest,Carroll,5,90,95,NA,NA,NA,green_forest,carroll,tyson,2020,Sep,2020-09
+24,429,9/9/20,Tyson,Green Forest,Carroll,5,93,98,NA,NA,NA,green_forest,carroll,tyson,2020,Sep,2020-09
+24,450,9/24/20,Tyson,Green Forest,Carroll,5,98,103,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Sep,2020-09
+24,470,10/8/20,Tyson,Green Forest,Carroll,8,104,112,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
+24,481,10/12/20,Tyson,Green Forest,Carroll,5,105,110,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
+24,486,10/15/20,Tyson,Green Forest,Carroll,6,106,112,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
+24,491,10/19/20,Tyson,Green Forest,Carroll,9,117,126,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
+24,495,10/22/20,Tyson,Green Forest,Carroll,9,125,134,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
+24,500,10/26/20,Tyson,Green Forest,Carroll,10,131,141,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
+24,508,10/29/20,Tyson,Green Forest,Carroll,10,137,147,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Oct,2020-10
+24,520,11/2/20,Tyson,Green Forest,Carroll,6,141,147,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
+24,530,11/5/20,Tyson,Green Forest,Carroll,6,144,150,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
+24,559,11/16/20,Tyson,Green Forest,Carroll,5,148,153,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
+24,562,11/19/20,Tyson,Green Forest,Carroll,8,152,160,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
+24,577,11/26/20,Tyson,Green Forest,Carroll,10,165,175,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
+24,584,11/30/20,Tyson,Green Forest,Carroll,10,183,193,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Nov,2020-11
+24,590,12/3/20,Tyson,Green Forest,Carroll,7,199,206,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
+24,595,12/7/20,Tyson,Green Forest,Carroll,11,204,215,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
+24,610,12/10/20,Tyson,Green Forest,Carroll,20,208,228,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
+24,622,12/14/20,Tyson,Green Forest,Carroll,27,220,247,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
+24,648,12/17/20,Tyson,Green Forest,Carroll,9,221,230,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
+24,687,12/24/20,Tyson,Green Forest,Carroll,5,259,264,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
+24,698,12/31/20,Tyson,Green Forest,Carroll,5,271,276,NA,Manufacturing,NA,green_forest,carroll,tyson,2020,Dec,2020-12
+24,750,1/18/21,Tyson,Green Forest,Carroll,5,283,288,NA,Manufacturing,NA,green_forest,carroll,tyson,2021,Jan,2021-01
+25,152,6/25/20,Tyson,Springdale,Washington,31,6,37,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jun,2020-06
+25,177,7/3/20,Tyson,Springdale,Washington,22,15,37,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jul,2020-07
+25,202,7/6/20,Tyson,Springdale,Washington,19,18,37,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jul,2020-07
+25,219,7/13/20,Tyson,Springdale,Washington,15,25,40,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jul,2020-07
+25,243,7/20/20,Tyson,Springdale,Washington,6,44,50,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Jul,2020-07
+25,344,8/7/20,Tyson,Springdale,Washington,5,59,64,Randall Rd.,NA,randall rd,springdale,washington,tyson,2020,Aug,2020-08
+26,164,6/25/20,Tyson,Russellville,Pope,7,6,13,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jun,2020-06
+26,185,7/3/20,Tyson,Russellville,Pope,11,13,24,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jul,2020-07
+26,208,7/6/20,Tyson,Russellville,Pope,8,16,24,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jul,2020-07
+26,225,7/13/20,Tyson,Russellville,Pope,9,25,34,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jul,2020-07
+26,239,7/20/20,Tyson,Russellville,Pope,8,35,43,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Jul,2020-07
+26,319,8/3/20,Tyson,Russellville,Pope,7,49,56,Tyler Rd,NA,tyler rd,russellville,pope,tyson,2020,Aug,2020-08
+26,523,11/2/20,Tyson,Russellville,Pope,5,79,84,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Nov,2020-11
+26,605,12/7/20,Tyson,Russellville,Pope,6,95,101,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
+26,632,12/14/20,Tyson,Russellville,Pope,7,100,107,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
+26,656,12/17/20,Tyson,Russellville,Pope,5,97,102,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
+26,679,12/24/20,Tyson,Russellville,Pope,8,112,120,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
+26,699,12/31/20,Tyson,Russellville,Pope,5,124,129,Tyler Rd.,Manufacturing,tyler rd,russellville,pope,tyson,2020,Dec,2020-12
+27,242,7/20/20,Tyson,Nashville,Howard,7,16,23,NA,NA,NA,ashdown,howard,tyson,2020,Jul,2020-07
+27,261,7/24/20,Tyson,Nashville,Howard,7,19,26,NA,NA,NA,ashdown,howard,tyson,2020,Jul,2020-07
+27,275,7/27/20,Tyson,Nashville,Howard,8,21,29,NA,NA,NA,ashdown,howard,tyson,2020,Jul,2020-07
+27,295,7/31/20,Tyson,Nashville,Howard,6,33,39,NA,NA,NA,ashdown,howard,tyson,2020,Jul,2020-07
+27,321,8/3/20,Tyson,Nashville,Howard,6,35,41,NA,NA,NA,ashdown,howard,tyson,2020,Aug,2020-08
+27,515,10/29/20,Tyson,Nashville,Howard,5,64,69,NA,Manufacturing,NA,ashdown,howard,tyson,2020,Oct,2020-10
+27,767,1/25/21,Tyson,Nashville,Howard,11,92,103,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Jan,2021-01
+27,772,1/28/21,Tyson,Nashville,Howard,12,97,109,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Jan,2021-01
+27,775,2/1/21,Tyson,Nashville,Howard,9,106,115,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Feb,2021-02
+27,777,2/4/21,Tyson,Nashville,Howard,7,117,124,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Feb,2021-02
+27,789,2/8/21,Tyson,Nashville,Howard,5,116,121,NA,Manufacturing,NA,ashdown,howard,tyson,2021,Feb,2021-02
+28,336,8/7/20,Tyson,Hope,Hempstead,7,15,22,275 Hempstead 278,NA,275 hempstead 278,hope,hempstead,tyson,2020,Aug,2020-08
+28,355,8/10/20,Tyson,Hope,Hempstead,8,17,25,275 Hempstead 278,NA,275 hempstead 278,hope,hempstead,tyson,2020,Aug,2020-08
+28,370,8/13/20,Tyson,Hope,Hempstead,9,23,32,275 Hempstead 278,NA,275 hempstead 278,hope,hempstead,tyson,2020,Aug,2020-08
+28,391,8/17/20,Tyson,Hope,Hempstead,6,26,32,275 Hempstead 278,NA,275 hempstead 278,hope,hempstead,tyson,2020,Aug,2020-08
+28,636,12/14/20,Tyson,Hope,Hempstead,6,59,65,275 Hempstead 278,Manufacturing,275 hempstead 278,hope,hempstead,tyson,2020,Dec,2020-12
+28,732,1/14/21,Tyson,Hope,Hempstead,6,74,80,275 Hempstead 278,Manufacturing,275 hempstead 278,hope,hempstead,tyson,2021,Jan,2021-01
+28,745,1/18/21,Tyson,Hope,Hempstead,7,78,85,275 Hempstead 278,Manufacturing,275 hempstead 278,hope,hempstead,tyson,2021,Jan,2021-01
+28,763,1/25/21,Tyson,Hope,Hempstead,5,85,90,275 Hempstead 278,Manufacturing,275 hempstead 278,hope,hempstead,tyson,2021,Jan,2021-01
+29,393,8/17/20,Tyson,Pine Bluff,Jefferson,5,32,37,NA,NA,NA,pine_bluff,jefferson,tyson,2020,Aug,2020-08
+29,448,9/24/20,Tyson,Pine Bluff,Jefferson,8,49,57,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Sep,2020-09
+29,454,9/28/20,Tyson,Pine Bluff,Jefferson,6,53,59,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Sep,2020-09
+29,460,10/1/20,Tyson,Pine Bluff,Jefferson,6,55,61,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
+29,465,10/5/20,Tyson,Pine Bluff,Jefferson,6,56,62,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
+29,474,10/8/20,Tyson,Pine Bluff,Jefferson,6,57,63,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
+29,477,10/12/20,Tyson,Pine Bluff,Jefferson,7,58,65,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
+29,483,10/15/20,Tyson,Pine Bluff,Jefferson,7,58,65,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
+29,493,10/19/20,Tyson,Pine Bluff,Jefferson,7,58,65,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
+29,514,10/29/20,Tyson,Pine Bluff,Jefferson,5,65,70,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Oct,2020-10
+29,518,11/2/20,Tyson,Pine Bluff,Jefferson,9,65,74,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Nov,2020-11
+29,531,11/5/20,Tyson,Pine Bluff,Jefferson,6,68,74,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Nov,2020-11
+29,539,11/9/20,Tyson,Pine Bluff,Jefferson,7,73,80,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Nov,2020-11
+29,548,11/12/20,Tyson,Pine Bluff,Jefferson,6,75,81,NA,Manufacturing,NA,pine_bluff,jefferson,tyson,2020,Nov,2020-11
+30,505,10/26/20,Tyson,Waldron,Scott,6,4,10,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Oct,2020-10
+30,511,10/29/20,Tyson,Waldron,Scott,6,7,13,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Oct,2020-10
+30,542,11/9/20,Tyson,Waldron,Scott,5,13,18,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Nov,2020-11
+30,549,11/12/20,Tyson,Waldron,Scott,6,14,20,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Nov,2020-11
+30,555,11/16/20,Tyson,Waldron,Scott,7,13,20,NA,Manufacturing,NA,waldron,scott,tyson,2020,Nov,2020-11
+30,578,11/26/20,Tyson,Waldron,Scott,7,20,27,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Nov,2020-11
+30,585,11/30/20,Tyson,Waldron,Scott,8,28,36,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Nov,2020-11
+30,594,12/3/20,Tyson,Waldron,Scott,5,32,37,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Dec,2020-12
+30,596,12/7/20,Tyson,Waldron,Scott,11,39,50,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Dec,2020-12
+30,621,12/10/20,Tyson,Waldron,Scott,5,45,50,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Dec,2020-12
+30,627,12/14/20,Tyson,Waldron,Scott,10,46,56,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2020,Dec,2020-12
+30,714,1/11/21,Tyson,Waldron,Scott,24,69,93,NA,Manufacturing,NA,waldron,scott,tyson,2021,Jan,2021-01
+30,725,1/14/21,Tyson,Waldron,Scott,18,71,89,Plant. St,Manufacturing,plant st,waldron,scott,tyson,2021,Jan,2021-01
+30,751,1/18/21,Tyson,Waldron,Scott,20,73,93,Plant St.,Manufacturing,plant st,waldron,scott,tyson,2021,Jan,2021-01
+31,644,12/14/20,Tyson Corporate,Springdale,Washington,5,31,36,Don Tyson Pkwy,Manufacturing,don tyson pkwy,springdale,washington,tyson,2020,Dec,2020-12
+31,696,12/31/20,Tyson Corporate,Springdale,Washington,7,44,51,Don Tyson Pkwy,"Administrative and Support and Waste Management and
 Remediation Services",don tyson pkwy,springdale,washington,tyson,2020,Dec,2020-12
-31,788,2021-02-08,Tyson Corporate, Springdale, Washington,5,70,75,Don Tyson Pkwy,"Administrative and Support and Waste Management and
+31,788,2/8/21,Tyson Corporate,Springdale,Washington,5,70,75,Don Tyson Pkwy,"Administrative and Support and Waste Management and
 Remediation Services",don tyson pkwy,springdale,washington,tyson,2021,Feb,2021-02
-32,41,2020-06-02,Wayne Farms, Danville, Yell,9,1,10,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
-32,57,2020-06-05,Wayne Farms, Danville, Yell,11,1,12,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
-32,71,2020-06-08,Wayne Farms, Danville, Yell,17,3,20,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
-32,91,2020-06-14,Wayne Farms, Danville, Yell,24,13,37,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
-32,111,2020-06-18,Wayne Farms, Danville, Yell,25,29,54,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
-32,130,2020-06-21,Wayne Farms, Danville, Yell,36,35,71,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
-32,147,2020-06-25,Wayne Farms, Danville, Yell,59,50,109,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
-32,170,2020-07-03,Wayne Farms, Danville, Yell,64,96,160,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
-32,195,2020-07-06,Wayne Farms, Danville, Yell,45,115,160,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
-32,215,2020-07-13,Wayne Farms, Danville, Yell,34,151,185,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
-32,234,2020-07-20,Wayne Farms, Danville, Yell,19,172,191,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
-32,258,2020-07-24,Wayne Farms, Danville, Yell,9,185,194,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
-32,278,2020-07-27,Wayne Farms, Danville, Yell,6,191,197,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
-32,298,2020-07-31,Wayne Farms, Danville, Yell,5,193,198,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
-32,320,2020-08-03,Wayne Farms, Danville, Yell,6,193,199,NA,NA,NA,danville,yell,wayne farms,2020,Aug,2020-08
-32,639,2020-12-14,Wayne Farms, Danville, Yell,5,211,216,NA,Manufacturing,NA,danville,yell,wayne farms,2020,Dec,2020-12
-32,675,2020-12-24,Wayne Farms, Danville, Yell,9,221,230,NA,Manufacturing,NA,danville,yell,wayne farms,2020,Dec,2020-12
-33,55,2020-06-05,Simmons Foods, Van Buren, Crawford,12,0,12,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
-33,75,2020-06-08,Simmons Foods, Van Buren, Crawford,11,2,13,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
-33,98,2020-06-14,Simmons Foods, Van Buren, Crawford,10,13,23,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
-33,122,2020-06-18,Simmons Foods, Van Buren, Crawford,7,17,24,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
-33,140,2020-06-21,Simmons Foods, Van Buren, Crawford,8,19,27,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
-33,244,2020-07-20,Simmons Foods, Van Buren, Crawford,6,35,41,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jul,2020-07
-33,300,2020-07-31,Simmons Foods, Van Buren, Crawford,5,45,50,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jul,2020-07
-33,323,2020-08-03,Simmons Foods, Van Buren, Crawford,5,47,52,NA,NA,NA,van buren,crawford,simmons_foods,2020,Aug,2020-08
-33,341,2020-08-07,Simmons Foods, Van Buren, Crawford,6,48,54,NA,NA,NA,van buren,crawford,simmons_foods,2020,Aug,2020-08
-33,358,2020-08-10,Simmons Foods, Van Buren, Crawford,6,48,54,NA,NA,NA,van buren,crawford,simmons_foods,2020,Aug,2020-08
-33,42,2020-06-02,Simmons Poultry, Van Buren, Crawford,8,0,8,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
-34,61,2020-06-05,Simmons Foods, Gentry, Benton,5,0,5,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
-34,80,2020-06-08,Simmons Foods, Gentry, Benton,6,0,6,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
-34,119,2020-06-18,Simmons Foods, Gentry, Benton,8,8,16,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
-34,137,2020-06-21,Simmons Foods, Gentry, Benton,11,8,19,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
-34,161,2020-06-25,Simmons Foods, Gentry, Benton,11,12,23,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
-34,188,2020-07-03,Simmons Foods, Gentry, Benton,5,24,29,NA,NA,NA,gentry,benton,simmons_foods,2020,Jul,2020-07
-34,260,2020-07-24,Simmons Foods, Gentry, Benton,8,46,54,NA,NA,NA,gentry,benton,simmons_foods,2020,Jul,2020-07
-34,274,2020-07-27,Simmons Foods, Gentry, Benton,8,51,59,NA,NA,NA,gentry,benton,simmons_foods,2020,Jul,2020-07
-34,290,2020-07-31,Simmons Foods, Gentry, Benton,10,61,71,NA,NA,NA,gentry,benton,simmons_foods,2020,Jul,2020-07
-34,314,2020-08-03,Simmons Foods, Gentry, Benton,9,61,70,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
-34,340,2020-08-07,Simmons Foods, Gentry, Benton,6,70,76,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
-34,360,2020-08-10,Simmons Foods, Gentry, Benton,5,73,78,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
-34,373,2020-08-13,Simmons Foods, Gentry, Benton,6,76,82,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
-34,390,2020-08-17,Simmons Foods, Gentry, Benton,6,78,84,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
-35,62,2020-06-05,Simmons Foods, Siloam Springs, Benton,5,0,5,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Jun,2020-06
-35,82,2020-06-08,Simmons Foods, Siloam Springs, Benton,5,2,7,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Jun,2020-06
-35,281,2020-07-27,Simmons Foods, Siloam Springs, Benton,5,20,25,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Jul,2020-07
-35,335,2020-08-07,Simmons Foods, Siloam Springs, Benton,10,39,49,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Aug,2020-08
-35,353,2020-08-10,Simmons Foods, Siloam Springs, Benton,12,42,54,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Aug,2020-08
-35,369,2020-08-13,Simmons Foods, Siloam Springs, Benton,9,59,68,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Aug,2020-08
-35,389,2020-08-17,Simmons Foods, Siloam Springs, Benton,7,67,74,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Aug,2020-08
-35,546,2020-11-12,Simmons Foods, Siloam Springs, Benton,7,92,99,NA,Manufacturing,NA,siloam springs,benton,simmons_foods,2020,Nov,2020-11
-35,556,2020-11-16,Simmons Foods, Siloam Springs, Benton,6,96,102,NA,Manufacturing,NA,siloam springs,benton,simmons_foods,2020,Nov,2020-11
-35,564,2020-11-19,Simmons Foods, Siloam Springs, Benton,7,97,104,NA,Manufacturing,NA,siloam springs,benton,simmons_foods,2020,Nov,2020-11
-35,635,2020-12-14,Simmons Foods, Siloam Springs, Benton,6,110,116,NA,Manufacturing,NA,siloam springs,benton,simmons_foods,2020,Dec,2020-12
-36,301,2020-07-31,Simmons Foods, Ft Smith, Sebastian,5,24,29,NA,NA,NA,fort_smith,sebastian,simmons_foods,2020,Jul,2020-07
-36,345,2020-08-07,Simmons Foods, Ft Smith, Sebastian,5,26,31,NA,NA,NA,fort_smith,sebastian,simmons_foods,2020,Aug,2020-08
-36,522,2020-11-02,Simmons Foods, Ft Smith, Sebastian,6,40,46,NA,Manufacturing,NA,fort_smith,sebastian,simmons_foods,2020,Nov,2020-11
-36,535,2020-11-05,Simmons Foods, Ft Smith, Sebastian,5,41,46,NA,Manufacturing,NA,fort_smith,sebastian,simmons_foods,2020,Nov,2020-11
-37,59,2020-06-05,Southeast Poultry, Rogers, Benton,5,4,9,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
-37,74,2020-06-08,Southeast Poultry, Rogers, Benton,11,4,15,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
-37,93,2020-06-14,Southeast Poultry, Rogers, Benton,22,11,33,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
-37,113,2020-06-18,Southeast Poultry, Rogers, Benton,15,26,41,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
-37,134,2020-06-21,Southeast Poultry, Rogers, Benton,16,32,48,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
-37,159,2020-06-25,Southeast Poultry, Rogers, Benton,13,44,57,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
-37,182,2020-07-03,Southeast Poultry, Rogers, Benton,11,59,70,NA,NA,NA,rogers,benton,southeast poultry,2020,Jul,2020-07
-37,209,2020-07-06,Southeast Poultry, Rogers, Benton,7,66,73,NA,NA,NA,rogers,benton,southeast poultry,2020,Jul,2020-07
-38,63,2020-06-05,Hino Motors, Marion, AR,5,3,8,NA,NA,NA,marion,crittenden,hino motors,2020,Jun,2020-06
-38,83,2020-06-08,Hino Motors, Marion, Crittenden,11,4,15,NA,NA,NA,marion,crittenden,hino motors,2020,Jun,2020-06
-38,105,2020-06-14,Hino Motors, Marion, Crittenden,5,11,16,NA,NA,NA,marion,crittenden,hino motors,2020,Jun,2020-06
-39,79,2020-06-08,Twin Rivers Foods, Atkins, Pope,6,5,11,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jun,2020-06
-39,118,2020-06-18,Twin Rivers Foods, Atkins, Pope,8,11,19,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jun,2020-06
-39,136,2020-06-21,Twin Rivers Foods, Atkins, Pope,12,13,25,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jun,2020-06
-39,158,2020-06-25,Twin Rivers Foods, Atkins, Pope,14,19,33,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jun,2020-06
-39,187,2020-07-03,Twin Rivers Foods, Atkins, Pope,7,35,42,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jul,2020-07
-39,667,2020-12-21,Twin Rivers Foods, Atkins, Pope,6,154,160,NA,Manufacturing,NA,atkins,pope,twin rivers foods,2020,Dec,2020-12
-39,718,2021-01-11,Twin Rivers Foods, Atkins, Pope,6,107,113,NA,Manufacturing,NA,atkins,pope,twin rivers foods,2021,Jan,2021-01
-39,726,2021-01-14,Twin Rivers Foods, Atkins, Pope,10,112,122,NA,Manufacturing,NA,atkins,pope,twin rivers foods,2021,Jan,2021-01
-39,744,2021-01-18,Twin Rivers Foods, Atkins, Pope,6,116,122,NA,Manufacturing,NA,atkins,pope,twin rivers foods,2021,Jan,2021-01
-40,374,2020-08-13,Twin Rivers Foods, Ft Smith, Sebastian,6,10,16,NA,NA,NA,fort_smith,sebastian,twin rivers foods,2020,Aug,2020-08
-40,394,2020-08-17,Twin Rivers Foods, Ft Smith, Sebastian,5,11,16,NA,NA,NA,fort_smith,sebastian,twin rivers foods,2020,Aug,2020-08
-40,651,2020-12-17,Twin Rivers Foods, Ft Smith, Sebastian,7,40,47,NA,Manufacturing,NA,fort_smith,sebastian,twin rivers foods,2020,Dec,2020-12
-41,84,2020-06-08,Husqvarna, Nashville, Howard,6,1,7,NA,NA,NA,ashdown,howard,husqvarna,2020,Jun,2020-06
-41,641,2020-12-14,Husqvarna, Nashville, Howard,5,56,61,NA,Manufacturing,NA,ashdown,howard,husqvarna,2020,Dec,2020-12
-41,654,2020-12-17,Husqvarna, Nashville, Howard,6,57,63,NA,Manufacturing,NA,ashdown,howard,husqvarna,2020,Dec,2020-12
-41,665,2020-12-21,Husqvarna, Nashville, Howard,6,62,68,NA,Manufacturing,NA,ashdown,howard,husqvarna,2020,Dec,2020-12
-41,678,2020-12-24,Husqvarna, Nashville, Howard,9,62,71,NA,Manufacturing,NA,ashdown,howard,husqvarna,2020,Dec,2020-12
-42,85,2020-06-08,Consulate of Mexico, Little Rock, Pulaski,5,0,5,NA,NA,NA,little rock,pulaski,consulate of mexico,2020,Jun,2020-06
-43,103,2020-06-14,Park Hill Collection Warehouse, Little Rock, Pulaski,7,3,10,NA,NA,NA,little rock,pulaski,park hill collection warehouse,2020,Jun,2020-06
-44,104,2020-06-14,Walmart Regional Distribution Center 6094, Bentonville, Benton,6,1,7,NA,NA,NA,bentonville,benton,walmart,2020,Jun,2020-06
-45,251,2020-07-20,Wal-Mart #0119, Batesville, Independence,5,0,5,NA,NA,NA,batesville,independence,walmart,2020,Jul,2020-07
-46,123,2020-06-18,Rockline Industries, Russellville, Pope,5,10,15,NA,NA,NA,russellville,pope,rockline industries,2020,Jun,2020-06
-46,144,2020-06-21,Rockline Industries, Russellville, Pope,6,10,16,NA,NA,NA,russellville,pope,rockline industries,2020,Jun,2020-06
-47,166,2020-06-25,Rockline Industries, Springdale, Washington,5,16,21,NA,NA,NA,springdale,washington,rockline industries,2020,Jun,2020-06
-48,124,2020-06-18,Target, Fayetteville, Washington,5,1,6,NA,NA,NA,fayetteville,washington,target,2020,Jun,2020-06
-49,143,2020-06-21,OK Foods, Ft Smith, Sebastian,6,4,10,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jun,2020-06
-49,165,2020-06-25,OK Foods, Ft Smith, Sebastian,5,8,13,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jun,2020-06
-49,184,2020-07-03,OK Foods, Ft Smith, Sebastian,11,14,25,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
-49,210,2020-07-06,OK Foods, Ft Smith, Sebastian,7,21,28,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
-49,218,2020-07-13,OK Foods, Ft Smith, Sebastian,20,40,60,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
-49,253,2020-07-24,OK Foods, Ft Smith, Sebastian,30,99,129,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
-49,268,2020-07-27,OK Foods, Ft Smith, Sebastian,27,116,143,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
-49,284,2020-07-31,OK Foods, Ft Smith, Sebastian,25,133,158,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
-49,308,2020-08-03,OK Foods, Ft Smith, Sebastian,24,140,164,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
-49,330,2020-08-07,OK Foods, Ft Smith, Sebastian,28,172,200,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
-49,349,2020-08-10,OK Foods, Ft Smith, Sebastian,24,177,201,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
-49,367,2020-08-13,OK Foods, Ft Smith, Sebastian,19,187,206,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
-49,386,2020-08-17,OK Foods, Ft Smith, Sebastian,17,193,210,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
-49,406,2020-08-27,OK Foods, Ft Smith, Sebastian,11,223,234,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
-49,413,2020-08-31,OK Foods, Ft Smith, Sebastian,8,226,234,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
-49,469,2020-10-08,OK Foods, Fort Smith, Sebastian,8,262,270,NA,Manufacturing,NA,fort_smith,sebastian,ok foods,2020,Oct,2020-10
-49,478,2020-10-12,OK Foods, Fort Smith, Sebastian,7,262,270,NA,Manufacturing,NA,fort_smith,sebastian,ok foods,2020,Oct,2020-10
-49,487,2020-10-15,OK Foods, Fort Smith, Sebastian,6,263,269,NA,Manufacturing,NA,fort_smith,sebastian,ok foods,2020,Oct,2020-10
-50,167,2020-06-25,ConAgra, Russellville, Pope,5,8,13,NA,NA,NA,russellville,pope,con_agra,2020,Jun,2020-06
-50,191,2020-07-03,ConAgra, Russellville, Pope,13,12,25,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
-50,211,2020-07-06,ConAgra, Russellville, Pope,17,14,31,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
-50,229,2020-07-13,ConAgra, Russellville, Pope,21,30,51,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
-50,247,2020-07-20,ConAgra, Russellville, Pope,31,60,91,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
-50,265,2020-07-24,ConAgra, Russellville, Pope,25,83,108,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
-50,282,2020-07-27,ConAgra, Russellville, Pope,22,89,111,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
-50,302,2020-07-31,ConAgra, Russellville, Pope,26,101,127,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
-50,324,2020-08-03,ConAgra, Russellville, Pope,30,113,143,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
-50,346,2020-08-07,ConAgra, Russellville, Pope,24,132,156,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
-50,361,2020-08-10,ConAgra, Russellville, Pope,19,144,163,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
-50,377,2020-08-13,ConAgra, Russellville, Pope,11,164,175,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
-50,382,2020-08-17,ConAgra, Russellville, Pope,6,172,178,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
-50,466,2020-10-05,ConAgra, Russellville, Pope,5,190,195,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Oct,2020-10
-50,473,2020-10-08,ConAgra, Russellville, Pope,6,190,196,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Oct,2020-10
-50,480,2020-10-12,ConAgra, Russellville, Pope,5,193,198,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Oct,2020-10
-50,566,2020-11-19,ConAgra, Russellville, Pope,6,205,211,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Nov,2020-11
-50,570,2020-11-23,ConAgra, Russellville, Pope,14,207,221,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Nov,2020-11
-50,576,2020-11-26,ConAgra, Russellville, Pope,14,208,222,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Nov,2020-11
-50,583,2020-11-30,ConAgra, Russellville, Pope,10,219,229,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Nov,2020-11
-50,591,2020-12-03,ConAgra, Russellville, Pope,6,231,237,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,597,2020-12-07,ConAgra, Russellville, Pope,10,229,239,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,611,2020-12-10,ConAgra, Russellville, Pope,13,230,243,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,623,2020-12-14,ConAgra, Russellville, Pope,19,237,256,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,647,2020-12-17,ConAgra, Russellville, Pope,9,240,249,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,661,2020-12-21,ConAgra, Russellville, Pope,9,259,268,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,671,2020-12-24,ConAgra, Russellville, Pope,15,265,280,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,692,2020-12-28,ConAgra, Russellville, Pope,5,276,281,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,694,2020-12-31,ConAgra, Russellville, Pope,8,285,293,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
-50,700,2021-01-04,ConAgra, Russellville, Pope,10,295,305,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
-50,703,2021-01-07,ConAgra, Russellville, Pope,20,296,316,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
-50,715,2021-01-11,ConAgra, Russellville, Pope,12,303,315,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
-50,727,2021-01-14,ConAgra, Russellville, Pope,8,323,331,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
-50,738,2021-01-18,ConAgra, Russellville, Pope,7,326,333,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
-50,754,2021-01-21,ConAgra, Russellville, Pope,5,331,336,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
-50,760,2021-01-25,ConAgra, Russellville, Pope,6,333,339,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
-50,768,2021-01-28,ConAgra, Russellville, Pope,5,337,342,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
-50,783,2021-02-08,ConAgra, Russellville, Pope,6,345,351,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Feb,2021-02
-50,791,2021-02-11,ConAgra, Russellville, Pope,6,347,353,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Feb,2021-02
-51,739,2021-01-18,ConAgra/Pinnacle Foods, Fayetteville, Washington,5,54,59,NA,Manufacturing,NA,fayetteville,washington,con_agra,2021,Jan,2021-01
-52,192,2020-07-03,TMC Logistics, Bentonville, Benton,9,3,12,NA,NA,NA,bentonville,benton,tmc logistics,2020,Jul,2020-07
-52,212,2020-07-06,TMC Logistics, Bentonville, Benton,6,8,14,NA,NA,NA,bentonville,benton,tmc logistics,2020,Jul,2020-07
-53,230,2020-07-13,Evergreen Packaging, Pine Bluff, Jefferson,7,12,19,NA,NA,NA,pine_bluff,jefferson,evergreen packaging,2020,Jul,2020-07
-53,248,2020-07-20,Evergreen Packaging, Pine Bluff, Jefferson,8,28,36,NA,NA,NA,pine_bluff,jefferson,evergreen packaging,2020,Jul,2020-07
-53,494,2020-10-19,Evergreen Packaging, Pine Bluff, Jefferson,6,77,83,NA,Manufacturing,NA,pine_bluff,jefferson,evergreen packaging,2020,Oct,2020-10
-53,497,2020-10-22,Evergreen Packaging, Pine Bluff, Jefferson,6,79,85,NA,Manufacturing,NA,pine_bluff,jefferson,evergreen packaging,2020,Oct,2020-10
-53,501,2020-10-26,Evergreen Packaging, Pine Bluff, Jefferson,8,79,87,NA,Manufacturing,NA,pine_bluff,jefferson,evergreen packaging,2020,Oct,2020-10
-53,513,2020-10-29,Evergreen Packaging, Pine Bluff, Jefferson,5,87,92,NA,Manufacturing,NA,pine_bluff,jefferson,evergreen packaging,2020,Oct,2020-10
-54,245,2020-07-20,Peco, Pocahontas, Randolph,6,19,25,NA,NA,NA,pocahontas,randolph,peco,2020,Jul,2020-07
-54,287,2020-07-31,Peco, Pocahontas, Randolph,12,30,42,NA,NA,NA,pocahontas,randolph,peco,2020,Jul,2020-07
-54,315,2020-08-03,Peco, Pocahontas, Randolph,9,33,42,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
-54,334,2020-08-07,Peco, Pocahontas, Randolph,10,40,50,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
-54,354,2020-08-10,Peco, Pocahontas, Randolph,10,40,50,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
-54,398,2020-08-24,Peco, Pocahontas, Randolph,11,49,60,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
-54,407,2020-08-27,Peco, Pocahontas, Randolph,7,54,61,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
-54,414,2020-08-31,Peco, Pocahontas, Randolph,5,56,61,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
-54,417,2020-09-03,Peco, Pocahontas, Randolph,5,59,64,NA,NA,NA,pocahontas,randolph,peco,2020,Sep,2020-09
-54,422,2020-09-07,Peco, Pocahontas, Randolph,5,58,63,NA,NA,NA,pocahontas,randolph,peco,2020,Sep,2020-09
-54,430,2020-09-09,Peco, Pocahontas, Randolph,5,57,62,NA,NA,NA,pocahontas,randolph,peco,2020,Sep,2020-09
-54,438,2020-09-14,Peco, Pocahontas, Randolph,6,59,65,NA,NA,NA,pocahontas,randolph,peco,2020,Sep,2020-09
-54,447,2020-09-17,Peco, Pocahontas, Randolph,5,59,64,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Sep,2020-09
-54,451,2020-09-24,Peco, Pocahontas, Randolph,5,61,66,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Sep,2020-09
-54,498,2020-10-22,Peco, Pocahontas, Randolph,6,66,72,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Oct,2020-10
-54,502,2020-10-26,Peco, Pocahontas, Randolph,7,67,74,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Oct,2020-10
-54,510,2020-10-29,Peco, Pocahontas, Randolph,7,69,76,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Oct,2020-10
-54,519,2020-11-02,Peco, Pocahontas, Randolph,7,71,78,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
-54,529,2020-11-05,Peco, Pocahontas, Randolph,7,72,79,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
-54,540,2020-11-09,Peco, Pocahontas, Randolph,5,74,79,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
-54,557,2020-11-16,Peco, Pocahontas, Randolph,6,74,80,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
-54,568,2020-11-19,Peco, Pocahontas, Randolph,5,75,80,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
-54,580,2020-11-26,Peco, Pocahontas, Randolph,5,81,86,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
-54,618,2020-12-10,Peco, Pocahontas, Randolph,6,90,96,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Dec,2020-12
-54,640,2020-12-14,Peco, Pocahontas, Randolph,5,92,97,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Dec,2020-12
-54,684,2020-12-24,Peco, Pocahontas, Randolph,6,104,110,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Dec,2020-12
-55,276,2020-07-27,Peco, Batesville, Independence,8,3,11,NA,NA,NA,batesville,independence,peco,2020,Jul,2020-07
-55,291,2020-07-31,Peco, Batesville, Independence,10,10,20,NA,NA,NA,batesville,independence,peco,2020,Jul,2020-07
-55,310,2020-08-03,Peco, Batesville, Independence,14,14,28,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
-55,331,2020-08-07,Peco, Batesville, Independence,22,26,48,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
-55,350,2020-08-10,Peco, Batesville, Independence,22,32,54,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
-55,366,2020-08-13,Peco, Batesville, Independence,24,51,75,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
-55,385,2020-08-17,Peco, Batesville, Independence,19,62,81,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
-55,396,2020-08-24,Peco, Batesville, Independence,30,109,139,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
-55,404,2020-08-27,Peco, Batesville, Independence,25,118,143,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
-55,412,2020-08-31,Peco, Batesville, Independence,11,136,147,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
-55,416,2020-09-03,Peco, Batesville, Independence,5,146,151,NA,NA,NA,batesville,independence,peco,2020,Sep,2020-09
-56,249,2020-07-20,Producers Rice Mill Inc, Stuttgart, Arkansas,8,4,12,NA,NA,NA,stuttgart,arkansas,producers rice mill inc,2020,Jul,2020-07
-56,267,2020-07-24,Producers Rice Mill Inc, Stuttgart, Arkansas,5,7,12,NA,NA,NA,stuttgart,arkansas,producers rice mill inc,2020,Jul,2020-07
-57,250,2020-07-20,Adams Fertilizer Equipment, Dewitt, Arkansas,7,1,8,NA,NA,NA,dewitt,arkansas,adams fertilizer equipment,2020,Jul,2020-07
-58,304,2020-07-31,Hytrol Conveyor Company, Jonesboro, Craighead,5,8,13,NA,NA,NA,jonesboro,craighead,hytrol conveyor company,2020,Jul,2020-07
-58,326,2020-08-03,Hytrol Conveyor Company, Jonesboro, Craighead,6,9,15,NA,NA,NA,jonesboro,craighead,hytrol conveyor company,2020,Aug,2020-08
-58,452,2020-09-24,Hytrol Conveyor Company, Jonesboro, Craighead,5,38,43,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Sep,2020-09
-58,472,2020-10-08,Hytrol Conveyor Company, Jonesboro, Craighead,6,47,53,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Oct,2020-10
-58,476,2020-10-12,Hytrol Conveyor Company, Jonesboro, Craighead,8,49,57,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Oct,2020-10
-58,488,2020-10-15,Hytrol Conveyor Company, Jonesboro, Craighead,5,53,58,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Oct,2020-10
-58,521,2020-11-02,Hytrol Conveyor Company, Jonesboro, Craighead,6,64,70,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
-58,527,2020-11-05,Hytrol Conveyor Company, Jonesboro, Craighead,10,66,76,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
-58,537,2020-11-09,Hytrol Conveyor Company, Jonesboro, Craighead,9,68,77,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
-58,544,2020-11-12,Hytrol Conveyor Company, Jonesboro, Craighead,8,73,81,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
-58,552,2020-11-16,Hytrol Conveyor Company, Jonesboro, Craighead,8,75,83,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
-58,567,2020-11-19,Hytrol Conveyor Company, Jonesboro, Craighead,6,80,86,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
-58,573,2020-11-23,Hytrol Conveyor Company, Jonesboro, Craighead,5,83,88,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
-58,592,2020-12-03,Hytrol Conveyor Company, Jonesboro, Craighead,6,90,96,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
-58,603,2020-12-07,Hytrol Conveyor Company, Jonesboro, Craighead,7,92,99,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
-58,633,2020-12-14,Hytrol Conveyor Company, Jonesboro, Craighead,7,97,104,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
-58,657,2020-12-17,Hytrol Conveyor Company, Jonesboro, Craighead,5,85,90,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
-58,688,2020-12-24,Hytrol Conveyor Company, Jonesboro, Craighead,5,104,109,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
-58,731,2021-01-14,Hytrol Conveyor Company, Jonesboro, Craighead,6,115,121,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2021,Jan,2021-01
-59,740,2021-01-18,Hytrol Conveyor Company, Siloam Springs, Benton,5,32,37,NA,Manufacturing,NA,siloam springs,benton,hytrol conveyor company,2021,Jan,2021-01
-60,305,2020-07-31,Pace Industries, Harrison, Boone,5,3,8,NA,NA,NA,harrison,boone,pace industries,2020,Jul,2020-07
-60,327,2020-08-03,Pace Industries, Harrison, Boone,5,4,9,NA,NA,NA,harrison,boone,pace industries,2020,Aug,2020-08
-61,306,2020-07-31,West Tree Services, Little Rock, Pulaski,5,1,6,NA,NA,NA,little rock,pulaski,west tree services,2020,Jul,2020-07
-61,328,2020-08-03,West Tree Services, Little Rock, Pulaski,5,2,7,NA,NA,NA,little rock,pulaski,west tree services,2020,Aug,2020-08
-62,329,2020-08-03,Kagome Foods, Osceola, Mississippi,5,2,7,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
-62,348,2020-08-07,Kagome Foods, Osceola, Mississippi,8,6,14,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
-62,364,2020-08-10,Kagome Foods, Osceola, Mississippi,7,9,16,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
-62,380,2020-08-13,Kagome Foods, Osceola, Mississippi,5,14,19,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
-62,384,2020-08-17,Kagome Foods, Osceola, Mississippi,5,14,19,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
-63,337,2020-08-07,Custom Craft Poultry, Batesville, Independence,7,2,9,NA,NA,NA,batesville,independence,custom craft poultry,2020,Aug,2020-08
-64,347,2020-08-07,Radius Aerospace, Hot Springs, Garland,10,0,10,NA,NA,NA,hot_springs,garland,radius aerospace,2020,Aug,2020-08
-64,363,2020-08-10,Radius Aerospace, Hot Springs, Garland,10,0,10,NA,NA,NA,hot_springs,garland,radius aerospace,2020,Aug,2020-08
-65,362,2020-08-10,Wilson Brothers Lumber Co, Rison, Cleveland,15,0,15,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
-65,378,2020-08-13,Wilson Brothers Lumber Co, Rison, Cleveland,11,4,15,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
-65,381,2020-08-17,Wilson Brothers Lumber Co, Rison, Cleveland,10,6,16,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
-65,395,2020-08-24,Wilson Brothers Lumber Co, Rison, Cleveland,5,10,15,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
-65,403,2020-08-27,Wilson Brothers Lumber Co, Rison, Cleveland,5,10,15,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
-66,365,2020-08-10,JB Hunt Transport Services, Lowell, Benton,5,23,28,NA,NA,NA,lowell,benton,jb hunt transport services,2020,Aug,2020-08
-67,400,2020-08-27,Triumph Airborne Structures, Hot Springs, Garland,10,0,10,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Aug,2020-08
-67,408,2020-08-31,Triumph Airborne Structures, Hot Springs, Garland,13,2,15,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Aug,2020-08
-67,423,2020-09-07,Triumph Airborne Structures, Hot Springs, Garland,9,10,19,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Sep,2020-09
-67,431,2020-09-09,Triumph Airborne Structures, Hot Springs, Garland,8,12,20,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Sep,2020-09
-67,442,2020-09-14,Triumph Airborne Structures, Hot Springs, Garland,5,15,20,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Sep,2020-09
-68,401,2020-08-27,Global Food Group, Clinton, Van Buren,7,1,8,NA,NA,NA,clinton,van_buren,global food group,2020,Aug,2020-08
-68,410,2020-08-31,Global Food Group, Clinton, Van Buren,6,2,8,NA,NA,NA,clinton,van_buren,global food group,2020,Aug,2020-08
-69,402,2020-08-27,JW Aluminum Co., Russellville, Pope,6,0,6,NA,NA,NA,russellville,pope,jw aluminum co.,2020,Aug,2020-08
-69,409,2020-08-31,JW Aluminum Co., Russellville, Pope,7,0,7,NA,NA,NA,russellville,pope,jw aluminum co.,2020,Aug,2020-08
-69,418,2020-09-03,JW Aluminum Co., Russellville, Pope,5,3,8,NA,NA,NA,russellville,pope,jw aluminum co.,2020,Sep,2020-09
-70,424,2020-09-07,Big River Steel, Osceola, Mississippi,8,8,16,NA,NA,NA,osceola,mississippi,big river steel,2020,Sep,2020-09
-70,435,2020-09-09,Big River Steel, Osceola, Mississippi,5,11,16,NA,NA,NA,osceola,mississippi,big river steel,2020,Sep,2020-09
-71,425,2020-09-07,Textbook Brokers, Jonesboro, Craighead,8,1,9,NA,NA,NA,jonesboro,craighead,textbook brokers,2020,Sep,2020-09
-71,433,2020-09-09,Textbook Brokers, Jonesboro, Craighead,6,4,10,NA,NA,NA,jonesboro,craighead,textbook brokers,2020,Sep,2020-09
-71,440,2020-09-14,Textbook Brokers, Jonesboro, Craighead,6,5,11,NA,NA,NA,jonesboro,craighead,textbook brokers,2020,Sep,2020-09
-72,426,2020-09-07,MAHLE Engine Components, Russellville, Pope,7,1,8,NA,NA,NA,russellville,pope,mahle engine components,2020,Sep,2020-09
-72,432,2020-09-09,MAHLE Engine Components, Russellville, Pope,6,5,11,NA,NA,NA,russellville,pope,mahle engine components,2020,Sep,2020-09
-73,434,2020-09-09,Lennox Industries, Stuttgart, Arkansas,5,21,26,NA,NA,NA,stuttgart,arkansas,lennox industries,2020,Sep,2020-09
-73,441,2020-09-14,Lennox Industries, Stuttgart, Arkansas,5,22,27,NA,NA,NA,stuttgart,arkansas,lennox industries,2020,Sep,2020-09
-73,453,2020-09-24,Lennox Industries, Stuttgart, Arkansas,5,29,34,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Sep,2020-09
-73,455,2020-09-28,Lennox Industries, Stuttgart, Arkansas,6,31,37,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Sep,2020-09
-73,461,2020-10-01,Lennox Industries, Stuttgart, Arkansas,5,36,41,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Oct,2020-10
-73,489,2020-10-15,Lennox Industries, Stuttgart, Arkansas,5,45,50,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Oct,2020-10
-73,506,2020-10-26,Lennox Industries, Stuttgart, Arkansas,5,54,59,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Oct,2020-10
-73,761,2021-01-25,Lennox Industries, Stuttgart, Arkansas,5,80,85,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2021,Jan,2021-01
-74,456,2020-09-28,Pine Bluff Fire and Emergency, Pine Bluff, Jefferson,6,3,9,NA,Public Administration,NA,pine_bluff,jefferson,pine bluff fire and emergency,2020,Sep,2020-09
-74,458,2020-10-01,Pine Bluff Fire and Emergency, Pine Bluff, Jefferson,7,3,10,NA,Public Administration,NA,pine_bluff,jefferson,pine bluff fire and emergency,2020,Oct,2020-10
-75,457,2020-10-01,Dooley Agri, Forestry," Fishing and Hunting, Colt, St. Francis",26,0,26,NA,Agriculture,NA,forestry,st. francis,dooley agri,2020,Oct,2020-10
-75,462,2020-10-05,Dooley Agri, Forestry," Fishing and Hunting, Colt, St. Francis",26,0,26,NA,Agriculture,NA,forestry,st. francis,dooley agri,2020,Oct,2020-10
-75,471,2020-10-08,Dooley Agri, Forestry," Fishing and Hunting, Colt, St. Francis",6,20,26,NA,Agriculture,NA,forestry,st. francis,dooley agri,2020,Oct,2020-10
-76,464,2020-10-05,Vacation Tour and Travel, Entertainment," and Recreation, Conway, Faulkner",7,1,8,NA,Arts,NA,conway,faulkner,vacation tour and travel,2020,Oct,2020-10
-76,468,2020-10-08,Vacation Tour and Travel, Entertainment," and Recreation, Conway, Faulkner",10,2,12,NA,Arts,NA,conway,faulkner,vacation tour and travel,2020,Oct,2020-10
-76,475,2020-10-12,Vacation Tour and Travel, Entertainment," and Recreation, Conway, Faulkner",8,5,13,NA,Arts,NA,conway,faulkner,vacation tour and travel,2020,Oct,2020-10
-77,467,2020-10-05,DENSO Manufacturing, Osceola, Mississippi,5,38,43,NA,Manufacturing,NA,osceola,mississippi,denso manufacturing,2020,Oct,2020-10
-77,614,2020-12-10,DENSO Manufacturing, Osceola, Mississippi,7,60,67,NA,Manufacturing,NA,osceola,mississippi,denso manufacturing,2020,Dec,2020-12
-77,634,2020-12-14,DENSO Manufacturing, Osceola, Mississippi,7,60,67,NA,Manufacturing,NA,osceola,mississippi,denso manufacturing,2020,Dec,2020-12
-78,479,2020-10-12,Land O'Frost, Searcy, White,6,6,12,NA,Manufacturing,NA,searcy,white,land o'frost,2020,Oct,2020-10
-78,484,2020-10-15,Land O'Frost, Searcy, White,7,7,14,NA,Manufacturing,NA,searcy,white,land o'frost,2020,Oct,2020-10
-79,482,2020-10-15,Arkansas Glass Container, Jonesboro, Craighead,8,3,11,NA,Manufacturing,NA,jonesboro,craighead,arkansas glass container,2020,Oct,2020-10
-79,492,2020-10-19,Arkansas Glass Container, Jonesboro, Craighead,8,3,11,NA,Manufacturing,NA,jonesboro,craighead,arkansas glass container,2020,Oct,2020-10
-80,485,2020-10-15,Big Rock KangaRoof, Little Rock, Pulaski,7,0,7,NA,Construction,NA,little rock,pulaski,big rock kangaroof,2020,Oct,2020-10
-81,499,2020-10-22,Cooper Tire, Texarkana, Miller,5,24,29,NA,Manufacturing,NA,texarkana,miller,cooper tire,2020,Oct,2020-10
-82,504,2020-10-26,Greenbrier Rail, Paragould, Greene,6,15,21,NA,Manufacturing,NA,paragould,greene,greenbrier rail,2020,Oct,2020-10
-83,507,2020-10-26,Diamond Pet Foods, Dumas, Desha,5,10,15,NA,Manufacturing,NA,dumas,desha,diamond pet foods,2020,Oct,2020-10
-83,517,2020-10-29,Diamond Pet Foods, Dumas, Desha,5,12,17,NA,Manufacturing,NA,dumas,desha,diamond pet foods,2020,Oct,2020-10
-84,509,2020-10-29,Roach Manufacturing, Trumann, Poinsett,8,9,17,NA,Manufacturing,NA,trumann,poinsett,roach manufacturing,2020,Oct,2020-10
-84,526,2020-11-02,Roach Manufacturing, Trumann, Poinsett,5,12,17,NA,Manufacturing,NA,trumann,poinsett,roach manufacturing,2020,Nov,2020-11
-84,536,2020-11-05,Roach Manufacturing, Trumann, Poinsett,5,14,19,NA,Manufacturing,NA,trumann,poinsett,roach manufacturing,2020,Nov,2020-11
-85,534,2020-11-05,Nestle, Jonesboro, Craighead,5,41,46,NA,Manufacturing,NA,jonesboro,craighead,nestle,2020,Nov,2020-11
-86,541,2020-11-09,ABB, Ft Smith, Sebastian,5,32,37,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
-86,550,2020-11-12,ABB, Ft Smith, Sebastian,5,35,40,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
-86,561,2020-11-16,ABB, Fort Smith, Sebastian,5,36,41,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
-86,565,2020-11-19,ABB, Ft Smith, Sebastian,7,40,47,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
-86,571,2020-11-23,ABB, Ft Smith, Sebastian,7,42,49,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
-86,598,2020-12-07,ABB, Ft Smith, Sebastian,10,60,70,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Dec,2020-12
-86,613,2020-12-10,ABB, Ft Smith, Sebastian,9,63,72,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Dec,2020-12
-86,626,2020-12-14,ABB, Ft Smith, Sebastian,10,65,75,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Dec,2020-12
-86,712,2021-01-07,ABB, Fort Smith, Sebastian,5,84,89,NA,Manufacturing,NA,fort_smith,sebastian,abb,2021,Jan,2021-01
-87,551,2020-11-12,Lockheed Martin, Camden, Ouachita,5,15,20,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2020,Nov,2020-11
-87,606,2020-12-07,Lockheed Martin, Camden, Ouachita,6,30,36,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2020,Dec,2020-12
-87,743,2021-01-18,Lockheed Martin, Camden, Ouachita,7,53,60,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Jan,2021-01
-87,762,2021-01-25,Lockheed Martin, Camden, Ouachita,7,62,69,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Jan,2021-01
-87,770,2021-01-28,Lockheed Martin, Camden, Ouachita,6,64,70,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Jan,2021-01
-87,787,2021-02-08,Lockheed Martin, Camden, Ouachita,6,71,77,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Feb,2021-02
-87,795,2021-02-11,Lockheed Martin, Camden, Ouachita,6,72,78,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Feb,2021-02
-88,554,2020-11-16,Nabholz, Conway, Faulkner,7,4,11,NA,Construction,NA,conway,faulkner,nabholz,2020,Nov,2020-11
-89,569,2020-11-19,Alma Tractor, Alma, Crawford,5,2,7,NA,Manufacturing,NA,alma,crawford,alma tractor,2020,Nov,2020-11
-90,572,2020-11-23,Rineco Chemical Industries, Haskell, Saline,6,5,11,NA,Manufacturing,NA,haskell,saline,rineco chemical industries,2020,Nov,2020-11
-90,582,2020-11-26,Rineco Chemical Industries, Haskell, Saline,5,7,12,NA,Manufacturing,NA,haskell,saline,rineco chemical industries,2020,Nov,2020-11
-91,575,2020-11-23,Maynard Inc., Fayetteville, Washington,5,3,8,NA,Manufacturing,NA,fayetteville,washington,maynard inc.,2020,Nov,2020-11
-92,588,2020-11-30,Nucor-Yamato Steel, Blytheville, Mississippi,5,29,34,NA,Manufacturing,NA,blytheville,mississippi,nucor-yamato steel,2020,Nov,2020-11
-93,593,2020-12-03,Tenneco Inc., Paragould, Greene,6,34,40,NA,Manufacturing,NA,paragould,greene,tenneco inc.,2020,Dec,2020-12
-94,608,2020-12-07,Wilson Combat Scattergun Tech, Berryville, Carroll,5,12,17,NA,Manufacturing,NA,berryville,carroll,wilson combat scattergun tech,2020,Dec,2020-12
-95,609,2020-12-07,PotlatchDeltic, Warren, Bradley,5,11,16,NA,Manufacturing,NA,warren,bradley,potlatchdeltic,2020,Dec,2020-12
-95,620,2020-12-10,PotlatchDeltic, Warren, Bradley,5,12,17,NA,Manufacturing,NA,warren,bradley,potlatchdeltic,2020,Dec,2020-12
-96,710,2021-01-07,PotlatchDeltic, Ola, Yell,6,13,19,NA,Manufacturing,NA,ola,yell,potlatchdeltic,2021,Jan,2021-01
-97,615,2020-12-10,Quality Voices, Jonesboro, Craighead,7,1,8,NA,Other Services,NA,jonesboro,craighead,quality voices,2020,Dec,2020-12
-98,619,2020-12-10,American Greetings Co., Osceola, Mississippi,5,37,42,NA,Manufacturing,NA,osceola,mississippi,american greetings co.,2020,Dec,2020-12
-98,637,2020-12-14,American Greetings Co., Osceola, Mississippi,6,37,43,NA,Manufacturing,NA,osceola,mississippi,american greetings co.,2020,Dec,2020-12
-98,658,2020-12-17,American Greetings Co., Osceola, Mississippi,5,40,45,NA,Manufacturing,NA,osceola,mississippi,american greetings co.,2020,Dec,2020-12
-98,713,2021-01-07,American Greetings Co., Osceola, Mississippi,5,58,63,NA,Manufacturing,NA,osceola,mississippi,american greetings co.,2021,Jan,2021-01
-99,628,2020-12-14,Spirit Fitness, Jonesboro, Craighead,10,3,13,NA,Manufacturing,NA,jonesboro,craighead,spirit fitness,2020,Dec,2020-12
-99,652,2020-12-17,Spirit Fitness, Jonesboro, Craighead,7,11,18,NA,Manufacturing,NA,jonesboro,craighead,spirit fitness,2020,Dec,2020-12
-100,631,2020-12-14,WeatherBarr Windows & Doors, Ft Smith, Sebastian,8,9,17,NA,Manufacturing,NA,fort_smith,sebastian,weatherbarr windows & doors,2020,Dec,2020-12
-101,642,2020-12-14,Utility Trailer Manufacturing Co., Paragould, Greene,5,34,39,NA,Manufacturing,NA,paragould,greene,utility trailer manufacturing co.,2020,Dec,2020-12
-102,643,2020-12-14,Dassault Falcon Jet LLC, Little Rock, Pulaski,5,33,38,NA,Manufacturing,NA,little rock,pulaski,dassault falcon jet llc,2020,Dec,2020-12
-102,769,2021-01-28,Dassault Falcon Jet LLC, Little Rock, Pulaski,6,54,60,NA,Manufacturing,NA,little rock,pulaski,dassault falcon jet llc,2021,Jan,2021-01
-102,773,2021-02-01,Dassault Falcon Jet LLC, Little Rock, Pulaski,7,56,63,NA,Manufacturing,NA,little rock,pulaski,dassault falcon jet llc,2021,Feb,2021-02
-103,645,2020-12-14,Duke Custom Cabinets Inc., Roland, Pulaski,5,1,6,NA,Manufacturing,NA,roland,pulaski,duke custom cabinets inc.,2020,Dec,2020-12
-104,655,2020-12-17,Unilever, Jonesboro, Craighead,6,23,29,NA,Manufacturing,NA,jonesboro,craighead,unilever,2020,Dec,2020-12
-104,711,2021-01-07,Unilever, Jonesboro, Craighead,6,37,43,NA,Manufacturing,NA,jonesboro,craighead,unilever,2021,Jan,2021-01
-104,724,2021-01-11,Unilever, Jonesboro, Craighead,5,38,43,NA,Manufacturing,NA,jonesboro,craighead,unilever,2021,Jan,2021-01
-104,735,2021-01-14,Unilever, Jonesboro, Craighead,5,38,43,NA,Manufacturing,NA,jonesboro,craighead,unilever,2021,Jan,2021-01
-105,659,2020-12-17,Nice Pak, Jonesboro, Craighead,5,35,40,NA,Manufacturing,NA,jonesboro,craighead,nice pak,2020,Dec,2020-12
-105,681,2020-12-24,Nice Pak, Jonesboro, Craighead,7,42,49,NA,Manufacturing,NA,jonesboro,craighead,nice pak,2020,Dec,2020-12
-106,660,2020-12-17,APAC-Central, Fayetteville, Washington,5,13,18,NA,Manufacturing,NA,fayetteville,washington,apac-central,2020,Dec,2020-12
-106,668,2020-12-21,APAC-Central, Fayetteville, Washington,5,16,21,NA,Manufacturing,NA,fayetteville,washington,apac-central,2020,Dec,2020-12
-107,664,2020-12-21,Domtar Paper Co., Ash Down, Little River,6,26,32,NA,Manufacturing,NA,ashdown,little_river,domtar paper co.,2020,Dec,2020-12
-107,672,2020-12-24,Domtar Paper Co., Ashdown, Little River,11,30,41,NA,Manufacturing,NA,ashdown,little_river,domtar paper co.,2020,Dec,2020-12
-108,666,2020-12-21,Roehm America, Osceola, Mississippi,6,1,7,NA,Manufacturing,NA,osceola,mississippi,roehm_america,2020,Dec,2020-12
-108,673,2020-12-24,Roehm America/Evonik, Osceola, Mississippi,11,2,13,NA,Manufacturing,NA,osceola,mississippi,roehm_america,2020,Dec,2020-12
-109,669,2020-12-21,McKee Foods, Gentry, Benton,5,24,29,NA,Manufacturing,NA,gentry,benton,mckee foods,2020,Dec,2020-12
-109,683,2020-12-24,McKee Foods, Gentry, Benton,7,29,36,NA,Manufacturing,NA,gentry,benton,mckee foods,2020,Dec,2020-12
-109,702,2021-01-04,McKee Foods, Gentry, Benton,6,41,47,NA,Manufacturing,NA,gentry,benton,mckee foods,2021,Jan,2021-01
-109,708,2021-01-07,McKee Foods, Gentry, Benton,7,46,53,NA,Manufacturing,NA,gentry,benton,mckee foods,2021,Jan,2021-01
-110,682,2020-12-24,Arkansas Nuclear One, Russellville, Pope,7,31,38,NA,Utilities,NA,russellville,pope,arkansas nuclear one,2020,Dec,2020-12
-111,685,2020-12-24,Shippers Products, Fordyce, Dallas,6,7,13,NA,Manufacturing,NA,fordyce,dallas,shippers products,2020,Dec,2020-12
-112,686,2020-12-24,La-Z-Boy Furniture, Siloam Springs, Benton,6,1,7,NA,Retail Trade,NA,siloam springs,benton,la-z-boy furniture,2020,Dec,2020-12
-113,691,2020-12-28,Shelby Group International Inc., Glenwood, Pike,6,5,11,NA,Manufacturing,NA,glenwood,pike,shelby group international inc.,2020,Dec,2020-12
-114,693,2020-12-28,Stephens Inc., Little Rock, Pulaski,5,7,12,NA,Finance and Insurance,NA,little rock,pulaski,stephens inc.,2020,Dec,2020-12
-115,705,2021-01-07,Dillar's Corporate Headquarters, Little Rock, Pulaski,8,13,21,NA,Retail Trade,NA,little rock,pulaski,dillards,2021,Jan,2021-01
-116,779,2021-02-04,Dillards Fulfillment Center, Stuttgart, Arkansas,5,59,64,NA,Manufacturing,NA,stuttgart,arkansas,dillards,2021,Feb,2021-02
-117,707,2021-01-07,Centene Corporation, Little Rock, Pulaski,7,14,21,NA,Finance and Insurance,NA,little rock,pulaski,centene corporation,2021,Jan,2021-01
-117,721,2021-01-11,Centene Corporation, Little Rock, Pulaski,5,15,20,NA,Finance and Insurance,NA,little rock,pulaski,centene corporation,2021,Jan,2021-01
-118,717,2021-01-11,Gates Corportation, Siloam Springs, Benton,7,26,33,NA,Manufacturing,NA,siloam springs,benton,gates_corporation,2021,Jan,2021-01
-118,729,2021-01-14,Gates Rubber Corportation, Siloam Springs, Benton,7,31,38,NA,Manufacturing,NA,siloam springs,benton,gates_corporation,2021,Jan,2021-01
-119,741,2021-01-18,Gates Rubber Corportation, Jonesboro, Craighead,5,116,121,NA,Manufacturing,NA,jonesboro,craighead,gates_corporation,2021,Jan,2021-01
-120,722,2021-01-11,Clean Harbors Evnvironmental Services, El Dorado, Union,5,21,26,NA,"Administrative and Support and Waste Management and
+32,41,6/2/20,Wayne Farms,Danville,Yell,9,1,10,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
+32,57,6/5/20,Wayne Farms,Danville,Yell,11,1,12,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
+32,71,6/8/20,Wayne Farms,Danville,Yell,17,3,20,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
+32,91,6/14/20,Wayne Farms,Danville,Yell,24,13,37,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
+32,111,6/18/20,Wayne Farms,Danville,Yell,25,29,54,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
+32,130,6/21/20,Wayne Farms,Danville,Yell,36,35,71,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
+32,147,6/25/20,Wayne Farms,Danville,Yell,59,50,109,NA,NA,NA,danville,yell,wayne farms,2020,Jun,2020-06
+32,170,7/3/20,Wayne Farms,Danville,Yell,64,96,160,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
+32,195,7/6/20,Wayne Farms,Danville,Yell,45,115,160,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
+32,215,7/13/20,Wayne Farms,Danville,Yell,34,151,185,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
+32,234,7/20/20,Wayne Farms,Danville,Yell,19,172,191,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
+32,258,7/24/20,Wayne Farms,Danville,Yell,9,185,194,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
+32,278,7/27/20,Wayne Farms,Danville,Yell,6,191,197,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
+32,298,7/31/20,Wayne Farms,Danville,Yell,5,193,198,NA,NA,NA,danville,yell,wayne farms,2020,Jul,2020-07
+32,320,8/3/20,Wayne Farms,Danville,Yell,6,193,199,NA,NA,NA,danville,yell,wayne farms,2020,Aug,2020-08
+32,639,12/14/20,Wayne Farms,Danville,Yell,5,211,216,NA,Manufacturing,NA,danville,yell,wayne farms,2020,Dec,2020-12
+32,675,12/24/20,Wayne Farms,Danville,Yell,9,221,230,NA,Manufacturing,NA,danville,yell,wayne farms,2020,Dec,2020-12
+33,55,6/5/20,Simmons Foods,Van Buren,Crawford,12,0,12,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
+33,75,6/8/20,Simmons Foods,Van Buren,Crawford,11,2,13,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
+33,98,6/14/20,Simmons Foods,Van Buren,Crawford,10,13,23,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
+33,122,6/18/20,Simmons Foods,Van Buren,Crawford,7,17,24,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
+33,140,6/21/20,Simmons Foods,Van Buren,Crawford,8,19,27,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
+33,244,7/20/20,Simmons Foods,Van Buren,Crawford,6,35,41,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jul,2020-07
+33,300,7/31/20,Simmons Foods,Van Buren,Crawford,5,45,50,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jul,2020-07
+33,323,8/3/20,Simmons Foods,Van Buren,Crawford,5,47,52,NA,NA,NA,van buren,crawford,simmons_foods,2020,Aug,2020-08
+33,341,8/7/20,Simmons Foods,Van Buren,Crawford,6,48,54,NA,NA,NA,van buren,crawford,simmons_foods,2020,Aug,2020-08
+33,358,8/10/20,Simmons Foods,Van Buren,Crawford,6,48,54,NA,NA,NA,van buren,crawford,simmons_foods,2020,Aug,2020-08
+33,42,6/2/20,Simmons Poultry,Van Buren,Crawford,8,0,8,NA,NA,NA,van buren,crawford,simmons_foods,2020,Jun,2020-06
+34,61,6/5/20,Simmons Foods,Gentry,Benton,5,0,5,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
+34,80,6/8/20,Simmons Foods,Gentry,Benton,6,0,6,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
+34,119,6/18/20,Simmons Foods,Gentry,Benton,8,8,16,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
+34,137,6/21/20,Simmons Foods,Gentry,Benton,11,8,19,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
+34,161,6/25/20,Simmons Foods,Gentry,Benton,11,12,23,NA,NA,NA,gentry,benton,simmons_foods,2020,Jun,2020-06
+34,188,7/3/20,Simmons Foods,Gentry,Benton,5,24,29,NA,NA,NA,gentry,benton,simmons_foods,2020,Jul,2020-07
+34,260,7/24/20,Simmons Foods,Gentry,Benton,8,46,54,NA,NA,NA,gentry,benton,simmons_foods,2020,Jul,2020-07
+34,274,7/27/20,Simmons Foods,Gentry,Benton,8,51,59,NA,NA,NA,gentry,benton,simmons_foods,2020,Jul,2020-07
+34,290,7/31/20,Simmons Foods,Gentry,Benton,10,61,71,NA,NA,NA,gentry,benton,simmons_foods,2020,Jul,2020-07
+34,314,8/3/20,Simmons Foods,Gentry,Benton,9,61,70,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
+34,340,8/7/20,Simmons Foods,Gentry,Benton,6,70,76,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
+34,360,8/10/20,Simmons Foods,Gentry,Benton,5,73,78,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
+34,373,8/13/20,Simmons Foods,Gentry,Benton,6,76,82,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
+34,390,8/17/20,Simmons Foods,Gentry,Benton,6,78,84,NA,NA,NA,gentry,benton,simmons_foods,2020,Aug,2020-08
+35,62,6/5/20,Simmons Foods,Siloam Springs,Benton,5,0,5,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Jun,2020-06
+35,82,6/8/20,Simmons Foods,Siloam Springs,Benton,5,2,7,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Jun,2020-06
+35,281,7/27/20,Simmons Foods,Siloam Springs,Benton,5,20,25,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Jul,2020-07
+35,335,8/7/20,Simmons Foods,Siloam Springs,Benton,10,39,49,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Aug,2020-08
+35,353,8/10/20,Simmons Foods,Siloam Springs,Benton,12,42,54,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Aug,2020-08
+35,369,8/13/20,Simmons Foods,Siloam Springs,Benton,9,59,68,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Aug,2020-08
+35,389,8/17/20,Simmons Foods,Siloam Springs,Benton,7,67,74,NA,NA,NA,siloam springs,benton,simmons_foods,2020,Aug,2020-08
+35,546,11/12/20,Simmons Foods,Siloam Springs,Benton,7,92,99,NA,Manufacturing,NA,siloam springs,benton,simmons_foods,2020,Nov,2020-11
+35,556,11/16/20,Simmons Foods,Siloam Springs,Benton,6,96,102,NA,Manufacturing,NA,siloam springs,benton,simmons_foods,2020,Nov,2020-11
+35,564,11/19/20,Simmons Foods,Siloam Springs,Benton,7,97,104,NA,Manufacturing,NA,siloam springs,benton,simmons_foods,2020,Nov,2020-11
+35,635,12/14/20,Simmons Foods,Siloam Springs,Benton,6,110,116,NA,Manufacturing,NA,siloam springs,benton,simmons_foods,2020,Dec,2020-12
+36,301,7/31/20,Simmons Foods,Ft Smith,Sebastian,5,24,29,NA,NA,NA,fort_smith,sebastian,simmons_foods,2020,Jul,2020-07
+36,345,8/7/20,Simmons Foods,Ft Smith,Sebastian,5,26,31,NA,NA,NA,fort_smith,sebastian,simmons_foods,2020,Aug,2020-08
+36,522,11/2/20,Simmons Foods,Ft Smith,Sebastian,6,40,46,NA,Manufacturing,NA,fort_smith,sebastian,simmons_foods,2020,Nov,2020-11
+36,535,11/5/20,Simmons Foods,Ft Smith,Sebastian,5,41,46,NA,Manufacturing,NA,fort_smith,sebastian,simmons_foods,2020,Nov,2020-11
+37,59,6/5/20,Southeast Poultry,Rogers,Benton,5,4,9,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
+37,74,6/8/20,Southeast Poultry,Rogers,Benton,11,4,15,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
+37,93,6/14/20,Southeast Poultry,Rogers,Benton,22,11,33,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
+37,113,6/18/20,Southeast Poultry,Rogers,Benton,15,26,41,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
+37,134,6/21/20,Southeast Poultry,Rogers,Benton,16,32,48,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
+37,159,6/25/20,Southeast Poultry,Rogers,Benton,13,44,57,NA,NA,NA,rogers,benton,southeast poultry,2020,Jun,2020-06
+37,182,7/3/20,Southeast Poultry,Rogers,Benton,11,59,70,NA,NA,NA,rogers,benton,southeast poultry,2020,Jul,2020-07
+37,209,7/6/20,Southeast Poultry,Rogers,Benton,7,66,73,NA,NA,NA,rogers,benton,southeast poultry,2020,Jul,2020-07
+38,63,6/5/20,Hino Motors,Marion,AR,5,3,8,NA,NA,NA,marion,crittenden,hino motors,2020,Jun,2020-06
+38,83,6/8/20,Hino Motors,Marion,Crittenden,11,4,15,NA,NA,NA,marion,crittenden,hino motors,2020,Jun,2020-06
+38,105,6/14/20,Hino Motors,Marion,Crittenden,5,11,16,NA,NA,NA,marion,crittenden,hino motors,2020,Jun,2020-06
+39,79,6/8/20,Twin Rivers Foods,Atkins,Pope,6,5,11,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jun,2020-06
+39,118,6/18/20,Twin Rivers Foods,Atkins,Pope,8,11,19,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jun,2020-06
+39,136,6/21/20,Twin Rivers Foods,Atkins,Pope,12,13,25,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jun,2020-06
+39,158,6/25/20,Twin Rivers Foods,Atkins,Pope,14,19,33,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jun,2020-06
+39,187,7/3/20,Twin Rivers Foods,Atkins,Pope,7,35,42,NA,NA,NA,atkins,pope,twin rivers foods,2020,Jul,2020-07
+39,667,12/21/20,Twin Rivers Foods,Atkins,Pope,6,154,160,NA,Manufacturing,NA,atkins,pope,twin rivers foods,2020,Dec,2020-12
+39,718,1/11/21,Twin Rivers Foods,Atkins,Pope,6,107,113,NA,Manufacturing,NA,atkins,pope,twin rivers foods,2021,Jan,2021-01
+39,726,1/14/21,Twin Rivers Foods,Atkins,Pope,10,112,122,NA,Manufacturing,NA,atkins,pope,twin rivers foods,2021,Jan,2021-01
+39,744,1/18/21,Twin Rivers Foods,Atkins,Pope,6,116,122,NA,Manufacturing,NA,atkins,pope,twin rivers foods,2021,Jan,2021-01
+40,374,8/13/20,Twin Rivers Foods,Ft Smith,Sebastian,6,10,16,NA,NA,NA,fort_smith,sebastian,twin rivers foods,2020,Aug,2020-08
+40,394,8/17/20,Twin Rivers Foods,Ft Smith,Sebastian,5,11,16,NA,NA,NA,fort_smith,sebastian,twin rivers foods,2020,Aug,2020-08
+40,651,12/17/20,Twin Rivers Foods,Ft Smith,Sebastian,7,40,47,NA,Manufacturing,NA,fort_smith,sebastian,twin rivers foods,2020,Dec,2020-12
+41,84,6/8/20,Husqvarna,Nashville,Howard,6,1,7,NA,NA,NA,ashdown,howard,husqvarna,2020,Jun,2020-06
+41,641,12/14/20,Husqvarna,Nashville,Howard,5,56,61,NA,Manufacturing,NA,ashdown,howard,husqvarna,2020,Dec,2020-12
+41,654,12/17/20,Husqvarna,Nashville,Howard,6,57,63,NA,Manufacturing,NA,ashdown,howard,husqvarna,2020,Dec,2020-12
+41,665,12/21/20,Husqvarna,Nashville,Howard,6,62,68,NA,Manufacturing,NA,ashdown,howard,husqvarna,2020,Dec,2020-12
+41,678,12/24/20,Husqvarna,Nashville,Howard,9,62,71,NA,Manufacturing,NA,ashdown,howard,husqvarna,2020,Dec,2020-12
+42,85,6/8/20,Consulate of Mexico,Little Rock,Pulaski,5,0,5,NA,NA,NA,little rock,pulaski,consulate of mexico,2020,Jun,2020-06
+43,103,6/14/20,Park Hill Collection Warehouse,Little Rock,Pulaski,7,3,10,NA,NA,NA,little rock,pulaski,park hill collection warehouse,2020,Jun,2020-06
+44,104,6/14/20,Walmart Regional Distribution Center 6094,Bentonville,Benton,6,1,7,NA,NA,NA,bentonville,benton,walmart,2020,Jun,2020-06
+45,251,7/20/20,Wal-Mart #0119,Batesville,Independence,5,0,5,NA,NA,NA,batesville,independence,walmart,2020,Jul,2020-07
+46,123,6/18/20,Rockline Industries,Russellville,Pope,5,10,15,NA,NA,NA,russellville,pope,rockline industries,2020,Jun,2020-06
+46,144,6/21/20,Rockline Industries,Russellville,Pope,6,10,16,NA,NA,NA,russellville,pope,rockline industries,2020,Jun,2020-06
+47,166,6/25/20,Rockline Industries,Springdale,Washington,5,16,21,NA,NA,NA,springdale,washington,rockline industries,2020,Jun,2020-06
+48,124,6/18/20,Target,Fayetteville,Washington,5,1,6,NA,NA,NA,fayetteville,washington,target,2020,Jun,2020-06
+49,143,6/21/20,OK Foods,Ft Smith,Sebastian,6,4,10,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jun,2020-06
+49,165,6/25/20,OK Foods,Ft Smith,Sebastian,5,8,13,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jun,2020-06
+49,184,7/3/20,OK Foods,Ft Smith,Sebastian,11,14,25,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
+49,210,7/6/20,OK Foods,Ft Smith,Sebastian,7,21,28,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
+49,218,7/13/20,OK Foods,Ft Smith,Sebastian,20,40,60,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
+49,253,7/24/20,OK Foods,Ft Smith,Sebastian,30,99,129,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
+49,268,7/27/20,OK Foods,Ft Smith,Sebastian,27,116,143,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
+49,284,7/31/20,OK Foods,Ft Smith,Sebastian,25,133,158,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Jul,2020-07
+49,308,8/3/20,OK Foods,Ft Smith,Sebastian,24,140,164,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
+49,330,8/7/20,OK Foods,Ft Smith,Sebastian,28,172,200,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
+49,349,8/10/20,OK Foods,Ft Smith,Sebastian,24,177,201,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
+49,367,8/13/20,OK Foods,Ft Smith,Sebastian,19,187,206,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
+49,386,8/17/20,OK Foods,Ft Smith,Sebastian,17,193,210,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
+49,406,8/27/20,OK Foods,Ft Smith,Sebastian,11,223,234,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
+49,413,8/31/20,OK Foods,Ft Smith,Sebastian,8,226,234,NA,NA,NA,fort_smith,sebastian,ok foods,2020,Aug,2020-08
+49,469,10/8/20,OK Foods,Fort Smith,Sebastian,8,262,270,NA,Manufacturing,NA,fort_smith,sebastian,ok foods,2020,Oct,2020-10
+49,478,10/12/20,OK Foods,Fort Smith,Sebastian,7,262,270,NA,Manufacturing,NA,fort_smith,sebastian,ok foods,2020,Oct,2020-10
+49,487,10/15/20,OK Foods,Fort Smith,Sebastian,6,263,269,NA,Manufacturing,NA,fort_smith,sebastian,ok foods,2020,Oct,2020-10
+50,167,6/25/20,ConAgra,Russellville,Pope,5,8,13,NA,NA,NA,russellville,pope,con_agra,2020,Jun,2020-06
+50,191,7/3/20,ConAgra,Russellville,Pope,13,12,25,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
+50,211,7/6/20,ConAgra,Russellville,Pope,17,14,31,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
+50,229,7/13/20,ConAgra,Russellville,Pope,21,30,51,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
+50,247,7/20/20,ConAgra,Russellville,Pope,31,60,91,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
+50,265,7/24/20,ConAgra,Russellville,Pope,25,83,108,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
+50,282,7/27/20,ConAgra,Russellville,Pope,22,89,111,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
+50,302,7/31/20,ConAgra,Russellville,Pope,26,101,127,NA,NA,NA,russellville,pope,con_agra,2020,Jul,2020-07
+50,324,8/3/20,ConAgra,Russellville,Pope,30,113,143,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
+50,346,8/7/20,ConAgra,Russellville,Pope,24,132,156,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
+50,361,8/10/20,ConAgra,Russellville,Pope,19,144,163,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
+50,377,8/13/20,ConAgra,Russellville,Pope,11,164,175,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
+50,382,8/17/20,ConAgra,Russellville,Pope,6,172,178,NA,NA,NA,russellville,pope,con_agra,2020,Aug,2020-08
+50,466,10/5/20,ConAgra,Russellville,Pope,5,190,195,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Oct,2020-10
+50,473,10/8/20,ConAgra,Russellville,Pope,6,190,196,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Oct,2020-10
+50,480,10/12/20,ConAgra,Russellville,Pope,5,193,198,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Oct,2020-10
+50,566,11/19/20,ConAgra,Russellville,Pope,6,205,211,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Nov,2020-11
+50,570,11/23/20,ConAgra,Russellville,Pope,14,207,221,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Nov,2020-11
+50,576,11/26/20,ConAgra,Russellville,Pope,14,208,222,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Nov,2020-11
+50,583,11/30/20,ConAgra,Russellville,Pope,10,219,229,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Nov,2020-11
+50,591,12/3/20,ConAgra,Russellville,Pope,6,231,237,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,597,12/7/20,ConAgra,Russellville,Pope,10,229,239,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,611,12/10/20,ConAgra,Russellville,Pope,13,230,243,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,623,12/14/20,ConAgra,Russellville,Pope,19,237,256,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,647,12/17/20,ConAgra,Russellville,Pope,9,240,249,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,661,12/21/20,ConAgra,Russellville,Pope,9,259,268,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,671,12/24/20,ConAgra,Russellville,Pope,15,265,280,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,692,12/28/20,ConAgra,Russellville,Pope,5,276,281,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,694,12/31/20,ConAgra,Russellville,Pope,8,285,293,NA,Manufacturing,NA,russellville,pope,con_agra,2020,Dec,2020-12
+50,700,1/4/21,ConAgra,Russellville,Pope,10,295,305,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
+50,703,1/7/21,ConAgra,Russellville,Pope,20,296,316,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
+50,715,1/11/21,ConAgra,Russellville,Pope,12,303,315,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
+50,727,1/14/21,ConAgra,Russellville,Pope,8,323,331,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
+50,738,1/18/21,ConAgra,Russellville,Pope,7,326,333,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
+50,754,1/21/21,ConAgra,Russellville,Pope,5,331,336,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
+50,760,1/25/21,ConAgra,Russellville,Pope,6,333,339,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
+50,768,1/28/21,ConAgra,Russellville,Pope,5,337,342,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Jan,2021-01
+50,783,2/8/21,ConAgra,Russellville,Pope,6,345,351,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Feb,2021-02
+50,791,2/11/21,ConAgra,Russellville,Pope,6,347,353,NA,Manufacturing,NA,russellville,pope,con_agra,2021,Feb,2021-02
+51,739,1/18/21,ConAgra/Pinnacle Foods,Fayetteville,Washington,5,54,59,NA,Manufacturing,NA,fayetteville,washington,con_agra,2021,Jan,2021-01
+52,192,7/3/20,TMC Logistics,Bentonville,Benton,9,3,12,NA,NA,NA,bentonville,benton,tmc logistics,2020,Jul,2020-07
+52,212,7/6/20,TMC Logistics,Bentonville,Benton,6,8,14,NA,NA,NA,bentonville,benton,tmc logistics,2020,Jul,2020-07
+53,230,7/13/20,Evergreen Packaging,Pine Bluff,Jefferson,7,12,19,NA,NA,NA,pine_bluff,jefferson,evergreen packaging,2020,Jul,2020-07
+53,248,7/20/20,Evergreen Packaging,Pine Bluff,Jefferson,8,28,36,NA,NA,NA,pine_bluff,jefferson,evergreen packaging,2020,Jul,2020-07
+53,494,10/19/20,Evergreen Packaging,Pine Bluff,Jefferson,6,77,83,NA,Manufacturing,NA,pine_bluff,jefferson,evergreen packaging,2020,Oct,2020-10
+53,497,10/22/20,Evergreen Packaging,Pine Bluff,Jefferson,6,79,85,NA,Manufacturing,NA,pine_bluff,jefferson,evergreen packaging,2020,Oct,2020-10
+53,501,10/26/20,Evergreen Packaging,Pine Bluff,Jefferson,8,79,87,NA,Manufacturing,NA,pine_bluff,jefferson,evergreen packaging,2020,Oct,2020-10
+53,513,10/29/20,Evergreen Packaging,Pine Bluff,Jefferson,5,87,92,NA,Manufacturing,NA,pine_bluff,jefferson,evergreen packaging,2020,Oct,2020-10
+54,245,7/20/20,Peco,Pocahontas,Randolph,6,19,25,NA,NA,NA,pocahontas,randolph,peco,2020,Jul,2020-07
+54,287,7/31/20,Peco,Pocahontas,Randolph,12,30,42,NA,NA,NA,pocahontas,randolph,peco,2020,Jul,2020-07
+54,315,8/3/20,Peco,Pocahontas,Randolph,9,33,42,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
+54,334,8/7/20,Peco,Pocahontas,Randolph,10,40,50,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
+54,354,8/10/20,Peco,Pocahontas,Randolph,10,40,50,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
+54,398,8/24/20,Peco,Pocahontas,Randolph,11,49,60,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
+54,407,8/27/20,Peco,Pocahontas,Randolph,7,54,61,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
+54,414,8/31/20,Peco,Pocahontas,Randolph,5,56,61,NA,NA,NA,pocahontas,randolph,peco,2020,Aug,2020-08
+54,417,9/3/20,Peco,Pocahontas,Randolph,5,59,64,NA,NA,NA,pocahontas,randolph,peco,2020,Sep,2020-09
+54,422,9/7/20,Peco,Pocahontas,Randolph,5,58,63,NA,NA,NA,pocahontas,randolph,peco,2020,Sep,2020-09
+54,430,9/9/20,Peco,Pocahontas,Randolph,5,57,62,NA,NA,NA,pocahontas,randolph,peco,2020,Sep,2020-09
+54,438,9/14/20,Peco,Pocahontas,Randolph,6,59,65,NA,NA,NA,pocahontas,randolph,peco,2020,Sep,2020-09
+54,447,9/17/20,Peco,Pocahontas,Randolph,5,59,64,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Sep,2020-09
+54,451,9/24/20,Peco,Pocahontas,Randolph,5,61,66,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Sep,2020-09
+54,498,10/22/20,Peco,Pocahontas,Randolph,6,66,72,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Oct,2020-10
+54,502,10/26/20,Peco,Pocahontas,Randolph,7,67,74,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Oct,2020-10
+54,510,10/29/20,Peco,Pocahontas,Randolph,7,69,76,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Oct,2020-10
+54,519,11/2/20,Peco,Pocahontas,Randolph,7,71,78,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
+54,529,11/5/20,Peco,Pocahontas,Randolph,7,72,79,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
+54,540,11/9/20,Peco,Pocahontas,Randolph,5,74,79,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
+54,557,11/16/20,Peco,Pocahontas,Randolph,6,74,80,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
+54,568,11/19/20,Peco,Pocahontas,Randolph,5,75,80,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
+54,580,11/26/20,Peco,Pocahontas,Randolph,5,81,86,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Nov,2020-11
+54,618,12/10/20,Peco,Pocahontas,Randolph,6,90,96,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Dec,2020-12
+54,640,12/14/20,Peco,Pocahontas,Randolph,5,92,97,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Dec,2020-12
+54,684,12/24/20,Peco,Pocahontas,Randolph,6,104,110,NA,Manufacturing,NA,pocahontas,randolph,peco,2020,Dec,2020-12
+55,276,7/27/20,Peco,Batesville,Independence,8,3,11,NA,NA,NA,batesville,independence,peco,2020,Jul,2020-07
+55,291,7/31/20,Peco,Batesville,Independence,10,10,20,NA,NA,NA,batesville,independence,peco,2020,Jul,2020-07
+55,310,8/3/20,Peco,Batesville,Independence,14,14,28,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
+55,331,8/7/20,Peco,Batesville,Independence,22,26,48,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
+55,350,8/10/20,Peco,Batesville,Independence,22,32,54,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
+55,366,8/13/20,Peco,Batesville,Independence,24,51,75,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
+55,385,8/17/20,Peco,Batesville,Independence,19,62,81,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
+55,396,8/24/20,Peco,Batesville,Independence,30,109,139,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
+55,404,8/27/20,Peco,Batesville,Independence,25,118,143,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
+55,412,8/31/20,Peco,Batesville,Independence,11,136,147,NA,NA,NA,batesville,independence,peco,2020,Aug,2020-08
+55,416,9/3/20,Peco,Batesville,Independence,5,146,151,NA,NA,NA,batesville,independence,peco,2020,Sep,2020-09
+56,249,7/20/20,Producers Rice Mill Inc,Stuttgart,Arkansas,8,4,12,NA,NA,NA,stuttgart,arkansas,producers rice mill inc,2020,Jul,2020-07
+56,267,7/24/20,Producers Rice Mill Inc,Stuttgart,Arkansas,5,7,12,NA,NA,NA,stuttgart,arkansas,producers rice mill inc,2020,Jul,2020-07
+57,250,7/20/20,Adams Fertilizer Equipment,Dewitt,Arkansas,7,1,8,NA,NA,NA,dewitt,arkansas,adams fertilizer equipment,2020,Jul,2020-07
+58,304,7/31/20,Hytrol Conveyor Company,Jonesboro,Craighead,5,8,13,NA,NA,NA,jonesboro,craighead,hytrol conveyor company,2020,Jul,2020-07
+58,326,8/3/20,Hytrol Conveyor Company,Jonesboro,Craighead,6,9,15,NA,NA,NA,jonesboro,craighead,hytrol conveyor company,2020,Aug,2020-08
+58,452,9/24/20,Hytrol Conveyor Company,Jonesboro,Craighead,5,38,43,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Sep,2020-09
+58,472,10/8/20,Hytrol Conveyor Company,Jonesboro,Craighead,6,47,53,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Oct,2020-10
+58,476,10/12/20,Hytrol Conveyor Company,Jonesboro,Craighead,8,49,57,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Oct,2020-10
+58,488,10/15/20,Hytrol Conveyor Company,Jonesboro,Craighead,5,53,58,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Oct,2020-10
+58,521,11/2/20,Hytrol Conveyor Company,Jonesboro,Craighead,6,64,70,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
+58,527,11/5/20,Hytrol Conveyor Company,Jonesboro,Craighead,10,66,76,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
+58,537,11/9/20,Hytrol Conveyor Company,Jonesboro,Craighead,9,68,77,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
+58,544,11/12/20,Hytrol Conveyor Company,Jonesboro,Craighead,8,73,81,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
+58,552,11/16/20,Hytrol Conveyor Company,Jonesboro,Craighead,8,75,83,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
+58,567,11/19/20,Hytrol Conveyor Company,Jonesboro,Craighead,6,80,86,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
+58,573,11/23/20,Hytrol Conveyor Company,Jonesboro,Craighead,5,83,88,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Nov,2020-11
+58,592,12/3/20,Hytrol Conveyor Company,Jonesboro,Craighead,6,90,96,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
+58,603,12/7/20,Hytrol Conveyor Company,Jonesboro,Craighead,7,92,99,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
+58,633,12/14/20,Hytrol Conveyor Company,Jonesboro,Craighead,7,97,104,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
+58,657,12/17/20,Hytrol Conveyor Company,Jonesboro,Craighead,5,85,90,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
+58,688,12/24/20,Hytrol Conveyor Company,Jonesboro,Craighead,5,104,109,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2020,Dec,2020-12
+58,731,1/14/21,Hytrol Conveyor Company,Jonesboro,Craighead,6,115,121,NA,Manufacturing,NA,jonesboro,craighead,hytrol conveyor company,2021,Jan,2021-01
+59,740,1/18/21,Hytrol Conveyor Company,Siloam Springs,Benton,5,32,37,NA,Manufacturing,NA,siloam springs,benton,hytrol conveyor company,2021,Jan,2021-01
+60,305,7/31/20,Pace Industries,Harrison,Boone,5,3,8,NA,NA,NA,harrison,boone,pace industries,2020,Jul,2020-07
+60,327,8/3/20,Pace Industries,Harrison,Boone,5,4,9,NA,NA,NA,harrison,boone,pace industries,2020,Aug,2020-08
+61,306,7/31/20,West Tree Services,Little Rock,Pulaski,5,1,6,NA,NA,NA,little rock,pulaski,west tree services,2020,Jul,2020-07
+61,328,8/3/20,West Tree Services,Little Rock,Pulaski,5,2,7,NA,NA,NA,little rock,pulaski,west tree services,2020,Aug,2020-08
+62,329,8/3/20,Kagome Foods,Osceola,Mississippi,5,2,7,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
+62,348,8/7/20,Kagome Foods,Osceola,Mississippi,8,6,14,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
+62,364,8/10/20,Kagome Foods,Osceola,Mississippi,7,9,16,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
+62,380,8/13/20,Kagome Foods,Osceola,Mississippi,5,14,19,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
+62,384,8/17/20,Kagome Foods,Osceola,Mississippi,5,14,19,NA,NA,NA,osceola,mississippi,kagome foods,2020,Aug,2020-08
+63,337,8/7/20,Custom Craft Poultry,Batesville,Independence,7,2,9,NA,NA,NA,batesville,independence,custom craft poultry,2020,Aug,2020-08
+64,347,8/7/20,Radius Aerospace,Hot Springs,Garland,10,0,10,NA,NA,NA,hot_springs,garland,radius aerospace,2020,Aug,2020-08
+64,363,8/10/20,Radius Aerospace,Hot Springs,Garland,10,0,10,NA,NA,NA,hot_springs,garland,radius aerospace,2020,Aug,2020-08
+65,362,8/10/20,Wilson Brothers Lumber Co,Rison,Cleveland,15,0,15,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
+65,378,8/13/20,Wilson Brothers Lumber Co,Rison,Cleveland,11,4,15,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
+65,381,8/17/20,Wilson Brothers Lumber Co,Rison,Cleveland,10,6,16,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
+65,395,8/24/20,Wilson Brothers Lumber Co,Rison,Cleveland,5,10,15,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
+65,403,8/27/20,Wilson Brothers Lumber Co,Rison,Cleveland,5,10,15,NA,NA,NA,rison,cleveland,wilson brothers lumber co,2020,Aug,2020-08
+66,365,8/10/20,JB Hunt Transport Services,Lowell,Benton,5,23,28,NA,NA,NA,lowell,benton,jb hunt transport services,2020,Aug,2020-08
+67,400,8/27/20,Triumph Airborne Structures,Hot Springs,Garland,10,0,10,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Aug,2020-08
+67,408,8/31/20,Triumph Airborne Structures,Hot Springs,Garland,13,2,15,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Aug,2020-08
+67,423,9/7/20,Triumph Airborne Structures,Hot Springs,Garland,9,10,19,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Sep,2020-09
+67,431,9/9/20,Triumph Airborne Structures,Hot Springs,Garland,8,12,20,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Sep,2020-09
+67,442,9/14/20,Triumph Airborne Structures,Hot Springs,Garland,5,15,20,NA,NA,NA,hot_springs,garland,triumph_airborne_structures,2020,Sep,2020-09
+68,401,8/27/20,Global Food Group,Clinton,Van Buren,7,1,8,NA,NA,NA,clinton,van_buren,global food group,2020,Aug,2020-08
+68,410,8/31/20,Global Food Group,Clinton,Van Buren,6,2,8,NA,NA,NA,clinton,van_buren,global food group,2020,Aug,2020-08
+69,402,8/27/20,JW Aluminum Co.,Russellville,Pope,6,0,6,NA,NA,NA,russellville,pope,jw aluminum co.,2020,Aug,2020-08
+69,409,8/31/20,JW Aluminum Co.,Russellville,Pope,7,0,7,NA,NA,NA,russellville,pope,jw aluminum co.,2020,Aug,2020-08
+69,418,9/3/20,JW Aluminum Co.,Russellville,Pope,5,3,8,NA,NA,NA,russellville,pope,jw aluminum co.,2020,Sep,2020-09
+70,424,9/7/20,Big River Steel,Osceola,Mississippi,8,8,16,NA,NA,NA,osceola,mississippi,big river steel,2020,Sep,2020-09
+70,435,9/9/20,Big River Steel,Osceola,Mississippi,5,11,16,NA,NA,NA,osceola,mississippi,big river steel,2020,Sep,2020-09
+71,425,9/7/20,Textbook Brokers,Jonesboro,Craighead,8,1,9,NA,NA,NA,jonesboro,craighead,textbook brokers,2020,Sep,2020-09
+71,433,9/9/20,Textbook Brokers,Jonesboro,Craighead,6,4,10,NA,NA,NA,jonesboro,craighead,textbook brokers,2020,Sep,2020-09
+71,440,9/14/20,Textbook Brokers,Jonesboro,Craighead,6,5,11,NA,NA,NA,jonesboro,craighead,textbook brokers,2020,Sep,2020-09
+72,426,9/7/20,MAHLE Engine Components,Russellville,Pope,7,1,8,NA,NA,NA,russellville,pope,mahle engine components,2020,Sep,2020-09
+72,432,9/9/20,MAHLE Engine Components,Russellville,Pope,6,5,11,NA,NA,NA,russellville,pope,mahle engine components,2020,Sep,2020-09
+73,434,9/9/20,Lennox Industries,Stuttgart,Arkansas,5,21,26,NA,NA,NA,stuttgart,arkansas,lennox industries,2020,Sep,2020-09
+73,441,9/14/20,Lennox Industries,Stuttgart,Arkansas,5,22,27,NA,NA,NA,stuttgart,arkansas,lennox industries,2020,Sep,2020-09
+73,453,9/24/20,Lennox Industries,Stuttgart,Arkansas,5,29,34,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Sep,2020-09
+73,455,9/28/20,Lennox Industries,Stuttgart,Arkansas,6,31,37,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Sep,2020-09
+73,461,10/1/20,Lennox Industries,Stuttgart,Arkansas,5,36,41,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Oct,2020-10
+73,489,10/15/20,Lennox Industries,Stuttgart,Arkansas,5,45,50,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Oct,2020-10
+73,506,10/26/20,Lennox Industries,Stuttgart,Arkansas,5,54,59,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2020,Oct,2020-10
+73,761,1/25/21,Lennox Industries,Stuttgart,Arkansas,5,80,85,NA,Manufacturing,NA,stuttgart,arkansas,lennox industries,2021,Jan,2021-01
+74,456,9/28/20,Pine Bluff Fire and Emergency,Pine Bluff,Jefferson,6,3,9,NA,Public Administration,NA,pine_bluff,jefferson,pine bluff fire and emergency,2020,Sep,2020-09
+74,458,10/1/20,Pine Bluff Fire and Emergency,Pine Bluff,Jefferson,7,3,10,NA,Public Administration,NA,pine_bluff,jefferson,pine bluff fire and emergency,2020,Oct,2020-10
+75,457,10/1/20,Dooley Agri,Forestry," Fishing and Hunting, Colt, St. Francis",26,0,26,NA,Agriculture,NA,forestry,st. francis,dooley agri,2020,Oct,2020-10
+75,462,10/5/20,Dooley Agri,Forestry," Fishing and Hunting, Colt, St. Francis",26,0,26,NA,Agriculture,NA,forestry,st. francis,dooley agri,2020,Oct,2020-10
+75,471,10/8/20,Dooley Agri,Forestry," Fishing and Hunting, Colt, St. Francis",6,20,26,NA,Agriculture,NA,forestry,st. francis,dooley agri,2020,Oct,2020-10
+76,464,10/5/20,Vacation Tour and Travel,Entertainment," and Recreation, Conway, Faulkner",7,1,8,NA,Arts,NA,conway,faulkner,vacation tour and travel,2020,Oct,2020-10
+76,468,10/8/20,Vacation Tour and Travel,Entertainment," and Recreation, Conway, Faulkner",10,2,12,NA,Arts,NA,conway,faulkner,vacation tour and travel,2020,Oct,2020-10
+76,475,10/12/20,Vacation Tour and Travel,Entertainment," and Recreation, Conway, Faulkner",8,5,13,NA,Arts,NA,conway,faulkner,vacation tour and travel,2020,Oct,2020-10
+77,467,10/5/20,DENSO Manufacturing,Osceola,Mississippi,5,38,43,NA,Manufacturing,NA,osceola,mississippi,denso manufacturing,2020,Oct,2020-10
+77,614,12/10/20,DENSO Manufacturing,Osceola,Mississippi,7,60,67,NA,Manufacturing,NA,osceola,mississippi,denso manufacturing,2020,Dec,2020-12
+77,634,12/14/20,DENSO Manufacturing,Osceola,Mississippi,7,60,67,NA,Manufacturing,NA,osceola,mississippi,denso manufacturing,2020,Dec,2020-12
+78,479,10/12/20,Land O'Frost,Searcy,White,6,6,12,NA,Manufacturing,NA,searcy,white,land o'frost,2020,Oct,2020-10
+78,484,10/15/20,Land O'Frost,Searcy,White,7,7,14,NA,Manufacturing,NA,searcy,white,land o'frost,2020,Oct,2020-10
+79,482,10/15/20,Arkansas Glass Container,Jonesboro,Craighead,8,3,11,NA,Manufacturing,NA,jonesboro,craighead,arkansas glass container,2020,Oct,2020-10
+79,492,10/19/20,Arkansas Glass Container,Jonesboro,Craighead,8,3,11,NA,Manufacturing,NA,jonesboro,craighead,arkansas glass container,2020,Oct,2020-10
+80,485,10/15/20,Big Rock KangaRoof,Little Rock,Pulaski,7,0,7,NA,Construction,NA,little rock,pulaski,big rock kangaroof,2020,Oct,2020-10
+81,499,10/22/20,Cooper Tire,Texarkana,Miller,5,24,29,NA,Manufacturing,NA,texarkana,miller,cooper tire,2020,Oct,2020-10
+82,504,10/26/20,Greenbrier Rail,Paragould,Greene,6,15,21,NA,Manufacturing,NA,paragould,greene,greenbrier rail,2020,Oct,2020-10
+83,507,10/26/20,Diamond Pet Foods,Dumas,Desha,5,10,15,NA,Manufacturing,NA,dumas,desha,diamond pet foods,2020,Oct,2020-10
+83,517,10/29/20,Diamond Pet Foods,Dumas,Desha,5,12,17,NA,Manufacturing,NA,dumas,desha,diamond pet foods,2020,Oct,2020-10
+84,509,10/29/20,Roach Manufacturing,Trumann,Poinsett,8,9,17,NA,Manufacturing,NA,trumann,poinsett,roach manufacturing,2020,Oct,2020-10
+84,526,11/2/20,Roach Manufacturing,Trumann,Poinsett,5,12,17,NA,Manufacturing,NA,trumann,poinsett,roach manufacturing,2020,Nov,2020-11
+84,536,11/5/20,Roach Manufacturing,Trumann,Poinsett,5,14,19,NA,Manufacturing,NA,trumann,poinsett,roach manufacturing,2020,Nov,2020-11
+85,534,11/5/20,Nestle,Jonesboro,Craighead,5,41,46,NA,Manufacturing,NA,jonesboro,craighead,nestle,2020,Nov,2020-11
+86,541,11/9/20,ABB,Ft Smith,Sebastian,5,32,37,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
+86,550,11/12/20,ABB,Ft Smith,Sebastian,5,35,40,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
+86,561,11/16/20,ABB,Fort Smith,Sebastian,5,36,41,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
+86,565,11/19/20,ABB,Ft Smith,Sebastian,7,40,47,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
+86,571,11/23/20,ABB,Ft Smith,Sebastian,7,42,49,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Nov,2020-11
+86,598,12/7/20,ABB,Ft Smith,Sebastian,10,60,70,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Dec,2020-12
+86,613,12/10/20,ABB,Ft Smith,Sebastian,9,63,72,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Dec,2020-12
+86,626,12/14/20,ABB,Ft Smith,Sebastian,10,65,75,NA,Manufacturing,NA,fort_smith,sebastian,abb,2020,Dec,2020-12
+86,712,1/7/21,ABB,Fort Smith,Sebastian,5,84,89,NA,Manufacturing,NA,fort_smith,sebastian,abb,2021,Jan,2021-01
+87,551,11/12/20,Lockheed Martin,Camden,Ouachita,5,15,20,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2020,Nov,2020-11
+87,606,12/7/20,Lockheed Martin,Camden,Ouachita,6,30,36,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2020,Dec,2020-12
+87,743,1/18/21,Lockheed Martin,Camden,Ouachita,7,53,60,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Jan,2021-01
+87,762,1/25/21,Lockheed Martin,Camden,Ouachita,7,62,69,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Jan,2021-01
+87,770,1/28/21,Lockheed Martin,Camden,Ouachita,6,64,70,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Jan,2021-01
+87,787,2/8/21,Lockheed Martin,Camden,Ouachita,6,71,77,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Feb,2021-02
+87,795,2/11/21,Lockheed Martin,Camden,Ouachita,6,72,78,NA,Manufacturing,NA,camden,ouachita,lockheed martin,2021,Feb,2021-02
+88,554,11/16/20,Nabholz,Conway,Faulkner,7,4,11,NA,Construction,NA,conway,faulkner,nabholz,2020,Nov,2020-11
+89,569,11/19/20,Alma Tractor,Alma,Crawford,5,2,7,NA,Manufacturing,NA,alma,crawford,alma tractor,2020,Nov,2020-11
+90,572,11/23/20,Rineco Chemical Industries,Haskell,Saline,6,5,11,NA,Manufacturing,NA,haskell,saline,rineco chemical industries,2020,Nov,2020-11
+90,582,11/26/20,Rineco Chemical Industries,Haskell,Saline,5,7,12,NA,Manufacturing,NA,haskell,saline,rineco chemical industries,2020,Nov,2020-11
+91,575,11/23/20,Maynard Inc.,Fayetteville,Washington,5,3,8,NA,Manufacturing,NA,fayetteville,washington,maynard inc.,2020,Nov,2020-11
+92,588,11/30/20,Nucor-Yamato Steel,Blytheville,Mississippi,5,29,34,NA,Manufacturing,NA,blytheville,mississippi,nucor-yamato steel,2020,Nov,2020-11
+93,593,12/3/20,Tenneco Inc.,Paragould,Greene,6,34,40,NA,Manufacturing,NA,paragould,greene,tenneco inc.,2020,Dec,2020-12
+94,608,12/7/20,Wilson Combat Scattergun Tech,Berryville,Carroll,5,12,17,NA,Manufacturing,NA,berryville,carroll,wilson combat scattergun tech,2020,Dec,2020-12
+95,609,12/7/20,PotlatchDeltic,Warren,Bradley,5,11,16,NA,Manufacturing,NA,warren,bradley,potlatchdeltic,2020,Dec,2020-12
+95,620,12/10/20,PotlatchDeltic,Warren,Bradley,5,12,17,NA,Manufacturing,NA,warren,bradley,potlatchdeltic,2020,Dec,2020-12
+96,710,1/7/21,PotlatchDeltic,Ola,Yell,6,13,19,NA,Manufacturing,NA,ola,yell,potlatchdeltic,2021,Jan,2021-01
+97,615,12/10/20,Quality Voices,Jonesboro,Craighead,7,1,8,NA,Other Services,NA,jonesboro,craighead,quality voices,2020,Dec,2020-12
+98,619,12/10/20,American Greetings Co.,Osceola,Mississippi,5,37,42,NA,Manufacturing,NA,osceola,mississippi,american greetings co.,2020,Dec,2020-12
+98,637,12/14/20,American Greetings Co.,Osceola,Mississippi,6,37,43,NA,Manufacturing,NA,osceola,mississippi,american greetings co.,2020,Dec,2020-12
+98,658,12/17/20,American Greetings Co.,Osceola,Mississippi,5,40,45,NA,Manufacturing,NA,osceola,mississippi,american greetings co.,2020,Dec,2020-12
+98,713,1/7/21,American Greetings Co.,Osceola,Mississippi,5,58,63,NA,Manufacturing,NA,osceola,mississippi,american greetings co.,2021,Jan,2021-01
+99,628,12/14/20,Spirit Fitness,Jonesboro,Craighead,10,3,13,NA,Manufacturing,NA,jonesboro,craighead,spirit fitness,2020,Dec,2020-12
+99,652,12/17/20,Spirit Fitness,Jonesboro,Craighead,7,11,18,NA,Manufacturing,NA,jonesboro,craighead,spirit fitness,2020,Dec,2020-12
+100,631,12/14/20,WeatherBarr Windows & Doors,Ft Smith,Sebastian,8,9,17,NA,Manufacturing,NA,fort_smith,sebastian,weatherbarr windows & doors,2020,Dec,2020-12
+101,642,12/14/20,Utility Trailer Manufacturing Co.,Paragould,Greene,5,34,39,NA,Manufacturing,NA,paragould,greene,utility trailer manufacturing co.,2020,Dec,2020-12
+102,643,12/14/20,Dassault Falcon Jet LLC,Little Rock,Pulaski,5,33,38,NA,Manufacturing,NA,little rock,pulaski,dassault falcon jet llc,2020,Dec,2020-12
+102,769,1/28/21,Dassault Falcon Jet LLC,Little Rock,Pulaski,6,54,60,NA,Manufacturing,NA,little rock,pulaski,dassault falcon jet llc,2021,Jan,2021-01
+102,773,2/1/21,Dassault Falcon Jet LLC,Little Rock,Pulaski,7,56,63,NA,Manufacturing,NA,little rock,pulaski,dassault falcon jet llc,2021,Feb,2021-02
+103,645,12/14/20,Duke Custom Cabinets Inc.,Roland,Pulaski,5,1,6,NA,Manufacturing,NA,roland,pulaski,duke custom cabinets inc.,2020,Dec,2020-12
+104,655,12/17/20,Unilever,Jonesboro,Craighead,6,23,29,NA,Manufacturing,NA,jonesboro,craighead,unilever,2020,Dec,2020-12
+104,711,1/7/21,Unilever,Jonesboro,Craighead,6,37,43,NA,Manufacturing,NA,jonesboro,craighead,unilever,2021,Jan,2021-01
+104,724,1/11/21,Unilever,Jonesboro,Craighead,5,38,43,NA,Manufacturing,NA,jonesboro,craighead,unilever,2021,Jan,2021-01
+104,735,1/14/21,Unilever,Jonesboro,Craighead,5,38,43,NA,Manufacturing,NA,jonesboro,craighead,unilever,2021,Jan,2021-01
+105,659,12/17/20,Nice Pak,Jonesboro,Craighead,5,35,40,NA,Manufacturing,NA,jonesboro,craighead,nice pak,2020,Dec,2020-12
+105,681,12/24/20,Nice Pak,Jonesboro,Craighead,7,42,49,NA,Manufacturing,NA,jonesboro,craighead,nice pak,2020,Dec,2020-12
+106,660,12/17/20,APAC-Central,Fayetteville,Washington,5,13,18,NA,Manufacturing,NA,fayetteville,washington,apac-central,2020,Dec,2020-12
+106,668,12/21/20,APAC-Central,Fayetteville,Washington,5,16,21,NA,Manufacturing,NA,fayetteville,washington,apac-central,2020,Dec,2020-12
+107,664,12/21/20,Domtar Paper Co.,Ash Down,Little River,6,26,32,NA,Manufacturing,NA,ashdown,little_river,domtar paper co.,2020,Dec,2020-12
+107,672,12/24/20,Domtar Paper Co.,Ashdown,Little River,11,30,41,NA,Manufacturing,NA,ashdown,little_river,domtar paper co.,2020,Dec,2020-12
+108,666,12/21/20,Roehm America,Osceola,Mississippi,6,1,7,NA,Manufacturing,NA,osceola,mississippi,roehm_america,2020,Dec,2020-12
+108,673,12/24/20,Roehm America/Evonik,Osceola,Mississippi,11,2,13,NA,Manufacturing,NA,osceola,mississippi,roehm_america,2020,Dec,2020-12
+109,669,12/21/20,McKee Foods,Gentry,Benton,5,24,29,NA,Manufacturing,NA,gentry,benton,mckee foods,2020,Dec,2020-12
+109,683,12/24/20,McKee Foods,Gentry,Benton,7,29,36,NA,Manufacturing,NA,gentry,benton,mckee foods,2020,Dec,2020-12
+109,702,1/4/21,McKee Foods,Gentry,Benton,6,41,47,NA,Manufacturing,NA,gentry,benton,mckee foods,2021,Jan,2021-01
+109,708,1/7/21,McKee Foods,Gentry,Benton,7,46,53,NA,Manufacturing,NA,gentry,benton,mckee foods,2021,Jan,2021-01
+110,682,12/24/20,Arkansas Nuclear One,Russellville,Pope,7,31,38,NA,Utilities,NA,russellville,pope,arkansas nuclear one,2020,Dec,2020-12
+111,685,12/24/20,Shippers Products,Fordyce,Dallas,6,7,13,NA,Manufacturing,NA,fordyce,dallas,shippers products,2020,Dec,2020-12
+112,686,12/24/20,La-Z-Boy Furniture,Siloam Springs,Benton,6,1,7,NA,Retail Trade,NA,siloam springs,benton,la-z-boy furniture,2020,Dec,2020-12
+113,691,12/28/20,Shelby Group International Inc.,Glenwood,Pike,6,5,11,NA,Manufacturing,NA,glenwood,pike,shelby group international inc.,2020,Dec,2020-12
+114,693,12/28/20,Stephens Inc.,Little Rock,Pulaski,5,7,12,NA,Finance and Insurance,NA,little rock,pulaski,stephens inc.,2020,Dec,2020-12
+115,705,1/7/21,Dillar's Corporate Headquarters,Little Rock,Pulaski,8,13,21,NA,Retail Trade,NA,little rock,pulaski,dillards,2021,Jan,2021-01
+116,779,2/4/21,Dillards Fulfillment Center,Stuttgart,Arkansas,5,59,64,NA,Manufacturing,NA,stuttgart,arkansas,dillards,2021,Feb,2021-02
+117,707,1/7/21,Centene Corporation,Little Rock,Pulaski,7,14,21,NA,Finance and Insurance,NA,little rock,pulaski,centene corporation,2021,Jan,2021-01
+117,721,1/11/21,Centene Corporation,Little Rock,Pulaski,5,15,20,NA,Finance and Insurance,NA,little rock,pulaski,centene corporation,2021,Jan,2021-01
+118,717,1/11/21,Gates Corportation,Siloam Springs,Benton,7,26,33,NA,Manufacturing,NA,siloam springs,benton,gates_corporation,2021,Jan,2021-01
+118,729,1/14/21,Gates Rubber Corportation,Siloam Springs,Benton,7,31,38,NA,Manufacturing,NA,siloam springs,benton,gates_corporation,2021,Jan,2021-01
+119,741,1/18/21,Gates Rubber Corportation,Jonesboro,Craighead,5,116,121,NA,Manufacturing,NA,jonesboro,craighead,gates_corporation,2021,Jan,2021-01
+120,722,1/11/21,Clean Harbors Evnvironmental Services,El Dorado,Union,5,21,26,NA,"Administrative and Support and Waste Management and
 Remediation Services",NA,el dorado,union,clean harbors evnvironmental services,2021,Jan,2021-01
-121,723,2021-01-11,Pet Solutions, Danville, Yell,5,12,17,NA,Retail Trade,NA,danville,yell,pet solutions,2021,Jan,2021-01
-122,736,2021-01-14,Hooters, North Little Rock, Pulaski,5,3,8,NA,Accommodation and Food Services,NA,north little rock,pulaski,hooters,2021,Jan,2021-01
-123,737,2021-01-18,Bell & Company, North Little Rock, Pulaski,7,2,9,NA,Finance and Insurance,NA,north little rock,pulaski,bell & company,2021,Jan,2021-01
-123,753,2021-01-21,Bell & Company, North Little Rock, Pulaski,5,5,10,NA,Finance and Insurance,NA,north little rock,pulaski,bell & company,2021,Jan,2021-01
-124,742,2021-01-18,L'Oreal Manufacturing center, North Little Rock, Pulaski,5,11,16,NA,Manufacturing,NA,north little rock,pulaski,l'oreal manufacturing center,2021,Jan,2021-01
-125,752,2021-01-21,Aerojet Rocketdyne, Camden, Ouachita,5,46,51,NA,Manufacturing,NA,camden,ouachita,aerojet rocketdyne,2021,Jan,2021-01
-126,759,2021-01-25,City of Camden, Camden, Ouachita,6,2,8,NA,Public Administration,NA,camden,ouachita,city of camden,2021,Jan,2021-01
-127,774,2021-02-01,SYKES Enterprises Call Center, Ft Smith, Sebastian,6,23,29,NA,"Administrative and Support and Waste Management and
+121,723,1/11/21,Pet Solutions,Danville,Yell,5,12,17,NA,Retail Trade,NA,danville,yell,pet solutions,2021,Jan,2021-01
+122,736,1/14/21,Hooters,North Little Rock,Pulaski,5,3,8,NA,Accommodation and Food Services,NA,north little rock,pulaski,hooters,2021,Jan,2021-01
+123,737,1/18/21,Bell & Company,North Little Rock,Pulaski,7,2,9,NA,Finance and Insurance,NA,north little rock,pulaski,bell & company,2021,Jan,2021-01
+123,753,1/21/21,Bell & Company,North Little Rock,Pulaski,5,5,10,NA,Finance and Insurance,NA,north little rock,pulaski,bell & company,2021,Jan,2021-01
+124,742,1/18/21,L'Oreal Manufacturing center,North Little Rock,Pulaski,5,11,16,NA,Manufacturing,NA,north little rock,pulaski,l'oreal manufacturing center,2021,Jan,2021-01
+125,752,1/21/21,Aerojet Rocketdyne,Camden,Ouachita,5,46,51,NA,Manufacturing,NA,camden,ouachita,aerojet rocketdyne,2021,Jan,2021-01
+126,759,1/25/21,City of Camden,Camden,Ouachita,6,2,8,NA,Public Administration,NA,camden,ouachita,city of camden,2021,Jan,2021-01
+127,774,2/1/21,SYKES Enterprises Call Center,Ft Smith,Sebastian,6,23,29,NA,"Administrative and Support and Waste Management and
 Remediation Services",NA,fort_smith,sebastian,sykes enterprises call center,2021,Feb,2021-02
-127,796,2021-02-11,SYKES Enterprises Call Center, Ft Smith, Sebastian,5,30,35,NA,"Administrative and Support and Waste Management and
+127,796,2/11/21,SYKES Enterprises Call Center,Ft Smith,Sebastian,5,30,35,NA,"Administrative and Support and Waste Management and
 Remediation Services",NA,fort_smith,sebastian,sykes enterprises call center,2021,Feb,2021-02
-128,781,2021-02-04,SYKES Enterprises Call Center, Maumelle, Pulaski,5,7,12,NA,Retail Trade,NA,maumelle,pulaski,sykes enterprises call center,2021,Feb,2021-02
-129,776,2021-02-01,Welspun Pipes Inc., Little Rock, Pulaski,5,33,38,NA,Manufacturing,NA,little rock,pulaski,welspun pipes inc.,2021,Feb,2021-02
-129,778,2021-02-04,Welspun Pipes Inc., Little Rock, Pulaski,6,33,39,NA,Manufacturing,NA,little rock,pulaski,welspun pipes inc.,2021,Feb,2021-02
-130,782,2021-02-08,Claudia's Canine Bakery, Maumelle, Pulaski,10,9,19,NA,Manufacturing,NA,maumelle,pulaski,claudia's canine bakery,2021,Feb,2021-02
-130,790,2021-02-11,Claudia's Canine Bakery, Maumelle, Pulaski,9,10,19,NA,Manufacturing,NA,maumelle,pulaski,claudia's canine bakery,2021,Feb,2021-02
-131,784,2021-02-08,De Wafelbakkers, North Little Rock, Pulaski,6,34,40,NA,Manufacturing,NA,north little rock,pulaski,de wafelbakkers,2021,Feb,2021-02
-131,792,2021-02-11,De Wafelbakkers, North Little Rock, Pulaski,6,37,43,NA,Manufacturing,NA,north little rock,pulaski,de wafelbakkers,2021,Feb,2021-02
-132,785,2021-02-08,Great Dane Trailers, Jonesboro, Craighead,5,27,32,NA,Manufacturing,NA,jonesboro,craighead,great dane trailers,2021,Feb,2021-02
-132,793,2021-02-11,Great Dane Trailers, Jonesboro, Craighead,8,27,35,NA,Manufacturing,NA,jonesboro,craighead,great dane trailers,2021,Feb,2021-02
-133,786,2021-02-08,Lamb & Associates Packaging, Maumelle, Pulaski,5,7,12,NA,Manufacturing,NA,maumelle,pulaski,lamb & associates packaging,2021,Feb,2021-02
-133,794,2021-02-11,Lamb & Associates Packaging, Maumelle, Pulaski,6,9,15,NA,Manufacturing,NA,maumelle,pulaski,lamb & associates packaging,2021,Feb,2021-02
-134,797,2021-02-22,Wapsi Fly Co., Mountain Home, Baxter,5,1,6,NA,Manufacturing,NA,mountain home,baxter,wapsi fly co.,2021,Feb,2021-02
-134,799,2021-02-25,Wapsi Fly Co., Mountain Home, Baxter,5,1,6,NA,Manufacturing,NA,mountain home,baxter,wapsi fly co.,2021,Feb,2021-02
-135,798,2021-02-25,Rheem Manufacturing, Fort Smith, Sebastian,6,66,72,NA,Manufacturing,NA,fort_smith,sebastian,rheem manufacturing,2021,Feb,2021-02
-136,800,2021-02-25,Twin Rivers Paper, Pine Bluff, Jefferson,5,17,22,NA,Manufacturing,NA,pine_bluff,jefferson,twin rivers paper,2021,Feb,2021-02
-137,801,2021-02-25,Wilkerson's Jewelry, Stuttgart, Arkansas,5,2,7,NA,Retail Trade,NA,stuttgart,arkansas,wilkerson's jewelry,2021,Feb,2021-02
-138,802,2021-03-01,McLarty Daniel Chevrolet, Springdale, Washington,7,3,10,NA,Retail Trade,NA,springdale,washington,mclarty daniel chevrolet,2021,Mar,2021-03
-138,803,2021-03-04,McLarty Daniel Chevrolet, Springdale, Washington,7,4,11,NA,Retail Trade,NA,springdale,washington,mclarty daniel chevrolet,2021,Mar,2021-03
-139,804,2021-03-15,Klein Tools, Ft Smith, Sebastian,16,5,21,NA,Manufacturing,NA,fort_smith,sebastian,klein tools,2021,Mar,2021-03
-139,806,2021-03-18,Klein Tools, Ft Smith, Sebastian,16,7,23,NA,Manufacturing,NA,fort_smith,sebastian,klein tools,2021,Mar,2021-03
-139,808,2021-03-22,Klein Tools, Ft Smith, Sebastian,5,21,26,NA,Manufacturing,NA,fort_smith,sebastian,klein tools,2021,Mar,2021-03
-140,807,2021-03-22,K&K Veterinary Supply, Tontitown, Washington,6,6,12,NA,Manufacturing,NA,tontitown,washington,k&k veterinary supply,2021,Mar,2021-03
-141,809,2021-04-08,First Security Bank, Mountain Home, Baxter,5,2,7,NA,Finance and Insurance,NA,mountain home,baxter,first security bank,2021,Apr,2021-04
-142,163,2020-06-25,Butterball, Ozark, Franklin,8,5,13,NA,NA,NA,ozark,franklin,butterball,2020,Jun,2020-06
-142,190,2020-07-03,Butterball, Ozark, Franklin,5,12,17,NA,NA,NA,ozark,franklin,butterball,2020,Jul,2020-07
-142,262,2020-07-24,Butterball, Ozark, Franklin,7,24,31,NA,NA,NA,ozark,franklin,butterball,2020,Jul,2020-07
-143,589,2020-11-30,Butterball, Jonesboro, Craighead,5,17,22,NA,Manufacturing,NA,jonesboro,craighead,butterball,2020,Nov,2020-11
-144,32,2020-05-29,Tyson, Rogers, Benton,5,1,6,NA,NA,NA,rogers,benton,tyson,2020,May,2020-05
-145,2,2020-05-19,Tyson,Various Locations,---,14,32,46,NA,NA,NA,various locations,---,tyson,2020,May,2020-05
+128,781,2/4/21,SYKES Enterprises Call Center,Maumelle,Pulaski,5,7,12,NA,Retail Trade,NA,maumelle,pulaski,sykes enterprises call center,2021,Feb,2021-02
+129,776,2/1/21,Welspun Pipes Inc.,Little Rock,Pulaski,5,33,38,NA,Manufacturing,NA,little rock,pulaski,welspun pipes inc.,2021,Feb,2021-02
+129,778,2/4/21,Welspun Pipes Inc.,Little Rock,Pulaski,6,33,39,NA,Manufacturing,NA,little rock,pulaski,welspun pipes inc.,2021,Feb,2021-02
+130,782,2/8/21,Claudia's Canine Bakery,Maumelle,Pulaski,10,9,19,NA,Manufacturing,NA,maumelle,pulaski,claudia's canine bakery,2021,Feb,2021-02
+130,790,2/11/21,Claudia's Canine Bakery,Maumelle,Pulaski,9,10,19,NA,Manufacturing,NA,maumelle,pulaski,claudia's canine bakery,2021,Feb,2021-02
+131,784,2/8/21,De Wafelbakkers,North Little Rock,Pulaski,6,34,40,NA,Manufacturing,NA,north little rock,pulaski,de wafelbakkers,2021,Feb,2021-02
+131,792,2/11/21,De Wafelbakkers,North Little Rock,Pulaski,6,37,43,NA,Manufacturing,NA,north little rock,pulaski,de wafelbakkers,2021,Feb,2021-02
+132,785,2/8/21,Great Dane Trailers,Jonesboro,Craighead,5,27,32,NA,Manufacturing,NA,jonesboro,craighead,great dane trailers,2021,Feb,2021-02
+132,793,2/11/21,Great Dane Trailers,Jonesboro,Craighead,8,27,35,NA,Manufacturing,NA,jonesboro,craighead,great dane trailers,2021,Feb,2021-02
+133,786,2/8/21,Lamb & Associates Packaging,Maumelle,Pulaski,5,7,12,NA,Manufacturing,NA,maumelle,pulaski,lamb & associates packaging,2021,Feb,2021-02
+133,794,2/11/21,Lamb & Associates Packaging,Maumelle,Pulaski,6,9,15,NA,Manufacturing,NA,maumelle,pulaski,lamb & associates packaging,2021,Feb,2021-02
+134,797,2/22/21,Wapsi Fly Co.,Mountain Home,Baxter,5,1,6,NA,Manufacturing,NA,mountain home,baxter,wapsi fly co.,2021,Feb,2021-02
+134,799,2/25/21,Wapsi Fly Co.,Mountain Home,Baxter,5,1,6,NA,Manufacturing,NA,mountain home,baxter,wapsi fly co.,2021,Feb,2021-02
+135,798,2/25/21,Rheem Manufacturing,Fort Smith,Sebastian,6,66,72,NA,Manufacturing,NA,fort_smith,sebastian,rheem manufacturing,2021,Feb,2021-02
+136,800,2/25/21,Twin Rivers Paper,Pine Bluff,Jefferson,5,17,22,NA,Manufacturing,NA,pine_bluff,jefferson,twin rivers paper,2021,Feb,2021-02
+137,801,2/25/21,Wilkerson's Jewelry,Stuttgart,Arkansas,5,2,7,NA,Retail Trade,NA,stuttgart,arkansas,wilkerson's jewelry,2021,Feb,2021-02
+138,802,3/1/21,McLarty Daniel Chevrolet,Springdale,Washington,7,3,10,NA,Retail Trade,NA,springdale,washington,mclarty daniel chevrolet,2021,Mar,2021-03
+138,803,3/4/21,McLarty Daniel Chevrolet,Springdale,Washington,7,4,11,NA,Retail Trade,NA,springdale,washington,mclarty daniel chevrolet,2021,Mar,2021-03
+139,804,3/15/21,Klein Tools,Ft Smith,Sebastian,16,5,21,NA,Manufacturing,NA,fort_smith,sebastian,klein tools,2021,Mar,2021-03
+139,806,3/18/21,Klein Tools,Ft Smith,Sebastian,16,7,23,NA,Manufacturing,NA,fort_smith,sebastian,klein tools,2021,Mar,2021-03
+139,808,3/22/21,Klein Tools,Ft Smith,Sebastian,5,21,26,NA,Manufacturing,NA,fort_smith,sebastian,klein tools,2021,Mar,2021-03
+140,807,3/22/21,K&K Veterinary Supply,Tontitown,Washington,6,6,12,NA,Manufacturing,NA,tontitown,washington,k&k veterinary supply,2021,Mar,2021-03
+141,809,4/8/21,First Security Bank,Mountain Home,Baxter,5,2,7,NA,Finance and Insurance,NA,mountain home,baxter,first security bank,2021,Apr,2021-04
+142,163,6/25/20,Butterball,Ozark,Franklin,8,5,13,NA,NA,NA,ozark,franklin,butterball,2020,Jun,2020-06
+142,190,7/3/20,Butterball,Ozark,Franklin,5,12,17,NA,NA,NA,ozark,franklin,butterball,2020,Jul,2020-07
+142,262,7/24/20,Butterball,Ozark,Franklin,7,24,31,NA,NA,NA,ozark,franklin,butterball,2020,Jul,2020-07
+143,589,11/30/20,Butterball,Jonesboro,Craighead,5,17,22,NA,Manufacturing,NA,jonesboro,craighead,butterball,2020,Nov,2020-11
+144,32,5/29/20,Tyson,Rogers,Benton,5,1,6,NA,NA,NA,rogers,benton,tyson,2020,May,2020-05
+145,2,5/19/20,Tyson,Various Locations,---,14,32,46,NA,NA,NA,various locations,---,tyson,2020,May,2020-05
+146,3,5/19/20,Nebo Poultry,"Dardanelle, Russellville","Yell, Pope",14,0,14,NA,NA,NA,"dardanelle, russellville","yell, pope",nebo poultry,2020,May,2020-05
+146,9,5/22/20,Nebo Poultry,"Dardanelle, Russellville","Yell, Pope",48,2,50,NA,NA,NA,"dardanelle, russellville","yell, pope",nebo poultry,2020,May,2020-05
+147,706,1/7/21,George's Poultry,Springdale,Washington,8,86,94,Kansas St.,Manufacturing,kansas st,springdale,washington,georges_poultry,2021,Jan,2021-01
